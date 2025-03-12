@@ -158,6 +158,11 @@ body {
   @apply bg-gradient-to-b from-slate-900 to-slate-800 text-white;
 }
 
+html {
+  background-color: theme('colors.slate.800'); /* Tailwind의 slate-800과 동일한 색상 */
+}
+
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
