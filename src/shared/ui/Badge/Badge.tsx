@@ -5,7 +5,7 @@ import { cn } from "@/shared/utils";
 
 import { badgeVariants } from "./style";
 
-const BadgeButton = ({
+const Badge = ({
   children,
   className,
   variant = "line",
@@ -13,10 +13,10 @@ const BadgeButton = ({
 }: { className?: string; children: ReactNode } & VariantProps<typeof badgeVariants> &
   ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
-    <button type="button" className={cn(badgeVariants({ variant }), className)} {...rest}>
+    <span className={cn(badgeVariants({ variant }), className)} {...rest}>
       {children}
-    </button>
+    </span>
   );
 };
 
-export default BadgeButton;
+export default Badge;

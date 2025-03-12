@@ -1,3 +1,4 @@
+import Badge from "./Badge";
 import BadgeButton from "./BadgeButton";
 
-export { BadgeButton };
+export { Badge, BadgeButton };

@@ -4,7 +4,7 @@ import { CheckCircle, Copy, Crown, UserCircle2 } from "lucide-react";
 import { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 
-import { BadgeButton, Button, Card } from "@/shared/ui";
+import { Badge, BadgeButton, Button, Card } from "@/shared/ui";
 import { ToastViewPort } from "@/shared/ui/Toast";
 import { useToastStore } from "@/shared/ui/Toast/stores";
 
@@ -76,10 +76,10 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
                   <UserCircle2 className="mr-2 h-5 w-5 text-slate-300" />
                   <span className="flex-1">{player.username}</span>
                   {player.isHost && (
-                    <BadgeButton className="flex items-center gap-1 border-amber-500 text-amber-400">
+                    <Badge className="flex items-center gap-1 border-amber-500 text-amber-400">
                       <Crown className="h-3 w-3" />
                       방장
-                    </BadgeButton>
+                    </Badge>
                   )}
                 </li>
               ))}
@@ -99,15 +99,21 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
               </li>
               <li className="flex justify-between">
                 <span className="text-slate-300">랜덤 직업 부여</span>
-                <BadgeButton>{settings.randomRoles ? "활성화" : "비활성화"}</BadgeButton>
+                <Badge variant={settings.randomRoles ? "isSelected" : "isNotSelected"}>
+                  {settings.randomRoles ? "활성화" : "비활성화"}
+                </Badge>
               </li>
               <li className="flex justify-between">
                 <span className="text-slate-300">익명 투표</span>
-                <BadgeButton>{settings.anonymousVoting ? "활성화" : "비활성화"}</BadgeButton>
+                <Badge variant={settings.anonymousVoting ? "isSelected" : "isNotSelected"}>
+                  {settings.anonymousVoting ? "활성화" : "비활성화"}
+                </Badge>
               </li>
               <li className="flex justify-between">
                 <span className="text-slate-300">특수 투표</span>
-                <BadgeButton>{settings.specialVoting ? "활성화" : "비활성화"}</BadgeButton>
+                <Badge variant={settings.specialVoting ? "isSelected" : "isNotSelected"}>
+                  {settings.specialVoting ? "활성화" : "비활성화"}
+                </Badge>
               </li>
             </ul>
           </Card.Content>
