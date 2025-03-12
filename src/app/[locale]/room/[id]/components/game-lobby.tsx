@@ -5,6 +5,8 @@ import { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 
 import { BadgeButton, Button, Card } from "@/shared/ui";
+import { ToastViewPort } from "@/shared/ui/Toast";
+import { useToastStore } from "@/shared/ui/Toast/stores";
 
 type Player = {
   id: string;
@@ -30,88 +32,98 @@ interface GameLobbyProps {
 
 export default function GameLobby({ players, settings, isHost, onStartGame }: GameLobbyProps) {
   const [copied, setCopied] = useState(false);
+  const { addToast } = useToastStore();
 
   const handleCopyLink = () => {
     setCopied(true);
+    addToast({
+      type: "success",
+      title: "링크 복사됨",
+      description: "게임 초대 링크가 복사되었습니다.",
+    });
+
     setTimeout(() => setCopied(false), 2000);
   };
 
   return (
-    <div className="grid gap-6 md:grid-cols-2">
-      <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur">
-        <Card.Header>
-          <Card.Title className="flex items-center justify-between">
-            <span>
-              참가자 ({players.length}/{settings.maxPlayers})
-            </span>
+    <>
+      <div className="grid gap-6 md:grid-cols-2">
+        <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur">
+          <Card.Header>
+            <Card.Title className="flex items-center justify-between">
+              <span>
+                참가자 ({players.length}/{settings.maxPlayers})
+              </span>
 
-            <CopyToClipboard
-              text={typeof window !== "undefined" ? window.location.href : ""}
-              onCopy={() => handleCopyLink()}
-            >
-              <Button
-                variant="primaryLine"
-                className="border-slate-600 rounded-md h-10 text-slate-200 hover:bg-slate-700"
-                onClick={handleCopyLink}
+              <CopyToClipboard
+                text={typeof window !== "undefined" ? window.location.href : ""}
+                onCopy={() => handleCopyLink()}
               >
-                {copied ? <CheckCircle className="h-4 w-4 mr-1" /> : <Copy className="h-4 w-4 mr-1" />}
-                초대 링크 복사
-              </Button>
-            </CopyToClipboard>
-          </Card.Title>
-        </Card.Header>
-        <Card.Content>
-          <ul className="space-y-2">
-            {players.map((player) => (
-              <li key={player.id} className="flex items-center rounded-lg bg-slate-700/50 p-3">
-                <UserCircle2 className="mr-2 h-5 w-5 text-slate-300" />
-                <span className="flex-1">{player.username}</span>
-                {player.isHost && (
-                  <BadgeButton className="flex items-center gap-1 border-amber-500 text-amber-400">
-                    <Crown className="h-3 w-3" />
-                    방장
-                  </BadgeButton>
-                )}
-              </li>
-            ))}
-          </ul>
-        </Card.Content>
-      </Card>
+                <Button
+                  variant="primaryLine"
+                  className="border-slate-600 rounded-md h-10 text-slate-200 hover:bg-slate-700"
+                >
+                  {copied ? <CheckCircle className="h-4 w-4 mr-1" /> : <Copy className="h-4 w-4 mr-1" />}
+                  초대 링크 복사
+                </Button>
+              </CopyToClipboard>
+            </Card.Title>
+          </Card.Header>
+          <Card.Content>
+            <ul className="space-y-2">
+              {players.map((player) => (
+                <li key={player.id} className="flex items-center rounded-lg bg-slate-700/50 p-3">
+                  <UserCircle2 className="mr-2 h-5 w-5 text-slate-300" />
+                  <span className="flex-1">{player.username}</span>
+                  {player.isHost && (
+                    <BadgeButton className="flex items-center gap-1 border-amber-500 text-amber-400">
+                      <Crown className="h-3 w-3" />
+                      방장
+                    </BadgeButton>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </Card.Content>
+        </Card>
 
-      <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur">
-        <Card.Header>
-          <Card.Title>게임 설정</Card.Title>
-        </Card.Header>
-        <Card.Content>
-          <ul className="space-y-3">
-            <li className="flex justify-between">
-              <span className="text-slate-300">최대 인원</span>
-              <span>{settings.maxPlayers}명</span>
-            </li>
-            <li className="flex justify-between">
-              <span className="text-slate-300">랜덤 직업 부여</span>
-              <BadgeButton>{settings.randomRoles ? "활성화" : "비활성화"}</BadgeButton>
-            </li>
-            <li className="flex justify-between">
-              <span className="text-slate-300">익명 투표</span>
-              <BadgeButton>{settings.anonymousVoting ? "활성화" : "비활성화"}</BadgeButton>
-            </li>
-            <li className="flex justify-between">
-              <span className="text-slate-300">특수 투표</span>
-              <BadgeButton>{settings.specialVoting ? "활성화" : "비활성화"}</BadgeButton>
-            </li>
-          </ul>
-        </Card.Content>
-        <Card.Footer>
-          {isHost ? (
-            <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={onStartGame}>
-              게임 시작
-            </Button>
-          ) : (
-            <p className="text-center text-sm text-slate-400 w-full">방장이 게임을 시작하기를 기다리는 중...</p>
-          )}
-        </Card.Footer>
-      </Card>
-    </div>
+        <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur">
+          <Card.Header>
+            <Card.Title>게임 설정</Card.Title>
+          </Card.Header>
+          <Card.Content>
+            <ul className="space-y-3">
+              <li className="flex justify-between">
+                <span className="text-slate-300">최대 인원</span>
+                <span>{settings.maxPlayers}명</span>
+              </li>
+              <li className="flex justify-between">
+                <span className="text-slate-300">랜덤 직업 부여</span>
+                <BadgeButton>{settings.randomRoles ? "활성화" : "비활성화"}</BadgeButton>
+              </li>
+              <li className="flex justify-between">
+                <span className="text-slate-300">익명 투표</span>
+                <BadgeButton>{settings.anonymousVoting ? "활성화" : "비활성화"}</BadgeButton>
+              </li>
+              <li className="flex justify-between">
+                <span className="text-slate-300">특수 투표</span>
+                <BadgeButton>{settings.specialVoting ? "활성화" : "비활성화"}</BadgeButton>
+              </li>
+            </ul>
+          </Card.Content>
+          <Card.Footer>
+            {isHost ? (
+              <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={onStartGame}>
+                게임 시작
+              </Button>
+            ) : (
+              <p className="text-center text-sm text-slate-400 w-full">방장이 게임을 시작하기를 기다리는 중...</p>
+            )}
+          </Card.Footer>
+        </Card>
+
+        <ToastViewPort key="viewPort" className="bottom-[6.25rem]" />
+      </div>
+    </>
   );
 }
