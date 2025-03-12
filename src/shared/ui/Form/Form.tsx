@@ -1,32 +1,34 @@
-import React, { ComponentProps, forwardRef, PropsWithChildren } from 'react'
+"use client";
 
-import { cn } from '@/shared/utils'
+import React, { ComponentProps, forwardRef, PropsWithChildren, useState } from "react";
 
-import { Control, Field, Label, Message, Root, Submit } from './components/radix'
+import { cn } from "@/shared/utils";
+
+import { Control, Field, Label, Message, Root, Submit } from "./components/radix";
 
 // Root 컴포넌트 타입 정의
-export type FormProps = ComponentProps<typeof Root>
+export type FormProps = ComponentProps<typeof Root>;
 
 const Form = forwardRef<HTMLFormElement, FormProps>(({ children, ...rest }, ref) => {
   return (
     <Root {...rest} ref={ref}>
       {children}
     </Root>
-  )
-})
+  );
+});
 
-Form.displayName = 'Form'
+Form.displayName = "Form";
 
 // Field 컴포넌트 타입 정의
-export type FieldProps = ComponentProps<typeof Field>
+export type FieldProps = ComponentProps<typeof Field>;
 
 const RawField: React.FC<FieldProps> = (props) => {
   const { className, ...rest } = props;
-  return <Field {...rest} className={cn("", className)} />;
-}
+  return <Field {...rest} className={cn("flex flex-col gap-2", className)} />;
+};
 
 // Label 컴포넌트 타입 정의
-type LabelProps = ComponentProps<typeof Label>
+type LabelProps = ComponentProps<typeof Label>;
 
 const RawLabel: React.FC<LabelProps> = (props) => {
   return <Label className="text-text-default" {...props} />;
@@ -42,9 +44,15 @@ const RawControl: React.FC<ControlProps> = (props) => {
 // Message 컴포넌트 타입 정의
 export type MessageProps = ComponentProps<typeof Message>;
 
+const MessageContainer = ({ className, children }: { className?: string } & PropsWithChildren) => {
+  return (
+    <div className={cn("flex w-full h-3 justify-center items-center flex-col px-1 mb-0.5", className)}>{children}</div>
+  );
+};
+
 const RawMessage: React.FC<MessageProps> = (props) => {
   const { className, ...rest } = props;
-  return <Message {...rest} className={cn("text-color-text-danger caption", className)} />;
+  return <Message {...rest} className={cn("w-full text-error caption-2", className)} />;
 };
 
 // Submit 컴포넌트 타입 정의
@@ -63,6 +71,7 @@ interface FormComponent extends React.ForwardRefExoticComponent<FormProps & Reac
   Field: React.FC<FieldProps>;
   Label: React.FC<LabelProps>;
   Message: React.FC<MessageProps>;
+  MessageContainer: React.FC<ComponentProps<typeof MessageContainer>>;
   Submit: React.FC<SubmitProps>;
   Control: React.FC<ControlProps>;
   Required: React.FC;
@@ -76,5 +85,6 @@ ForwardedForm.Message = RawMessage;
 ForwardedForm.Submit = RawSubmit;
 ForwardedForm.Control = RawControl;
 ForwardedForm.Required = RawRequired;
+ForwardedForm.MessageContainer = MessageContainer;
 
-export default ForwardedForm
+export default ForwardedForm;

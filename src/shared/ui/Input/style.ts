@@ -1,11 +1,11 @@
 import { cva } from 'class-variance-authority'
 
 export const InputStyleVariants = cva(
-  `p-4 pr-10 rounded border outline-1 border-border-02 bg-tertiary-op-press text-text-01 body-2 placeholder:text-text-placeholder caret-primary-01`,
+  `p-4 pr-10 rounded outline-1 outline-solid  bg-tertiary-op-press text-text-01 body-2 placeholder:text-text-placeholder caret-primary-01`,
   {
     variants: {
       variant: {
-        default: `read-only:bg-color-text-brand
+        default: `read-only:bg-color-text-brand outline-primary-01
       `,
         invalid: `border-error focus-within:outline-1 focus-within:outline-error`,
       },
