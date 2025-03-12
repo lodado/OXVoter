@@ -2,6 +2,7 @@
 
 import { CheckCircle, Copy, Crown, UserCircle2 } from "lucide-react";
 import { useState } from "react";
+import CopyToClipboard from "react-copy-to-clipboard";
 
 import { BadgeButton, Button, Card } from "@/shared/ui";
 
@@ -30,9 +31,7 @@ interface GameLobbyProps {
 export default function GameLobby({ players, settings, isHost, onStartGame }: GameLobbyProps) {
   const [copied, setCopied] = useState(false);
 
-  const copyRoomLink = () => {
-    // 실제 구현에서는 현재 URL을 사용
-    navigator.clipboard.writeText(window.location.href);
+  const handleCopyLink = () => {
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -45,14 +44,20 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
             <span>
               참가자 ({players.length}/{settings.maxPlayers})
             </span>
-            <Button
-              variant="primaryLine"
-              className="border-slate-600 rounded-md h-10 text-slate-200 hover:bg-slate-700"
-              onClick={copyRoomLink}
+
+            <CopyToClipboard
+              text={typeof window !== "undefined" ? window.location.href : ""}
+              onCopy={() => handleCopyLink()}
             >
-              {copied ? <CheckCircle className="h-4 w-4 mr-1" /> : <Copy className="h-4 w-4 mr-1" />}
-              초대 링크 복사
-            </Button>
+              <Button
+                variant="primaryLine"
+                className="border-slate-600 rounded-md h-10 text-slate-200 hover:bg-slate-700"
+                onClick={handleCopyLink}
+              >
+                {copied ? <CheckCircle className="h-4 w-4 mr-1" /> : <Copy className="h-4 w-4 mr-1" />}
+                초대 링크 복사
+              </Button>
+            </CopyToClipboard>
           </Card.Title>
         </Card.Header>
         <Card.Content>
