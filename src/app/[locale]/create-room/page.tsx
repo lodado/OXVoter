@@ -1,5 +1,6 @@
 "use client";
 
+import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import type React from "react";
 import { useState } from "react";
@@ -140,7 +141,14 @@ export default function CreateRoomPage() {
           </Card.Content>
           <Card.Footer>
             <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isLoading}>
-              {isLoading ? "생성 중..." : "방 만들기"}
+              {isLoading ? (
+                <>
+                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                  생성 중...
+                </>
+              ) : (
+                "방 만들기"
+              )}
             </Button>
           </Card.Footer>
         </form>
