@@ -29,6 +29,8 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   /** Controlled value */
   value?: string;
 
+  resetValue?: string;
+
   /** Setter function for the controlled value */
   setValue?: (value: string) => void;
 }
@@ -40,6 +42,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props: InputProps, ref) 
     children,
     value: controlledValue,
     setValue: setControlledValue,
+    resetValue = "",
     ...rest
   } = props;
 
@@ -63,12 +66,12 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props: InputProps, ref) 
 
   const handleClear = () => {
     if (isControlled) {
-      setControlledValue?.("");
+      setControlledValue?.(resetValue);
     } else {
-      setInternalValue("");
+      setInternalValue(resetValue);
     }
     if (defaultRef.current) {
-      defaultRef.current.value = "";
+      defaultRef.current.value = resetValue;
       defaultRef.current.focus();
     }
   };

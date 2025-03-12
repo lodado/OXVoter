@@ -12,7 +12,7 @@ interface SwitchCaseProps<T extends string | number | symbol | boolean> {
   defaultComponent?: React.ReactNode;
 }
 
-const Switch = <T extends string | number | symbol | boolean>({
+const IfCondition = <T extends string | number | symbol | boolean>({
   value,
   caseBy,
   defaultComponent = null,
@@ -20,4 +20,4 @@ const Switch = <T extends string | number | symbol | boolean>({
   return <>{(caseBy as any)[value] ?? defaultComponent}</>;
 };
 
-export default Switch;
+export default IfCondition;

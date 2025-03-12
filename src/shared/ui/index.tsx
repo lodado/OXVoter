@@ -6,6 +6,7 @@ export * from "./Children";
 export * from "./Dropdown";
 export * from "./Form";
 export * from "./icons";
+export * from "./IfCondition";
 export * from "./Image";
 export * from "./Input";
 export * from "./JsonLd";
