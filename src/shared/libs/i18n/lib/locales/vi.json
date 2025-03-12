@@ -1,0 +1,229 @@
+{
+  "EDITORLINKDIALOG": {
+    "SUBMITTEXT": "Gửi",
+    "CANCELTEXT": "Hủy bỏ",
+    "HEADER": "Mô tả liên kết và Nhập URL Modal",
+    "DESCRIPTION": "Vui lòng nhập mô tả liên kết và URL cho văn bản đã chọn."
+  },
+  "LoginDialogContainer": {
+    "DialogTitle": "Đăng nhập",
+    "DialogDescription": "Vui lòng chọn phương thức đăng nhập bạn muốn"
+  },
+  "LoginForm": {
+    "KakaoButton": "Đăng ký với Kakao",
+    "GoogleButton": "Đăng ký với Google",
+    "GithubButton": "Đăng ký với GitHub",
+    "share_comparison": "Chia sẻ so sánh tương đồng với nhau",
+    "receive_feedback": "Nhận phản hồi",
+    "sns_login": "Đăng nhập SNS dễ dàng"
+  },
+  "loginButton": {
+    "login": "Đăng nhập"
+  },
+  "LogoutButton": {
+    "logout": "Đăng xuất"
+  },
+  "ProfileDropdown": {
+    "profile": "Hồ sơ",
+    "my_blog": "Blog của tôi",
+    "settings": "Cài đặt"
+  },
+  "PROFILETHEMESELECTOR": {
+    "LABEL-THEME": "Chủ đề",
+    "ITEM-SYSTEM": "hệ thống",
+    "ITEM-DARK": "tối",
+    "ITEM-LIGHT": "sáng"
+  },
+  "LANG": {
+    "ko": "Hàn Quốc",
+    "en": "Tiếng Anh",
+    "ja": "Tiếng Nhật",
+    "zh": "Tiếng Trung",
+    "hi": "Tiếng Hindi",
+    "fr": "Tiếng Pháp",
+    "es": "Tiếng Tây Ban Nha",
+    "ar": "Tiếng Ả Rập",
+    "bn": "Tiếng Bengal",
+    "pt": "Tiếng Bồ Đào Nha",
+    "id": "Tiếng Indonesia",
+    "it": "Tiếng Ý",
+    "vi": "Tiếng Việt",
+    "th": "Tiếng Thái",
+    "ms": "Tiếng Mã Lai",
+    "ru": "Tiếng Nga",
+    "de": "Tiếng Đức",
+    "tr": "Tiếng Thổ Nhĩ Kỳ"
+  },
+  "MAINPAGE": {
+    "TITLE": "Bắt đầu so sánh giống nhau của bạn",
+    "DESCRIPTION-1": "Cập nhật ảnh để so sánh giống nhau và tiếp tục so sánh.",
+    "DESCRIPTION-2": "Bạn có thể kiểm tra xem bạn giống ai hơn.",
+    "BUTTON-START-COMPARISON": "Bắt đầu so sánh giống nhau",
+    "title": "Simmey - Khám phá bạn giống mẹ và bố bao nhiêu bằng AI so khớp khuôn mặt của chúng tôi!",
+    "description": "Khám phá bạn giống mẹ và bố bao nhiêu bằng AI so khớp khuôn mặt của chúng tôi! Đây là trang chính nơi bạn có thể bắt đầu so sánh mức độ giống nhau trong gia đình một cách vui vẻ và hấp dẫn.",
+    "keywords": "so sánh khuôn mặt, cha mẹ, sự giống nhau, vui vẻ, gia đình"
+  },
+  "BUTTON": {
+    "CHECK-HISTORY": "Kiểm tra lịch sử đã chia sẻ"
+  },
+  "MODEL": {
+    "DOWNLOAD-LOADING": "Đang tải xuống mô hình AI để so sánh",
+    "DOWNLOAD-WAIT": "Vui lòng chờ...",
+    "DOWNLOAD-FAIL": "Tải xuống mô hình AI bị gián đoạn",
+    "DOWNLOAD-RETRY": "Vui lòng thử lại (0%)",
+    "DOWNLOAD-RESUME": "Tiếp tục",
+    "DOWNLOAD-SUCCESS": "Tải xuống mô hình AI hoàn tất",
+    "DOWNLOAD-COMPLETE": "Tải xuống hoàn tất. (100%)"
+  },
+  "ADD": {
+    "PICTURE-BUTTON": "Thêm ảnh",
+    "PICTURE-SUCCESS": "Lưu thành công",
+    "PICTURE-SUCCESS-DESC": "Ảnh mới đã được thêm thành công.",
+    "PICTURE-FAIL": "Lưu thất bại",
+    "PICTURE-FAIL-DESC": "Thêm ảnh mới thất bại."
+  },
+  "COMPARE": {
+    "BUTTON": "So sánh",
+    "ERROR-TITLE": "Lỗi",
+    "ERROR-MODEL-NOT-FOUND": "Mô hình nhận dạng khuôn mặt đang được tải xuống.",
+    "ERROR-USER-NOT-SELECTED": "Vui lòng chọn bản thân làm đối tượng so sánh.",
+    "ERROR-MIN-TWO-PLAYERS": "Vui lòng chọn ít nhất hai đối tượng so sánh.",
+    "ERROR-FACE-NOT-RECOGNIZED": "Có một bức ảnh không nhận diện được khuôn mặt."
+  },
+  "FACES": {
+    "PAGE-HEADER": "So sánh độ giống nhau",
+    "TUTORIAL-STEP-1": "Vui lòng thêm ảnh bạn muốn so sánh.",
+    "TUTORIAL-STEP-2": "Bạn có thể trích xuất và kiểm tra chỉ khuôn mặt từ ảnh!",
+    "TUTORIAL-STEP-3": "Chọn bản thân là bắt buộc và phân loại ít nhất một đối tượng so sánh.",
+    "TUTORIAL-STEP-4": "Bạn có thể tự chỉnh sửa lại hoặc xóa hình ảnh!",
+    "TUTORIAL-STEP-5": "Sau khi chọn xong, nhấn nút!",
+    "BUTTON-BACK": "Quay lại",
+    "BUTTON-HELP": "Trợ giúp",
+    "SELECT-PICTURE-TITLE": "Vui lòng chọn ảnh để so sánh",
+    "description": "Đây là trang chủ so khớp khuôn mặt, nơi bạn có thể tải ảnh lên để trích xuất và so sánh khuôn mặt. Hãy chọn chính bạn và ít nhất một người khác để dễ dàng so sánh khuôn mặt.",
+    "keywords": "So khớp khuôn mặt, so sánh khuôn mặt, tải ảnh lên, trích xuất khuôn mặt, cắt ảnh, nhận diện khuôn mặt, so sánh ảnh"
+  },
+  "IMAGES": {
+    "EMPTY-IMAGE-TITLE": "Vui lòng thêm ảnh để so sánh.",
+    "EMPTY-IMAGE-DESCRIPTION-1": "Thêm ảnh để so sánh",
+    "EMPTY-IMAGE-DESCRIPTION-2": "Phân loại ảnh.",
+    "ImageUpload-info": "*Thông tin hình ảnh không được lưu trữ trên máy chủ cho đến khi được chia sẻ!",
+    "DIALOG-TITLE": "Thêm mục phân loại",
+    "DIALOG-PLACEHOLDER": "Vui lòng nhập",
+    "DIALOG-SUCCESS-TITLE": "Lưu thành công",
+    "DIALOG-SUCCESS-DESCRIPTION": "Mục phân loại đã được thêm thành công.",
+    "DIALOG-ERROR-NAME-EXISTS": "Tên này đã tồn tại.",
+    "DIALOG-ERROR-NAME-TOO-LONG": "Vui lòng nhập trong vòng 50 ký tự.",
+    "CROP-DIALOG-TITLE": "Cắt lại",
+    "CROP-DIALOG-SELECT-AREA": "Vui lòng chọn khu vực cần cắt",
+    "CROP-DIALOG-INSTRUCTIONS-1": "Vui lòng xác định lại khu vực cắt từ ảnh gốc.",
+    "CROP-DIALOG-INSTRUCTIONS-2": "Điều chỉnh khu vực màu xanh để xác định vùng cắt.",
+    "CROP-DIALOG-SELECT-PLAYER": "Vui lòng chọn một người chơi",
+    "CROP-DIALOG-SELECT-PERSON": "Vui lòng chọn một người",
+    "CROP-DIALOG-CONFIRM": "Xác nhận",
+    "CROP-DIALOG-CANCEL": "Hủy",
+    "ImageLists-unselected": "Chưa chọn",
+    "ImageLists-add_new": "Thêm mới",
+    "ImageLists-recrop": "Cắt lại",
+    "ImageLists-delete": "Xóa",
+    "ImageLists-unrecognized": "Không nhận diện",
+    "RemoveImageDialog-title": "Xóa ảnh",
+    "RemoveImageDialog-description": "Bạn có chắc chắn muốn xóa ảnh so sánh không?",
+    "RemoveImageDialog-success_title": "Xóa thành công",
+    "RemoveImageDialog-success_description": "Ảnh đã được xóa thành công."
+  },
+  "RemoveTemplateDialog": {
+    "warning": "Sau khi xóa, hành động này không thể được hoàn tác.",
+    "confirm": "Xác nhận",
+    "cancel": "Hủy"
+  },
+  "PLAYERS": {
+    "Myself": "Bản thân tôi",
+    "Mama": "Mẹ",
+    "Papa": "Bố"
+  },
+  "AddTemplateDialog": {
+    "title": "Thêm mục danh mục",
+    "placeholder": "Vui lòng nhập",
+    "confirm": "Xác nhận",
+    "cancel": "Hủy"
+  },
+  "LoginFormDialog": {
+    "please_login": "Vui lòng đăng nhập"
+  },
+  "ResultPage": {
+    "return_home": "Quay lại màn hình chính",
+    "go_back": "Quay lại",
+    "compare_faces": "So sánh gương mặt giống nhau"
+  },
+  "ImagePrediction": {
+    "similarity_text": "[{player}] và [{comparison}] là",
+    "looks_similar": "Trông giống nhau."
+  },
+  "ShareButton": {
+    "share": "Chia sẻ"
+  },
+  "LoginPopupPage": {
+    "login_completed": "Đăng nhập đã hoàn tất. Vui lòng đóng cửa sổ này và thử lại."
+  },
+  "FORM": {
+    "TITLE-COMPARE-LOOKS": "So sánh những người giống nhau"
+  },
+  "HistoryPage": {
+    "error_page_not_found": "Không tìm thấy trang!",
+    "go_to_homepage": "Quay lại trang chủ"
+  },
+  "HistoryPageHeader": {
+    "rename_history": "Đổi tên lịch sử",
+    "delete_history": "Xóa lịch sử"
+  },
+  "CommentInput": {
+    "error": "Lỗi",
+    "cooldown_error_title": "Vui lòng thử lại sau",
+    "cooldown_error_description": "Bạn đang nhập quá nhanh.",
+    "input_placeholder": "Nhập bình luận..."
+  },
+  "CopyLinkButton": {
+    "copy_success": "Sao chép thành công",
+    "copy_success_description": "URL đã được sao chép."
+  },
+  "UpdateHistoryTitleDialog": {
+    "dialog_title": "Chỉnh sửa tiêu đề",
+    "success_title": "Cập nhật thành công",
+    "success_description": "Tiêu đề đã được cập nhật thành công.",
+    "placeholder": "Vui lòng nhập tiêu đề",
+    "max_length_error": "ký tự hoặc ít hơn."
+  },
+  "RemoveCommentDialog": {
+    "dialog_title": "Xóa kết quả so sánh",
+    "dialog_description": "Bạn có chắc chắn muốn xóa kết quả này không?",
+    "success_title": "Xóa thành công",
+    "success_description": "Kết quả đã được xóa thành công.",
+    "title": "Xóa kết quả so sánh",
+    "description": "Bạn có chắc chắn muốn xóa kết quả này không?"
+  },
+  "LOGIN": {
+    "title": "Simmey - Khám phá bạn giống mẹ và bố bao nhiêu bằng AI so khớp khuôn mặt của chúng tôi!",
+    "description": "Truy cập nhanh các tính năng mong muốn với hệ thống đăng nhập an toàn và đơn giản.",
+    "keywords": "Đăng nhập, truy cập tài khoản, đăng nhập an toàn, đăng nhập dễ dàng, xác thực"
+  },
+  "HISTORY": {
+    "title": "Kết quả đối sánh khuôn mặt trước đây",
+    "description": "Kiểm tra kết quả đối sánh khuôn mặt trước đây của bạn và chia sẻ với gia đình, bạn bè.",
+    "keywords": "đối sánh khuôn mặt, AI, lịch sử kết quả, gia đình, bạn bè, vui vẻ",
+    "go_to_homepage": "Quay lại trang chủ"
+  },
+  "RESULT": {
+    "title": "Trang kết quả so sánh",
+    "description": "Kiểm tra kết quả đối sánh khuôn mặt của bạn!",
+    "keywords": "đối sánh khuôn mặt, AI, lịch sử kết quả, gia đình, bạn bè, vui vẻ"
+  },
+  "HISTORYID": {
+    "title": "Kết quả đối sánh khuôn mặt trước đây",
+    "description": "Kiểm tra kết quả đối sánh khuôn mặt trước đây của bạn và chia sẻ với gia đình, bạn bè.",
+    "keywords": "đối sánh khuôn mặt, AI, lịch sử kết quả, gia đình, bạn bè, vui vẻ"
+  },
+  "HistoryList": {
+    "delete": "Xóa"
+  }
+}

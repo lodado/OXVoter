@@ -1,0 +1,229 @@
+{
+  "EDITORLINKDIALOG": {
+    "SUBMITTEXT": "Submit",
+    "CANCELTEXT": "Cancel",
+    "HEADER": "Link Description and URL Input Modal",
+    "DESCRIPTION": "Please enter the link description and URL for the selected text."
+  },
+  "LoginDialogContainer": {
+    "DialogTitle": "Login",
+    "DialogDescription": "Please select your preferred login method"
+  },
+  "LoginForm": {
+    "KakaoButton": "Sign up with Kakao",
+    "GoogleButton": "Sign up with Google",
+    "GithubButton": "Sign up with GitHub",
+    "share_comparison": "Share lookalike comparisons with each other",
+    "receive_feedback": "Receive feedback",
+    "sns_login": "Easy SNS login"
+  },
+  "loginButton": {
+    "login": "Login"
+  },
+  "LogoutButton": {
+    "logout": "Logout"
+  },
+  "ProfileDropdown": {
+    "profile": "Profile",
+    "my_blog": "My Blog",
+    "settings": "Settings"
+  },
+  "PROFILETHEMESELECTOR": {
+    "LABEL-THEME": "Theme",
+    "ITEM-SYSTEM": "system",
+    "ITEM-DARK": "dark",
+    "ITEM-LIGHT": "light"
+  },
+  "LANG": {
+    "ko": "Korean",
+    "en": "English",
+    "ja": "Japanese",
+    "zh": "Chinese",
+    "hi": "Hindi",
+    "fr": "French",
+    "es": "Spanish",
+    "ar": "Arabic",
+    "bn": "Bengali",
+    "pt": "Portuguese",
+    "id": "Indonesian",
+    "it": "Italian",
+    "vi": "Vietnamese",
+    "th": "Thai",
+    "ms": "Malay",
+    "ru": "Russian",
+    "de": "German",
+    "tr": "Turkish"
+  },
+  "MAINPAGE": {
+    "TITLE": "Start Your Look-Alike Comparison",
+    "DESCRIPTION-1": "Update a photo for look-alike comparison and proceed with the comparison.",
+    "DESCRIPTION-2": "You can check who you resemble more.",
+    "BUTTON-START-COMPARISON": "Start Look-Alike Comparison",
+    "title": "Simmey - Discover how much you resemble your mom and dad using our face-matching AI!",
+    "description": "Use our face-matching AI to see how much you resemble your parents! This is the main page where you can start a fun and exciting family look-alike comparison.",
+    "keywords": "face comparison, parents, similarity, fun, family"
+  },
+  "BUTTON": {
+    "CHECK-HISTORY": "Check Shared History"
+  },
+  "MODEL": {
+    "DOWNLOAD-LOADING": "Downloading AI model for comparison",
+    "DOWNLOAD-WAIT": "Please wait a moment...",
+    "DOWNLOAD-FAIL": "AI model download interrupted",
+    "DOWNLOAD-RETRY": "Please try again (0%)",
+    "DOWNLOAD-RESUME": "Resume",
+    "DOWNLOAD-SUCCESS": "AI model download completed",
+    "DOWNLOAD-COMPLETE": "Download completed. (100%)"
+  },
+  "ADD": {
+    "PICTURE-BUTTON": "Add Picture",
+    "PICTURE-SUCCESS": "Save Successful",
+    "PICTURE-SUCCESS-DESC": "Successfully added a new picture.",
+    "PICTURE-FAIL": "Save Failed",
+    "PICTURE-FAIL-DESC": "Failed to add a new picture."
+  },
+  "COMPARE": {
+    "BUTTON": "Compare",
+    "ERROR-TITLE": "Error",
+    "ERROR-MODEL-NOT-FOUND": "Face recognition model is downloading.",
+    "ERROR-USER-NOT-SELECTED": "Please select yourself as a comparison target.",
+    "ERROR-MIN-TWO-PLAYERS": "Please select at least two comparison targets.",
+    "ERROR-FACE-NOT-RECOGNIZED": "There is a photo where the face is not recognized."
+  },
+  "FACES": {
+    "PAGE-HEADER": "Compare Look-Alikes",
+    "TUTORIAL-STEP-1": "Please add the photos you want to compare.",
+    "TUTORIAL-STEP-2": "You can extract and check only faces from the photos!",
+    "TUTORIAL-STEP-3": "Select yourself as required and classify at least one comparison target.",
+    "TUTORIAL-STEP-4": "You can manually recrop or delete images!",
+    "TUTORIAL-STEP-5": "Once selection is complete, press the button!",
+    "BUTTON-BACK": "Go Back",
+    "BUTTON-HELP": "Help",
+    "SELECT-PICTURE-TITLE": "Please select photos to compare",
+    "description": "This is a face matching homepage where you can upload photos to extract and compare faces. Select yourself and at least one other person to easily compare faces.",
+    "keywords": "Face matching, face comparison, photo upload, face extraction, image crop, face recognition, photo comparison"
+  },
+  "IMAGES": {
+    "EMPTY-IMAGE-TITLE": "Please add photos to compare.",
+    "EMPTY-IMAGE-DESCRIPTION-1": "Add photos to compare",
+    "EMPTY-IMAGE-DESCRIPTION-2": "Classify the photos.",
+    "ImageUpload-info": "*Image information is not stored on the server until it is shared!",
+    "DIALOG-TITLE": "Add Classification Item",
+    "DIALOG-PLACEHOLDER": "Please enter",
+    "DIALOG-SUCCESS-TITLE": "Successfully saved",
+    "DIALOG-SUCCESS-DESCRIPTION": "The classification item was successfully added.",
+    "DIALOG-ERROR-NAME-EXISTS": "This name already exists.",
+    "DIALOG-ERROR-NAME-TOO-LONG": "Please enter within 50 characters.",
+    "CROP-DIALOG-TITLE": "Redo Crop",
+    "CROP-DIALOG-SELECT-AREA": "Please select the area to crop",
+    "CROP-DIALOG-INSTRUCTIONS-1": "Please redefine the crop area from the original photo.",
+    "CROP-DIALOG-INSTRUCTIONS-2": "Adjust the blue area to specify the crop region.",
+    "CROP-DIALOG-SELECT-PLAYER": "Please select a player",
+    "CROP-DIALOG-SELECT-PERSON": "Please select a person",
+    "CROP-DIALOG-CONFIRM": "Confirm",
+    "CROP-DIALOG-CANCEL": "Cancel",
+    "ImageLists-unselected": "Unselected",
+    "ImageLists-add_new": "Add New",
+    "ImageLists-recrop": "Recrop",
+    "ImageLists-delete": "Delete",
+    "ImageLists-unrecognized": "Unrecognized",
+    "RemoveImageDialog-title": "Delete Photo",
+    "RemoveImageDialog-description": "Are you sure you want to delete the comparison photo?",
+    "RemoveImageDialog-success_title": "Delete Successful",
+    "RemoveImageDialog-success_description": "The photo was successfully deleted."
+  },
+  "RemoveTemplateDialog": {
+    "warning": "Once deleted, this action cannot be undone.",
+    "confirm": "Confirm",
+    "cancel": "Cancel"
+  },
+  "PLAYERS": {
+    "Myself": "Myself",
+    "Mama": "Mama",
+    "Papa": "Papa"
+  },
+  "AddTemplateDialog": {
+    "title": "Add Category Item",
+    "placeholder": "Please enter",
+    "confirm": "Confirm",
+    "cancel": "Cancel"
+  },
+  "LoginFormDialog": {
+    "please_login": "Please log in"
+  },
+  "ResultPage": {
+    "return_home": "Return to the home screen",
+    "go_back": "Go back",
+    "compare_faces": "Compare lookalikes"
+  },
+  "ImagePrediction": {
+    "similarity_text": "[{player}] and [{comparison}] are",
+    "looks_similar": "Look similar."
+  },
+  "ShareButton": {
+    "share": "Share"
+  },
+  "LoginPopupPage": {
+    "login_completed": "Login is complete. Please close this window and try again."
+  },
+  "FORM": {
+    "TITLE-COMPARE-LOOKS": "Compare looks alike"
+  },
+  "HistoryPage": {
+    "error_page_not_found": "Page not found!",
+    "go_to_homepage": "Go back to the homepage"
+  },
+  "HistoryPageHeader": {
+    "rename_history": "Rename History",
+    "delete_history": "Delete History"
+  },
+  "CommentInput": {
+    "error": "Error",
+    "cooldown_error_title": "Please try again later",
+    "cooldown_error_description": "You are typing too quickly.",
+    "input_placeholder": "Enter a comment..."
+  },
+  "CopyLinkButton": {
+    "copy_success": "Copy Successful",
+    "copy_success_description": "The URL has been copied."
+  },
+  "UpdateHistoryTitleDialog": {
+    "dialog_title": "Edit Title",
+    "success_title": "Update Successful",
+    "success_description": "The title has been successfully updated.",
+    "placeholder": "Please enter a title",
+    "max_length_error": "characters or fewer."
+  },
+  "RemoveCommentDialog": {
+    "dialog_title": "Delete Comparison Result",
+    "dialog_description": "Are you sure you want to delete this result?",
+    "success_title": "Delete Successful",
+    "success_description": "The result was successfully deleted.",
+    "title": "Delete Comparison Result",
+    "description": "Are you sure you want to delete this result?"
+  },
+  "LOGIN": {
+    "title": "Simmey - Discover how much you resemble your mom and dad using our face-matching AI!",
+    "description": "Quickly access desired features with a secure and simple login system.",
+    "keywords": "Login, account access, secure login, easy login, authentication"
+  },
+  "HISTORY": {
+    "title": "Past Face Matching Results",
+    "description": "Check your previous face matching results and share them with family and friends.",
+    "keywords": "face matching, AI, result history, family, friends, fun",
+    "go_to_homepage": "Go back to the homepage"
+  },
+  "RESULT": {
+    "title": "Comparison Results Page",
+    "description": "Check your face matching results!",
+    "keywords": "face matching, AI, result history, family, friends, fun"
+  },
+  "HISTORYID": {
+    "title": "Past Face Matching Results",
+    "description": "Check your previous face matching results and share them with family and friends.",
+    "keywords": "face matching, AI, result history, family, friends, fun"
+  },
+  "HistoryList": {
+    "delete": "Delete"
+  }
+}

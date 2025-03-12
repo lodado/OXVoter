@@ -1,0 +1,229 @@
+{
+  "EDITORLINKDIALOG": {
+    "SUBMITTEXT": "Einreichen",
+    "CANCELTEXT": "Abbrechen",
+    "HEADER": "Link-Beschreibung und URL-Eingabemodal",
+    "DESCRIPTION": "Bitte geben Sie die Linkbeschreibung und die URL für den ausgewählten Text ein."
+  },
+  "LoginDialogContainer": {
+    "DialogTitle": "Anmelden",
+    "DialogDescription": "Bitte wählen Sie Ihre bevorzugte Anmeldemethode"
+  },
+  "LoginForm": {
+    "KakaoButton": "Mit Kakao registrieren",
+    "GoogleButton": "Mit Google registrieren",
+    "GithubButton": "Mit GitHub registrieren",
+    "share_comparison": "Teilen Sie Ähnlichkeitsvergleiche miteinander",
+    "receive_feedback": "Feedback erhalten",
+    "sns_login": "Einfache SNS-Anmeldung"
+  },
+  "loginButton": {
+    "login": "Anmelden"
+  },
+  "LogoutButton": {
+    "logout": "Abmelden"
+  },
+  "ProfileDropdown": {
+    "profile": "Profil",
+    "my_blog": "Mein Blog",
+    "settings": "Einstellungen"
+  },
+  "PROFILETHEMESELECTOR": {
+    "LABEL-THEME": "Thema",
+    "ITEM-SYSTEM": "System",
+    "ITEM-DARK": "dunkel",
+    "ITEM-LIGHT": "hell"
+  },
+  "LANG": {
+    "ko": "Koreanisch",
+    "en": "Englisch",
+    "ja": "Japanisch",
+    "zh": "Chinesisch",
+    "hi": "Hindi",
+    "fr": "Französisch",
+    "es": "Spanisch",
+    "ar": "Arabisch",
+    "bn": "Bengalisch",
+    "pt": "Portugiesisch",
+    "id": "Indonesisch",
+    "it": "Italienisch",
+    "vi": "Vietnamesisch",
+    "th": "Thailändisch",
+    "ms": "Malaiisch",
+    "ru": "Russisch",
+    "de": "Deutsch",
+    "tr": "Türkisch"
+  },
+  "MAINPAGE": {
+    "TITLE": "Starten Sie Ihren Ähnlichkeitsvergleich",
+    "DESCRIPTION-1": "Aktualisieren Sie ein Foto für den Ähnlichkeitsvergleich und fahren Sie mit dem Vergleich fort.",
+    "DESCRIPTION-2": "Sie können überprüfen, wem Sie mehr ähneln.",
+    "BUTTON-START-COMPARISON": "Vergleich der Ähnlichkeit starten",
+    "title": "Simmey - Entdecken Sie, wie sehr Sie Ihrer Mutter und Ihrem Vater ähneln, mit unserer Gesichtserkennungs-KI!",
+    "description": "Entdecken Sie, wie sehr Sie Ihrer Mutter und Ihrem Vater ähneln, mit unserer Gesichtserkennungs-KI! Dies ist die Hauptseite, auf der Sie mit Ihrem unterhaltsamen und ansprechenden Familienähnlichkeitsvergleich beginnen können.",
+    "keywords": "Gesichtsvergleich, Eltern, Ähnlichkeit, Spaß, Familie"
+  },
+  "BUTTON": {
+    "CHECK-HISTORY": "Überprüfen Sie die geteilte Historie"
+  },
+  "MODEL": {
+    "DOWNLOAD-LOADING": "Herunterladen des KI-Modells für den Vergleich",
+    "DOWNLOAD-WAIT": "Bitte warten Sie...",
+    "DOWNLOAD-FAIL": "KI-Modell-Download unterbrochen",
+    "DOWNLOAD-RETRY": "Bitte versuchen Sie es erneut (0%)",
+    "DOWNLOAD-RESUME": "Fortsetzen",
+    "DOWNLOAD-SUCCESS": "KI-Modell-Download abgeschlossen",
+    "DOWNLOAD-COMPLETE": "Download abgeschlossen. (100%)"
+  },
+  "ADD": {
+    "PICTURE-BUTTON": "Bild hinzufügen",
+    "PICTURE-SUCCESS": "Speichern erfolgreich",
+    "PICTURE-SUCCESS-DESC": "Neues Bild erfolgreich hinzugefügt.",
+    "PICTURE-FAIL": "Speichern fehlgeschlagen",
+    "PICTURE-FAIL-DESC": "Neues Bild konnte nicht hinzugefügt werden."
+  },
+  "COMPARE": {
+    "BUTTON": "Vergleichen",
+    "ERROR-TITLE": "Fehler",
+    "ERROR-MODEL-NOT-FOUND": "Das Gesichtserkennungsmodell wird heruntergeladen.",
+    "ERROR-USER-NOT-SELECTED": "Bitte wählen Sie sich selbst als Vergleichsziel aus.",
+    "ERROR-MIN-TWO-PLAYERS": "Bitte wählen Sie mindestens zwei Vergleichsziele aus.",
+    "ERROR-FACE-NOT-RECOGNIZED": "Es gibt ein Foto, auf dem das Gesicht nicht erkannt wurde."
+  },
+  "FACES": {
+    "PAGE-HEADER": "Ähnlichkeiten vergleichen",
+    "TUTORIAL-STEP-1": "Bitte fügen Sie die Fotos hinzu, die Sie vergleichen möchten.",
+    "TUTORIAL-STEP-2": "Sie können nur Gesichter aus den Fotos extrahieren und überprüfen!",
+    "TUTORIAL-STEP-3": "Wählen Sie sich selbst als erforderlich aus und klassifizieren Sie mindestens ein Vergleichsziel.",
+    "TUTORIAL-STEP-4": "Sie können Bilder manuell zuschneiden oder löschen!",
+    "TUTORIAL-STEP-5": "Sobald die Auswahl abgeschlossen ist, drücken Sie die Taste!",
+    "BUTTON-BACK": "Zurück",
+    "BUTTON-HELP": "Hilfe",
+    "SELECT-PICTURE-TITLE": "Bitte wählen Sie Fotos zum Vergleichen aus",
+    "description": "Dies ist die Gesichtsabgleich-Homepage, auf der Sie Fotos hochladen können, um Gesichter zu extrahieren und zu vergleichen. Wählen Sie sich selbst und mindestens eine weitere Person aus, um Gesichter einfach zu vergleichen.",
+    "keywords": "Gesichtsabgleich, Gesichtsvergleich, Foto-Upload, Gesichtsextraktion, Bildzuschnitt, Gesichtserkennung, Fotovergleich"
+  },
+  "IMAGES": {
+    "EMPTY-IMAGE-TITLE": "Bitte fügen Sie Fotos zum Vergleichen hinzu.",
+    "EMPTY-IMAGE-DESCRIPTION-1": "Fügen Sie Fotos zum Vergleichen hinzu",
+    "EMPTY-IMAGE-DESCRIPTION-2": "Klassifizieren Sie die Fotos.",
+    "ImageUpload-info": "*Bildinformationen werden nicht auf dem Server gespeichert, bis sie geteilt werden!",
+    "DIALOG-TITLE": "Klassifizierungselement hinzufügen",
+    "DIALOG-PLACEHOLDER": "Bitte eingeben",
+    "DIALOG-SUCCESS-TITLE": "Erfolgreich gespeichert",
+    "DIALOG-SUCCESS-DESCRIPTION": "Das Klassifizierungselement wurde erfolgreich hinzugefügt.",
+    "DIALOG-ERROR-NAME-EXISTS": "Dieser Name existiert bereits.",
+    "DIALOG-ERROR-NAME-TOO-LONG": "Bitte geben Sie maximal 50 Zeichen ein.",
+    "CROP-DIALOG-TITLE": "Zuschneiden erneut",
+    "CROP-DIALOG-SELECT-AREA": "Bitte wählen Sie den zuzuschneidenden Bereich",
+    "CROP-DIALOG-INSTRUCTIONS-1": "Bitte definieren Sie den Zuschneidebereich aus dem Originalfoto neu.",
+    "CROP-DIALOG-INSTRUCTIONS-2": "Passen Sie den blauen Bereich an, um die Zuschneidefläche zu bestimmen.",
+    "CROP-DIALOG-SELECT-PLAYER": "Bitte wählen Sie einen Spieler",
+    "CROP-DIALOG-SELECT-PERSON": "Bitte wählen Sie eine Person",
+    "CROP-DIALOG-CONFIRM": "Bestätigen",
+    "CROP-DIALOG-CANCEL": "Abbrechen",
+    "ImageLists-unselected": "Nicht ausgewählt",
+    "ImageLists-add_new": "Neu hinzufügen",
+    "ImageLists-recrop": "Erneut zuschneiden",
+    "ImageLists-delete": "Löschen",
+    "ImageLists-unrecognized": "Nicht erkannt",
+    "RemoveImageDialog-title": "Foto löschen",
+    "RemoveImageDialog-description": "Sind Sie sicher, dass Sie das Vergleichsfoto löschen möchten?",
+    "RemoveImageDialog-success_title": "Löschen erfolgreich",
+    "RemoveImageDialog-success_description": "Das Foto wurde erfolgreich gelöscht."
+  },
+  "RemoveTemplateDialog": {
+    "warning": "Nach dem Löschen kann diese Aktion nicht rückgängig gemacht werden.",
+    "confirm": "Bestätigen",
+    "cancel": "Abbrechen"
+  },
+  "PLAYERS": {
+    "Myself": "Ich selbst",
+    "Mama": "Mama",
+    "Papa": "Papa"
+  },
+  "AddTemplateDialog": {
+    "title": "Kategorieelement hinzufügen",
+    "placeholder": "Bitte eingeben",
+    "confirm": "Bestätigen",
+    "cancel": "Abbrechen"
+  },
+  "LoginFormDialog": {
+    "please_login": "Bitte einloggen"
+  },
+  "ResultPage": {
+    "return_home": "Zurück zum Startbildschirm",
+    "go_back": "Zurück",
+    "compare_faces": "Ähnlichkeiten vergleichen"
+  },
+  "ImagePrediction": {
+    "similarity_text": "[{player}] und [{comparison}] sind",
+    "looks_similar": "Sehen ähnlich aus."
+  },
+  "ShareButton": {
+    "share": "Teilen"
+  },
+  "LoginPopupPage": {
+    "login_completed": "Die Anmeldung ist abgeschlossen. Bitte schließen Sie dieses Fenster und versuchen Sie es erneut."
+  },
+  "FORM": {
+    "TITLE-COMPARE-LOOKS": "Vergleiche Ähnlichkeiten"
+  },
+  "HistoryPage": {
+    "error_page_not_found": "Seite nicht gefunden!",
+    "go_to_homepage": "Zur Startseite zurückkehren"
+  },
+  "HistoryPageHeader": {
+    "rename_history": "Verlauf umbenennen",
+    "delete_history": "Verlauf löschen"
+  },
+  "CommentInput": {
+    "error": "Fehler",
+    "cooldown_error_title": "Bitte versuchen Sie es später erneut",
+    "cooldown_error_description": "Sie tippen zu schnell.",
+    "input_placeholder": "Geben Sie einen Kommentar ein..."
+  },
+  "CopyLinkButton": {
+    "copy_success": "Kopieren erfolgreich",
+    "copy_success_description": "Die URL wurde kopiert."
+  },
+  "UpdateHistoryTitleDialog": {
+    "dialog_title": "Titel bearbeiten",
+    "success_title": "Aktualisierung erfolgreich",
+    "success_description": "Der Titel wurde erfolgreich aktualisiert.",
+    "placeholder": "Bitte geben Sie einen Titel ein",
+    "max_length_error": "Zeichen oder weniger."
+  },
+  "RemoveCommentDialog": {
+    "dialog_title": "Vergleichsergebnis löschen",
+    "dialog_description": "Möchten Sie dieses Ergebnis wirklich löschen?",
+    "success_title": "Löschen erfolgreich",
+    "success_description": "Das Ergebnis wurde erfolgreich gelöscht.",
+    "title": "Vergleichsergebnis löschen",
+    "description": "Sind Sie sicher, dass Sie dieses Ergebnis löschen möchten?"
+  },
+  "LOGIN": {
+    "title": "Simmey - Entdecken Sie, wie sehr Sie Ihrer Mutter und Ihrem Vater ähneln, mit unserer Gesichtserkennungs-KI!",
+    "description": "Greifen Sie schnell auf gewünschte Funktionen zu mit einem sicheren und einfachen Anmeldesystem.",
+    "keywords": "Anmeldung, Kontozugang, sichere Anmeldung, einfache Anmeldung, Authentifizierung"
+  },
+  "HISTORY": {
+    "title": "Frühere Ergebnisse der Gesichtserkennung",
+    "description": "Überprüfen Sie Ihre früheren Ergebnisse der Gesichtserkennung und teilen Sie sie mit Familie und Freunden.",
+    "keywords": "Gesichtserkennung, KI, Ergebnishistorie, Familie, Freunde, Spaß",
+    "go_to_homepage": "Zur Startseite zurückkehren"
+  },
+  "RESULT": {
+    "title": "Seite mit Vergleichsergebnissen",
+    "description": "Überprüfen Sie Ihre Gesichtserkennungsergebnisse!",
+    "keywords": "Gesichtserkennung, KI, Ergebnishistorie, Familie, Freunde, Spaß"
+  },
+  "HISTORYID": {
+    "title": "Frühere Ergebnisse der Gesichtserkennung",
+    "description": "Überprüfen Sie Ihre früheren Ergebnisse der Gesichtserkennung und teilen Sie sie mit Familie und Freunden.",
+    "keywords": "Gesichtserkennung, KI, Ergebnishistorie, Familie, Freunde, Spaß"
+  },
+  "HistoryList": {
+    "delete": "Löschen"
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "EDITORLINKDIALOG": {
+    "SUBMITTEXT": "प्रस्तुत करें",
+    "CANCELTEXT": "रद्द करें",
+    "HEADER": "लिंक विवरण और URL इनपुट मोडल",
+    "DESCRIPTION": "कृपया चयनित टेक्स्ट के लिए लिंक विवरण और URL दर्ज करें।"
+  },
+  "LoginDialogContainer": {
+    "DialogTitle": "लॉग इन करें",
+    "DialogDescription": "कृपया अपनी पसंदीदा लॉगिन विधि चुनें"
+  },
+  "LoginForm": {
+    "KakaoButton": "काकाओ से साइन अप करें",
+    "GoogleButton": "Google से साइन अप करें",
+    "GithubButton": "GitHub से साइन अप करें",
+    "share_comparison": "एक-दूसरे से समानता तुलना साझा करें",
+    "receive_feedback": "प्रतिक्रिया प्राप्त करें",
+    "sns_login": "आसान एसएनएस लॉगिन"
+  },
+  "loginButton": {
+    "login": "लॉग इन करें"
+  },
+  "LogoutButton": {
+    "logout": "लॉग आउट"
+  },
+  "ProfileDropdown": {
+    "profile": "प्रोफ़ाइल",
+    "my_blog": "मेरा ब्लॉग",
+    "settings": "सेटिंग्स"
+  },
+  "PROFILETHEMESELECTOR": {
+    "LABEL-THEME": "थीम",
+    "ITEM-SYSTEM": "सिस्टम",
+    "ITEM-DARK": "डार्क",
+    "ITEM-LIGHT": "लाइट"
+  },
+  "LANG": {
+    "ko": "कोरियाई",
+    "en": "अंग्रेज़ी",
+    "ja": "जापानी",
+    "zh": "चीनी",
+    "hi": "हिंदी",
+    "fr": "फ्रेंच",
+    "es": "स्पेनिश",
+    "ar": "अरबी",
+    "bn": "बांग्ला",
+    "pt": "पुर्तगाली",
+    "id": "इंडोनेशियाई",
+    "it": "इतालवी",
+    "vi": "वियतनामी",
+    "th": "थाई",
+    "ms": "मलय",
+    "ru": "रूसी",
+    "de": "जर्मन",
+    "tr": "तुर्की"
+  },
+  "MAINPAGE": {
+    "TITLE": "अपनी समानता तुलना शुरू करें",
+    "DESCRIPTION-1": "समानता तुलना के लिए एक फ़ोटो अपडेट करें और तुलना जारी रखें।",
+    "DESCRIPTION-2": "आप देख सकते हैं कि आप किससे अधिक मिलते-जुलते हैं।",
+    "BUTTON-START-COMPARISON": "समानता तुलना शुरू करें",
+    "title": "Simmey - हमारे फेस-मैचिंग AI का उपयोग करके जानें कि आप अपने माता-पिता से कितने मिलते-जुलते हैं!",
+    "description": "हमारे फेस-मैचिंग AI का उपयोग करके जानें कि आप अपने माता-पिता से कितने मिलते-जुलते हैं! यह मुख्य पृष्ठ है जहाँ आप मज़ेदार और आकर्षक पारिवारिक समानता तुलना शुरू कर सकते हैं।",
+    "keywords": "चेहरे की तुलना, माता-पिता, समानता, मज़ा, परिवार"
+  },
+  "BUTTON": {
+    "CHECK-HISTORY": "साझा की गई इतिहास देखें"
+  },
+  "MODEL": {
+    "DOWNLOAD-LOADING": "तुलना के लिए AI मॉडल डाउनलोड हो रहा है",
+    "DOWNLOAD-WAIT": "कृपया प्रतीक्षा करें...",
+    "DOWNLOAD-FAIL": "तुलना के लिए AI मॉडल डाउनलोड बाधित",
+    "DOWNLOAD-RETRY": "कृपया पुनः प्रयास करें (0%)",
+    "DOWNLOAD-RESUME": "फिर से शुरू करें",
+    "DOWNLOAD-SUCCESS": "तुलना के लिए AI मॉडल डाउनलोड पूरा हुआ",
+    "DOWNLOAD-COMPLETE": "डाउनलोड पूरा हो गया है। (100%)"
+  },
+  "ADD": {
+    "PICTURE-BUTTON": "तस्वीर जोड़ें",
+    "PICTURE-SUCCESS": "सहेजा गया सफलतापूर्वक",
+    "PICTURE-SUCCESS-DESC": "नई तस्वीर सफलतापूर्वक जोड़ी गई।",
+    "PICTURE-FAIL": "सहेजा विफल",
+    "PICTURE-FAIL-DESC": "नई तस्वीर जोड़ने में विफल।"
+  },
+  "COMPARE": {
+    "BUTTON": "तुलना करें",
+    "ERROR-TITLE": "त्रुटि",
+    "ERROR-MODEL-NOT-FOUND": "चेहरा पहचान मॉडल डाउनलोड हो रहा है।",
+    "ERROR-USER-NOT-SELECTED": "कृपया स्वयं को तुलना के लिए चुनें।",
+    "ERROR-MIN-TWO-PLAYERS": "कृपया कम से कम दो तुलना लक्ष्य चुनें।",
+    "ERROR-FACE-NOT-RECOGNIZED": "ऐसी तस्वीर है जहाँ चेहरा पहचाना नहीं गया है।"
+  },
+  "FACES": {
+    "PAGE-HEADER": "समानता तुलना करें",
+    "TUTORIAL-STEP-1": "कृपया तुलना करने के लिए तस्वीरें जोड़ें।",
+    "TUTORIAL-STEP-2": "आप केवल फोटो से चेहरे निकालकर देख सकते हैं!",
+    "TUTORIAL-STEP-3": "स्वयं को अनिवार्य रूप से चुनें और कम से कम एक तुलना लक्ष्य वर्गीकृत करें।",
+    "TUTORIAL-STEP-4": "आप मैन्युअल रूप से क्रॉप दोबारा कर सकते हैं या छवियां हटा सकते हैं!",
+    "TUTORIAL-STEP-5": "चयन पूरा होने के बाद, बटन दबाएँ!",
+    "BUTTON-BACK": "वापस जाएं",
+    "BUTTON-HELP": "सहायता",
+    "SELECT-PICTURE-TITLE": "कृपया तुलना करने के लिए तस्वीरें चुनें",
+    "description": "यह एक चेहरा मिलान होमपेज है जहां आप तस्वीरें अपलोड करके चेहरे निकाल सकते हैं और उनकी तुलना कर सकते हैं। खुद को अनिवार्य रूप से चुनें और कम से कम एक अन्य व्यक्ति का चयन करें ताकि आसानी से तुलना की जा सके।",
+    "keywords": "चेहरा मिलान, चेहरा तुलना, फोटो अपलोड, चेहरा निकालना, छवि क्रॉप, चेहरा पहचान, फोटो तुलना"
+  },
+  "IMAGES": {
+    "EMPTY-IMAGE-TITLE": "कृपया तुलना करने के लिए तस्वीरें जोड़ें।",
+    "EMPTY-IMAGE-DESCRIPTION-1": "तुलना करने के लिए तस्वीरें जोड़ें",
+    "EMPTY-IMAGE-DESCRIPTION-2": "कृपया तस्वीरों को वर्गीकृत करें।",
+    "ImageUpload-info": "*छवि जानकारी तब तक सर्वर पर संग्रहीत नहीं होती जब तक कि इसे साझा नहीं किया जाता!",
+    "DIALOG-TITLE": "वर्गीकरण आइटम जोड़ें",
+    "DIALOG-PLACEHOLDER": "कृपया दर्ज करें",
+    "DIALOG-SUCCESS-TITLE": "सहेजा गया सफलतापूर्वक",
+    "DIALOG-SUCCESS-DESCRIPTION": "वर्गीकरण आइटम सफलतापूर्वक जोड़ा गया।",
+    "DIALOG-ERROR-NAME-EXISTS": "यह नाम पहले से मौजूद है।",
+    "DIALOG-ERROR-NAME-TOO-LONG": "कृपया 50 वर्णों के भीतर दर्ज करें।",
+    "CROP-DIALOG-TITLE": "फसल पुनः करें",
+    "CROP-DIALOG-SELECT-AREA": "कृपया क्रॉप करने के लिए क्षेत्र चुनें",
+    "CROP-DIALOG-INSTRUCTIONS-1": "कृपया मूल फोटो से क्रॉप क्षेत्र को पुनः परिभाषित करें।",
+    "CROP-DIALOG-INSTRUCTIONS-2": "क्रॉप क्षेत्र निर्दिष्ट करने के लिए नीले क्षेत्र को समायोजित करें।",
+    "CROP-DIALOG-SELECT-PLAYER": "कृपया एक खिलाड़ी चुनें",
+    "CROP-DIALOG-SELECT-PERSON": "कृपया एक व्यक्ति चुनें",
+    "CROP-DIALOG-CONFIRM": "पुष्टि करें",
+    "CROP-DIALOG-CANCEL": "रद्द करें",
+    "ImageLists-unselected": "अचयनित",
+    "ImageLists-add_new": "नया जोड़ें",
+    "ImageLists-recrop": "पुनः क्रॉप करें",
+    "ImageLists-delete": "हटाएं",
+    "ImageLists-unrecognized": "अमान्य",
+    "RemoveImageDialog-title": "फोटो हटाएं",
+    "RemoveImageDialog-description": "क्या आप वाकई तुलना करने वाली तस्वीर हटाना चाहते हैं?",
+    "RemoveImageDialog-success_title": "हटाना सफल",
+    "RemoveImageDialog-success_description": "फोटो सफलतापूर्वक हटा दी गई।"
+  },
+  "RemoveTemplateDialog": {
+    "warning": "हटाने के बाद इसे वापस नहीं किया जा सकता।",
+    "confirm": "पुष्टि करें",
+    "cancel": "रद्द करें"
+  },
+  "PLAYERS": {
+    "Myself": "खुद",
+    "Mama": "माँ",
+    "Papa": "पापा"
+  },
+  "AddTemplateDialog": {
+    "title": "श्रेणी आइटम जोड़ें",
+    "placeholder": "कृपया दर्ज करें",
+    "confirm": "पुष्टि करें",
+    "cancel": "रद्द करें"
+  },
+  "LoginFormDialog": {
+    "please_login": "कृपया लॉग इन करें"
+  },
+  "ResultPage": {
+    "return_home": "मुख्य स्क्रीन पर लौटें",
+    "go_back": "वापस जाएं",
+    "compare_faces": "समान चेहरों की तुलना करें"
+  },
+  "ImagePrediction": {
+    "similarity_text": "[{player}] और [{comparison}] हैं",
+    "looks_similar": "समान दिखते हैं।"
+  },
+  "ShareButton": {
+    "share": "साझा करें"
+  },
+  "LoginPopupPage": {
+    "login_completed": "लॉगिन पूरा हो गया है। कृपया इस विंडो को बंद करें और पुनः प्रयास करें।"
+  },
+  "FORM": {
+    "TITLE-COMPARE-LOOKS": "समान दिखने वालों की तुलना करें"
+  },
+  "HistoryPage": {
+    "error_page_not_found": "पृष्ठ नहीं मिला!",
+    "go_to_homepage": "मुख्य पृष्ठ पर वापस जाएं"
+  },
+  "HistoryPageHeader": {
+    "rename_history": "इतिहास का नाम बदलें",
+    "delete_history": "इतिहास हटाएं"
+  },
+  "CommentInput": {
+    "error": "त्रुटि",
+    "cooldown_error_title": "कृपया बाद में पुनः प्रयास करें",
+    "cooldown_error_description": "आप बहुत जल्दी टाइप कर रहे हैं।",
+    "input_placeholder": "एक टिप्पणी दर्ज करें..."
+  },
+  "CopyLinkButton": {
+    "copy_success": "कॉपी सफल",
+    "copy_success_description": "URL कॉपी हो गया है।"
+  },
+  "UpdateHistoryTitleDialog": {
+    "dialog_title": "शीर्षक संपादित करें",
+    "success_title": "अपडेट सफल",
+    "success_description": "शीर्षक सफलतापूर्वक अपडेट किया गया है।",
+    "placeholder": "कृपया शीर्षक दर्ज करें",
+    "max_length_error": "अक्षरों या उससे कम।"
+  },
+  "RemoveCommentDialog": {
+    "dialog_title": "तुलना परिणाम हटाएं",
+    "dialog_description": "क्या आप वाकई इस परिणाम को हटाना चाहते हैं?",
+    "success_title": "हटाना सफल",
+    "success_description": "परिणाम सफलतापूर्वक हटा दिया गया।",
+    "title": "तुलना परिणाम हटाएँ",
+    "description": "क्या आप वाकई इस परिणाम को हटाना चाहते हैं?"
+  },
+  "LOGIN": {
+    "title": "Simmey - हमारे फेस-मैचिंग AI का उपयोग करके जानें कि आप अपने माता-पिता से कितने मिलते-जुलते हैं!",
+    "description": "सुरक्षित और सरल लॉगिन प्रणाली के माध्यम से आवश्यक सुविधाओं तक त्वरित पहुँच प्राप्त करें।",
+    "keywords": "लॉगिन, खाता एक्सेस, सुरक्षित लॉगिन, आसान लॉगिन, प्रमाणीकरण"
+  },
+  "HISTORY": {
+    "title": "पिछले फेस मैचिंग परिणाम",
+    "description": "अपने पिछले फेस मैचिंग परिणाम देखें और परिवार व दोस्तों के साथ साझा करें।",
+    "keywords": "चेहरा मिलान, एआई, परिणाम इतिहास, परिवार, दोस्त, मज़ा",
+    "go_to_homepage": "मुख्य पृष्ठ पर वापस जाएं"
+  },
+  "RESULT": {
+    "title": "तुलना परिणाम पृष्ठ",
+    "description": "अपने चेहरे मिलान के परिणाम देखें!",
+    "keywords": "चेहरा मिलान, एआई, परिणाम इतिहास, परिवार, दोस्त, मज़ा"
+  },
+  "HISTORYID": {
+    "title": "पिछले फेस मैचिंग परिणाम",
+    "description": "अपने पिछले फेस मैचिंग परिणाम देखें और परिवार व दोस्तों के साथ साझा करें।",
+    "keywords": "चेहरा मिलान, एआई, परिणाम इतिहास, परिवार, दोस्त, मज़ा"
+  },
+  "HistoryList": {
+    "delete": "हटाएं"
+  }
+}

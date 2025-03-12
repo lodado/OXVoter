@@ -1,0 +1,6 @@
+
+.SelectContent {
+  width: max-content;
+	width: max(var(--radix-select-trigger-width), max-content);
+	max-height: calc(var(--radix-select-content-available-height) * 3);
+}

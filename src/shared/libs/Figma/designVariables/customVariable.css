@@ -1,0 +1,12 @@
+:root, :root[data-theme][data-theme='light'] {
+  --Secondary-OP: rgba(0, 0, 0, 0.40);
+} 
+
+
+
+:root[data-theme][data-theme='dark'] {
+
+
+}
+ 
+

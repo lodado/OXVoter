@@ -1,0 +1,43 @@
+.__floater .__floater__open {
+  z-index: 10000000000;
+}
+
+.__floater__arrow * {
+  width: 50px;
+  height: 50px;
+  background-image: url('https://qmwtuvttspuxwuwrsuci.supabase.co/storage/v1/object/public/pokitokiStorage//finger.webp') !important;
+  background-size: cover;
+  background-position: center;
+  border: none;
+
+  z-index: 100000000;
+}
+
+.__floater__arrow * svg {
+  display: none !important;
+}
+
+/* 화살표 위치 동적 조정 */
+.__floater[x-placement^="bottom"] .__floater__arrow * {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(30%) translateY(0px);
+}
+
+.__floater[x-placement^="top"] .__floater__arrow * {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+}
+
+.__floater[x-placement^="left"] .__floater__arrow * {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-10px);
+}
+
+.__floater[x-placement^="right"] .__floater__arrow * {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+}

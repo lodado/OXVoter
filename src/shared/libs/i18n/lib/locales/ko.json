@@ -1,0 +1,229 @@
+{
+  "EDITORLINKDIALOG": {
+    "SUBMITTEXT": "확인",
+    "CANCELTEXT": "취소",
+    "HEADER": "링크 설명 및 주소 입력 모달",
+    "DESCRIPTION": "지금 선택한 텍스트에 넣을 링크의 설명과 주소를 입력해주세요."
+  },
+  "LoginDialogContainer": {
+    "DialogTitle": "로그인",
+    "DialogDescription": "원하시는 로그인 방법을 선택하세요"
+  },
+  "LoginForm": {
+    "KakaoButton": "카카오로 회원가입하기",
+    "GoogleButton": "구글로 회원가입하기",
+    "GithubButton": "깃허브로 회원가입하기",
+    "share_comparison": "닮은꼴 비교하기를 서로 공유하고",
+    "receive_feedback": "피드백을 받아볼 수 있습니다.",
+    "sns_login": "SNS 간편 로그인"
+  },
+  "loginButton": {
+    "login": "로그인"
+  },
+  "LogoutButton": {
+    "logout": "로그아웃"
+  },
+  "ProfileDropdown": {
+    "profile": "프로필",
+    "my_blog": "내 블로그",
+    "settings": "설정"
+  },
+  "PROFILETHEMESELECTOR": {
+    "LABEL-THEME": "테마",
+    "ITEM-SYSTEM": "시스템",
+    "ITEM-DARK": "다크",
+    "ITEM-LIGHT": "라이트"
+  },
+  "LANG": {
+    "ko": "한국어",
+    "en": "영어",
+    "ja": "일본어",
+    "zh": "중국어",
+    "hi": "힌디어",
+    "fr": "프랑스어",
+    "es": "스페인어",
+    "ar": "아랍어",
+    "bn": "벵골어",
+    "pt": "포르투갈어",
+    "id": "인도네시아어",
+    "it": "이탈리아어",
+    "vi": "베트남어",
+    "th": "태국어",
+    "ms": "말레이어",
+    "ru": "러시아어",
+    "de": "독일어",
+    "tr": "터키어"
+  },
+  "MAINPAGE": {
+    "TITLE": "닮은꼴 비교를 시작해보세요",
+    "DESCRIPTION-1": "닮은꼴 비교를 위한 사진을 업데이트를 하고 닮은꼴 비교를 진행해보세요.",
+    "DESCRIPTION-2": "누구를 더 닮았는지 확인해볼 수 있습니다.",
+    "BUTTON-START-COMPARISON": "닮은꼴 비교 시작하기",
+    "title": "Simmey - 우리의 얼굴 매칭 AI를 사용하여 부모님과 얼마나 닮았는지 확인해보세요!",
+    "description": "우리의 얼굴 매칭 AI를 사용하여 부모님과 얼마나 닮았는지 확인해보세요! 재미있고 흥미로운 가족 닮은꼴 비교를 시작할 수 있는 메인 페이지입니다.",
+    "keywords": "얼굴 비교, 부모님, 유사성, 재미, 가족"
+  },
+  "BUTTON": {
+    "CHECK-HISTORY": "공유 내역 확인하기"
+  },
+  "MODEL": {
+    "DOWNLOAD-LOADING": "비교를 위한 AI 모델을 다운로드중입니다",
+    "DOWNLOAD-WAIT": "잠시만 기다려주세요...",
+    "DOWNLOAD-FAIL": "비교를 위한 AI 모델 다운로드 중단",
+    "DOWNLOAD-RETRY": "다시 시도해주세요 (0%)",
+    "DOWNLOAD-RESUME": "재개",
+    "DOWNLOAD-SUCCESS": "비교를 위한 AI 모델을 다운로드 완료",
+    "DOWNLOAD-COMPLETE": "다운로드가 완료되었습니다. (100%)"
+  },
+  "ADD": {
+    "PICTURE-BUTTON": "사진 추가하기",
+    "PICTURE-SUCCESS": "저장 성공",
+    "PICTURE-SUCCESS-DESC": "새로 추가하기를 성공했습니다.",
+    "PICTURE-FAIL": "저장 실패",
+    "PICTURE-FAIL-DESC": "새로 추가하기를 실패했습니다."
+  },
+  "COMPARE": {
+    "BUTTON": "비교하기",
+    "ERROR-TITLE": "에러",
+    "ERROR-MODEL-NOT-FOUND": "얼굴 인식 모델을 다운로드 중입니다.",
+    "ERROR-USER-NOT-SELECTED": "비교 대상(나)를 지정해주세요.",
+    "ERROR-MIN-TWO-PLAYERS": "최소 두명 이상의 비교 대상을 지정해주세요.",
+    "ERROR-FACE-NOT-RECOGNIZED": "얼굴이 인식되지 않은 사진이 있습니다."
+  },
+  "FACES": {
+    "PAGE-HEADER": "닮은꼴 비교하기",
+    "TUTORIAL-STEP-1": "비교하고 싶은 사진들을 넣어주세요.",
+    "TUTORIAL-STEP-2": "사진에서 얼굴만 추출해서 확인 가능해요!",
+    "TUTORIAL-STEP-3": "나를 필수 선택하고 비교할 대상을 최소 1명이상 분류해주세요.",
+    "TUTORIAL-STEP-4": "크롭을 다시 수동으로 하거나 이미지를 삭제 가능해요!",
+    "TUTORIAL-STEP-5": "선택이 완료되면 버튼을 눌러주세요!",
+    "BUTTON-BACK": "뒤로 가기",
+    "BUTTON-HELP": "도움말",
+    "SELECT-PICTURE-TITLE": "비교할 사진을 선택해주세요",
+    "description": "비교하고 싶은 사진들을 업로드하면 얼굴만 추출해 확인할 수 있는 얼굴 매칭 홈페이지입니다. 자신을 필수 선택하고 최소 1명 이상의 비교 대상을 지정하여 손쉽게 얼굴 비교를 진행해보세요.",
+    "keywords": "얼굴 매칭, 얼굴 비교, 사진 업로드, 얼굴 추출, 이미지 크롭, 얼굴 인식, 사진 비교"
+  },
+  "IMAGES": {
+    "EMPTY-IMAGE-TITLE": "비교할 사진을 추가해주세요.",
+    "EMPTY-IMAGE-DESCRIPTION-1": "비교할 사진을 추가하고",
+    "EMPTY-IMAGE-DESCRIPTION-2": "사진을 분류해주세요.",
+    "ImageUpload-info": "*공유 이전까진 이미지 정보가 서버에 저장되지 않아요!",
+    "DIALOG-TITLE": "분류 항목 추가하기",
+    "DIALOG-PLACEHOLDER": "입력해주세요",
+    "DIALOG-SUCCESS-TITLE": "저장에 성공했습니다",
+    "DIALOG-SUCCESS-DESCRIPTION": "분류 항목 추가가 성공했습니다.",
+    "DIALOG-ERROR-NAME-EXISTS": "이미 존재하는 이름입니다.",
+    "DIALOG-ERROR-NAME-TOO-LONG": "50자 이하로 입력해주세요.",
+    "CROP-DIALOG-TITLE": "크롭 다시하기",
+    "CROP-DIALOG-SELECT-AREA": "크롭할 영역을 선택해주세요",
+    "CROP-DIALOG-INSTRUCTIONS-1": "원본사진에서 크롭 영역을 다시 지정해주세요.",
+    "CROP-DIALOG-INSTRUCTIONS-2": "파란색 영역의 크기를 조절하면 영역이 지정됩니다.",
+    "CROP-DIALOG-SELECT-PLAYER": "사진을 분류해주세요",
+    "CROP-DIALOG-SELECT-PERSON": "사람을 선택해주세요.",
+    "CROP-DIALOG-CONFIRM": "완료",
+    "CROP-DIALOG-CANCEL": "되돌리기",
+    "ImageLists-unselected": "미선택",
+    "ImageLists-add_new": "새로 추가하기",
+    "ImageLists-recrop": "크롭 다시하기",
+    "ImageLists-delete": "삭제하기",
+    "ImageLists-unrecognized": "미인식",
+    "RemoveImageDialog-title": "사진 삭제",
+    "RemoveImageDialog-description": "비교할 사진을 정말로 삭제하시겠습니까?",
+    "RemoveImageDialog-success_title": "삭제 성공",
+    "RemoveImageDialog-success_description": "사진 삭제에 성공했습니다."
+  },
+  "RemoveTemplateDialog": {
+    "warning": "삭제를 완료 후 되돌리기 어렵습니다.",
+    "confirm": "확인",
+    "cancel": "취소"
+  },
+  "PLAYERS": {
+    "Myself": "나",
+    "Mama": "엄마",
+    "Papa": "아빠"
+  },
+  "AddTemplateDialog": {
+    "title": "분류 항목 추가하기",
+    "placeholder": "입력해주세요",
+    "confirm": "확인",
+    "cancel": "취소"
+  },
+  "LoginFormDialog": {
+    "please_login": "로그인을 해주세요"
+  },
+  "ResultPage": {
+    "return_home": "처음 화면으로 돌아가기",
+    "go_back": "뒤로 가기",
+    "compare_faces": "닮은꼴 비교하기"
+  },
+  "ImagePrediction": {
+    "similarity_text": "[{player}]와 [{comparison}]는",
+    "looks_similar": "닮았습니다."
+  },
+  "ShareButton": {
+    "share": "공유하기"
+  },
+  "LoginPopupPage": {
+    "login_completed": "로그인이 완료되었습니다. 해당 창을 닫아주고 다시 시도해보세요."
+  },
+  "FORM": {
+    "TITLE-COMPARE-LOOKS": "닮은 사람 비교하기"
+  },
+  "HistoryPage": {
+    "error_page_not_found": "페이지를 찾을 수 없습니다!",
+    "go_to_homepage": "처음 화면으로 돌아가기"
+  },
+  "HistoryPageHeader": {
+    "rename_history": "제목 변경하기",
+    "delete_history": "삭제하기"
+  },
+  "CommentInput": {
+    "error": "에러",
+    "cooldown_error_title": "잠시 후에 다시 시도해주세요",
+    "cooldown_error_description": "너무 빠르게 입력하셨습니다.",
+    "input_placeholder": "댓글을 입력하세요..."
+  },
+  "CopyLinkButton": {
+    "copy_success": "복사 성공",
+    "copy_success_description": "URL이 복사되었습니다."
+  },
+  "UpdateHistoryTitleDialog": {
+    "dialog_title": "타이틀 수정",
+    "success_title": "변경에 성공했습니다",
+    "success_description": "이름 변경에 성공했습니다",
+    "placeholder": "입력해주세요",
+    "max_length_error": "자 이하로 입력해주세요."
+  },
+  "RemoveCommentDialog": {
+    "dialog_title": "비교 결과 삭제",
+    "dialog_description": "결과를 정말로 삭제하시겠습니까?",
+    "success_title": "삭제 성공",
+    "success_description": "삭제에 성공했습니다.",
+    "title": "비교 결과 삭제",
+    "description": "결과를 정말로 삭제하시겠습니까?"
+  },
+  "LOGIN": {
+    "title": "Simmey - 우리의 얼굴 매칭 AI를 사용하여 부모님과 얼마나 닮았는지 확인해보세요!",
+    "description": "안전하고 간편한 로그인 시스템을 통해 원하는 기능을 빠르게 이용하세요.",
+    "keywords": "로그인, 계정 접속, 보안 로그인, 간편 로그인, 인증"
+  },
+  "HISTORY": {
+    "title": "과거 얼굴 매칭 결과",
+    "description": "이전 얼굴 매칭 결과를 확인하고 가족 및 친구와 공유해보세요.",
+    "keywords": "얼굴 매칭, AI, 결과 기록, 가족, 친구, 재미",
+    "go_to_homepage": "처음 화면으로 돌아가기"
+  },
+  "RESULT": {
+    "title": "비교 결과 페이지",
+    "description": "얼굴 매칭 결과를 확인해보세요!",
+    "keywords": "얼굴 매칭, AI, 결과 기록, 가족, 친구, 재미"
+  },
+  "HISTORYID": {
+    "title": "과거 얼굴 매칭 결과",
+    "description": "이전 얼굴 매칭 결과를 확인하고 가족 및 친구와 공유해보세요.",
+    "keywords": "얼굴 매칭, AI, 결과 기록, 가족, 친구, 재미"
+  },
+  "HistoryList": {
+    "delete": "삭제"
+  }
+}

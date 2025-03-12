@@ -1,0 +1,229 @@
+{
+  "EDITORLINKDIALOG": {
+    "SUBMITTEXT": "Hantar",
+    "CANCELTEXT": "Batal",
+    "HEADER": "Penerangan Pautan dan Input Modal URL",
+    "DESCRIPTION": "Sila masukkan perihalan pautan dan URL untuk teks yang dipilih."
+  },
+  "LoginDialogContainer": {
+    "DialogTitle": "Log masuk",
+    "DialogDescription": "Sila pilih kaedah log masuk pilihan anda"
+  },
+  "LoginForm": {
+    "KakaoButton": "Daftar dengan Kakao",
+    "GoogleButton": "Daftar dengan Google",
+    "GithubButton": "Daftar dengan GitHub",
+    "share_comparison": "Kongsi perbandingan rupa dengan satu sama lain",
+    "receive_feedback": "Terima maklum balas",
+    "sns_login": "Log masuk SNS mudah"
+  },
+  "loginButton": {
+    "login": "Log masuk"
+  },
+  "LogoutButton": {
+    "logout": "Log keluar"
+  },
+  "ProfileDropdown": {
+    "profile": "Profil",
+    "my_blog": "Blog saya",
+    "settings": "Tetapan"
+  },
+  "PROFILETHEMESELECTOR": {
+    "LABEL-THEME": "Tema",
+    "ITEM-SYSTEM": "sistem",
+    "ITEM-DARK": "gelap",
+    "ITEM-LIGHT": "terang"
+  },
+  "LANG": {
+    "ko": "Bahasa Korea",
+    "en": "Bahasa Inggeris",
+    "ja": "Bahasa Jepun",
+    "zh": "Bahasa Cina",
+    "hi": "Bahasa Hindi",
+    "fr": "Bahasa Perancis",
+    "es": "Bahasa Sepanyol",
+    "ar": "Bahasa Arab",
+    "bn": "Bahasa Bengali",
+    "pt": "Bahasa Portugis",
+    "id": "Bahasa Indonesia",
+    "it": "Bahasa Itali",
+    "vi": "Bahasa Vietnam",
+    "th": "Bahasa Thai",
+    "ms": "Bahasa Melayu",
+    "ru": "Bahasa Rusia",
+    "de": "Bahasa Jerman",
+    "tr": "Bahasa Turki"
+  },
+  "MAINPAGE": {
+    "TITLE": "Mulakan Perbandingan Keserupaan Anda",
+    "DESCRIPTION-1": "Kemas kini foto untuk perbandingan keserupaan dan teruskan perbandingan.",
+    "DESCRIPTION-2": "Anda boleh melihat siapa yang lebih serupa dengan anda.",
+    "BUTTON-START-COMPARISON": "Mulakan Perbandingan Keserupaan",
+    "title": "Simmey - Temui berapa banyak anda menyerupai ibu dan bapa anda menggunakan AI padanan wajah kami!",
+    "description": "Temui berapa banyak anda menyerupai ibu dan bapa anda menggunakan AI padanan wajah kami! Ini adalah halaman utama di mana anda boleh memulakan perbandingan persamaan keluarga yang menyeronokkan dan menarik.",
+    "keywords": "perbandingan wajah, ibu bapa, persamaan, keseronokan, keluarga"
+  },
+  "BUTTON": {
+    "CHECK-HISTORY": "Semak Sejarah yang Dikongsi"
+  },
+  "MODEL": {
+    "DOWNLOAD-LOADING": "Memuat turun model AI untuk perbandingan",
+    "DOWNLOAD-WAIT": "Sila tunggu sebentar...",
+    "DOWNLOAD-FAIL": "Muat turun model AI terganggu",
+    "DOWNLOAD-RETRY": "Sila cuba lagi (0%)",
+    "DOWNLOAD-RESUME": "Sambung semula",
+    "DOWNLOAD-SUCCESS": "Muat turun model AI selesai",
+    "DOWNLOAD-COMPLETE": "Muat turun selesai. (100%)"
+  },
+  "ADD": {
+    "PICTURE-BUTTON": "Tambah Gambar",
+    "PICTURE-SUCCESS": "Simpanan Berjaya",
+    "PICTURE-SUCCESS-DESC": "Gambar baru berjaya ditambah.",
+    "PICTURE-FAIL": "Gagal Simpan",
+    "PICTURE-FAIL-DESC": "Gagal menambah gambar baru."
+  },
+  "COMPARE": {
+    "BUTTON": "Bandingkan",
+    "ERROR-TITLE": "Ralat",
+    "ERROR-MODEL-NOT-FOUND": "Model pengecaman wajah sedang dimuat turun.",
+    "ERROR-USER-NOT-SELECTED": "Sila pilih diri anda sebagai sasaran perbandingan.",
+    "ERROR-MIN-TWO-PLAYERS": "Sila pilih sekurang-kurangnya dua sasaran perbandingan.",
+    "ERROR-FACE-NOT-RECOGNIZED": "Terdapat gambar di mana wajah tidak dikenali."
+  },
+  "FACES": {
+    "PAGE-HEADER": "Bandingkan Keserupaan",
+    "TUTORIAL-STEP-1": "Sila tambahkan foto yang ingin anda bandingkan.",
+    "TUTORIAL-STEP-2": "Anda boleh mengekstrak dan menyemak hanya wajah dari foto!",
+    "TUTORIAL-STEP-3": "Pilih diri anda sebagai keperluan dan klasifikasikan sekurang-kurangnya satu sasaran perbandingan.",
+    "TUTORIAL-STEP-4": "Anda boleh memotong semula secara manual atau memadam imej!",
+    "TUTORIAL-STEP-5": "Setelah pilihan selesai, tekan butang!",
+    "BUTTON-BACK": "Kembali",
+    "BUTTON-HELP": "Bantuan",
+    "SELECT-PICTURE-TITLE": "Sila pilih foto untuk dibandingkan",
+    "description": "Ini adalah halaman utama padanan wajah di mana anda boleh memuat naik foto untuk mengekstrak dan membandingkan wajah. Pilih diri anda dan sekurang-kurangnya satu orang lain untuk membandingkan dengan mudah.",
+    "keywords": "Padanan wajah, perbandingan wajah, muat naik foto, pengekstrakan wajah, pemotongan imej, pengecaman wajah, perbandingan foto"
+  },
+  "IMAGES": {
+    "EMPTY-IMAGE-TITLE": "Sila tambah foto untuk dibandingkan.",
+    "EMPTY-IMAGE-DESCRIPTION-1": "Tambah foto untuk dibandingkan",
+    "EMPTY-IMAGE-DESCRIPTION-2": "Klasifikasikan foto.",
+    "ImageUpload-info": "*Maklumat imej tidak disimpan di pelayan sehingga ia dikongsi!",
+    "DIALOG-TITLE": "Tambah item klasifikasi",
+    "DIALOG-PLACEHOLDER": "Sila masukkan",
+    "DIALOG-SUCCESS-TITLE": "Berjaya disimpan",
+    "DIALOG-SUCCESS-DESCRIPTION": "Item klasifikasi berjaya ditambah.",
+    "DIALOG-ERROR-NAME-EXISTS": "Nama ini sudah wujud.",
+    "DIALOG-ERROR-NAME-TOO-LONG": "Sila masukkan dalam 50 aksara.",
+    "CROP-DIALOG-TITLE": "Potong Semula",
+    "CROP-DIALOG-SELECT-AREA": "Sila pilih kawasan untuk dipotong",
+    "CROP-DIALOG-INSTRUCTIONS-1": "Sila tentukan semula kawasan potong dari foto asal.",
+    "CROP-DIALOG-INSTRUCTIONS-2": "Laraskan kawasan biru untuk menentukan wilayah potong.",
+    "CROP-DIALOG-SELECT-PLAYER": "Sila pilih pemain",
+    "CROP-DIALOG-SELECT-PERSON": "Sila pilih seseorang",
+    "CROP-DIALOG-CONFIRM": "Sahkan",
+    "CROP-DIALOG-CANCEL": "Batal",
+    "ImageLists-unselected": "Tidak dipilih",
+    "ImageLists-add_new": "Tambah baru",
+    "ImageLists-recrop": "Pangkas semula",
+    "ImageLists-delete": "Padam",
+    "ImageLists-unrecognized": "Tidak dikenali",
+    "RemoveImageDialog-title": "Padam Foto",
+    "RemoveImageDialog-description": "Adakah anda pasti mahu memadam foto perbandingan?",
+    "RemoveImageDialog-success_title": "Pemadaman Berjaya",
+    "RemoveImageDialog-success_description": "Foto berjaya dipadamkan."
+  },
+  "RemoveTemplateDialog": {
+    "warning": "Setelah dipadam, tindakan ini tidak boleh dibatalkan.",
+    "confirm": "Sahkan",
+    "cancel": "Batal"
+  },
+  "PLAYERS": {
+    "Myself": "Diri sendiri",
+    "Mama": "Ibu",
+    "Papa": "Ayah"
+  },
+  "AddTemplateDialog": {
+    "title": "Tambah Item Kategori",
+    "placeholder": "Sila masukkan",
+    "confirm": "Sahkan",
+    "cancel": "Batal"
+  },
+  "LoginFormDialog": {
+    "please_login": "Sila log masuk"
+  },
+  "ResultPage": {
+    "return_home": "Kembali ke skrin utama",
+    "go_back": "Kembali",
+    "compare_faces": "Bandingkan wajah serupa"
+  },
+  "ImagePrediction": {
+    "similarity_text": "[{player}] dan [{comparison}] adalah",
+    "looks_similar": "Nampak serupa."
+  },
+  "ShareButton": {
+    "share": "Kongsi"
+  },
+  "LoginPopupPage": {
+    "login_completed": "Log masuk selesai. Sila tutup tetingkap ini dan cuba lagi."
+  },
+  "FORM": {
+    "TITLE-COMPARE-LOOKS": "Bandingkan rupa yang serupa"
+  },
+  "HistoryPage": {
+    "error_page_not_found": "Halaman tidak dijumpai!",
+    "go_to_homepage": "Kembali ke halaman utama"
+  },
+  "HistoryPageHeader": {
+    "rename_history": "Tukar Nama Sejarah",
+    "delete_history": "Padam Sejarah"
+  },
+  "CommentInput": {
+    "error": "Ralat",
+    "cooldown_error_title": "Sila cuba lagi kemudian",
+    "cooldown_error_description": "Anda menaip terlalu pantas.",
+    "input_placeholder": "Masukkan komen..."
+  },
+  "CopyLinkButton": {
+    "copy_success": "Salinan Berjaya",
+    "copy_success_description": "URL telah disalin."
+  },
+  "UpdateHistoryTitleDialog": {
+    "dialog_title": "Edit Tajuk",
+    "success_title": "Kemas kini Berjaya",
+    "success_description": "Tajuk telah berjaya dikemas kini.",
+    "placeholder": "Sila masukkan tajuk",
+    "max_length_error": "aksara atau kurang."
+  },
+  "RemoveCommentDialog": {
+    "dialog_title": "Padam Keputusan Perbandingan",
+    "dialog_description": "Adakah anda pasti mahu memadam keputusan ini?",
+    "success_title": "Pemadaman berjaya",
+    "success_description": "Hasil telah berjaya dipadamkan.",
+    "title": "Padam hasil perbandingan",
+    "description": "Adakah anda pasti mahu memadam hasil ini?"
+  },
+  "LOGIN": {
+    "title": "Simmey - Temui berapa banyak anda menyerupai ibu dan bapa anda menggunakan AI padanan wajah kami!",
+    "description": "Akses ciri yang diinginkan dengan cepat melalui sistem log masuk yang selamat dan mudah.",
+    "keywords": "Log masuk, akses akaun, log masuk selamat, log masuk mudah, pengesahan"
+  },
+  "HISTORY": {
+    "title": "Keputusan Padanan Wajah Terdahulu",
+    "description": "Semak keputusan padanan wajah terdahulu anda dan kongsikan dengan keluarga serta rakan-rakan.",
+    "keywords": "padanan wajah, AI, sejarah keputusan, keluarga, rakan, keseronokan",
+    "go_to_homepage": "Kembali ke halaman utama"
+  },
+  "RESULT": {
+    "title": "Halaman Keputusan Perbandingan",
+    "description": "Periksa keputusan padanan wajah anda!",
+    "keywords": "padanan wajah, AI, sejarah keputusan, keluarga, rakan, keseronokan"
+  },
+  "HISTORYID": {
+    "title": "Keputusan Padanan Wajah Terdahulu",
+    "description": "Semak keputusan padanan wajah terdahulu anda dan kongsikan dengan keluarga serta rakan-rakan.",
+    "keywords": "padanan wajah, AI, sejarah keputusan, keluarga, rakan, keseronokan"
+  },
+  "HistoryList": {
+    "delete": "Padam"
+  }
+}

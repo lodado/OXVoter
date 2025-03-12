@@ -1,0 +1,229 @@
+{
+  "EDITORLINKDIALOG": {
+    "SUBMITTEXT": "জমা দিন",
+    "CANCELTEXT": "বাতিল করুন",
+    "HEADER": "লিঙ্ক বর্ণনা এবং ইউআরএল ইনপুট মোডাল",
+    "DESCRIPTION": "অনুগ্রহ করে নির্বাচিত পাঠ্যের জন্য লিঙ্কের বর্ণনা এবং URL প্রবেশ করান।"
+  },
+  "LoginDialogContainer": {
+    "DialogTitle": "লগ ইন",
+    "DialogDescription": "আপনার পছন্দের লগইন পদ্ধতি নির্বাচন করুন"
+  },
+  "LoginForm": {
+    "KakaoButton": "কাকাও দিয়ে সাইন আপ করুন",
+    "GoogleButton": "গুগল দিয়ে সাইন আপ করুন",
+    "GithubButton": "গিটহাব দিয়ে সাইন আপ করুন",
+    "share_comparison": "একটি অপরের সাথে সাদৃশ্য তুলনা ভাগ করুন",
+    "receive_feedback": "প্রতিক্রিয়া গ্রহণ করুন",
+    "sns_login": "সহজ SNS লগইন"
+  },
+  "loginButton": {
+    "login": "লগইন করুন"
+  },
+  "LogoutButton": {
+    "logout": "প্রস্থান করুন"
+  },
+  "ProfileDropdown": {
+    "profile": "প্রোফাইল",
+    "my_blog": "আমার ব্লগ",
+    "settings": "সেটিংস"
+  },
+  "PROFILETHEMESELECTOR": {
+    "LABEL-THEME": "থিম",
+    "ITEM-SYSTEM": "সিস্টেম",
+    "ITEM-DARK": "ডার্ক",
+    "ITEM-LIGHT": "লাইট"
+  },
+  "LANG": {
+    "ko": "কোরিয়ান",
+    "en": "ইংরেজি",
+    "ja": "জাপানি",
+    "zh": "চাইনিজ",
+    "hi": "হিন্দি",
+    "fr": "ফরাসি",
+    "es": "স্প্যানিশ",
+    "ar": "আরবি",
+    "bn": "বাংলা",
+    "pt": "পর্তুগিজ",
+    "id": "ইন্দোনেশিয়ান",
+    "it": "ইতালীয়",
+    "vi": "ভিয়েতনামী",
+    "th": "থাই",
+    "ms": "মালয়",
+    "ru": "রাশিয়ান",
+    "de": "জার্মান",
+    "tr": "তুর্কি"
+  },
+  "MAINPAGE": {
+    "TITLE": "আপনার সাদৃশ্য তুলনা শুরু করুন",
+    "DESCRIPTION-1": "সাদৃশ্য তুলনার জন্য একটি ছবি আপডেট করুন এবং তুলনা চালিয়ে যান।",
+    "DESCRIPTION-2": "আপনি দেখতে পারেন আপনি কাকে বেশি সাদৃশ্য।",
+    "BUTTON-START-COMPARISON": "সাদৃশ্য তুলনা শুরু করুন",
+    "title": "Simmey - আমাদের ফেস-ম্যাচিং AI ব্যবহার করে দেখুন আপনি আপনার মা-বাবার সাথে কতটা মিল!",
+    "description": "আমাদের ফেস-ম্যাচিং AI ব্যবহার করে দেখুন আপনি আপনার মা-বাবার সাথে কতটা মিল! এটি প্রধান পৃষ্ঠা যেখানে আপনি মজার এবং আকর্ষণীয় পারিবারিক সাদৃশ্য তুলনা শুরু করতে পারেন।",
+    "keywords": "মুখের তুলনা, পিতামাতা, সাদৃশ্য, মজা, পরিবার"
+  },
+  "BUTTON": {
+    "CHECK-HISTORY": "ভাগ করা ইতিহাস দেখুন"
+  },
+  "MODEL": {
+    "DOWNLOAD-LOADING": "তুলনার জন্য এআই মডেল ডাউনলোড হচ্ছে",
+    "DOWNLOAD-WAIT": "অনুগ্রহ করে অপেক্ষা করুন...",
+    "DOWNLOAD-FAIL": "তুলনার জন্য এআই মডেল ডাউনলোড বন্ধ",
+    "DOWNLOAD-RETRY": "অনুগ্রহ করে পুনরায় চেষ্টা করুন (0%)",
+    "DOWNLOAD-RESUME": "পুনরায় শুরু করুন",
+    "DOWNLOAD-SUCCESS": "তুলনার জন্য এআই মডেল ডাউনলোড সম্পন্ন হয়েছে",
+    "DOWNLOAD-COMPLETE": "ডাউনলোড সম্পন্ন হয়েছে। (100%)"
+  },
+  "ADD": {
+    "PICTURE-BUTTON": "ছবি যোগ করুন",
+    "PICTURE-SUCCESS": "সংরক্ষণ সফল হয়েছে",
+    "PICTURE-SUCCESS-DESC": "নতুন ছবি সফলভাবে যোগ করা হয়েছে।",
+    "PICTURE-FAIL": "সংরক্ষণ ব্যর্থ হয়েছে",
+    "PICTURE-FAIL-DESC": "নতুন ছবি যোগ করতে ব্যর্থ হয়েছে।"
+  },
+  "COMPARE": {
+    "BUTTON": "তুলনা করুন",
+    "ERROR-TITLE": "ত্রুটি",
+    "ERROR-MODEL-NOT-FOUND": "মুখ চেনার মডেল ডাউনলোড হচ্ছে।",
+    "ERROR-USER-NOT-SELECTED": "অনুগ্রহ করে তুলনার জন্য নিজেকে নির্ধারণ করুন।",
+    "ERROR-MIN-TWO-PLAYERS": "কমপক্ষে দুটি তুলনার লক্ষ্য নির্ধারণ করুন।",
+    "ERROR-FACE-NOT-RECOGNIZED": "একটি ছবি আছে যেখানে মুখ চেনা যায়নি।"
+  },
+  "FACES": {
+    "PAGE-HEADER": "সাদৃশ্য তুলনা করুন",
+    "TUTORIAL-STEP-1": "দয়া করে তুলনা করার জন্য ছবিগুলি যোগ করুন।",
+    "TUTORIAL-STEP-2": "আপনি শুধুমাত্র ফটো থেকে মুখগুলি বের করতে এবং পরীক্ষা করতে পারেন!",
+    "TUTORIAL-STEP-3": "নিজেকে বাধ্যতামূলকভাবে নির্বাচন করুন এবং অন্তত একটি তুলনার লক্ষ্য শ্রেণীবদ্ধ করুন।",
+    "TUTORIAL-STEP-4": "আপনি ম্যানুয়ালি ক্রপ পুনরায় করতে বা ছবি মুছতে পারেন!",
+    "TUTORIAL-STEP-5": "নির্বাচন সম্পূর্ণ হলে, বোতাম টিপুন!",
+    "BUTTON-BACK": "ফিরে যান",
+    "BUTTON-HELP": "সাহায্য",
+    "SELECT-PICTURE-TITLE": "দয়া করে তুলনা করার জন্য ফটো নির্বাচন করুন",
+    "description": "এটি একটি মুখ মিলানোর হোমপেজ যেখানে আপনি ছবি আপলোড করে মুখ বের করে তুলনা করতে পারেন। নিজেকে অবশ্যই নির্বাচন করুন এবং কমপক্ষে একজন তুলনার জন্য নির্ধারণ করুন।",
+    "keywords": "মুখ মিলানো, মুখ তুলনা, ছবি আপলোড, মুখ নির্যাস, ছবি ক্রপ, মুখ চিহ্নিতকরণ, ছবি তুলনা"
+  },
+  "IMAGES": {
+    "EMPTY-IMAGE-TITLE": "অনুগ্রহ করে তুলনার জন্য ছবি যোগ করুন।",
+    "EMPTY-IMAGE-DESCRIPTION-1": "তুলনার জন্য ছবি যোগ করুন",
+    "EMPTY-IMAGE-DESCRIPTION-2": "অনুগ্রহ করে ছবিগুলি শ্রেণীবদ্ধ করুন।",
+    "ImageUpload-info": "*শেয়ার করার আগে চিত্র তথ্য সার্ভারে সংরক্ষণ করা হয় না!",
+    "DIALOG-TITLE": "শ্রেণীবিভাগ আইটেম যোগ করুন",
+    "DIALOG-PLACEHOLDER": "অনুগ্রহ করে লিখুন",
+    "DIALOG-SUCCESS-TITLE": "সফলভাবে সংরক্ষণ করা হয়েছে",
+    "DIALOG-SUCCESS-DESCRIPTION": "শ্রেণীবিভাগ আইটেম সফলভাবে যোগ করা হয়েছে।",
+    "DIALOG-ERROR-NAME-EXISTS": "এই নামটি ইতিমধ্যে বিদ্যমান।",
+    "DIALOG-ERROR-NAME-TOO-LONG": "অনুগ্রহ করে ৫০ অক্ষরের মধ্যে লিখুন।",
+    "CROP-DIALOG-TITLE": "ক্রপ পুনরায় করুন",
+    "CROP-DIALOG-SELECT-AREA": "দয়া করে ক্রপ করার জন্য অঞ্চল নির্বাচন করুন",
+    "CROP-DIALOG-INSTRUCTIONS-1": "অনুগ্রহ করে মূল ফটো থেকে ক্রপ এলাকা পুনরায় সংজ্ঞায়িত করুন।",
+    "CROP-DIALOG-INSTRUCTIONS-2": "ক্রপ অঞ্চল নির্দিষ্ট করতে নীল এলাকার আকার সমন্বয় করুন।",
+    "CROP-DIALOG-SELECT-PLAYER": "একজন খেলোয়াড় নির্বাচন করুন",
+    "CROP-DIALOG-SELECT-PERSON": "একজন ব্যক্তিকে নির্বাচন করুন",
+    "CROP-DIALOG-CONFIRM": "নিশ্চিত করুন",
+    "CROP-DIALOG-CANCEL": "বাতিল করুন",
+    "ImageLists-unselected": "অচয়নিত",
+    "ImageLists-add_new": "নতুন যোগ করুন",
+    "ImageLists-recrop": "পুনরায় ক্রপ করুন",
+    "ImageLists-delete": "মুছুন",
+    "ImageLists-unrecognized": "অপরিচিত",
+    "RemoveImageDialog-title": "ছবি মুছুন",
+    "RemoveImageDialog-description": "আপনি কি নিশ্চিত যে আপনি তুলনামূলক ছবিটি মুছতে চান?",
+    "RemoveImageDialog-success_title": "মুছে ফেলা সফল",
+    "RemoveImageDialog-success_description": "ছবি সফলভাবে মুছে ফেলা হয়েছে।"
+  },
+  "RemoveTemplateDialog": {
+    "warning": "মুছে ফেলার পর, এটি পুনরুদ্ধার করা সম্ভব নয়।",
+    "confirm": "নিশ্চিত করুন",
+    "cancel": "বাতিল করুন"
+  },
+  "PLAYERS": {
+    "Myself": "আমি",
+    "Mama": "মা",
+    "Papa": "বাবা"
+  },
+  "AddTemplateDialog": {
+    "title": "বিভাগ আইটেম যোগ করুন",
+    "placeholder": "অনুগ্রহ করে প্রবেশ করুন",
+    "confirm": "নিশ্চিত করুন",
+    "cancel": "বাতিল করুন"
+  },
+  "LoginFormDialog": {
+    "please_login": "দয়া করে লগইন করুন"
+  },
+  "ResultPage": {
+    "return_home": "প্রধান পর্দায় ফিরে যান",
+    "go_back": "ফিরে যান",
+    "compare_faces": "সাদৃশ্য তুলনা করুন"
+  },
+  "ImagePrediction": {
+    "similarity_text": "[{player}] এবং [{comparison}] হল",
+    "looks_similar": "দেখতে একরকম।"
+  },
+  "ShareButton": {
+    "share": "শেয়ার করুন"
+  },
+  "LoginPopupPage": {
+    "login_completed": "লগইন সম্পন্ন হয়েছে। অনুগ্রহ করে এই উইন্ডোটি বন্ধ করুন এবং পুনরায় চেষ্টা করুন।"
+  },
+  "FORM": {
+    "TITLE-COMPARE-LOOKS": "মিল দেখতে তুলনা করুন"
+  },
+  "HistoryPage": {
+    "error_page_not_found": "পৃষ্ঠা পাওয়া যায়নি!",
+    "go_to_homepage": "হোমপেজে ফিরে যান"
+  },
+  "HistoryPageHeader": {
+    "rename_history": "ইতিহাসের নাম পরিবর্তন করুন",
+    "delete_history": "ইতিহাস মুছুন"
+  },
+  "CommentInput": {
+    "error": "ত্রুটি",
+    "cooldown_error_title": "অনুগ্রহ করে পরে আবার চেষ্টা করুন",
+    "cooldown_error_description": "আপনি খুব দ্রুত টাইপ করছেন।",
+    "input_placeholder": "একটি মন্তব্য লিখুন..."
+  },
+  "CopyLinkButton": {
+    "copy_success": "কপি সফল",
+    "copy_success_description": "URL কপি করা হয়েছে।"
+  },
+  "UpdateHistoryTitleDialog": {
+    "dialog_title": "শিরোনাম সম্পাদনা করুন",
+    "success_title": "আপডেট সফল হয়েছে",
+    "success_description": "শিরোনাম সফলভাবে আপডেট করা হয়েছে।",
+    "placeholder": "অনুগ্রহ করে একটি শিরোনাম লিখুন",
+    "max_length_error": "অক্ষরের মধ্যে রাখুন।"
+  },
+  "RemoveCommentDialog": {
+    "dialog_title": "তুলনা ফলাফল মুছুন",
+    "dialog_description": "আপনি কি নিশ্চিত যে আপনি এই ফলাফল মুছতে চান?",
+    "success_title": "মোছা সফল",
+    "success_description": "ফলাফল সফলভাবে মোছা হয়েছে।",
+    "title": "তুলনা ফলাফল মুছুন",
+    "description": "আপনি কি সত্যিই এই ফলাফলটি মুছে ফেলতে চান?"
+  },
+  "LOGIN": {
+    "title": "Simmey - আমাদের ফেস-ম্যাচিং AI ব্যবহার করে দেখুন আপনি আপনার মা-বাবার সাথে কতটা মিল!",
+    "description": "নিরাপদ ও সহজ লগইন ব্যবস্থার মাধ্যমে দ্রুত পছন্দসই বৈশিষ্ট্যগুলি ব্যবহার করুন।",
+    "keywords": "লগইন, অ্যাকাউন্ট প্রবেশ, নিরাপদ লগইন, সহজ লগইন, প্রমাণীকরণ"
+  },
+  "HISTORY": {
+    "title": "পূর্ববর্তী মুখ মিলানোর ফলাফল",
+    "description": "আপনার পূর্ববর্তী মুখ মিলানোর ফলাফল দেখুন এবং পরিবারের ও বন্ধুদের সাথে শেয়ার করুন।",
+    "keywords": "মুখ মিলানো, এআই, ফলাফল ইতিহাস, পরিবার, বন্ধু, মজা",
+    "go_to_homepage": "হোমপেজে ফিরে যান"
+  },
+  "RESULT": {
+    "title": "তুলনা ফলাফল পৃষ্ঠা",
+    "description": "আপনার মুখ মিলানোর ফলাফল দেখুন!",
+    "keywords": "মুখ মিলানো, এআই, ফলাফল ইতিহাস, পরিবার, বন্ধু, মজা"
+  },
+  "HISTORYID": {
+    "title": "পূর্ববর্তী মুখ মিলানোর ফলাফল",
+    "description": "আপনার পূর্ববর্তী মুখ মিলানোর ফলাফল দেখুন এবং পরিবারের ও বন্ধুদের সাথে শেয়ার করুন।",
+    "keywords": "মুখ মিলানো, এআই, ফলাফল ইতিহাস, পরিবার, বন্ধু, মজা"
+  },
+  "HistoryList": {
+    "delete": "মুছে ফেলুন"
+  }
+}

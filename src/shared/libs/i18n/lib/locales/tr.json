@@ -1,0 +1,229 @@
+{
+  "EDITORLINKDIALOG": {
+    "SUBMITTEXT": "Gönder",
+    "CANCELTEXT": "İptal etmek",
+    "HEADER": "Bağlantı Açıklaması ve URL Girişi Modalı",
+    "DESCRIPTION": "Lütfen seçilen metin için bağlantı açıklaması ve URL girin."
+  },
+  "LoginDialogContainer": {
+    "DialogTitle": "Giriş Yap",
+    "DialogDescription": "Lütfen tercih ettiğiniz giriş yöntemini seçin"
+  },
+  "LoginForm": {
+    "KakaoButton": "Kakao ile kayıt ol",
+    "GoogleButton": "Google ile kayıt ol",
+    "GithubButton": "GitHub ile kayıt ol",
+    "share_comparison": "Benzerlik karşılaştırmalarını paylaşın",
+    "receive_feedback": "Geri bildirim alın",
+    "sns_login": "Kolay SNS girişi"
+  },
+  "loginButton": {
+    "login": "Giriş yap"
+  },
+  "LogoutButton": {
+    "logout": "Çıkış Yap"
+  },
+  "ProfileDropdown": {
+    "profile": "Profil",
+    "my_blog": "Blogum",
+    "settings": "Ayarlar"
+  },
+  "PROFILETHEMESELECTOR": {
+    "LABEL-THEME": "Tema",
+    "ITEM-SYSTEM": "sistem",
+    "ITEM-DARK": "karanlık",
+    "ITEM-LIGHT": "aydınlık"
+  },
+  "LANG": {
+    "ko": "Korece",
+    "en": "İngilizce",
+    "ja": "Japonca",
+    "zh": "Çince",
+    "hi": "Hintçe",
+    "fr": "Fransızca",
+    "es": "İspanyolca",
+    "ar": "Arapça",
+    "bn": "Bengalce",
+    "pt": "Portekizce",
+    "id": "Endonezce",
+    "it": "İtalyanca",
+    "vi": "Vietnamca",
+    "th": "Tayca",
+    "ms": "Malayca",
+    "ru": "Rusça",
+    "de": "Almanca",
+    "tr": "Türkçe"
+  },
+  "MAINPAGE": {
+    "TITLE": "Benzerlik Karşılaştırmanızı Başlatın",
+    "DESCRIPTION-1": "Benzerlik karşılaştırması için bir fotoğraf güncelleyin ve karşılaştırmaya devam edin.",
+    "DESCRIPTION-2": "Kime daha çok benzediğinizi kontrol edebilirsiniz.",
+    "BUTTON-START-COMPARISON": "Benzerlik Karşılaştırmasını Başlat",
+    "title": "Simmey - Yüz eşleştirme yapay zekamızla annenize ve babanıza ne kadar benzediğinizi keşfedin!",
+    "description": "Yüz eşleştirme yapay zekamızla annenize ve babanıza ne kadar benzediğinizi keşfedin! Bu, eğlenceli ve ilgi çekici aile benzerliği karşılaştırmanıza başlayabileceğiniz ana sayfadır.",
+    "keywords": "yüz karşılaştırması, ebeveynler, benzerlik, eğlence, aile"
+  },
+  "BUTTON": {
+    "CHECK-HISTORY": "Paylaşılan Geçmişi Kontrol Et"
+  },
+  "MODEL": {
+    "DOWNLOAD-LOADING": "Karşılaştırma için AI modeli indiriliyor",
+    "DOWNLOAD-WAIT": "Lütfen bekleyin...",
+    "DOWNLOAD-FAIL": "Yapay zeka modeli indirme kesildi",
+    "DOWNLOAD-RETRY": "Lütfen tekrar deneyin (0%)",
+    "DOWNLOAD-RESUME": "Devam et",
+    "DOWNLOAD-SUCCESS": "Yapay zeka modeli indirme tamamlandı",
+    "DOWNLOAD-COMPLETE": "İndirme tamamlandı. (100%)"
+  },
+  "ADD": {
+    "PICTURE-BUTTON": "Resim Ekle",
+    "PICTURE-SUCCESS": "Kaydetme başarılı",
+    "PICTURE-SUCCESS-DESC": "Yeni resim başarıyla eklendi.",
+    "PICTURE-FAIL": "Kaydetme başarısız oldu",
+    "PICTURE-FAIL-DESC": "Yeni resim eklenemedi."
+  },
+  "COMPARE": {
+    "BUTTON": "Karşılaştır",
+    "ERROR-TITLE": "Hata",
+    "ERROR-MODEL-NOT-FOUND": "Yüz tanıma modeli indiriliyor.",
+    "ERROR-USER-NOT-SELECTED": "Lütfen kendinizi karşılaştırma hedefi olarak seçin.",
+    "ERROR-MIN-TWO-PLAYERS": "Lütfen en az iki karşılaştırma hedefi seçin.",
+    "ERROR-FACE-NOT-RECOGNIZED": "Yüzün tanınmadığı bir fotoğraf var."
+  },
+  "FACES": {
+    "PAGE-HEADER": "Benzerlikleri Karşılaştır",
+    "TUTORIAL-STEP-1": "Lütfen karşılaştırmak istediğiniz fotoğrafları ekleyin.",
+    "TUTORIAL-STEP-2": "Fotoğraflardan sadece yüzleri çıkarabilir ve kontrol edebilirsiniz!",
+    "TUTORIAL-STEP-3": "Kendinizi zorunlu olarak seçin ve en az bir karşılaştırma hedefi sınıflandırın.",
+    "TUTORIAL-STEP-4": "Resimleri manuel olarak yeniden kırpabilir veya silebilirsiniz!",
+    "TUTORIAL-STEP-5": "Seçim tamamlandıktan sonra düğmeye basın!",
+    "BUTTON-BACK": "Geri Git",
+    "BUTTON-HELP": "Yardım",
+    "SELECT-PICTURE-TITLE": "Lütfen karşılaştırmak için fotoğrafları seçin",
+    "description": "Bu, yüzleri çıkarmak ve karşılaştırmak için fotoğraflar yükleyebileceğiniz bir yüz eşleştirme ana sayfasıdır. Kendinizi seçin ve en az bir kişi daha belirleyerek kolayca karşılaştırma yapın.",
+    "keywords": "Yüz eşleştirme, yüz karşılaştırma, fotoğraf yükleme, yüz çıkarma, görüntü kırpma, yüz tanıma, fotoğraf karşılaştırma"
+  },
+  "IMAGES": {
+    "EMPTY-IMAGE-TITLE": "Lütfen karşılaştırmak için fotoğraflar ekleyin.",
+    "EMPTY-IMAGE-DESCRIPTION-1": "Karşılaştırmak için fotoğraflar ekleyin",
+    "EMPTY-IMAGE-DESCRIPTION-2": "Fotoğrafları sınıflandırın.",
+    "ImageUpload-info": "*Görsel bilgileri, paylaşılana kadar sunucuda saklanmaz!",
+    "DIALOG-TITLE": "Sınıflandırma Öğesi Ekle",
+    "DIALOG-PLACEHOLDER": "Lütfen girin",
+    "DIALOG-SUCCESS-TITLE": "Başarıyla kaydedildi",
+    "DIALOG-SUCCESS-DESCRIPTION": "Sınıflandırma öğesi başarıyla eklendi.",
+    "DIALOG-ERROR-NAME-EXISTS": "Bu isim zaten mevcut.",
+    "DIALOG-ERROR-NAME-TOO-LONG": "Lütfen 50 karakter içinde girin.",
+    "CROP-DIALOG-TITLE": "Kırpma işlemini yeniden yap",
+    "CROP-DIALOG-SELECT-AREA": "Lütfen kırpılacak alanı seçin",
+    "CROP-DIALOG-INSTRUCTIONS-1": "Lütfen kırpma alanını orijinal fotoğraftan yeniden belirleyin.",
+    "CROP-DIALOG-INSTRUCTIONS-2": "Kırpma bölgesini belirlemek için mavi alanı ayarlayın.",
+    "CROP-DIALOG-SELECT-PLAYER": "Lütfen bir oyuncu seçin",
+    "CROP-DIALOG-SELECT-PERSON": "Lütfen bir kişi seçin",
+    "CROP-DIALOG-CONFIRM": "Onayla",
+    "CROP-DIALOG-CANCEL": "İptal",
+    "ImageLists-unselected": "Seçilmedi",
+    "ImageLists-add_new": "Yeni ekle",
+    "ImageLists-recrop": "Yeniden kırp",
+    "ImageLists-delete": "Sil",
+    "ImageLists-unrecognized": "Tanınmıyor",
+    "RemoveImageDialog-title": "Fotoğrafı Sil",
+    "RemoveImageDialog-description": "Karşılaştırma fotoğrafını silmek istediğinizden emin misiniz?",
+    "RemoveImageDialog-success_title": "Silme Başarılı",
+    "RemoveImageDialog-success_description": "Fotoğraf başarıyla silindi."
+  },
+  "RemoveTemplateDialog": {
+    "warning": "Silindikten sonra bu işlem geri alınamaz.",
+    "confirm": "Onayla",
+    "cancel": "İptal"
+  },
+  "PLAYERS": {
+    "Myself": "Kendim",
+    "Mama": "Anne",
+    "Papa": "Baba"
+  },
+  "AddTemplateDialog": {
+    "title": "Kategori Öğesi Ekle",
+    "placeholder": "Lütfen girin",
+    "confirm": "Onayla",
+    "cancel": "İptal"
+  },
+  "LoginFormDialog": {
+    "please_login": "Lütfen giriş yapın"
+  },
+  "ResultPage": {
+    "return_home": "Ana ekrana dön",
+    "go_back": "Geri dön",
+    "compare_faces": "Benzerlikleri karşılaştır"
+  },
+  "ImagePrediction": {
+    "similarity_text": "[{player}] ve [{comparison}] benzer",
+    "looks_similar": "Benzer görünüyor."
+  },
+  "ShareButton": {
+    "share": "Paylaş"
+  },
+  "LoginPopupPage": {
+    "login_completed": "Giriş tamamlandı. Lütfen bu pencereyi kapatın ve tekrar deneyin."
+  },
+  "FORM": {
+    "TITLE-COMPARE-LOOKS": "Benzerlikleri karşılaştır"
+  },
+  "HistoryPage": {
+    "error_page_not_found": "Sayfa bulunamadı!",
+    "go_to_homepage": "Ana sayfaya geri dön"
+  },
+  "HistoryPageHeader": {
+    "rename_history": "Geçmişi Yeniden Adlandır",
+    "delete_history": "Geçmişi Sil"
+  },
+  "CommentInput": {
+    "error": "Hata",
+    "cooldown_error_title": "Lütfen daha sonra tekrar deneyin",
+    "cooldown_error_description": "Çok hızlı yazıyorsunuz.",
+    "input_placeholder": "Bir yorum girin..."
+  },
+  "CopyLinkButton": {
+    "copy_success": "Kopyalama Başarılı",
+    "copy_success_description": "URL kopyalandı."
+  },
+  "UpdateHistoryTitleDialog": {
+    "dialog_title": "Başlığı Düzenle",
+    "success_title": "Güncelleme Başarılı",
+    "success_description": "Başlık başarıyla güncellendi.",
+    "placeholder": "Lütfen bir başlık girin",
+    "max_length_error": "karakter veya daha az."
+  },
+  "RemoveCommentDialog": {
+    "dialog_title": "Karşılaştırma Sonucunu Sil",
+    "dialog_description": "Bu sonucu silmek istediğinizden emin misiniz?",
+    "success_title": "Silme başarılı",
+    "success_description": "Sonuç başarıyla silindi.",
+    "title": "Karşılaştırma sonucunu sil",
+    "description": "Bu sonucu gerçekten silmek istiyor musunuz?"
+  },
+  "LOGIN": {
+    "title": "Simmey - Yüz eşleştirme yapay zekamızla annenize ve babanıza ne kadar benzediğinizi keşfedin!",
+    "description": "Güvenli ve basit bir giriş sistemiyle istediğiniz özelliklere hızlıca erişin.",
+    "keywords": "Giriş, hesap erişimi, güvenli giriş, kolay giriş, kimlik doğrulama"
+  },
+  "HISTORY": {
+    "title": "Geçmiş Yüz Eşleştirme Sonuçları",
+    "description": "Önceki yüz eşleştirme sonuçlarınızı kontrol edin ve aileniz ve arkadaşlarınızla paylaşın.",
+    "keywords": "yüz eşleştirme, yapay zeka, sonuç geçmişi, aile, arkadaşlar, eğlence",
+    "go_to_homepage": "Ana sayfaya geri dön"
+  },
+  "RESULT": {
+    "title": "Karşılaştırma Sonuçları Sayfası",
+    "description": "Yüz eşleştirme sonuçlarınızı kontrol edin!",
+    "keywords": "yüz eşleştirme, yapay zeka, sonuç geçmişi, aile, arkadaşlar, eğlence"
+  },
+  "HISTORYID": {
+    "title": "Geçmiş Yüz Eşleştirme Sonuçları",
+    "description": "Önceki yüz eşleştirme sonuçlarınızı kontrol edin ve aileniz ve arkadaşlarınızla paylaşın.",
+    "keywords": "yüz eşleştirme, yapay zeka, sonuç geçmişi, aile, arkadaşlar, eğlence"
+  },
+  "HistoryList": {
+    "delete": "Sil"
+  }
+}

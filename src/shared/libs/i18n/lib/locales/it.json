@@ -1,0 +1,229 @@
+{
+  "EDITORLINKDIALOG": {
+    "SUBMITTEXT": "Invia",
+    "CANCELTEXT": "Annulla",
+    "HEADER": "Descrizione del link e input URL Modal",
+    "DESCRIPTION": "Si prega di inserire la descrizione del link e l'URL per il testo selezionato."
+  },
+  "LoginDialogContainer": {
+    "DialogTitle": "Accesso",
+    "DialogDescription": "Si prega di selezionare il metodo di accesso preferito"
+  },
+  "LoginForm": {
+    "KakaoButton": "Iscriviti con Kakao",
+    "GoogleButton": "Iscriviti con Google",
+    "GithubButton": "Iscriviti con GitHub",
+    "share_comparison": "Condividi confronti di somiglianza",
+    "receive_feedback": "Ricevi feedback",
+    "sns_login": "Accesso SNS facile"
+  },
+  "loginButton": {
+    "login": "Accedi"
+  },
+  "LogoutButton": {
+    "logout": "Disconnetti"
+  },
+  "ProfileDropdown": {
+    "profile": "Profilo",
+    "my_blog": "Il Mio Blog",
+    "settings": "Impostazioni"
+  },
+  "PROFILETHEMESELECTOR": {
+    "LABEL-THEME": "Tema",
+    "ITEM-SYSTEM": "sistema",
+    "ITEM-DARK": "scuro",
+    "ITEM-LIGHT": "chiaro"
+  },
+  "LANG": {
+    "ko": "Coreano",
+    "en": "Inglese",
+    "ja": "Giapponese",
+    "zh": "Cinese",
+    "hi": "Hindi",
+    "fr": "Francese",
+    "es": "Spagnolo",
+    "ar": "Arabo",
+    "bn": "Bengalese",
+    "pt": "Portoghese",
+    "id": "Indonesiano",
+    "it": "Italiano",
+    "vi": "Vietnamita",
+    "th": "Thailandese",
+    "ms": "Malese",
+    "ru": "Russo",
+    "de": "Tedesco",
+    "tr": "Turco"
+  },
+  "MAINPAGE": {
+    "TITLE": "Inizia il tuo confronto di somiglianza",
+    "DESCRIPTION-1": "Aggiorna una foto per il confronto di somiglianza e procedi con il confronto.",
+    "DESCRIPTION-2": "Puoi vedere a chi assomigli di più.",
+    "BUTTON-START-COMPARISON": "Inizia il confronto di somiglianza",
+    "title": "Simmey - Scopri quanto assomigli a tua madre e tuo padre usando la nostra AI di riconoscimento facciale!",
+    "description": "Scopri quanto assomigli a tua madre e tuo padre usando la nostra AI di riconoscimento facciale! Questa è la pagina principale dove puoi iniziare il tuo divertente e coinvolgente confronto di somiglianza familiare.",
+    "keywords": "confronto facciale, genitori, somiglianza, divertente, famiglia"
+  },
+  "BUTTON": {
+    "CHECK-HISTORY": "Controlla la cronologia condivisa"
+  },
+  "MODEL": {
+    "DOWNLOAD-LOADING": "Scaricamento del modello AI per il confronto",
+    "DOWNLOAD-WAIT": "Attendere prego...",
+    "DOWNLOAD-FAIL": "Download del modello AI interrotto",
+    "DOWNLOAD-RETRY": "Per favore riprova (0%)",
+    "DOWNLOAD-RESUME": "Riprendi",
+    "DOWNLOAD-SUCCESS": "Download del modello AI completato",
+    "DOWNLOAD-COMPLETE": "Download completato. (100%)"
+  },
+  "ADD": {
+    "PICTURE-BUTTON": "Aggiungi foto",
+    "PICTURE-SUCCESS": "Salvataggio riuscito",
+    "PICTURE-SUCCESS-DESC": "Nuova foto aggiunta con successo.",
+    "PICTURE-FAIL": "Salvataggio fallito",
+    "PICTURE-FAIL-DESC": "Impossibile aggiungere una nuova foto."
+  },
+  "COMPARE": {
+    "BUTTON": "Confronta",
+    "ERROR-TITLE": "Errore",
+    "ERROR-MODEL-NOT-FOUND": "Il modello di riconoscimento facciale è in fase di download.",
+    "ERROR-USER-NOT-SELECTED": "Seleziona te stesso come obiettivo di confronto.",
+    "ERROR-MIN-TWO-PLAYERS": "Seleziona almeno due obiettivi di confronto.",
+    "ERROR-FACE-NOT-RECOGNIZED": "C'è una foto in cui il volto non è riconosciuto."
+  },
+  "FACES": {
+    "PAGE-HEADER": "Confronta Somiglianze",
+    "TUTORIAL-STEP-1": "Aggiungi le foto che vuoi confrontare.",
+    "TUTORIAL-STEP-2": "Puoi estrarre e controllare solo i volti dalle foto!",
+    "TUTORIAL-STEP-3": "Selezionati obbligatoriamente e classifica almeno un obiettivo di confronto.",
+    "TUTORIAL-STEP-4": "Puoi ritagliare manualmente o eliminare immagini!",
+    "TUTORIAL-STEP-5": "Una volta completata la selezione, premi il pulsante!",
+    "BUTTON-BACK": "Torna indietro",
+    "BUTTON-HELP": "Aiuto",
+    "SELECT-PICTURE-TITLE": "Seleziona le foto da confrontare",
+    "description": "Questa è una pagina di abbinamento del viso dove puoi caricare foto per estrarre e confrontare i volti. Seleziona te stesso e almeno un'altra persona per confrontare facilmente.",
+    "keywords": "Abbinamento del viso, confronto del viso, caricamento foto, estrazione del viso, ritaglio immagine, riconoscimento facciale, confronto foto"
+  },
+  "IMAGES": {
+    "EMPTY-IMAGE-TITLE": "Aggiungi foto da confrontare.",
+    "EMPTY-IMAGE-DESCRIPTION-1": "Aggiungi foto da confrontare",
+    "EMPTY-IMAGE-DESCRIPTION-2": "Classifica le foto.",
+    "ImageUpload-info": "*Le informazioni sull'immagine non vengono memorizzate sul server fino a quando non vengono condivise!",
+    "DIALOG-TITLE": "Aggiungi elemento di classificazione",
+    "DIALOG-PLACEHOLDER": "Si prega di inserire",
+    "DIALOG-SUCCESS-TITLE": "Salvataggio riuscito",
+    "DIALOG-SUCCESS-DESCRIPTION": "L'elemento di classificazione è stato aggiunto con successo.",
+    "DIALOG-ERROR-NAME-EXISTS": "Questo nome esiste già.",
+    "DIALOG-ERROR-NAME-TOO-LONG": "Si prega di inserire entro 50 caratteri.",
+    "CROP-DIALOG-TITLE": "Ritaglia di nuovo",
+    "CROP-DIALOG-SELECT-AREA": "Seleziona l'area da ritagliare",
+    "CROP-DIALOG-INSTRUCTIONS-1": "Ridefinisci l'area di ritaglio dalla foto originale.",
+    "CROP-DIALOG-INSTRUCTIONS-2": "Regola l'area blu per specificare la regione di ritaglio.",
+    "CROP-DIALOG-SELECT-PLAYER": "Si prega di selezionare un giocatore",
+    "CROP-DIALOG-SELECT-PERSON": "Si prega di selezionare una persona",
+    "CROP-DIALOG-CONFIRM": "Conferma",
+    "CROP-DIALOG-CANCEL": "Annulla",
+    "ImageLists-unselected": "Non selezionato",
+    "ImageLists-add_new": "Aggiungi nuovo",
+    "ImageLists-recrop": "Ritaglia di nuovo",
+    "ImageLists-delete": "Elimina",
+    "ImageLists-unrecognized": "Non riconosciuto",
+    "RemoveImageDialog-title": "Elimina foto",
+    "RemoveImageDialog-description": "Sei sicuro di voler eliminare la foto di confronto?",
+    "RemoveImageDialog-success_title": "Eliminazione riuscita",
+    "RemoveImageDialog-success_description": "La foto è stata eliminata con successo."
+  },
+  "RemoveTemplateDialog": {
+    "warning": "Una volta eliminato, questa azione non può essere annullata.",
+    "confirm": "Confermare",
+    "cancel": "Annullare"
+  },
+  "PLAYERS": {
+    "Myself": "Me stesso",
+    "Mama": "Mamma",
+    "Papa": "Papà"
+  },
+  "AddTemplateDialog": {
+    "title": "Aggiungi elemento della categoria",
+    "placeholder": "Si prega di inserire",
+    "confirm": "Confermare",
+    "cancel": "Annullare"
+  },
+  "LoginFormDialog": {
+    "please_login": "Effettua il login"
+  },
+  "ResultPage": {
+    "return_home": "Torna alla schermata principale",
+    "go_back": "Torna indietro",
+    "compare_faces": "Confronta somiglianze"
+  },
+  "ImagePrediction": {
+    "similarity_text": "[{player}] e [{comparison}] sono",
+    "looks_similar": "Sembrano simili."
+  },
+  "ShareButton": {
+    "share": "Condividi"
+  },
+  "LoginPopupPage": {
+    "login_completed": "Il login è stato completato. Chiudi questa finestra e riprova."
+  },
+  "FORM": {
+    "TITLE-COMPARE-LOOKS": "Confronta le somiglianze"
+  },
+  "HistoryPage": {
+    "error_page_not_found": "Pagina non trovata!",
+    "go_to_homepage": "Torna alla home page"
+  },
+  "HistoryPageHeader": {
+    "rename_history": "Rinomina cronologia",
+    "delete_history": "Elimina cronologia"
+  },
+  "CommentInput": {
+    "error": "Errore",
+    "cooldown_error_title": "Per favore riprova più tardi",
+    "cooldown_error_description": "Stai digitando troppo velocemente.",
+    "input_placeholder": "Inserisci un commento..."
+  },
+  "CopyLinkButton": {
+    "copy_success": "Copia riuscita",
+    "copy_success_description": "L'URL è stato copiato."
+  },
+  "UpdateHistoryTitleDialog": {
+    "dialog_title": "Modifica titolo",
+    "success_title": "Aggiornamento riuscito",
+    "success_description": "Il titolo è stato aggiornato con successo.",
+    "placeholder": "Si prega di inserire un titolo",
+    "max_length_error": "caratteri o meno."
+  },
+  "RemoveCommentDialog": {
+    "dialog_title": "Elimina risultato del confronto",
+    "dialog_description": "Sei sicuro di voler eliminare questo risultato?",
+    "success_title": "Eliminazione riuscita",
+    "success_description": "Il risultato è stato eliminato con successo.",
+    "title": "Elimina risultato del confronto",
+    "description": "Sei sicuro di voler eliminare questo risultato?"
+  },
+  "LOGIN": {
+    "title": "Simmey - Scopri quanto assomigli a tua madre e tuo padre usando la nostra AI di riconoscimento facciale!",
+    "description": "Accedi rapidamente alle funzionalità desiderate con un sistema di login sicuro e semplice.",
+    "keywords": "Accesso, accesso all'account, login sicuro, login facile, autenticazione"
+  },
+  "HISTORY": {
+    "title": "Risultati passati del confronto facciale",
+    "description": "Controlla i tuoi risultati passati del confronto facciale e condividili con famiglia e amici.",
+    "keywords": "confronto facciale, IA, cronologia dei risultati, famiglia, amici, divertimento",
+    "go_to_homepage": "Torna alla home page"
+  },
+  "RESULT": {
+    "title": "Pagina dei risultati del confronto",
+    "description": "Controlla i tuoi risultati di confronto facciale!",
+    "keywords": "confronto facciale, IA, cronologia dei risultati, famiglia, amici, divertimento"
+  },
+  "HISTORYID": {
+    "title": "Risultati passati del confronto facciale",
+    "description": "Controlla i tuoi risultati passati del confronto facciale e condividili con famiglia e amici.",
+    "keywords": "confronto facciale, IA, cronologia dei risultati, famiglia, amici, divertimento"
+  },
+  "HistoryList": {
+    "delete": "Elimina"
+  }
+}

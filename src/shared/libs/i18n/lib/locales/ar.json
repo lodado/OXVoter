@@ -1,0 +1,229 @@
+{
+  "EDITORLINKDIALOG": {
+    "SUBMITTEXT": "إرسال",
+    "CANCELTEXT": "إلغاء",
+    "HEADER": "وصف الرابط وإدخال URL",
+    "DESCRIPTION": "يرجى إدخال وصف الرابط وعنوان URL للنص المحدد."
+  },
+  "LoginDialogContainer": {
+    "DialogTitle": "تسجيل الدخول",
+    "DialogDescription": "يرجى اختيار طريقة تسجيل الدخول المفضلة لديك"
+  },
+  "LoginForm": {
+    "KakaoButton": "سجّل عبر Kakao",
+    "GoogleButton": "سجّل عبر Google",
+    "GithubButton": "سجّل عبر GitHub",
+    "share_comparison": "شارك مقارنات الشبه مع الآخرين",
+    "receive_feedback": "تلقي التعليقات",
+    "sns_login": "تسجيل الدخول السهل عبر SNS"
+  },
+  "loginButton": {
+    "login": "تسجيل الدخول"
+  },
+  "LogoutButton": {
+    "logout": "تسجيل الخروج"
+  },
+  "ProfileDropdown": {
+    "profile": "الملف الشخصي",
+    "my_blog": "مدونتي",
+    "settings": "الإعدادات"
+  },
+  "PROFILETHEMESELECTOR": {
+    "LABEL-THEME": "السمة",
+    "ITEM-SYSTEM": "النظام",
+    "ITEM-DARK": "داكن",
+    "ITEM-LIGHT": "فاتح"
+  },
+  "LANG": {
+    "ko": "الكورية",
+    "en": "الإنجليزية",
+    "ja": "اليابانية",
+    "zh": "الصينية",
+    "hi": "الهندية",
+    "fr": "الفرنسية",
+    "es": "الإسبانية",
+    "ar": "العربية",
+    "bn": "البنغالية",
+    "pt": "البرتغالية",
+    "id": "الإندونيسية",
+    "it": "الإيطالية",
+    "vi": "الفيتنامية",
+    "th": "التايلاندية",
+    "ms": "الملاوية",
+    "ru": "الروسية",
+    "de": "الألمانية",
+    "tr": "التركية"
+  },
+  "MAINPAGE": {
+    "TITLE": "ابدأ مقارنة الشبه",
+    "DESCRIPTION-1": "قم بتحديث صورة لمقارنة الشبه ثم تابع المقارنة.",
+    "DESCRIPTION-2": "يمكنك التحقق من من تشبه أكثر.",
+    "BUTTON-START-COMPARISON": "ابدأ مقارنة الشبه",
+    "title": "Simmey - اكتشف مدى تشابهك مع والدتك ووالدك باستخدام ذكاءنا الاصطناعي لمطابقة الوجوه!",
+    "description": "اكتشف مدى تشابهك مع والدتك ووالدك باستخدام ذكاءنا الاصطناعي لمطابقة الوجوه! هذه هي الصفحة الرئيسية حيث يمكنك بدء مقارنة الشبه العائلية الممتعة والمشوقة.",
+    "keywords": "مقارنة الوجوه, الوالدين, التشابه, المرح, العائلة"
+  },
+  "BUTTON": {
+    "CHECK-HISTORY": "التحقق من السجل المشترك"
+  },
+  "MODEL": {
+    "DOWNLOAD-LOADING": "جارٍ تنزيل نموذج الذكاء الاصطناعي للمقارنة",
+    "DOWNLOAD-WAIT": "يرجى الانتظار...",
+    "DOWNLOAD-FAIL": "تم إيقاف تنزيل نموذج الذكاء الاصطناعي",
+    "DOWNLOAD-RETRY": "يرجى المحاولة مرة أخرى (0%)",
+    "DOWNLOAD-RESUME": "استئناف",
+    "DOWNLOAD-SUCCESS": "اكتمل تنزيل نموذج الذكاء الاصطناعي",
+    "DOWNLOAD-COMPLETE": "اكتمل التنزيل. (100%)"
+  },
+  "ADD": {
+    "PICTURE-BUTTON": "إضافة صورة",
+    "PICTURE-SUCCESS": "تم الحفظ بنجاح",
+    "PICTURE-SUCCESS-DESC": "تمت إضافة صورة جديدة بنجاح.",
+    "PICTURE-FAIL": "فشل الحفظ",
+    "PICTURE-FAIL-DESC": "فشل في إضافة صورة جديدة."
+  },
+  "COMPARE": {
+    "BUTTON": "قارن",
+    "ERROR-TITLE": "خطأ",
+    "ERROR-MODEL-NOT-FOUND": "يتم تنزيل نموذج التعرف على الوجه.",
+    "ERROR-USER-NOT-SELECTED": "يرجى تحديد نفسك كهدف للمقارنة.",
+    "ERROR-MIN-TWO-PLAYERS": "يرجى تحديد ما لا يقل عن هدفين للمقارنة.",
+    "ERROR-FACE-NOT-RECOGNIZED": "هناك صورة لم يتم التعرف على الوجه فيها."
+  },
+  "FACES": {
+    "PAGE-HEADER": "مقارنة الشبه",
+    "TUTORIAL-STEP-1": "يرجى إضافة الصور التي تريد مقارنتها.",
+    "TUTORIAL-STEP-2": "يمكنك استخراج والتحقق فقط من الوجوه في الصور!",
+    "TUTORIAL-STEP-3": "يجب عليك اختيار نفسك وتصنيف هدف مقارنة واحد على الأقل.",
+    "TUTORIAL-STEP-4": "يمكنك إعادة اقتصاص الصور يدويًا أو حذفها!",
+    "TUTORIAL-STEP-5": "بمجرد اكتمال التحديد، اضغط على الزر!",
+    "BUTTON-BACK": "العودة",
+    "BUTTON-HELP": "مساعدة",
+    "SELECT-PICTURE-TITLE": "يرجى تحديد الصور للمقارنة",
+    "description": "هذه صفحة مطابقة الوجه حيث يمكنك تحميل الصور لاستخراج الوجوه ومقارنتها. يجب اختيار نفسك وتحديد شخص واحد على الأقل لإجراء مقارنة بسهولة.",
+    "keywords": "مطابقة الوجه, مقارنة الوجه, تحميل الصور, استخراج الوجه, قص الصورة, التعرف على الوجه, مقارنة الصور"
+  },
+  "IMAGES": {
+    "EMPTY-IMAGE-TITLE": "يرجى إضافة الصور للمقارنة.",
+    "EMPTY-IMAGE-DESCRIPTION-1": "أضف الصور للمقارنة",
+    "EMPTY-IMAGE-DESCRIPTION-2": "يرجى تصنيف الصور.",
+    "ImageUpload-info": "*لن يتم تخزين معلومات الصورة على الخادم حتى يتم مشاركتها!",
+    "DIALOG-TITLE": "إضافة عنصر تصنيف",
+    "DIALOG-PLACEHOLDER": "الرجاء إدخال",
+    "DIALOG-SUCCESS-TITLE": "تم الحفظ بنجاح",
+    "DIALOG-SUCCESS-DESCRIPTION": "تمت إضافة عنصر التصنيف بنجاح.",
+    "DIALOG-ERROR-NAME-EXISTS": "هذا الاسم موجود بالفعل.",
+    "DIALOG-ERROR-NAME-TOO-LONG": "يرجى إدخال 50 حرفًا أو أقل.",
+    "CROP-DIALOG-TITLE": "إعادة الاقتصاص",
+    "CROP-DIALOG-SELECT-AREA": "يرجى تحديد المنطقة المراد اقتصاصها",
+    "CROP-DIALOG-INSTRUCTIONS-1": "يرجى إعادة تحديد منطقة الاقتصاص من الصورة الأصلية.",
+    "CROP-DIALOG-INSTRUCTIONS-2": "قم بضبط المنطقة الزرقاء لتحديد منطقة الاقتصاص.",
+    "CROP-DIALOG-SELECT-PLAYER": "الرجاء اختيار لاعب",
+    "CROP-DIALOG-SELECT-PERSON": "الرجاء اختيار شخص",
+    "CROP-DIALOG-CONFIRM": "تأكيد",
+    "CROP-DIALOG-CANCEL": "إلغاء",
+    "ImageLists-unselected": "غير محدد",
+    "ImageLists-add_new": "إضافة جديد",
+    "ImageLists-recrop": "إعادة الاقتصاص",
+    "ImageLists-delete": "حذف",
+    "ImageLists-unrecognized": "غير معترف به",
+    "RemoveImageDialog-title": "حذف الصورة",
+    "RemoveImageDialog-description": "هل أنت متأكد أنك تريد حذف صورة المقارنة؟",
+    "RemoveImageDialog-success_title": "تم الحذف بنجاح",
+    "RemoveImageDialog-success_description": "تم حذف الصورة بنجاح."
+  },
+  "RemoveTemplateDialog": {
+    "warning": "بمجرد الحذف، لا يمكن التراجع عن هذا الإجراء.",
+    "confirm": "تأكيد",
+    "cancel": "إلغاء"
+  },
+  "PLAYERS": {
+    "Myself": "نفسي",
+    "Mama": "أمي",
+    "Papa": "أبي"
+  },
+  "AddTemplateDialog": {
+    "title": "إضافة عنصر فئة",
+    "placeholder": "يرجى الإدخال",
+    "confirm": "تأكيد",
+    "cancel": "إلغاء"
+  },
+  "LoginFormDialog": {
+    "please_login": "الرجاء تسجيل الدخول"
+  },
+  "ResultPage": {
+    "return_home": "العودة إلى الشاشة الرئيسية",
+    "go_back": "الرجوع",
+    "compare_faces": "مقارنة الشبه"
+  },
+  "ImagePrediction": {
+    "similarity_text": "[{player}] و[{comparison}] هما",
+    "looks_similar": "تبدو متشابهة."
+  },
+  "ShareButton": {
+    "share": "مشاركة"
+  },
+  "LoginPopupPage": {
+    "login_completed": "تم تسجيل الدخول بنجاح. الرجاء إغلاق هذه النافذة والمحاولة مرة أخرى."
+  },
+  "FORM": {
+    "TITLE-COMPARE-LOOKS": "قارن بين الأشخاص المتشابهين"
+  },
+  "HistoryPage": {
+    "error_page_not_found": "الصفحة غير موجودة!",
+    "go_to_homepage": "العودة إلى الصفحة الرئيسية"
+  },
+  "HistoryPageHeader": {
+    "rename_history": "إعادة تسمية السجل",
+    "delete_history": "حذف السجل"
+  },
+  "CommentInput": {
+    "error": "خطأ",
+    "cooldown_error_title": "يرجى المحاولة مرة أخرى لاحقًا",
+    "cooldown_error_description": "أنت تكتب بسرعة كبيرة.",
+    "input_placeholder": "أدخل تعليقًا..."
+  },
+  "CopyLinkButton": {
+    "copy_success": "تم النسخ بنجاح",
+    "copy_success_description": "تم نسخ الرابط."
+  },
+  "UpdateHistoryTitleDialog": {
+    "dialog_title": "تحرير العنوان",
+    "success_title": "تم التحديث بنجاح",
+    "success_description": "تم تحديث العنوان بنجاح.",
+    "placeholder": "يرجى إدخال عنوان",
+    "max_length_error": "أو أقل من الأحرف."
+  },
+  "RemoveCommentDialog": {
+    "dialog_title": "حذف نتيجة المقارنة",
+    "dialog_description": "هل أنت متأكد أنك تريد حذف هذه النتيجة؟",
+    "success_title": "تم الحذف بنجاح",
+    "success_description": "تم حذف النتيجة بنجاح.",
+    "title": "حذف نتيجة المقارنة",
+    "description": "هل أنت متأكد أنك تريد حذف هذه النتيجة؟"
+  },
+  "LOGIN": {
+    "title": "Simmey - اكتشف مدى تشابهك مع والدتك ووالدك باستخدام ذكاءنا الاصطناعي لمطابقة الوجوه!",
+    "description": "قم بالوصول إلى الميزات المطلوبة بسرعة من خلال نظام تسجيل دخول آمن وسهل.",
+    "keywords": "تسجيل الدخول, الوصول إلى الحساب, تسجيل دخول آمن, تسجيل دخول سهل, مصادقة"
+  },
+  "HISTORY": {
+    "title": "نتائج مطابقة الوجه السابقة",
+    "description": "تحقق من نتائج مطابقة الوجه السابقة وشاركها مع العائلة والأصدقاء.",
+    "keywords": "مطابقة الوجه, الذكاء الاصطناعي, سجل النتائج, العائلة, الأصدقاء, المتعة",
+    "go_to_homepage": "العودة إلى الصفحة الرئيسية"
+  },
+  "RESULT": {
+    "title": "صفحة نتائج المقارنة",
+    "description": "تحقق من نتائج مطابقة الوجه الخاصة بك!",
+    "keywords": "مطابقة الوجه, الذكاء الاصطناعي, سجل النتائج, العائلة, الأصدقاء, المتعة"
+  },
+  "HISTORYID": {
+    "title": "نتائج مطابقة الوجه السابقة",
+    "description": "تحقق من نتائج مطابقة الوجه السابقة وشاركها مع العائلة والأصدقاء.",
+    "keywords": "مطابقة الوجه, الذكاء الاصطناعي, سجل النتائج, العائلة, الأصدقاء, المتعة"
+  },
+  "HistoryList": {
+    "delete": "حذف"
+  }
+}
