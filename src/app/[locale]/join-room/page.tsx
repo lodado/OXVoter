@@ -6,6 +6,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import { Button, Card, Input } from "@/shared/ui";
+import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 import { ToastViewPort } from "@/shared/ui/Toast";
 import { useToastStore } from "@/shared/ui/Toast/stores";
 
@@ -77,7 +78,7 @@ export default function JoinRoomPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-slate-900 to-slate-800 p-4">
+    <ReactiveLayout className="flex flex-col justify-center items-center">
       <Card className="w-full max-w-md bg-slate-800/80 text-white shadow-xl backdrop-blur">
         <Card.Header>
           <Card.Title className="text-2xl">게임방 참가하기</Card.Title>
@@ -117,7 +118,7 @@ export default function JoinRoomPage() {
         </form>
       </Card>
 
-      <ToastViewPort key="viewPort" className="bottom-[6.25rem]" />
-    </div>
+      <ToastViewPort key="viewPort" className="bottom-[3rem]" />
+    </ReactiveLayout>
   );
 }

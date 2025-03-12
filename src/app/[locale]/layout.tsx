@@ -36,7 +36,7 @@ const RootLayout: React.FunctionComponent<LocaleProps> = ({ children, params: { 
   const nonce = headers().get("x-nonce")!;
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html className="bg-gradient-to-b from-slate-900 to-slate-800 text-white" lang={locale} suppressHydrationWarning>
       <Head>
         {/* Preload Spoqa Han Sans Neo */}
         <link rel="preload" href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" as="style" />

@@ -2,10 +2,11 @@ import Link from "next/link";
 
 import { LocaleLink } from "@/entities/Router";
 import { Button } from "@/shared/ui";
+import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 
 export default function Home() {
   return (
-    <div className="flex  min-h-screen flex-col items-center justify-center bg-gradient-to-b from-slate-900 to-slate-800 p-4 text-white">
+    <ReactiveLayout className="flex flex-col justify-center items-center">
       <div className="border border-solid border-white w-full max-w-md space-y-8 rounded-xl bg-slate-800/50 p-8 shadow-lg backdrop-blur">
         <div className="flex flex-col w-full justify-center items-center text-center">
           <h1 className="text-4xl font-bold tracking-tight">실시간 투표</h1>
@@ -18,14 +19,14 @@ export default function Home() {
           </LocaleLink>
           <LocaleLink href="/join-room" className="w-full">
             <Button
-              variant="primaryLine"
-              className="w-full h-[2.9rem] border-slate-600 text-slate-200 hover:bg-slate-700"
+              variant="custom"
+              className="w-full h-[2.9rem] border border-slate-600 text-slate-200 hover:bg-slate-700"
             >
               방 참가하기
             </Button>
           </LocaleLink>
         </div>
       </div>
-    </div>
+    </ReactiveLayout>
   );
 }

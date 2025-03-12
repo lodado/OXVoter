@@ -48,7 +48,7 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
   return (
     <>
       <div className="grid gap-6 md:grid-cols-2">
-        <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur">
+        <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur min-h-[40vh]">
           <Card.Header>
             <Card.Title className="flex items-center justify-between">
               <span>
@@ -128,7 +128,7 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
           </Card.Footer>
         </Card>
 
-        <ToastViewPort key="viewPort" className="bottom-[6.25rem]" />
+        <ToastViewPort key="viewPort" className="bottom-[3rem]" />
       </div>
     </>
   );

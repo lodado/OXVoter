@@ -7,6 +7,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import { Button, Card, Input, Switch } from "@/shared/ui";
+import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 
 export default function CreateRoomPage() {
   const router = useRouter();
@@ -61,7 +62,7 @@ export default function CreateRoomPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-slate-900 to-slate-800 p-4">
+    <ReactiveLayout className="flex flex-col justify-center items-center">
       <Card className="w-full max-w-md bg-slate-800/80 text-white shadow-xl backdrop-blur">
         <Card.Header>
           <Card.Title className="text-2xl">새 게임방 만들기</Card.Title>
@@ -153,6 +154,6 @@ export default function CreateRoomPage() {
           </Card.Footer>
         </form>
       </Card>
-    </div>
+    </ReactiveLayout>
   );
 }

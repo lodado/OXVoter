@@ -215,7 +215,7 @@ export default function RoomPage({ params }: { params: { id: string } }) {
   }
 
   return (
-    <div className="min-h-screen w-full px-4 flex justify-center bg-gradient-to-b from-slate-900 to-slate-800 p-4 text-white">
+    <div className="flex flex-col justify-center p-4 items-center">
       <div className="mx-auto w-full max-w-[1200px]">
         <header className="mb-6 flex items-center justify-between">
           <div>
