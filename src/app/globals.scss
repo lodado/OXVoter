@@ -154,6 +154,10 @@ html, body {
   animation: wave 3s ease-in-out infinite;
 }
 
+body {
+  @apply bg-gradient-to-b from-slate-900 to-slate-800 text-white;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
