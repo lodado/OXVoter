@@ -79,14 +79,14 @@ export default function CreateRoomPage() {
   };
 
   return (
-    <ReactiveLayout className="flex flex-col justify-center items-center">
+    <ReactiveLayout className="flex flex-col justify-center items-center py-10">
       <Card className="w-full max-w-md bg-slate-800/80 text-white shadow-xl backdrop-blur">
         <Card.Header>
           <Card.Title className="text-2xl">새 게임방 만들기</Card.Title>
           <Card.Description className="text-slate-300">게임 설정을 구성하고 친구들을 초대하세요</Card.Description>
         </Card.Header>
         <Form onSubmit={handleCreateRoom}>
-          <Card.Content className="p-0 px-6 flex flex-col gap-2">
+          <Card.Content className="relative p-0 px-6 flex flex-col gap-2">
             <Form.Field name="roomName" className="">
               <Form.Label htmlFor="roomName">방 이름</Form.Label>
               <Form.Control asChild>
@@ -181,7 +181,7 @@ export default function CreateRoomPage() {
               </div>
             </div>
           </Card.Content>
-          <Card.Footer>
+          <Card.Footer className="sticky bottom-0">
             <Form.Submit asChild disabled={isLoading}>
               <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
                 {isLoading ? (
