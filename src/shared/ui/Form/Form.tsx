@@ -2,17 +2,28 @@
 
 import React, { ComponentProps, forwardRef, PropsWithChildren, useState } from "react";
 
-import { cn } from "@/shared/utils";
+import { cn, contextBuildHelper } from "@/shared/utils";
 
 import { Control, Field, Label, Message, Root, Submit } from "./components/radix";
 
 // Root 컴포넌트 타입 정의
 export type FormProps = ComponentProps<typeof Root>;
 
+interface FormContextProps {
+  isInvalid: boolean;
+  setIsInvalid: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const [FormProvider, useFormContext] = contextBuildHelper<FormContextProps>({ id: "form" });
+
 const Form = forwardRef<HTMLFormElement, FormProps>(({ children, ...rest }, ref) => {
+  const [isInvalid, setIsInvalid] = useState(false);
+
   return (
     <Root {...rest} ref={ref}>
-      {children}
+      <FormProvider isInvalid={isInvalid} setIsInvalid={setIsInvalid}>
+        {children}
+      </FormProvider>
     </Root>
   );
 });
@@ -38,7 +49,21 @@ const RawLabel: React.FC<LabelProps> = (props) => {
 export type ControlProps = ComponentProps<typeof Control>;
 
 const RawControl: React.FC<ControlProps> = (props) => {
-  return <Control {...props} />;
+  const { isInvalid, setIsInvalid } = useFormContext();
+
+  return (
+    <Control
+      {...props}
+      onChange={(e) => {
+        setIsInvalid(false);
+        props.onChange?.(e);
+      }}
+      onInvalid={(e) => {
+        setIsInvalid(true);
+        props.onInvalid?.(e);
+      }}
+    />
+  );
 };
 
 // Message 컴포넌트 타입 정의
@@ -59,7 +84,9 @@ const RawMessage: React.FC<MessageProps> = (props) => {
 export type SubmitProps = ComponentProps<typeof Submit>;
 
 const RawSubmit: React.FC<SubmitProps> = (props) => {
-  return <Submit asChild {...props} />;
+  const { isInvalid } = useFormContext();
+
+  return <Submit asChild {...props} disabled={isInvalid || props.disabled} />;
 };
 
 export const RawRequired = () => {

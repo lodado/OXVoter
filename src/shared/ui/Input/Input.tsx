@@ -62,6 +62,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>((props: InputProps, ref) 
     } else {
       setInternalValue(newValue);
     }
+
+    props.onChange?.(e);
   };
 
   const handleClear = () => {
