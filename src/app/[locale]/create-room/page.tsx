@@ -99,7 +99,11 @@ export default function CreateRoomPage() {
                 min={2}
                 max={20}
                 value={String(maxPlayers ?? 0)}
-                setValue={(value) => setMaxPlayers(Number.parseInt(value))}
+                setValue={(value) => {
+                  if (isNaN(Number(value))) return;
+
+                  setMaxPlayers(value ? Number.parseInt(value) : 0);
+                }}
                 resetValue="8"
                 required
                 className=" bg-slate-900/50 text-white"
