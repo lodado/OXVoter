@@ -15,9 +15,9 @@ export default function CreateRoomPage() {
   const [roomName, setRoomName] = useState("");
   const [username, setUsername] = useState("");
   const [maxPlayers, setMaxPlayers] = useState(8);
-  const [randomRoles, setRandomRoles] = useState(true);
-  const [anonymousVoting, setAnonymousVoting] = useState(false);
-  const [specialVoting, setSpecialVoting] = useState(true);
+  const [randomRoles, setRandomRoles] = useState(false);
+  const [anonymousVoting, setAnonymousVoting] = useState(true);
+  const [specialVoting, setSpecialVoting] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const {

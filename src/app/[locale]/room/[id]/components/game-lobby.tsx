@@ -4,7 +4,7 @@ import { CheckCircle, Copy, Crown, UserCircle2 } from "lucide-react";
 import { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 
-import { Badge, BadgeButton, Button, Card } from "@/shared/ui";
+import { Badge, BadgeButton, Button, Card, Switch } from "@/shared/ui";
 import { ToastViewPort } from "@/shared/ui/Toast";
 import { useToastStore } from "@/shared/ui/Toast/stores";
 
@@ -32,6 +32,11 @@ interface GameLobbyProps {
 
 export default function GameLobby({ players, settings, isHost, onStartGame }: GameLobbyProps) {
   const [copied, setCopied] = useState(false);
+
+  const [randomRoles, setRandomRoles] = useState(false);
+  const [anonymousVoting, setAnonymousVoting] = useState(true);
+  const [specialVoting, setSpecialVoting] = useState(false);
+
   const { addToast } = useToastStore();
 
   const handleCopyLink = () => {
@@ -99,21 +104,16 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
               </li>
               <li className="flex justify-between">
                 <span className="text-slate-300">랜덤 직업 부여</span>
-                <Badge variant={settings.randomRoles ? "isSelected" : "isNotSelected"}>
-                  {settings.randomRoles ? "활성화" : "비활성화"}
-                </Badge>
+
+                <Switch id="randomRoles" checked={randomRoles} onCheckedChange={setRandomRoles} />
               </li>
               <li className="flex justify-between">
                 <span className="text-slate-300">익명 투표</span>
-                <Badge variant={settings.anonymousVoting ? "isSelected" : "isNotSelected"}>
-                  {settings.anonymousVoting ? "활성화" : "비활성화"}
-                </Badge>
+                <Switch id="anonymousVoting" checked={anonymousVoting} onCheckedChange={setAnonymousVoting} />
               </li>
               <li className="flex justify-between">
                 <span className="text-slate-300">특수 투표</span>
-                <Badge variant={settings.specialVoting ? "isSelected" : "isNotSelected"}>
-                  {settings.specialVoting ? "활성화" : "비활성화"}
-                </Badge>
+                <Switch id="specialVoting" checked={specialVoting} onCheckedChange={setSpecialVoting} />
               </li>
             </ul>
           </Card.Content>
