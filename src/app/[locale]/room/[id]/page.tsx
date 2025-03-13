@@ -11,10 +11,10 @@ import { useFunnelWithoutHistory } from "@/shared";
 import { Card } from "@/shared/ui";
 import { useToastStore } from "@/shared/ui/Toast/stores";
 
-import GameLobby from "./components/game-lobby";
-import GameRoom from "./components/game-room";
-import VoteResults from "./components/vote-results";
-import VotingPhase from "./components/voting-phase";
+import GameLobby from "./components/funnels/game-lobby";
+import GameRoom from "./components/funnels/game-room";
+import VoteResults from "./components/funnels/vote-results";
+import VotingPhase from "./components/funnels/voting-phase";
 
 type GameState = {
   lobby: {};
@@ -272,6 +272,7 @@ export default function RoomPage({ params }: { params: { id: string } }) {
             return (
               <VotingPhase
                 title={"투표하기"}
+                players={players}
                 isHost={true}
                 options={[
                   { id: "yes", text: "찬성" },
@@ -293,18 +294,21 @@ export default function RoomPage({ params }: { params: { id: string } }) {
               <VoteResults
                 results={[
                   {
-                    optionId: "yes",
+                    id: "yes",
+                    text: "찬성",
                     votes: 1,
                     voters: [playerId],
                   },
                   {
-                    optionId: "no",
+                    id: "no",
+                    text: "반대",
                     votes: 2,
                     voters: [playerId],
                   },
 
                   {
-                    optionId: "abstain",
+                    id: "abstain",
+                    text: "기권",
                     votes: 3,
                     voters: [playerId],
                   },
