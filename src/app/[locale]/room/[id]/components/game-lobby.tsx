@@ -81,8 +81,8 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
                   <UserCircle2 className="mr-2 h-5 w-5 text-slate-300" />
                   <span className="flex-1">{player.username}</span>
                   {player.isHost && (
-                    <Badge className="flex items-center gap-1 border-amber-500 text-amber-400">
-                      <Crown className="h-3 w-3" />
+                    <Badge variant={"success"} className="flex items-center gap-1">
+                      <Crown className="h-3 w-3 text-warning" />
                       방장
                     </Badge>
                   )}
@@ -105,7 +105,7 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
               <li className="flex justify-between">
                 <span className="text-slate-300">랜덤 직업 부여</span>
 
-                <Switch id="randomRoles" checked={randomRoles} onCheckedChange={setRandomRoles} />
+                <Switch id="randomRoles" checked={randomRoles} onCheckedChange={setRandomRoles} disabled />
               </li>
               <li className="flex justify-between">
                 <span className="text-slate-300">익명 투표</span>
@@ -113,7 +113,7 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
               </li>
               <li className="flex justify-between">
                 <span className="text-slate-300">특수 투표</span>
-                <Switch id="specialVoting" checked={specialVoting} onCheckedChange={setSpecialVoting} />
+                <Switch id="specialVoting" checked={specialVoting} onCheckedChange={setSpecialVoting} disabled />
               </li>
             </ul>
           </Card.Content>

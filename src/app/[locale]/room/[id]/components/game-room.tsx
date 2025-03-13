@@ -27,7 +27,7 @@ export default function GameRoom({ players, isHost, onStartVote }: GameRoomProps
         <Card.Header>
           <Card.Title className="flex items-center justify-between">
             <span>게임 진행 중</span>
-            <Badge className="border-green-500 text-green-400">
+            <Badge variant="success" className="w-max px-2 bg-transparent subhead-2 ">
               생존자: {alivePlayers.length}/{players.length}
             </Badge>
           </Card.Title>
@@ -43,8 +43,16 @@ export default function GameRoom({ players, isHost, onStartVote }: GameRoomProps
               >
                 <UserCircle2 className="mr-2 h-5 w-5 text-slate-300" />
                 <span className="flex-1">{player.username}</span>
-                {player.isHost && <Crown className="h-4 w-4 text-amber-400" />}
-                {!player.isAlive && <AlertCircle className="h-4 w-4 text-red-400" />}
+
+                <div className="flex flex-row items-center gap-2">
+                  {player.isHost && <Crown className="h-4 w-4 text-amber-400" />}
+                  {player.role && (
+                    <Badge variant="primary" className="px-2 subhead-2">
+                      {player.role}
+                    </Badge>
+                  )}
+                  {!player.isAlive && <AlertCircle className="h-4 w-4 text-red-400" />}
+                </div>
               </div>
             ))}
           </div>

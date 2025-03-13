@@ -1,16 +1,28 @@
 "use client";
 
+import { useFunnel, UseFunnelOptions, UseFunnelResults } from "@use-funnel/browser";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { G } from "vitest/dist/chunks/reporters.WnPwkmgA.js";
 
+import { useFunnelWithoutHistory } from "@/shared";
 import { Card } from "@/shared/ui";
 import { useToastStore } from "@/shared/ui/Toast/stores";
 
 import GameLobby from "./components/game-lobby";
+import GameRoom from "./components/game-room";
+import VoteResults from "./components/vote-results";
+import VotingPhase from "./components/voting-phase";
 
-type GameState = "lobby" | "role-reveal" | "game" | "voting" | "special-voting" | "results";
+type GameState = {
+  lobby: {};
+  game: {};
+  voting: {};
+  specialVoting: {};
+  results: {};
+};
 
 type Player = {
   id: string;
@@ -68,7 +80,6 @@ export default function RoomPage({ params }: { params: { id: string } }) {
   const { addToast } = useToastStore();
 
   const [playerId, setPlayerId] = useState<string>("");
-  const [gameState, setGameState] = useState<GameState>("lobby");
   const [players, setPlayers] = useState<Player[]>([]);
   const [myRole, setMyRole] = useState<string | null>(null);
   const [roomSettings, setRoomSettings] = useState({
@@ -78,14 +89,24 @@ export default function RoomPage({ params }: { params: { id: string } }) {
     anonymousVoting: false,
     specialVoting: true,
   });
+
   const [currentVote, setCurrentVote] = useState<{
     title: string;
     options: VoteOption[];
     timeLimit?: number;
   } | null>(null);
+
   const [voteResults, setVoteResults] = useState<VoteResult[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [hasVoted, setHasVoted] = useState(false);
+
+  const funnel = useFunnelWithoutHistory<GameState>({
+    id: "game-page",
+    initial: {
+      step: "lobby",
+      context: {},
+    },
+  } satisfies UseFunnelOptions<GameState>);
 
   // 방 데이터 로드
   useEffect(() => {
@@ -124,7 +145,6 @@ export default function RoomPage({ params }: { params: { id: string } }) {
 
         // 방 데이터 설정
         setPlayers(room.players);
-        setGameState(room.gameState);
         setRoomSettings({
           roomName: room.name,
           maxPlayers: room.maxPlayers,
@@ -179,9 +199,6 @@ export default function RoomPage({ params }: { params: { id: string } }) {
 
       const room = JSON.parse(roomData) as RoomData;
 
-      // 게임 상태 변경
-      room.gameState = "role-reveal";
-
       room.players.forEach((player) => {
         player.role = ROLES.CITIZEN;
       });
@@ -195,8 +212,6 @@ export default function RoomPage({ params }: { params: { id: string } }) {
       // 방 데이터 저장
       localStorage.setItem(`room_${params.id}`, JSON.stringify(room));
 
-      // 상태 업데이트
-      setGameState("role-reveal");
       setPlayers(room.players);
     } catch (error) {
       console.error("게임 시작 오류:", error);
@@ -228,52 +243,81 @@ export default function RoomPage({ params }: { params: { id: string } }) {
           </div>
         </header>
 
-        {gameState === "lobby" && (
-          <GameLobby players={players} settings={roomSettings} isHost={isHost} onStartGame={startGame} />
-        )}
+        <funnel.Render
+          lobby={({ history }) => {
+            return (
+              <GameLobby
+                players={players}
+                settings={roomSettings}
+                isHost={isHost}
+                onStartGame={() => {
+                  startGame();
+                  history.push("game", {});
+                }}
+              />
+            );
+          }}
+          game={({ history }) => {
+            return (
+              <GameRoom
+                players={players}
+                isHost={true}
+                onStartVote={() => {
+                  history.push("voting", {});
+                }}
+              />
+            );
+          }}
+          voting={({ history }) => {
+            return (
+              <VotingPhase
+                title={"투표하기"}
+                isHost={true}
+                options={[
+                  { id: "yes", text: "찬성" },
+                  { id: "no", text: "반대" },
+                  { id: "abstain", text: "기권" },
+                ]}
+                onSubmitVote={(optionId: string) => {
+                  history.push("results", {});
+                }}
+                timeLimit={60}
+              />
+            );
+          }}
+          specialVoting={({ history }) => {
+            return <div>Special Voting</div>;
+          }}
+          results={({ history }) => {
+            return (
+              <VoteResults
+                results={[
+                  {
+                    optionId: "yes",
+                    votes: 1,
+                    voters: [playerId],
+                  },
+                  {
+                    optionId: "no",
+                    votes: 2,
+                    voters: [playerId],
+                  },
 
-        {/*
-
-        {gameState === "role-reveal" && (
-          <RoleReveal role={myRole || "시민"} onContinue={isHost ? nextPhase : undefined} />
-        )}
-
-        {gameState === "game" && (
-          <GameRoom players={players} isHost={isHost} onStartVote={isHost ? nextPhase : undefined} />
-        )}
-
-        {gameState === "voting" && currentVote && (
-          <VotingPhase
-            title={currentVote.title}
-            options={currentVote.options}
-            timeLimit={currentVote.timeLimit}
-            onSubmitVote={submitVote}
-            onForceEnd={isHost ? forceEndVoting : undefined}
-            hasVoted={hasVoted}
-          />
-        )}
-
-        {gameState === "special-voting" && currentVote && myRole && (
-          <SpecialVoting
-            title={currentVote.title}
-            options={currentVote.options}
-            role={myRole}
-            onSubmitVote={submitVote}
-            onForceEnd={isHost ? forceEndVoting : undefined}
-            hasVoted={hasVoted}
-          />
-        )}
-
-        {gameState === "results" && (
-          <VoteResults
-            results={voteResults}
-            players={players}
-            anonymousVoting={roomSettings.anonymousVoting}
-            onContinue={isHost ? nextPhase : undefined}
-          />
-        )}
-
-        */}
+                  {
+                    optionId: "abstain",
+                    votes: 3,
+                    voters: [playerId],
+                  },
+                ]}
+                players={players}
+                anonymousVoting={false}
+                onContinue={() => {
+                  history.push("game", {});
+                }}
+              />
+            );
+          }}
+        />
       </div>
     </div>
   );

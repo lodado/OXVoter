@@ -4,7 +4,6 @@ import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import type React from "react";
 import { useState } from "react";
-import { Controller, useForm } from "react-hook-form";
 import { v4 as uuidv4 } from "uuid";
 
 import { Button, Card, Form, Input, Switch } from "@/shared/ui";
@@ -19,22 +18,6 @@ export default function CreateRoomPage() {
   const [anonymousVoting, setAnonymousVoting] = useState(true);
   const [specialVoting, setSpecialVoting] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-  const {
-    control,
-    handleSubmit,
-    formState: { isValid },
-  } = useForm({
-    mode: "onChange", // 입력 값이 변경될 때마다 유효성 검사 수행
-    defaultValues: {
-      roomName: "",
-      username: "",
-      maxPlayers: 8,
-      randomRoles: true,
-      anonymousVoting: false,
-      specialVoting: true,
-    },
-  });
 
   const handleCreateRoom = async (e: React.FormEvent) => {
     e.preventDefault();

@@ -11,6 +11,13 @@ export const badgeVariants = cva(
         `,
         isSelected: `border border-black fill-text-primary text-text-default bg-black`,
         isNotSelected: `border border-border-02 text-text-03 bg-background-01`,
+
+        primary: `border border-text-primary text-text-primary bg-background-01`,
+        success: `border border-text-success text-text-success bg-background-01`,
+        error: `border border-text-error text-text-error bg-background-01`,
+        warning: `border border-text-warning text-text-warning bg-background-01`,
+        yellow: `border border-text-yellow text-text-yellow bg-background-01`,
+        cancel: `border border-cancel text-cancel bg-background-01`,
       },
     },
     defaultVariants: {
