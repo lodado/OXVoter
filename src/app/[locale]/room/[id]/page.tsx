@@ -231,13 +231,13 @@ export default function RoomPage({ params }: { params: { id: string } }) {
 
   return (
     <div className="flex flex-col justify-center p-4 items-center">
-      <div className="mx-auto w-full max-w-[1200px]">
-        <header className="mb-6 flex items-center justify-between">
+      <div className="mx-auto w-full max-w-[1000px]">
+        <header className="mb-7 flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold">{roomSettings.roomName}</h1>
             <p className="text-sm text-slate-300">방 ID: {params.id}</p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 w-[50%] flex-row justify-end flex-wrap">
             {myRole && <div className="rounded-full bg-slate-700 px-3 py-1 text-sm">역할: {myRole}</div>}
             <div className="rounded-full bg-blue-600 px-3 py-1 text-sm">{username}</div>
           </div>

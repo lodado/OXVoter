@@ -1,9 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { useState } from "react";
 
 import Input, { InputProps } from "./Input";
+import SpinInput from "./SpinControl";
 
 const meta: Meta<InputProps> = {
-  title: "Components/Input",
+  title: "Shared/Input",
   component: Input,
   argTypes: {
     wrapperClassName: {
@@ -85,5 +87,16 @@ export const WrapperStyled: Story = {
   args: {
     placeholder: "Type something in styled wrapper...",
     wrapperClassName: "bg-gray-50 p-2 border border-gray-300",
+  },
+};
+
+export const SpinControl: Story = {
+  render: () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [value, setValue] = useState(10);
+
+    return (
+      <SpinInput value={value} increment={() => setValue((v) => v + 1)} decrement={() => setValue((v) => v - 1)} />
+    );
   },
 };

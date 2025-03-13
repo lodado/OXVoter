@@ -115,7 +115,7 @@ export default function VotingPhase({
           {!localHasVoted && (
             <Button
               variant="primarySolid"
-              className="max-w-[150px] w-[30%] h-10"
+              className="max-w-[150px] w-[30%] min-w-[120px] h-10"
               onClick={handleVote}
               disabled={!selectedOption}
             >
@@ -126,7 +126,7 @@ export default function VotingPhase({
           {isHost && (
             <Button
               variant="errorSolid"
-              className="flex flex-row max-w-[150px] w-[30%] h-10 gap-2"
+              className="flex flex-row max-w-[150px] w-[30%] min-w-[120px] h-10 gap-2"
               onClick={onForceEnd}
             >
               <AlertTriangle className="h-4 w-4" />

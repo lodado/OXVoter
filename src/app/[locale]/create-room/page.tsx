@@ -7,6 +7,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import { Button, Card, Form, Input, Switch } from "@/shared/ui";
+import SpinControl from "@/shared/ui/Input/SpinControl";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 
 export default function CreateRoomPage() {
@@ -112,26 +113,24 @@ export default function CreateRoomPage() {
             <Form.Field name="maxPlayers" className="">
               <Form.Label htmlFor="maxPlayers">최대 인원</Form.Label>
               <Form.Control asChild>
-                <Input
+                <SpinControl
                   id="maxPlayers"
                   min={2}
                   max={20}
-                  value={String(maxPlayers ?? 0)}
-                  setValue={(value) => {
-                    if (isNaN(Number(value))) return;
-
-                    setMaxPlayers(value ? Number.parseInt(value) : 1);
-                  }}
-                  resetValue="8"
+                  value={maxPlayers ?? 0}
                   required
+                  onChange={(e) => setMaxPlayers(Number(e.target.value))}
                   className=" bg-slate-900/50 text-white"
+                  increment={() => setMaxPlayers((prev) => Math.min(prev + 1, 20))}
+                  decrement={() => {
+                    setMaxPlayers((prev) => Math.max(prev - 1, 2));
+                  }}
                 />
               </Form.Control>
               <div>
                 <Form.MessageContainer>
-                  <Form.Message match={(value, formData) => 0 < value.length && value.length <= 20}>
-                    최대 20명까지 설정 가능합니다.
-                  </Form.Message>
+                  <Form.Message match={"rangeUnderflow"}>최소 2명까지 설정 가능합니다.</Form.Message>
+                  <Form.Message match={"rangeOverflow"}>최대 20명까지 설정 가능합니다.</Form.Message>
                 </Form.MessageContainer>
               </div>
             </Form.Field>

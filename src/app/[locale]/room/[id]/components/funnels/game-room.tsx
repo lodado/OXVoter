@@ -24,7 +24,7 @@ export default function GameRoom({ players, isHost, onStartVote, onEndGame }: Ga
 
   return (
     <div className="space-y-6">
-      <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur">
+      <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur ">
         <Card.Header>
           <Card.Title className="flex items-center justify-between">
             <span>게임 진행 중</span>
@@ -38,12 +38,12 @@ export default function GameRoom({ players, isHost, onStartVote, onEndGame }: Ga
         </Card.Content>
         <Card.Footer className="flex flex-row justify-center gap-3">
           {isHost && (
-            <Button variant="primaryLine" className="w-[30%] max-w-[200px]" onClick={onStartVote}>
+            <Button variant="primaryLine" className="w-[30%] min-w-[125px] max-w-[200px]" onClick={onStartVote}>
               투표 시작하기
             </Button>
           )}
           {isHost && (
-            <Button variant="errorLine" className="w-[30%] max-w-[200px]" onClick={onEndGame}>
+            <Button variant="errorLine" className="w-[30%] min-w-[120px] max-w-[200px]" onClick={onEndGame}>
               게임 종료
             </Button>
           )}
