@@ -111,7 +111,7 @@ export default function VotingPhase({
             </RadioGroup>
           )}
         </Card.Content>
-        <Card.Footer className="flex justify-center gap-2">
+        <Card.Footer className="flex justify-center gap-3">
           {!localHasVoted && (
             <Button
               variant="primarySolid"

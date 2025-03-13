@@ -235,7 +235,7 @@ export default function RoomPage({ params }: { params: { id: string } }) {
         <header className="mb-6 flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold">{roomSettings.roomName}</h1>
-            <p className="text-sm text-slate-300">방 이름: {params.id}</p>
+            <p className="text-sm text-slate-300">방 ID: {params.id}</p>
           </div>
           <div className="flex items-center gap-2">
             {myRole && <div className="rounded-full bg-slate-700 px-3 py-1 text-sm">역할: {myRole}</div>}
@@ -264,6 +264,9 @@ export default function RoomPage({ params }: { params: { id: string } }) {
                 isHost={true}
                 onStartVote={() => {
                   history.push("voting", {});
+                }}
+                onEndGame={() => {
+                  history.push("lobby", {});
                 }}
               />
             );

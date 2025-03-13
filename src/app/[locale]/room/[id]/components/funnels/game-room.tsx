@@ -15,10 +15,11 @@ type Player = {
 interface GameRoomProps {
   players: Player[];
   isHost: boolean;
-  onStartVote?: () => void;
+  onStartVote: () => void;
+  onEndGame: () => void;
 }
 
-export default function GameRoom({ players, isHost, onStartVote }: GameRoomProps) {
+export default function GameRoom({ players, isHost, onStartVote, onEndGame }: GameRoomProps) {
   const alivePlayers = players.filter((p) => p.isAlive);
 
   return (
@@ -32,17 +33,17 @@ export default function GameRoom({ players, isHost, onStartVote }: GameRoomProps
             </Badge>
           </Card.Title>
         </Card.Header>
-        <Card.Content>
+        <Card.Content className="mb-2">
           <GamePlayerList players={players} />
         </Card.Content>
-        <Card.Footer className="flex flex-row justify-center gap-2">
-          {isHost && onStartVote && (
+        <Card.Footer className="flex flex-row justify-center gap-3">
+          {isHost && (
             <Button variant="primaryLine" className="w-[30%] max-w-[200px]" onClick={onStartVote}>
               투표 시작하기
             </Button>
           )}
           {isHost && (
-            <Button variant="errorLine" className="w-[30%] max-w-[200px]" onClick={onStartVote}>
+            <Button variant="errorLine" className="w-[30%] max-w-[200px]" onClick={onEndGame}>
               게임 종료
             </Button>
           )}
