@@ -67,7 +67,7 @@ export default function VoteResults({ results, players, anonymousVoting, onConti
               {!anonymousVoting && result.voters && result.voters.length > 0 && (
                 <div className="flex flex-wrap gap-1 pt-1">
                   {result.voters.map((voterId) => (
-                    <Badge key={voterId} variant="cancel">
+                    <Badge key={voterId} variant="isSelected">
                       {getPlayerName(voterId)}
                     </Badge>
                   ))}
