@@ -4,7 +4,7 @@ import { SocketConnectionError } from "@/shared/constants/error/socketError";
 
 import { AbstractSocketPubSubManager } from "./AbstractSocketPubSubManager";
 
-const maxReconnectAttempts = 5;
+const maxReconnectAttempts = 1;
 
 export class SocketPubSubManager extends AbstractSocketPubSubManager {
   private client: Client | null = null;

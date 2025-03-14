@@ -13,7 +13,7 @@ import { useToastStore } from "@/shared/ui/Toast/stores";
 export default function JoinRoomPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [roomName, setRoomName] = useState(searchParams.get("roomName") || "");
+  const [roomName, setRoomName] = useState("");
   const [username, setUsername] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
