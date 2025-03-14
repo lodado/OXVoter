@@ -4,6 +4,7 @@ export * from "./Button";
 export * from "./Card";
 export * from "./Children";
 export * from "./Dropdown";
+export * from "./ErrorBoundary";
 export * from "./Form";
 export * from "./icons";
 export * from "./IfCondition";

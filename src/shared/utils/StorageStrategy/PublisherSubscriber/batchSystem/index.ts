@@ -1,7 +1,7 @@
 import { cloneDeep, debounce, isNil } from "lodash-es";
 
 import IndexedDBController from "../../IndexedDBController";
-import { PubSubManager } from "../PubSubManager";
+import { PubSubManagerClass } from "../PubSubManager";
 
 const BATCH_USER_THRESHOLD = 50;
 
@@ -47,7 +47,7 @@ let IndexedDbBatchJSON: { [key in string]: any } = {};
  * Handles subscription and publication of various events.
  */
 // export const storageLRUPubsubManager = new PubSubManager();
-const storageLRUPubsubManager = new PubSubManager();
+const storageLRUPubsubManager = new PubSubManagerClass();
 
 /**
  * Subscribes to the AUTH_STORAGE_INIT event to initialize and manage batch processing.

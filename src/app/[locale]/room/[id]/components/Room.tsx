@@ -1,13 +1,16 @@
 "use client";
-
+ 
 import { UseFunnelOptions } from "@use-funnel/browser";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
+import { useSocketRegister } from "@/entities/Socket/hooks";
 import { useFunnelWithoutHistory } from "@/shared";
-import { Card } from "@/shared/ui";
+import { SocketConnectionError } from "@/shared/constants/error/socketError";
+import { Card, WithErrorBoundary } from "@/shared/ui";
+import { FallbackMapping } from "@/shared/ui/ErrorBoundary/ui/ErrorBoundary";
 import { useToastStore } from "@/shared/ui/Toast/stores";
 
 import GameLobby from "./funnels/game-lobby";
@@ -71,12 +74,22 @@ const ROLES = {
   POLICE: "경찰",
 };
 
-export default function RoomPage({ params }: { params: { id: string } }) {
+const fallbackMappings: FallbackMapping[] = [
+  {
+    condition: (error: Error) => error instanceof SocketConnectionError,
+    component: <>Socket Connection Error !</>,
+  },
+];
+
+const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
   const searchParams = useSearchParams();
+  const router = useRouter();
+
+  const { addToast } = useToastStore();
+  const { isSocketTryingToConnect } = useSocketRegister();
+
   const username = searchParams.get("username") || "게스트";
   const isHost = searchParams.get("isHost") === "true";
-  const router = useRouter();
-  const { addToast } = useToastStore();
 
   const [playerId, setPlayerId] = useState<string>("");
   const [players, setPlayers] = useState<Player[]>([]);
@@ -217,7 +230,7 @@ export default function RoomPage({ params }: { params: { id: string } }) {
     }
   };
 
-  if (isLoading) {
+  if (isSocketTryingToConnect || isLoading) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-slate-900 to-slate-800 p-4 text-white">
         <Card className="p-8 text-center bg-slate-800/80 shadow-xl backdrop-blur">
@@ -327,4 +340,6 @@ export default function RoomPage({ params }: { params: { id: string } }) {
       </div>
     </div>
   );
-}
+}, fallbackMappings);
+
+export default RoomPage;

@@ -14,7 +14,7 @@ const generateKey = () => {
 /**
  * Manages the publish-subscribe pattern for a set of actions.
  */
-export class PubSubManager {
+export class PubSubManagerClass {
   private subscriptions: {
     [key: string]: {
       key: KEY;
@@ -62,14 +62,14 @@ export class PubSubManager {
    * @param action - The action to publish.
    */
   publish(action: { type: TYPE; payload: any }) {
-      const subscribers = this.subscriptions[action.type];
+    const subscribers = this.subscriptions[action.type];
 
-      if (subscribers) {
-        subscribers.forEach((subscriber) => subscriber.callback(action.payload));
-      }
+    if (subscribers) {
+      subscribers.forEach((subscriber) => subscriber.callback(action.payload));
     }
+  }
 }
 // Create an instance of PubSubManager for use
-const pubsubManager = new PubSubManager();
+const pubsubManager = new PubSubManagerClass();
 
 export default pubsubManager;
