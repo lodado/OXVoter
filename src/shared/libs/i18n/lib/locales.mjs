@@ -5,7 +5,7 @@ import fetch from "node-fetch";
 
 const KEY_MARKER = "key";
 const DEPTH_SEPARATOR = "-";
-const SPREAD_SHEET_ID = "1coJRqE-8hdXjvhoW4AkqjlqEJ216qfxKRZOBCePEiF4";
+const SPREAD_SHEET_ID = "1HpAUx_IalOHMoByp4TLZnsDNoWTDC7hjQLb3f9vAgfw";
 
 const commaSplitterRegex = /(['"])((?:\\.|(?:(?!\1)[^\\]))*)\1/g;
 const removeSideCommaRegex = /^"|"$/g;
