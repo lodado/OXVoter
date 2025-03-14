@@ -11,6 +11,8 @@ export const THIRD_PARTY_CONNECT_SRC_LIST = [
   "https://tfhub.dev",
   "https://www.kaggle.com",
   "https://api.dictionaryapi.dev",
+  process.env.NEXT_PUBLIC_API_URL,
+  process.env.NEXT_PUBLIC_SOCKET_URL,
 ];
 
 export const THIRD_PARTY_IMAGE_SRC_LIST = [

@@ -17,11 +17,9 @@ export const useSocketRegister = () => {
       setLoading(true);
 
       try {
-        const flag = await socketController.registerSubscriber();
+        await socketController.registerSubscriber();
       } catch (e) {
-        console.error("Socket register error:", e);
-
-        /** FIXME - socket 연결 후 주석 해제 */
+        /** FIXME - 나중 소캣 연결 후 주석 해제 */
         // setError(new SocketConnectionError({}));
       } finally {
         setLoading(false);

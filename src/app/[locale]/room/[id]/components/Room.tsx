@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useSocketRegister } from "@/entities/Socket/hooks";
 import { useFunnelWithoutHistory } from "@/shared";
 import { SocketConnectionError } from "@/shared/constants/error/socketError";
-import { Card, WithErrorBoundary } from "@/shared/ui";
+import { Card, InfoPage, WithErrorBoundary } from "@/shared/ui";
 import { FallbackMapping } from "@/shared/ui/ErrorBoundary/ui/ErrorBoundary";
 import { useToastStore } from "@/shared/ui/Toast/stores";
 
@@ -77,7 +77,9 @@ const ROLES = {
 const fallbackMappings: FallbackMapping[] = [
   {
     condition: (error: Error) => error instanceof SocketConnectionError,
-    component: <>Socket Connection Error !</>,
+    component: (props) => (
+      <InfoPage {...props} title="서버 연결 오류" description="서버와 연결할 수 없습니다 잠시 후 시도해주세요." />
+    ),
   },
 ];
 
@@ -231,14 +233,7 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
   };
 
   if (isSocketTryingToConnect || isLoading) {
-    return (
-      <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-slate-900 to-slate-800 p-4 text-white">
-        <Card className="p-8 text-center bg-slate-800/80 shadow-xl backdrop-blur">
-          <h2 className="text-xl font-semibold">방 정보 로드 중...</h2>
-          <p className="mt-2 text-slate-300">잠시만 기다려주세요</p>
-        </Card>
-      </div>
-    );
+    return <InfoPage title="방 정보 로드중..." description="잠시만 기다려주세요" />;
   }
 
   return (
