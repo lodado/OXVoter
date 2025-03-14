@@ -23,7 +23,7 @@
   "ProfileDropdown": {
     "profile": "Profil",
     "my_blog": "Blog saya",
-    "settings": "Tetapan"
+    "createRoom": "Tetapan"
   },
   "PROFILETHEMESELECTOR": {
     "LABEL-THEME": "Tema",
@@ -72,5 +72,25 @@
     "roomFullDescription": "Sertai bilik lain atau buat yang baru",
     "generalTitle": "Ralat berlaku",
     "generalDescription": "Sila cuba lagi"
+  },
+  "createRoom": {
+    "Title_CreateGameRoom": "Buat bilik permainan baru",
+    "Description_GamecreateRoom": "Konfigurasikan tetapan permainan dan jemput rakan",
+    "Label_RoomName": "Nama bilik",
+    "Placeholder_RoomName": "Masukkan nama bilik permainan",
+    "Label_Username": "Nama samaran",
+    "Placeholder_Username": "Masukkan nama samaran untuk permainan",
+    "Label_MaxPlayers": "Jumlah pemain maksimum",
+    "Message_MinPlayers": "Sekurang-kurangnya 2 pemain diperlukan.",
+    "Message_MaxPlayers": "Maksimum 20 pemain dibenarkan.",
+    "Title_GamecreateRoom": "Tetapan Permainan",
+    "Label_RandomRoles": "Tetapkan Peranan Rawak",
+    "Description_RandomRoles": "Mafia, doktor, dll. diberikan secara rawak",
+    "Label_AnonymousVoting": "Pengundian Tanpa Nama",
+    "Description_AnonymousVoting": "Sembunyikan pilihan individu dalam keputusan pengundian",
+    "Button_CreateRoom": "Buat bilik",
+    "Button_Creating": "Sedang membuat...",
+    "specialVoting": "Aktifkan Pengundian Khas",
+    "specialVoting-description": "Tambahkan tahap pengundian khas untuk peranan"
   }
 }

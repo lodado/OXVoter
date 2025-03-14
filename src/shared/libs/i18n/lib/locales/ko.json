@@ -23,7 +23,7 @@
   "ProfileDropdown": {
     "profile": "프로필",
     "my_blog": "내 블로그",
-    "settings": "설정"
+    "createRoom": "설정"
   },
   "PROFILETHEMESELECTOR": {
     "LABEL-THEME": "테마",
@@ -72,5 +72,25 @@
     "roomFullDescription": "다른 방에 참가하거나 새 방을 만드세요",
     "generalTitle": "오류가 발생했습니다",
     "generalDescription": "다시 시도해주세요"
+  },
+  "createRoom": {
+    "Title_CreateGameRoom": "새 게임방 만들기",
+    "Description_GamecreateRoom": "게임 설정을 구성하고 친구들을 초대하세요",
+    "Label_RoomName": "방 이름",
+    "Placeholder_RoomName": "게임방 이름을 입력하세요",
+    "Label_Username": "닉네임",
+    "Placeholder_Username": "게임에서 사용할 닉네임을 입력하세요",
+    "Label_MaxPlayers": "최대 인원",
+    "Message_MinPlayers": "최소 2명까지 설정 가능합니다.",
+    "Message_MaxPlayers": "최대 20명까지 설정 가능합니다.",
+    "Title_GamecreateRoom": "게임 설정",
+    "Label_RandomRoles": "랜덤 직업 부여",
+    "Description_RandomRoles": "마피아, 의사 등 특수 역할 랜덤 배정",
+    "Label_AnonymousVoting": "익명 투표",
+    "Description_AnonymousVoting": "투표 결과에서 개인별 선택 숨김",
+    "Button_CreateRoom": "방 만들기",
+    "Button_Creating": "생성 중...",
+    "specialVoting": "특수 투표 활성화",
+    "specialVoting-description": "역할별 특수 투표 단계 추가"
   }
 }

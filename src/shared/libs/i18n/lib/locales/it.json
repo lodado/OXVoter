@@ -23,7 +23,7 @@
   "ProfileDropdown": {
     "profile": "Profilo",
     "my_blog": "Il Mio Blog",
-    "settings": "Impostazioni"
+    "createRoom": "Impostazioni"
   },
   "PROFILETHEMESELECTOR": {
     "LABEL-THEME": "Tema",
@@ -72,5 +72,25 @@
     "roomFullDescription": "Unisciti a un'altra stanza o creane una nuova",
     "generalTitle": "Si è verificato un errore",
     "generalDescription": "Per favore riprova"
+  },
+  "createRoom": {
+    "Title_CreateGameRoom": "Crea una nuova stanza di gioco",
+    "Description_GamecreateRoom": "Configura le impostazioni del gioco e invita gli amici",
+    "Label_RoomName": "Nome della stanza",
+    "Placeholder_RoomName": "Inserisci il nome della stanza di gioco",
+    "Label_Username": "Soprannome",
+    "Placeholder_Username": "Inserisci il soprannome per il gioco",
+    "Label_MaxPlayers": "Numero massimo di giocatori",
+    "Message_MinPlayers": "È necessario un minimo di 2 giocatori.",
+    "Message_MaxPlayers": "Massimo 20 giocatori consentiti.",
+    "Title_GamecreateRoom": "Impostazioni di gioco",
+    "Label_RandomRoles": "Assegna ruoli casuali",
+    "Description_RandomRoles": "Mafia, dottore, ecc. vengono assegnati casualmente",
+    "Label_AnonymousVoting": "Voto anonimo",
+    "Description_AnonymousVoting": "Nascondi le scelte individuali nei risultati della votazione",
+    "Button_CreateRoom": "Crea una stanza",
+    "Button_Creating": "Creazione in corso...",
+    "specialVoting": "Abilita il voto speciale",
+    "specialVoting-description": "Aggiungi fasi di votazione speciali per ruoli"
   }
 }

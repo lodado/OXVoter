@@ -23,7 +23,7 @@
   "ProfileDropdown": {
     "profile": "Профиль",
     "my_blog": "Мой блог",
-    "settings": "Настройки"
+    "createRoom": "Настройки"
   },
   "PROFILETHEMESELECTOR": {
     "LABEL-THEME": "Тема",
@@ -72,5 +72,25 @@
     "roomFullDescription": "Присоединитесь к другой комнате или создайте новую",
     "generalTitle": "Произошла ошибка",
     "generalDescription": "Пожалуйста, попробуйте снова"
+  },
+  "createRoom": {
+    "Title_CreateGameRoom": "Создать новую игровую комнату",
+    "Description_GamecreateRoom": "Настроить параметры игры и пригласить друзей",
+    "Label_RoomName": "Название комнаты",
+    "Placeholder_RoomName": "Введите название игровой комнаты",
+    "Label_Username": "Никнейм",
+    "Placeholder_Username": "Введите никнейм для игры",
+    "Label_MaxPlayers": "Максимальное количество игроков",
+    "Message_MinPlayers": "Требуется минимум 2 игрока.",
+    "Message_MaxPlayers": "Разрешено максимум 20 игроков.",
+    "Title_GamecreateRoom": "Настройки игры",
+    "Label_RandomRoles": "Назначить случайные роли",
+    "Description_RandomRoles": "Мафия, доктор и т. д. назначаются случайным образом",
+    "Label_AnonymousVoting": "Анонимное голосование",
+    "Description_AnonymousVoting": "Скрыть индивидуальные выборы в результатах голосования",
+    "Button_CreateRoom": "Создать комнату",
+    "Button_Creating": "Создание...",
+    "specialVoting": "Включить специальное голосование",
+    "specialVoting-description": "Добавить специальные этапы голосования для ролей"
   }
 }

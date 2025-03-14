@@ -23,7 +23,7 @@
   "ProfileDropdown": {
     "profile": "Profil",
     "my_blog": "Blogum",
-    "settings": "Ayarlar"
+    "createRoom": "Ayarlar"
   },
   "PROFILETHEMESELECTOR": {
     "LABEL-THEME": "Tema",
@@ -72,5 +72,25 @@
     "roomFullDescription": "Başka bir odaya katılın veya yeni bir tane oluşturun",
     "generalTitle": "Bir hata oluştu",
     "generalDescription": "Lütfen tekrar deneyin"
+  },
+  "createRoom": {
+    "Title_CreateGameRoom": "Yeni bir oyun odası oluştur",
+    "Description_GamecreateRoom": "Oyun ayarlarını yapılandırın ve arkadaşları davet edin",
+    "Label_RoomName": "Oda Adı",
+    "Placeholder_RoomName": "Oyun odası adını girin",
+    "Label_Username": "Takma Ad",
+    "Placeholder_Username": "Oyun için takma ad girin",
+    "Label_MaxPlayers": "Maksimum Oyuncu Sayısı",
+    "Message_MinPlayers": "En az 2 oyuncu gereklidir.",
+    "Message_MaxPlayers": "En fazla 20 oyuncuya izin verilir.",
+    "Title_GamecreateRoom": "Oyun Ayarları",
+    "Label_RandomRoles": "Rastgele Roller Ata",
+    "Description_RandomRoles": "Mafya, doktor vb. rastgele atanır",
+    "Label_AnonymousVoting": "Anonim Oylama",
+    "Description_AnonymousVoting": "Oylama sonuçlarında bireysel seçimleri gizle",
+    "Button_CreateRoom": "Oda Oluştur",
+    "Button_Creating": "Oluşturuluyor...",
+    "specialVoting": "Özel Oylamayı Etkinleştir",
+    "specialVoting-description": "Rollere özel oylama aşamaları ekleyin"
   }
 }

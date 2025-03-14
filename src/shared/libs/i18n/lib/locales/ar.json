@@ -23,7 +23,7 @@
   "ProfileDropdown": {
     "profile": "الملف الشخصي",
     "my_blog": "مدونتي",
-    "settings": "الإعدادات"
+    "createRoom": "الإعدادات"
   },
   "PROFILETHEMESELECTOR": {
     "LABEL-THEME": "السمة",
@@ -72,5 +72,25 @@
     "roomFullDescription": "انضم إلى غرفة أخرى أو أنشئ واحدة جديدة",
     "generalTitle": "حدث خطأ",
     "generalDescription": "يرجى المحاولة مرة أخرى"
+  },
+  "createRoom": {
+    "Title_CreateGameRoom": "إنشاء غرفة لعبة جديدة",
+    "Description_GamecreateRoom": "قم بتكوين إعدادات اللعبة ودعوة الأصدقاء",
+    "Label_RoomName": "اسم الغرفة",
+    "Placeholder_RoomName": "أدخل اسم غرفة اللعبة",
+    "Label_Username": "اسم مستعار",
+    "Placeholder_Username": "أدخل الاسم المستعار للعبة",
+    "Label_MaxPlayers": "الحد الأقصى من اللاعبين",
+    "Message_MinPlayers": "مطلوب ما لا يقل عن لاعبين اثنين.",
+    "Message_MaxPlayers": "بحد أقصى 20 لاعب مسموح.",
+    "Title_GamecreateRoom": "إعدادات اللعبة",
+    "Label_RandomRoles": "تعيين أدوار عشوائية",
+    "Description_RandomRoles": "يتم تعيين المافيا، الطبيب، إلخ. بشكل عشوائي",
+    "Label_AnonymousVoting": "التصويت المجهول",
+    "Description_AnonymousVoting": "إخفاء الخيارات الفردية في نتائج التصويت",
+    "Button_CreateRoom": "إنشاء غرفة",
+    "Button_Creating": "جاري الإنشاء...",
+    "specialVoting": "تمكين التصويت الخاص",
+    "specialVoting-description": "إضافة مراحل تصويت خاصة للأدوار"
   }
 }

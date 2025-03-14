@@ -23,7 +23,7 @@
   "ProfileDropdown": {
     "profile": "প্রোফাইল",
     "my_blog": "আমার ব্লগ",
-    "settings": "সেটিংস"
+    "createRoom": "সেটিংস"
   },
   "PROFILETHEMESELECTOR": {
     "LABEL-THEME": "থিম",
@@ -72,5 +72,25 @@
     "roomFullDescription": "অন্য রুমে যোগ দিন বা একটি নতুন তৈরি করুন",
     "generalTitle": "একটি ত্রুটি ঘটেছে",
     "generalDescription": "অনুগ্রহ করে আবার চেষ্টা করুন"
+  },
+  "createRoom": {
+    "Title_CreateGameRoom": "নতুন গেম রুম তৈরি করুন",
+    "Description_GamecreateRoom": "গেম সেটিংস কনফিগার করুন এবং বন্ধুদের আমন্ত্রণ করুন",
+    "Label_RoomName": "ঘরের নাম",
+    "Placeholder_RoomName": "গেম রুমের নাম লিখুন",
+    "Label_Username": "ছদ্মনাম",
+    "Placeholder_Username": "গেমের জন্য ছদ্মনাম লিখুন",
+    "Label_MaxPlayers": "সর্বাধিক খেলোয়াড়",
+    "Message_MinPlayers": "কমপক্ষে ২ জন খেলোয়াড় প্রয়োজন।",
+    "Message_MaxPlayers": "সর্বাধিক ২০ জন খেলোয়াড় অনুমোদিত।",
+    "Title_GamecreateRoom": "গেম সেটিংস",
+    "Label_RandomRoles": "যৌক্তিক ভূমিকা বরাদ্দ করুন",
+    "Description_RandomRoles": "মাফিয়া, ডাক্তার ইত্যাদি নির্বিচারে বরাদ্দ করা হয়",
+    "Label_AnonymousVoting": "গোপন ভোট",
+    "Description_AnonymousVoting": "ভোটের ফলে ব্যক্তিগত পছন্দ লুকান",
+    "Button_CreateRoom": "ঘর তৈরি করুন",
+    "Button_Creating": "তৈরি করা হচ্ছে...",
+    "specialVoting": "বিশেষ ভোট সক্রিয় করুন",
+    "specialVoting-description": "ভূমিকার জন্য বিশেষ ভোটিং ধাপ যোগ করুন"
   }
 }

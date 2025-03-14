@@ -23,7 +23,7 @@
   "ProfileDropdown": {
     "profile": "个人资料",
     "my_blog": "我的博客",
-    "settings": "设置"
+    "createRoom": "设置"
   },
   "PROFILETHEMESELECTOR": {
     "LABEL-THEME": "主题",
@@ -72,5 +72,25 @@
     "roomFullDescription": "加入其他房间或创建新房间",
     "generalTitle": "发生错误",
     "generalDescription": "请重试"
+  },
+  "createRoom": {
+    "Title_CreateGameRoom": "创建新的游戏房间",
+    "Description_GamecreateRoom": "配置游戏设置并邀请朋友",
+    "Label_RoomName": "房间名称",
+    "Placeholder_RoomName": "输入游戏房间名称",
+    "Label_Username": "昵称",
+    "Placeholder_Username": "输入游戏昵称",
+    "Label_MaxPlayers": "最多玩家",
+    "Message_MinPlayers": "至少需要2名玩家。",
+    "Message_MaxPlayers": "最多可设置20名玩家。",
+    "Title_GamecreateRoom": "游戏设置",
+    "Label_RandomRoles": "分配随机角色",
+    "Description_RandomRoles": "随机分配黑帮、医生等特殊角色",
+    "Label_AnonymousVoting": "匿名投票",
+    "Description_AnonymousVoting": "在投票结果中隐藏个人选择",
+    "Button_CreateRoom": "创建房间",
+    "Button_Creating": "创建中...",
+    "specialVoting": "启用特殊投票",
+    "specialVoting-description": "为角色添加特殊投票阶段"
   }
 }

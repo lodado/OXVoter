@@ -23,7 +23,7 @@
   "ProfileDropdown": {
     "profile": "Profile",
     "my_blog": "My Blog",
-    "settings": "Settings"
+    "createRoom": "createRoom"
   },
   "PROFILETHEMESELECTOR": {
     "LABEL-THEME": "Theme",
@@ -72,5 +72,25 @@
     "roomFullDescription": "Join another room or create a new one",
     "generalTitle": "An error occurred",
     "generalDescription": "Please try again"
+  },
+  "createRoom": {
+    "Title_CreateGameRoom": "Create a New Game Room",
+    "Description_GamecreateRoom": "Configure game createRoom and invite friends",
+    "Label_RoomName": "Room Name",
+    "Placeholder_RoomName": "Enter the game room name",
+    "Label_Username": "Nickname",
+    "Placeholder_Username": "Enter the nickname for the game",
+    "Label_MaxPlayers": "Maximum Players",
+    "Message_MinPlayers": "Minimum of 2 players required.",
+    "Message_MaxPlayers": "Maximum of 20 players allowed.",
+    "Title_GamecreateRoom": "Game Settings",
+    "Label_RandomRoles": "Assign Random Roles",
+    "Description_RandomRoles": "Mafia, doctor, etc. are randomly assigned",
+    "Label_AnonymousVoting": "Anonymous Voting",
+    "Description_AnonymousVoting": "Hide individual choices in voting results",
+    "Button_CreateRoom": "Create Room",
+    "Button_Creating": "Creating...",
+    "specialVoting": "Enable Special Voting",
+    "specialVoting-description": "Add special voting stages for roles"
   }
 }

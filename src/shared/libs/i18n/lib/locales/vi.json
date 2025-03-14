@@ -23,7 +23,7 @@
   "ProfileDropdown": {
     "profile": "Hồ sơ",
     "my_blog": "Blog của tôi",
-    "settings": "Cài đặt"
+    "createRoom": "Cài đặt"
   },
   "PROFILETHEMESELECTOR": {
     "LABEL-THEME": "Chủ đề",
@@ -72,5 +72,25 @@
     "roomFullDescription": "Tham gia phòng khác hoặc tạo phòng mới",
     "generalTitle": "Đã xảy ra lỗi",
     "generalDescription": "Vui lòng thử lại"
+  },
+  "createRoom": {
+    "Title_CreateGameRoom": "Tạo phòng trò chơi mới",
+    "Description_GamecreateRoom": "Cấu hình cài đặt trò chơi và mời bạn bè",
+    "Label_RoomName": "Tên phòng",
+    "Placeholder_RoomName": "Nhập tên phòng trò chơi",
+    "Label_Username": "Biệt danh",
+    "Placeholder_Username": "Nhập biệt danh cho trò chơi",
+    "Label_MaxPlayers": "Số người chơi tối đa",
+    "Message_MinPlayers": "Cần ít nhất 2 người chơi.",
+    "Message_MaxPlayers": "Tối đa 20 người chơi được phép.",
+    "Title_GamecreateRoom": "Cài đặt trò chơi",
+    "Label_RandomRoles": "Gán vai trò ngẫu nhiên",
+    "Description_RandomRoles": "Mafia, bác sĩ, v.v. được chỉ định ngẫu nhiên",
+    "Label_AnonymousVoting": "Bỏ phiếu ẩn danh",
+    "Description_AnonymousVoting": "Ẩn lựa chọn cá nhân trong kết quả bỏ phiếu",
+    "Button_CreateRoom": "Tạo phòng",
+    "Button_Creating": "Đang tạo...",
+    "specialVoting": "Bật bỏ phiếu đặc biệt",
+    "specialVoting-description": "Thêm giai đoạn bỏ phiếu đặc biệt cho vai trò"
   }
 }

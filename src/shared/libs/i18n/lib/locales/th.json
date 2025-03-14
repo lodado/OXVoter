@@ -23,7 +23,7 @@
   "ProfileDropdown": {
     "profile": "โปรไฟล์",
     "my_blog": "บล็อกของฉัน",
-    "settings": "การตั้งค่า"
+    "createRoom": "การตั้งค่า"
   },
   "PROFILETHEMESELECTOR": {
     "LABEL-THEME": "ธีม",
@@ -72,5 +72,25 @@
     "roomFullDescription": "เข้าร่วมห้องอื่นหรือสร้างห้องใหม่",
     "generalTitle": "เกิดข้อผิดพลาด",
     "generalDescription": "โปรดลองอีกครั้ง"
+  },
+  "createRoom": {
+    "Title_CreateGameRoom": "สร้างห้องเกมใหม่",
+    "Description_GamecreateRoom": "กำหนดค่าการตั้งค่าเกมและเชิญเพื่อน",
+    "Label_RoomName": "ชื่อห้อง",
+    "Placeholder_RoomName": "ป้อนชื่อห้องเกม",
+    "Label_Username": "ชื่อเล่น",
+    "Placeholder_Username": "ป้อนชื่อเล่นสำหรับเกม",
+    "Label_MaxPlayers": "จำนวนผู้เล่นสูงสุด",
+    "Message_MinPlayers": "ต้องมีผู้เล่นอย่างน้อย 2 คน",
+    "Message_MaxPlayers": "อนุญาตให้มีผู้เล่นได้สูงสุด 20 คน",
+    "Title_GamecreateRoom": "การตั้งค่าเกม",
+    "Label_RandomRoles": "กำหนดบทบาทแบบสุ่ม",
+    "Description_RandomRoles": "มาเฟีย, หมอ ฯลฯ ถูกกำหนดแบบสุ่ม",
+    "Label_AnonymousVoting": "การลงคะแนนแบบไม่เปิดเผยชื่อ",
+    "Description_AnonymousVoting": "ซ่อนตัวเลือกของแต่ละบุคคลในผลการลงคะแนน",
+    "Button_CreateRoom": "สร้างห้อง",
+    "Button_Creating": "กำลังสร้าง...",
+    "specialVoting": "เปิดใช้งานการลงคะแนนพิเศษ",
+    "specialVoting-description": "เพิ่มขั้นตอนการลงคะแนนพิเศษสำหรับบทบาท"
   }
 }

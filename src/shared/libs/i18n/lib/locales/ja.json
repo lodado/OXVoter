@@ -23,7 +23,7 @@
   "ProfileDropdown": {
     "profile": "プロフィール",
     "my_blog": "私のブログ",
-    "settings": "設定"
+    "createRoom": "設定"
   },
   "PROFILETHEMESELECTOR": {
     "LABEL-THEME": "テーマ",
@@ -72,5 +72,25 @@
     "roomFullDescription": "別のルームに参加するか、新しいルームを作成してください",
     "generalTitle": "エラーが発生しました",
     "generalDescription": "再試行してください"
+  },
+  "createRoom": {
+    "Title_CreateGameRoom": "新しいゲームルームを作成",
+    "Description_GamecreateRoom": "ゲーム設定を構成し、友達を招待してください",
+    "Label_RoomName": "ルーム名",
+    "Placeholder_RoomName": "ゲームルームの名前を入力してください",
+    "Label_Username": "ニックネーム",
+    "Placeholder_Username": "ゲームで使用するニックネームを入力してください",
+    "Label_MaxPlayers": "最大人数",
+    "Message_MinPlayers": "最低2人が必要です。",
+    "Message_MaxPlayers": "最大20人まで設定可能です。",
+    "Title_GamecreateRoom": "ゲーム設定",
+    "Label_RandomRoles": "ランダム役割付与",
+    "Description_RandomRoles": "マフィア、医者などの特殊役割をランダムに割り当て",
+    "Label_AnonymousVoting": "匿名投票",
+    "Description_AnonymousVoting": "投票結果で個々の選択を非表示",
+    "Button_CreateRoom": "ルームを作成",
+    "Button_Creating": "作成中...",
+    "specialVoting": "特別投票を有効化",
+    "specialVoting-description": "役割ごとの特別投票段階を追加"
   }
 }

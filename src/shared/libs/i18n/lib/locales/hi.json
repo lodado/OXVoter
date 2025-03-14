@@ -23,7 +23,7 @@
   "ProfileDropdown": {
     "profile": "प्रोफ़ाइल",
     "my_blog": "मेरा ब्लॉग",
-    "settings": "सेटिंग्स"
+    "createRoom": "सेटिंग्स"
   },
   "PROFILETHEMESELECTOR": {
     "LABEL-THEME": "थीम",
@@ -72,5 +72,25 @@
     "roomFullDescription": "किसी अन्य कमरे में शामिल हों या नया कमरा बनाएँ",
     "generalTitle": "त्रुटि हुई",
     "generalDescription": "कृपया पुन: प्रयास करें"
+  },
+  "createRoom": {
+    "Title_CreateGameRoom": "नया गेम रूम बनाएं",
+    "Description_GamecreateRoom": "गेम सेटिंग्स कॉन्फ़िगर करें और दोस्तों को आमंत्रित करें",
+    "Label_RoomName": "कमरे का नाम",
+    "Placeholder_RoomName": "गेम रूम का नाम दर्ज करें",
+    "Label_Username": "उपनाम",
+    "Placeholder_Username": "खेल के लिए उपनाम दर्ज करें",
+    "Label_MaxPlayers": "अधिकतम खिलाड़ी",
+    "Message_MinPlayers": "कम से कम 2 खिलाड़ी आवश्यक हैं।",
+    "Message_MaxPlayers": "अधिकतम 20 खिलाड़ी अनुमत हैं।",
+    "Title_GamecreateRoom": "गेम सेटिंग्स",
+    "Label_RandomRoles": "यादृच्छिक भूमिकाएँ असाइन करें",
+    "Description_RandomRoles": "माफिया, डॉक्टर आदि को यादृच्छिक रूप से असाइन किया जाता है",
+    "Label_AnonymousVoting": "गुमनाम मतदान",
+    "Description_AnonymousVoting": "मतदान परिणामों में व्यक्तिगत विकल्प छिपाएँ",
+    "Button_CreateRoom": "कमरा बनाएँ",
+    "Button_Creating": "बनाया जा रहा है...",
+    "specialVoting": "विशेष मतदान सक्षम करें",
+    "specialVoting-description": "भूमिकाओं के लिए विशेष मतदान चरण जोड़ें"
   }
 }
