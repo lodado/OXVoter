@@ -23,7 +23,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
 
         <div className="flex flex-col gap-4 pt-4">
           <LocaleLink href="/create-room" className="w-full ">
-            <Button className="w-full h-[2.9rem] bg-blue-600 hover:bg-blue-700">{t("createRoom")}</Button>
+            <Button className="w-full h-[2.9rem]">{t("createRoom")}</Button>
           </LocaleLink>
           <LocaleLink href="/join-room" className="w-full">
             <Button

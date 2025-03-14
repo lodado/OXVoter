@@ -56,5 +56,21 @@
     "description": "Disfruta de un juego de votación en tiempo real con tus amigos",
     "createRoom": "Crear sala",
     "joinRoom": "Unirse a la sala"
+  },
+  "joinRoom": {
+    "title": "Unirse a la sala de juegos",
+    "description": "Ingrese el nombre de la sala y el apodo para unirse al juego",
+    "roomNameLabel": "Nombre de la sala",
+    "roomNamePlaceholder": "Ingrese el nombre de la sala invitada",
+    "usernameLabel": "Apodo",
+    "usernamePlaceholder": "Apodo para usar en el juego",
+    "joinButton": "Unirse a la sala",
+    "joining": "Uniéndose...",
+    "roomNotFoundTitle": "Habitación no encontrada",
+    "roomNotFoundDescription": "Verifique si ha ingresado el código de habitación correcto",
+    "roomFullTitle": "Habitación llena",
+    "roomFullDescription": "Únase a otra habitación o cree una nueva",
+    "generalTitle": "Ocurrió un error",
+    "generalDescription": "Por favor, inténtelo de nuevo"
   }
 }

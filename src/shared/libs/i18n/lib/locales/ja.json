@@ -56,5 +56,21 @@
     "description": "友達と一緒にリアルタイム投票ゲームを楽しもう",
     "createRoom": "ルームを作成",
     "joinRoom": "ルームに参加"
+  },
+  "joinRoom": {
+    "title": "ゲームルームに参加する",
+    "description": "部屋の名前とニックネームを入力してゲームに参加してください",
+    "roomNameLabel": "部屋の名前",
+    "roomNamePlaceholder": "招待された部屋の名前を入力してください",
+    "usernameLabel": "ニックネーム",
+    "usernamePlaceholder": "ゲームで使用するニックネーム",
+    "joinButton": "部屋に参加する",
+    "joining": "参加中...",
+    "roomNotFoundTitle": "ルームが見つかりません",
+    "roomNotFoundDescription": "正しいルームコードを入力したか確認してください",
+    "roomFullTitle": "ルームが満員です",
+    "roomFullDescription": "別のルームに参加するか、新しいルームを作成してください",
+    "generalTitle": "エラーが発生しました",
+    "generalDescription": "再試行してください"
   }
 }

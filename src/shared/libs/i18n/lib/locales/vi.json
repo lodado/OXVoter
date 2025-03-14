@@ -56,5 +56,21 @@
     "description": "Thưởng thức trò chơi bình chọn theo thời gian thực cùng bạn bè",
     "createRoom": "Tạo phòng",
     "joinRoom": "Tham gia phòng"
+  },
+  "joinRoom": {
+    "title": "Tham gia phòng trò chơi",
+    "description": "Nhập tên phòng và biệt danh để tham gia trò chơi",
+    "roomNameLabel": "Tên phòng",
+    "roomNamePlaceholder": "Nhập tên phòng được mời",
+    "usernameLabel": "Biệt danh",
+    "usernamePlaceholder": "Biệt danh để sử dụng trong trò chơi",
+    "joinButton": "Tham gia phòng",
+    "joining": "Đang tham gia...",
+    "roomNotFoundTitle": "Không tìm thấy phòng",
+    "roomNotFoundDescription": "Kiểm tra xem bạn đã nhập đúng mã phòng chưa",
+    "roomFullTitle": "Phòng đầy",
+    "roomFullDescription": "Tham gia phòng khác hoặc tạo phòng mới",
+    "generalTitle": "Đã xảy ra lỗi",
+    "generalDescription": "Vui lòng thử lại"
   }
 }

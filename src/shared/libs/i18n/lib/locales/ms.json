@@ -56,5 +56,21 @@
     "description": "Nikmati permainan pengundian masa nyata bersama rakan-rakan anda",
     "createRoom": "Buat Bilik",
     "joinRoom": "Sertai Bilik"
+  },
+  "joinRoom": {
+    "title": "Sertai bilik permainan",
+    "description": "Masukkan nama bilik dan nama samaran untuk menyertai permainan",
+    "roomNameLabel": "Nama bilik",
+    "roomNamePlaceholder": "Masukkan nama bilik yang dijemput",
+    "usernameLabel": "Nama samaran",
+    "usernamePlaceholder": "Nama samaran untuk digunakan dalam permainan",
+    "joinButton": "Sertai bilik",
+    "joining": "Menyertai...",
+    "roomNotFoundTitle": "Bilik tidak dijumpai",
+    "roomNotFoundDescription": "Periksa sama ada anda telah memasukkan kod bilik yang betul",
+    "roomFullTitle": "Bilik penuh",
+    "roomFullDescription": "Sertai bilik lain atau buat yang baru",
+    "generalTitle": "Ralat berlaku",
+    "generalDescription": "Sila cuba lagi"
   }
 }

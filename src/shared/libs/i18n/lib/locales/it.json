@@ -56,5 +56,21 @@
     "description": "Goditi un gioco di votazione in tempo reale con i tuoi amici",
     "createRoom": "Crea Stanza",
     "joinRoom": "Partecipa alla Stanza"
+  },
+  "joinRoom": {
+    "title": "Unisciti alla sala giochi",
+    "description": "Inserisci il nome della stanza e il nickname per partecipare al gioco",
+    "roomNameLabel": "Nome della stanza",
+    "roomNamePlaceholder": "Inserisci il nome della stanza invitata",
+    "usernameLabel": "Soprannome",
+    "usernamePlaceholder": "Soprannome da utilizzare nel gioco",
+    "joinButton": "Unisciti alla stanza",
+    "joining": "Partecipazione...",
+    "roomNotFoundTitle": "Stanza non trovata",
+    "roomNotFoundDescription": "Controlla se hai inserito il codice stanza corretto",
+    "roomFullTitle": "Stanza piena",
+    "roomFullDescription": "Unisciti a un'altra stanza o creane una nuova",
+    "generalTitle": "Si è verificato un errore",
+    "generalDescription": "Per favore riprova"
   }
 }

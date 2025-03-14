@@ -56,5 +56,21 @@
     "description": "Nikmati permainan voting real-time bersama teman-teman Anda",
     "createRoom": "Buat Ruangan",
     "joinRoom": "Gabung ke Ruangan"
+  },
+  "joinRoom": {
+    "title": "Bergabung dengan ruang permainan",
+    "description": "Masukkan nama ruangan dan nama panggilan untuk bergabung dengan permainan",
+    "roomNameLabel": "Nama ruangan",
+    "roomNamePlaceholder": "Masukkan nama ruangan yang diundang",
+    "usernameLabel": "Nama panggilan",
+    "usernamePlaceholder": "Nama panggilan untuk digunakan dalam permainan",
+    "joinButton": "Bergabung dengan ruangan",
+    "joining": "Bergabung...",
+    "roomNotFoundTitle": "Kamar tidak ditemukan",
+    "roomNotFoundDescription": "Periksa apakah Anda telah memasukkan kode kamar yang benar",
+    "roomFullTitle": "Kamar penuh",
+    "roomFullDescription": "Bergabung dengan kamar lain atau buat yang baru",
+    "generalTitle": "Terjadi kesalahan",
+    "generalDescription": "Silakan coba lagi"
   }
 }

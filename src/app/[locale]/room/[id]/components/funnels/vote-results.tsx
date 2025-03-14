@@ -75,7 +75,7 @@ export default function VoteResults({ results, players, anonymousVoting, onConti
         </Card.Content>
         <Card.Footer className="flex justify-center">
           {onContinue && (
-            <Button variant="primarySolid" className="w-[30%] min-w-[120px] max-w-[150px] h-10" onClick={onContinue}>
+            <Button variant="primarySolid" className="max-w-[150px] w-[30%] min-w-[120px]" onClick={onContinue}>
               다음 단계로
             </Button>
           )}

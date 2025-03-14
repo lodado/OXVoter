@@ -56,5 +56,21 @@
     "description": "Profitez d'un jeu de vote en temps réel avec vos amis",
     "createRoom": "Créer une salle",
     "joinRoom": "Rejoindre une salle"
+  },
+  "joinRoom": {
+    "title": "Rejoindre la salle de jeu",
+    "description": "Entrez le nom de la salle et le pseudo pour rejoindre le jeu",
+    "roomNameLabel": "Nom de la salle",
+    "roomNamePlaceholder": "Entrez le nom de la salle invitée",
+    "usernameLabel": "Pseudo",
+    "usernamePlaceholder": "Pseudo à utiliser dans le jeu",
+    "joinButton": "Rejoindre la salle",
+    "joining": "Connexion...",
+    "roomNotFoundTitle": "Salle introuvable",
+    "roomNotFoundDescription": "Vérifiez si vous avez entré le code de salle correct",
+    "roomFullTitle": "Salle pleine",
+    "roomFullDescription": "Rejoignez une autre salle ou créez-en une nouvelle",
+    "generalTitle": "Une erreur s'est produite",
+    "generalDescription": "Veuillez réessayer"
   }
 }

@@ -56,5 +56,21 @@
     "description": "আপনার বন্ধুদের সাথে রিয়েল-টাইম ভোটিং গেম উপভোগ করুন",
     "createRoom": "রুম তৈরি করুন",
     "joinRoom": "রুমে যোগ দিন"
+  },
+  "joinRoom": {
+    "title": "গেম রুমে যোগদান করুন",
+    "description": "গেমে যোগ দিতে রুমের নাম এবং ডাকনাম লিখুন",
+    "roomNameLabel": "রুমের নাম",
+    "roomNamePlaceholder": "আমন্ত্রিত রুমের নাম লিখুন",
+    "usernameLabel": "ডাকনাম",
+    "usernamePlaceholder": "গেমে ব্যবহারের জন্য ডাকনাম",
+    "joinButton": "রুমে যোগদান করুন",
+    "joining": "যোগদান করা হচ্ছে...",
+    "roomNotFoundTitle": "রুম পাওয়া যায়নি",
+    "roomNotFoundDescription": "যাচাই করুন যে আপনি সঠিক রুম কোড প্রবেশ করেছেন কিনা",
+    "roomFullTitle": "রুম পূর্ণ",
+    "roomFullDescription": "অন্য রুমে যোগ দিন বা একটি নতুন তৈরি করুন",
+    "generalTitle": "একটি ত্রুটি ঘটেছে",
+    "generalDescription": "অনুগ্রহ করে আবার চেষ্টা করুন"
   }
 }

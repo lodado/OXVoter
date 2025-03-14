@@ -56,5 +56,21 @@
     "description": "استمتع بلعبة التصويت في الوقت الفعلي مع أصدقائك",
     "createRoom": "إنشاء غرفة",
     "joinRoom": "الانضمام إلى الغرفة"
+  },
+  "joinRoom": {
+    "title": "الانضمام إلى غرفة اللعبة",
+    "description": "أدخل اسم الغرفة واللقب للانضمام إلى اللعبة",
+    "roomNameLabel": "اسم الغرفة",
+    "roomNamePlaceholder": "أدخل اسم الغرفة المدعوة",
+    "usernameLabel": "لقب",
+    "usernamePlaceholder": "اللقب لاستخدامه في اللعبة",
+    "joinButton": "الانضمام إلى الغرفة",
+    "joining": "جاري الانضمام...",
+    "roomNotFoundTitle": "الغرفة غير موجودة",
+    "roomNotFoundDescription": "تحقق مما إذا كنت قد أدخلت رمز الغرفة الصحيح",
+    "roomFullTitle": "الغرفة ممتلئة",
+    "roomFullDescription": "انضم إلى غرفة أخرى أو أنشئ واحدة جديدة",
+    "generalTitle": "حدث خطأ",
+    "generalDescription": "يرجى المحاولة مرة أخرى"
   }
 }

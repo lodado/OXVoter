@@ -56,5 +56,21 @@
     "description": "与朋友一起享受实时投票游戏",
     "createRoom": "创建房间",
     "joinRoom": "加入房间"
+  },
+  "joinRoom": {
+    "title": "加入游戏房间",
+    "description": "输入房间名称和昵称以加入游戏",
+    "roomNameLabel": "房间名称",
+    "roomNamePlaceholder": "输入受邀房间的名称",
+    "usernameLabel": "昵称",
+    "usernamePlaceholder": "游戏中使用的昵称",
+    "joinButton": "加入房间",
+    "joining": "加入中...",
+    "roomNotFoundTitle": "未找到房间",
+    "roomNotFoundDescription": "检查是否输入了正确的房间代码",
+    "roomFullTitle": "房间已满",
+    "roomFullDescription": "加入其他房间或创建新房间",
+    "generalTitle": "发生错误",
+    "generalDescription": "请重试"
   }
 }

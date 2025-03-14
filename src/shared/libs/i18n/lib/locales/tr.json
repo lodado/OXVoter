@@ -56,5 +56,21 @@
     "description": "Arkadaşlarınızla gerçek zamanlı oylama oyununun tadını çıkarın",
     "createRoom": "Oda Oluştur",
     "joinRoom": "Odaya Katıl"
+  },
+  "joinRoom": {
+    "title": "Oyun odasına katıl",
+    "description": "Oyuna katılmak için oda adını ve takma adınızı girin",
+    "roomNameLabel": "Oda adı",
+    "roomNamePlaceholder": "Davet edilen oda adını girin",
+    "usernameLabel": "Takma ad",
+    "usernamePlaceholder": "Oyunda kullanılacak takma ad",
+    "joinButton": "Odaya katıl",
+    "joining": "Katılıyor...",
+    "roomNotFoundTitle": "Oda bulunamadı",
+    "roomNotFoundDescription": "Doğru oda kodunu girip girmediğinizi kontrol edin",
+    "roomFullTitle": "Oda dolu",
+    "roomFullDescription": "Başka bir odaya katılın veya yeni bir tane oluşturun",
+    "generalTitle": "Bir hata oluştu",
+    "generalDescription": "Lütfen tekrar deneyin"
   }
 }

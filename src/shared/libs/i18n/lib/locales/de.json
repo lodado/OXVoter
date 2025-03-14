@@ -56,5 +56,21 @@
     "description": "Genießen Sie ein Echtzeit-Abstimmungsspiel mit Ihren Freunden",
     "createRoom": "Raum erstellen",
     "joinRoom": "Raum beitreten"
+  },
+  "joinRoom": {
+    "title": "Spielraum beitreten",
+    "description": "Geben Sie den Raumnamen und den Spitznamen ein, um dem Spiel beizutreten",
+    "roomNameLabel": "Raumname",
+    "roomNamePlaceholder": "Geben Sie den Namen des eingeladenen Raums ein",
+    "usernameLabel": "Spitzname",
+    "usernamePlaceholder": "Spitzname für das Spiel",
+    "joinButton": "Raum beitreten",
+    "joining": "Beitreten...",
+    "roomNotFoundTitle": "Raum nicht gefunden",
+    "roomNotFoundDescription": "Überprüfen Sie, ob Sie den richtigen Raumcode eingegeben haben",
+    "roomFullTitle": "Raum ist voll",
+    "roomFullDescription": "Treten Sie einem anderen Raum bei oder erstellen Sie einen neuen",
+    "generalTitle": "Ein Fehler ist aufgetreten",
+    "generalDescription": "Bitte versuchen Sie es erneut"
   }
 }

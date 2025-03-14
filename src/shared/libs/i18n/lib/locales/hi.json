@@ -56,5 +56,21 @@
     "description": "अपने दोस्तों के साथ रीयल-टाइम वोटिंग गेम का आनंद लें",
     "createRoom": "कमरा बनाएं",
     "joinRoom": "कमरे में शामिल हों"
+  },
+  "joinRoom": {
+    "title": "गेम रूम में शामिल हों",
+    "description": "गेम में शामिल होने के लिए कमरे का नाम और उपनाम दर्ज करें",
+    "roomNameLabel": "कमरे का नाम",
+    "roomNamePlaceholder": "आमंत्रित कमरे का नाम दर्ज करें",
+    "usernameLabel": "उपनाम",
+    "usernamePlaceholder": "गेम में उपयोग करने के लिए उपनाम",
+    "joinButton": "कमरे में शामिल हों",
+    "joining": "शामिल हो रहा है...",
+    "roomNotFoundTitle": "कमरा नहीं मिला",
+    "roomNotFoundDescription": "जाँच करें कि आपने सही रूम कोड दर्ज किया है",
+    "roomFullTitle": "कमरा भरा हुआ है",
+    "roomFullDescription": "किसी अन्य कमरे में शामिल हों या नया कमरा बनाएँ",
+    "generalTitle": "त्रुटि हुई",
+    "generalDescription": "कृपया पुन: प्रयास करें"
   }
 }

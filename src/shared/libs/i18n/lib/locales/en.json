@@ -56,5 +56,21 @@
     "description": "Enjoy a real-time voting game with your friends",
     "createRoom": "Create Room",
     "joinRoom": "Join Room"
+  },
+  "joinRoom": {
+    "title": "Join Game Room",
+    "description": "Enter the room name and nickname to join the game",
+    "roomNameLabel": "Room Name",
+    "roomNamePlaceholder": "Enter the invited room name",
+    "usernameLabel": "Nickname",
+    "usernamePlaceholder": "Nickname to use in the game",
+    "joinButton": "Join Room",
+    "joining": "Joining...",
+    "roomNotFoundTitle": "Room not found",
+    "roomNotFoundDescription": "Check if you have entered the correct room code",
+    "roomFullTitle": "Room is full",
+    "roomFullDescription": "Join another room or create a new one",
+    "generalTitle": "An error occurred",
+    "generalDescription": "Please try again"
   }
 }

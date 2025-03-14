@@ -56,5 +56,21 @@
     "description": "สนุกกับเกมโหวตแบบเรียลไทม์กับเพื่อน ๆ",
     "createRoom": "สร้างห้อง",
     "joinRoom": "เข้าร่วมห้อง"
+  },
+  "joinRoom": {
+    "title": "เข้าร่วมเกมรูม",
+    "description": "ป้อนชื่อห้องและชื่อเล่นเพื่อเข้าร่วมเกม",
+    "roomNameLabel": "ชื่อห้อง",
+    "roomNamePlaceholder": "ป้อนชื่อห้องที่ได้รับเชิญ",
+    "usernameLabel": "ชื่อเล่น",
+    "usernamePlaceholder": "ชื่อเล่นที่จะใช้ในเกม",
+    "joinButton": "เข้าร่วมรูม",
+    "joining": "กำลังเข้าร่วม...",
+    "roomNotFoundTitle": "ไม่พบห้อง",
+    "roomNotFoundDescription": "ตรวจสอบว่าคุณได้ป้อนรหัสห้องที่ถูกต้องหรือไม่",
+    "roomFullTitle": "ห้องเต็ม",
+    "roomFullDescription": "เข้าร่วมห้องอื่นหรือสร้างห้องใหม่",
+    "generalTitle": "เกิดข้อผิดพลาด",
+    "generalDescription": "โปรดลองอีกครั้ง"
   }
 }
