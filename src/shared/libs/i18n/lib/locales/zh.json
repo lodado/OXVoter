@@ -20,6 +20,9 @@
   "LogoutButton": {
     "logout": "注销"
   },
+  "LoginFormDialog": {
+    "please_login": "请登录"
+  },
   "ProfileDropdown": {
     "profile": "个人资料",
     "my_blog": "我的博客",

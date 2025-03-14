@@ -20,6 +20,9 @@
   "LogoutButton": {
     "logout": "Çıkış Yap"
   },
+  "LoginFormDialog": {
+    "please_login": "Lütfen giriş yapın"
+  },
   "ProfileDropdown": {
     "profile": "Profil",
     "my_blog": "Blogum",

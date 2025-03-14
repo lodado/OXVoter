@@ -20,6 +20,9 @@
   "LogoutButton": {
     "logout": "लॉग आउट"
   },
+  "LoginFormDialog": {
+    "please_login": "कृपया लॉग इन करें"
+  },
   "ProfileDropdown": {
     "profile": "प्रोफ़ाइल",
     "my_blog": "मेरा ब्लॉग",

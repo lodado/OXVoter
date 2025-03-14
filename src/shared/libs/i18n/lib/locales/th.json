@@ -20,6 +20,9 @@
   "LogoutButton": {
     "logout": "ออกจากระบบ"
   },
+  "LoginFormDialog": {
+    "please_login": "กรุณาเข้าสู่ระบบ"
+  },
   "ProfileDropdown": {
     "profile": "โปรไฟล์",
     "my_blog": "บล็อกของฉัน",

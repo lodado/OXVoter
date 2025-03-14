@@ -20,6 +20,9 @@
   "LogoutButton": {
     "logout": "ログアウト"
   },
+  "LoginFormDialog": {
+    "please_login": "ログインしてください"
+  },
   "ProfileDropdown": {
     "profile": "プロフィール",
     "my_blog": "私のブログ",

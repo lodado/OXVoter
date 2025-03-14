@@ -20,6 +20,9 @@
   "LogoutButton": {
     "logout": "Disconnetti"
   },
+  "LoginFormDialog": {
+    "please_login": "Effettua il login"
+  },
   "ProfileDropdown": {
     "profile": "Profilo",
     "my_blog": "Il Mio Blog",

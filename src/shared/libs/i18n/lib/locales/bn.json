@@ -20,6 +20,9 @@
   "LogoutButton": {
     "logout": "প্রস্থান করুন"
   },
+  "LoginFormDialog": {
+    "please_login": "দয়া করে লগইন করুন"
+  },
   "ProfileDropdown": {
     "profile": "প্রোফাইল",
     "my_blog": "আমার ব্লগ",

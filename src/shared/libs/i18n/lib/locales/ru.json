@@ -20,6 +20,9 @@
   "LogoutButton": {
     "logout": "Выйти"
   },
+  "LoginFormDialog": {
+    "please_login": "Пожалуйста, войдите"
+  },
   "ProfileDropdown": {
     "profile": "Профиль",
     "my_blog": "Мой блог",

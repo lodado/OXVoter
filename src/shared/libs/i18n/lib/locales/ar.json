@@ -20,6 +20,9 @@
   "LogoutButton": {
     "logout": "تسجيل الخروج"
   },
+  "LoginFormDialog": {
+    "please_login": "الرجاء تسجيل الدخول"
+  },
   "ProfileDropdown": {
     "profile": "الملف الشخصي",
     "my_blog": "مدونتي",

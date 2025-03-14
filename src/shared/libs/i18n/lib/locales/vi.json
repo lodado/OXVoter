@@ -20,6 +20,9 @@
   "LogoutButton": {
     "logout": "Đăng xuất"
   },
+  "LoginFormDialog": {
+    "please_login": "Vui lòng đăng nhập"
+  },
   "ProfileDropdown": {
     "profile": "Hồ sơ",
     "my_blog": "Blog của tôi",

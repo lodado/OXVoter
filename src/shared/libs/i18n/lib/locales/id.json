@@ -20,6 +20,9 @@
   "LogoutButton": {
     "logout": "Keluar"
   },
+  "LoginFormDialog": {
+    "please_login": "Silakan masuk"
+  },
   "ProfileDropdown": {
     "profile": "Profil",
     "my_blog": "Blog Saya",

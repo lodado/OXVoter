@@ -20,6 +20,9 @@
   "LogoutButton": {
     "logout": "Cerrar sesión"
   },
+  "LoginFormDialog": {
+    "please_login": "Por favor, inicie sesión"
+  },
   "ProfileDropdown": {
     "profile": "Perfil",
     "my_blog": "Mi Blog",

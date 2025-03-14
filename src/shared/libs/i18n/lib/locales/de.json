@@ -20,6 +20,9 @@
   "LogoutButton": {
     "logout": "Abmelden"
   },
+  "LoginFormDialog": {
+    "please_login": "Bitte einloggen"
+  },
   "ProfileDropdown": {
     "profile": "Profil",
     "my_blog": "Mein Blog",
