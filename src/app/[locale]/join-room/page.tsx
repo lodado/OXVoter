@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import type React from "react";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
@@ -12,7 +12,8 @@ import { useToastStore } from "@/shared/ui/Toast/stores";
 
 export default function JoinRoomPage() {
   const router = useRouter();
-  const [roomId, setRoomId] = useState("");
+  const searchParams = useSearchParams();
+  const [roomName, setRoomName] = useState(searchParams.get("roomName") || "");
   const [username, setUsername] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -24,7 +25,7 @@ export default function JoinRoomPage() {
 
     try {
       // 로컬 스토리지에서 방 정보 확인
-      const roomData = localStorage.getItem(`room_${roomId}`);
+      const roomData = localStorage.getItem(`room_${roomName}`);
 
       if (!roomData) {
         addToast({
@@ -60,11 +61,11 @@ export default function JoinRoomPage() {
       room.players.push(newPlayer);
 
       // 업데이트된 방 정보 저장
-      localStorage.setItem(`room_${roomId}`, JSON.stringify(room));
+      localStorage.setItem(`room_${roomName}`, JSON.stringify(room));
 
       // 1초 후 방으로 이동 (로딩 시뮬레이션)
       setTimeout(() => {
-        router.push(`/room/${roomId}?username=${encodeURIComponent(username)}`);
+        router.push(`/room/${roomName}?username=${encodeURIComponent(username)}`);
       }, 1000);
     } catch (error) {
       console.error("방 참가 오류:", error);
@@ -82,17 +83,17 @@ export default function JoinRoomPage() {
       <Card className="w-full max-w-md bg-slate-800/80 text-white shadow-xl backdrop-blur">
         <Card.Header>
           <Card.Title className="text-2xl">게임방 참가하기</Card.Title>
-          <Card.Description className="text-slate-300">방 코드와 닉네임을 입력하여 게임에 참가하세요</Card.Description>
+          <Card.Description className="text-slate-300">방 이름과 닉네임을 입력하여 게임에 참가하세요</Card.Description>
         </Card.Header>
         <form onSubmit={handleJoinRoom}>
           <Card.Content className="space-y-4">
             <div className="space-y-2">
-              <label htmlFor="roomId">방 코드</label>
+              <label htmlFor="roomId">방 이름</label>
               <Input
                 id="roomId"
-                placeholder="초대받은 방 코드를 입력하세요"
-                value={roomId}
-                setValue={(id: string) => setRoomId(id)}
+                placeholder="초대받은 방 이름을 입력하세요"
+                value={roomName}
+                setValue={(id: string) => setRoomName(id)}
                 required
                 className="border-slate-700 bg-slate-900/50 text-white"
               />

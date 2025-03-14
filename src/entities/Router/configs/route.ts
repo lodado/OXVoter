@@ -1,5 +1,6 @@
 export const PAGE_ROUTE = {
   MAIN: "/",
-  OCR: "/ocr",
-  WORDS: "/words",
+  JOIN_ROOM: "/join-room",
+  CREATE_ROOM: "/create-room",
+  ROOM: "/room",
 } as const;
