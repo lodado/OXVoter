@@ -120,6 +120,7 @@
     "tabsSupport": "समर्थन",
     "userSettingsLanguage": "भाषा सेटिंग",
     "tab2Content": "टैब 2 की सामग्री",
-    "manage-app-settings-description": "अपने ऐप सेटिंग्स को प्रबंधित और व्यक्तिगत करें।"
+    "manage-app-settings-description": "अपने ऐप सेटिंग्स को प्रबंधित और व्यक्तिगत करें।",
+    "settings": "सेटिंग्स"
   }
 }

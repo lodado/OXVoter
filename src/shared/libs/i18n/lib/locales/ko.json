@@ -120,6 +120,7 @@
     "tabsSupport": "문의",
     "userSettingsLanguage": "언어 설정",
     "tab2Content": "탭 2의 콘텐츠",
-    "manage-app-settings-description": "앱 설정을 관리하고 개인화하세요."
+    "manage-app-settings-description": "앱 설정을 관리하고 개인화하세요.",
+    "settings": "설정"
   }
 }

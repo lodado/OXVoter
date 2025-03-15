@@ -120,6 +120,7 @@
     "tabsSupport": "সহায়তা",
     "userSettingsLanguage": "ভাষা সেটিংস",
     "tab2Content": "ট্যাব 2 এর বিষয়বস্তু",
-    "manage-app-settings-description": "আপনার অ্যাপ সেটিংস পরিচালনা করুন এবং ব্যক্তিগতকরণ করুন।"
+    "manage-app-settings-description": "আপনার অ্যাপ সেটিংস পরিচালনা করুন এবং ব্যক্তিগতকরণ করুন।",
+    "settings": "সেটিংস"
   }
 }

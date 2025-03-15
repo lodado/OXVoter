@@ -7,10 +7,12 @@ import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import { useSocketRegister } from "@/entities/Socket/hooks";
+import GameHeader from "@/features/Settings/ui/GameHeader";
 import { useFunnelWithoutHistory } from "@/shared";
 import { SocketConnectionError } from "@/shared/constants/error/socketError";
 import { Card, InfoPage, WithErrorBoundary } from "@/shared/ui";
 import { FallbackMapping } from "@/shared/ui/ErrorBoundary/ui/ErrorBoundary";
+import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 import { useToastStore } from "@/shared/ui/Toast/stores";
 
 import GameLobby from "./funnels/game-lobby";
@@ -237,8 +239,12 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
   }
 
   return (
-    <div className="flex flex-col justify-center p-4 items-center">
-      <div className="mx-auto w-full max-w-[1000px]">
+    <ReactiveLayout
+      className="md:w-[1000px] p-4"
+      outerClassName="relative"
+      outerPreviousChildren={<>{funnel.step === "lobby" && <GameHeader />}</>}
+    >
+      <div className="mx-auto w-full mt-6">
         <header className="mb-7 flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold">{roomSettings.roomName}</h1>
@@ -333,7 +339,7 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
           }}
         />
       </div>
-    </div>
+    </ReactiveLayout>
   );
 }, fallbackMappings);
 

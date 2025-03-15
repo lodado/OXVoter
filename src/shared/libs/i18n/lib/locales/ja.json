@@ -120,6 +120,7 @@
     "tabsSupport": "サポート",
     "userSettingsLanguage": "言語設定",
     "tab2Content": "タブ2のコンテンツ",
-    "manage-app-settings-description": "アプリの設定を管理してカスタマイズしてください。"
+    "manage-app-settings-description": "アプリの設定を管理してカスタマイズしてください。",
+    "settings": "設定"
   }
 }

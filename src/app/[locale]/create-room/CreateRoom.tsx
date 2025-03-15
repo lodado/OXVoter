@@ -1,13 +1,16 @@
 "use client";
 
-import { Loader2 } from "lucide-react";
+import { ArrowBigLeft, Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import type React from "react";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
+import { LocaleLink } from "@/entities/Router";
+import { PAGE_ROUTE } from "@/entities/Router/configs/route";
 import { SettingDialog } from "@/features/Settings";
+import GameHeader from "@/features/Settings/ui/GameHeader";
 import { Button, Card, Form, Input, Switch } from "@/shared/ui";
 import SpinControl from "@/shared/ui/Input/SpinControl";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
@@ -70,11 +73,7 @@ export default function CreateRoom() {
     <ReactiveLayout
       className="flex flex-col justify-center items-center py-10 relative"
       outerClassName="relative"
-      outerPreviousChildren={
-        <div className="h-5 absolute top-5 right-10 z-[100]">
-          <SettingDialog />
-        </div>
-      }
+      outerPreviousChildren={<GameHeader />}
     >
       <Card className="w-full max-w-md bg-slate-800/80 text-white shadow-xl backdrop-blur">
         <Card.Header>

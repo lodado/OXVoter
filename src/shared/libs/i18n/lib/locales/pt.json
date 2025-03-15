@@ -120,6 +120,7 @@
     "tabsSupport": "Suporte",
     "userSettingsLanguage": "Configurações de idioma",
     "tab2Content": "Conteúdo da guia 2",
-    "manage-app-settings-description": "Gerencie e personalize suas configurações de aplicativo."
+    "manage-app-settings-description": "Gerencie e personalize suas configurações de aplicativo.",
+    "settings": "Configurações"
   }
 }

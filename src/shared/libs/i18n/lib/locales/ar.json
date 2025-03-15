@@ -120,6 +120,7 @@
     "tabsSupport": "دعم",
     "userSettingsLanguage": "إعدادات اللغة",
     "tab2Content": "محتوى التبويب 2",
-    "manage-app-settings-description": "قم بإدارة وتخصيص إعدادات التطبيق الخاصة بك."
+    "manage-app-settings-description": "قم بإدارة وتخصيص إعدادات التطبيق الخاصة بك.",
+    "settings": "إعدادات"
   }
 }

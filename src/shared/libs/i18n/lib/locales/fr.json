@@ -120,6 +120,7 @@
     "tabsSupport": "Assistance",
     "userSettingsLanguage": "Paramètres de langue",
     "tab2Content": "Contenu de l'onglet 2",
-    "manage-app-settings-description": "Gérez et personnalisez vos paramètres d'application."
+    "manage-app-settings-description": "Gérez et personnalisez vos paramètres d'application.",
+    "settings": "Paramètres"
   }
 }

@@ -120,6 +120,7 @@
     "tabsSupport": "Поддержка",
     "userSettingsLanguage": "Настройки языка",
     "tab2Content": "Содержимое вкладки 2",
-    "manage-app-settings-description": "Управляйте и персонализируйте настройки вашего приложения."
+    "manage-app-settings-description": "Управляйте и персонализируйте настройки вашего приложения.",
+    "settings": "Настройки"
   }
 }

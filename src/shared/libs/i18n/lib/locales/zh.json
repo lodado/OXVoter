@@ -120,6 +120,7 @@
     "tabsSupport": "支持",
     "userSettingsLanguage": "语言设置",
     "tab2Content": "选项卡 2 的内容",
-    "manage-app-settings-description": "管理和个性化您的应用设置。"
+    "manage-app-settings-description": "管理和个性化您的应用设置。",
+    "settings": "设置"
   }
 }

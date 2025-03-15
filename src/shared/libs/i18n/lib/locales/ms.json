@@ -120,6 +120,7 @@
     "tabsSupport": "Sokongan",
     "userSettingsLanguage": "Tetapan Bahasa",
     "tab2Content": "Kandungan Tab 2",
-    "manage-app-settings-description": "Urus dan peribadikan tetapan aplikasi anda."
+    "manage-app-settings-description": "Urus dan peribadikan tetapan aplikasi anda.",
+    "settings": "Tetapan"
   }
 }

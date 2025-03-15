@@ -15,7 +15,12 @@ const ReactiveLayout = ({
   outerPreviousChildren?: ReactNode;
 } & PropsWithChildren) => {
   return (
-    <div className={cn("flex w-full h-max min-h-[calc(100*var(--vh))] items-center justify-center ", outerClassName)}>
+    <div
+      className={cn(
+        "flex flex-col w-full h-max min-h-[calc(100*var(--vh))] items-center justify-center ",
+        outerClassName
+      )}
+    >
       {outerPreviousChildren}
 
       <div

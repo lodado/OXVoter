@@ -120,6 +120,7 @@
     "tabsSupport": "Destek",
     "userSettingsLanguage": "Dil Ayarları",
     "tab2Content": "Sekme 2'nin içeriği",
-    "manage-app-settings-description": "Uygulama ayarlarınızı yönetin ve kişiselleştirin."
+    "manage-app-settings-description": "Uygulama ayarlarınızı yönetin ve kişiselleştirin.",
+    "settings": "Ayarlar"
   }
 }

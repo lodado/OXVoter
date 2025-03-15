@@ -120,6 +120,7 @@
     "tabsSupport": "Supporto",
     "userSettingsLanguage": "Impostazioni della lingua",
     "tab2Content": "Contenuto della scheda 2",
-    "manage-app-settings-description": "Gestisci e personalizza le impostazioni della tua app."
+    "manage-app-settings-description": "Gestisci e personalizza le impostazioni della tua app.",
+    "settings": "Impostazioni"
   }
 }

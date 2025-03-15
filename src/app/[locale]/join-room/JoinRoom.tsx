@@ -7,6 +7,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import { SettingDialog } from "@/features";
+import GameHeader from "@/features/Settings/ui/GameHeader";
 import { Button, Card, Input } from "@/shared/ui";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 import { ToastViewPort } from "@/shared/ui/Toast";
@@ -85,11 +86,7 @@ export default function JoinRoomPage() {
     <ReactiveLayout
       className="flex w-full h-full flex-col justify-center items-center"
       outerClassName="relative"
-      outerPreviousChildren={
-        <div className="h-5 absolute top-5 right-10 z-[100]">
-          <SettingDialog />
-        </div>
-      }
+      outerPreviousChildren={<GameHeader />}
     >
       <Card className="w-full max-w-md bg-slate-800/80 text-white shadow-xl backdrop-blur">
         <Card.Header>
