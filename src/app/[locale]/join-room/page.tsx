@@ -13,9 +13,12 @@ const page = ({ params }: { params: { locale: string } }) => {
   setRequestLocale(params.locale);
 
   return (
-    <>
+    <div className="w-full h-full flex justify-center items-center relative">
+      <div className="h-5 absolute top-5 right-5 z-[100]">
+        <SettingDialog />
+      </div>
       <JoinRoom />
-    </>
+    </div>
   );
 };
 
