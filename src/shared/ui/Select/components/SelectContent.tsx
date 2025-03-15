@@ -21,7 +21,7 @@ const SelectContent = ({
       dir="inherit"
       position="popper"
       className={cn(
-        `SelectContent overflow-hidden w-max z-dropdown bg-white border border-solid border-color-border-input rounded-lg shadow-dropdown mt-2`,
+        `SelectContent overflow-y-auto overflow-x-hidden w-max z-dropdown bg-white border border-solid border-color-border-input rounded-lg shadow-dropdown mt-2`,
         contentClassName
       )}
       {...rest}
@@ -29,7 +29,9 @@ const SelectContent = ({
       <ScrollUpButton className="flex items-center justify-center h-6 bg-background-default cursor-default">
         <ChevronUp className="text-text-01" />
       </ScrollUpButton>
-      <Viewport className={cn("p-2 text-text-01", className)}>{children}</Viewport>
+      <Viewport className={cn("p-2 text-text-01", className)}>
+        <>{children}</>
+      </Viewport>
       <ScrollDownButton className="flex items-center justify-center h-6 bg-background-default cursor-default">
         <ChevronDown className="text-text-01" />
       </ScrollDownButton>

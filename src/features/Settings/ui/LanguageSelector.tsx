@@ -52,8 +52,12 @@ const LanguageSelector = (props: ComponentProps<typeof Select>) => {
             <ChevronDown />
           </Select.Icon>
         </Select.Trigger>
-        <Select.Content align="center" className="flex flex-col min-w-[130px] max-w-[400px] max-h-[50vh]">
-          <Select.Group>
+        <Select.Content
+          align="center"
+          contentClassName="min-h-[6rem] h-[30vh] max-h-[15rem]"
+          className="flex flex-col min-w-[130px] max-w-[400px] "
+        >
+          <Select.Group className="h-[100%]">
             <Select.Label>Lang</Select.Label>
             {languages.map((language) => (
               <Select.Item className="flex gap-5  text-text-success" value={language.value} key={language.value}>
