@@ -240,7 +240,7 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
 
   return (
     <ReactiveLayout
-      className="md:w-[1000px] p-4"
+      className="md:w-[1000px] p-4 min-h-[calc(100*var(--vh)-1.25rem)]"
       outerClassName="relative"
       outerPreviousChildren={<>{funnel.step === "lobby" && <GameHeader />}</>}
     >

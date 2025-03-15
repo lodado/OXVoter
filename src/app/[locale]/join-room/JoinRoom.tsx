@@ -84,7 +84,7 @@ export default function JoinRoomPage() {
 
   return (
     <ReactiveLayout
-      className="flex w-full h-full flex-col justify-center items-center"
+      className="flex w-full h-full flex-col min-h-[calc(100*var(--vh)-1.25rem)] justify-center items-center"
       outerClassName="relative"
       outerPreviousChildren={<GameHeader />}
     >

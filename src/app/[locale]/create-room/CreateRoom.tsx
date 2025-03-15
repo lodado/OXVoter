@@ -71,7 +71,7 @@ export default function CreateRoom() {
 
   return (
     <ReactiveLayout
-      className="flex flex-col justify-center items-center py-10 relative"
+      className="flex flex-col justify-center min-h-[calc(100*var(--vh)-1.25rem)] items-center py-10 relative"
       outerClassName="relative"
       outerPreviousChildren={<GameHeader />}
     >

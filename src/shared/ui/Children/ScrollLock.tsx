@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 
 interface ScrollLockProps {
   children: React.ReactNode;
 }
 
 const ScrollLock: React.FC<ScrollLockProps> = ({ children }) => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const body = document.querySelector("body") as HTMLElement;
     const scrollPosition = window?.pageYOffset || document.documentElement.scrollTop;
 
