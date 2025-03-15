@@ -85,7 +85,7 @@ export default function JoinRoomPage() {
     <ReactiveLayout
       className="flex w-full h-full flex-col justify-center items-center"
       outerClassName="relative"
-      outerChildren={
+      outerPreviousChildren={
         <div className="h-5 absolute top-5 right-10 z-[100]">
           <SettingDialog />
         </div>

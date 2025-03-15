@@ -70,7 +70,7 @@ export default function CreateRoom() {
     <ReactiveLayout
       className="flex flex-col justify-center items-center py-10 relative"
       outerClassName="relative"
-      outerChildren={
+      outerPreviousChildren={
         <div className="h-5 absolute top-5 right-10 z-[100]">
           <SettingDialog />
         </div>

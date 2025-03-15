@@ -5,12 +5,18 @@ import { cn } from "@/shared/utils";
 const ReactiveLayout = ({
   children,
   outerClassName,
-  outerChildren,
+  outerPreviousChildren,
+  outerAfterChildren,
   className,
-}: { outerClassName?: string; className?: string; outerChildren?: ReactNode } & PropsWithChildren) => {
+}: {
+  outerClassName?: string;
+  className?: string;
+  outerAfterChildren?: ReactNode;
+  outerPreviousChildren?: ReactNode;
+} & PropsWithChildren) => {
   return (
     <div className={cn("flex w-full h-max min-h-[calc(100*var(--vh))] items-center justify-center ", outerClassName)}>
-      {outerChildren}
+      {outerPreviousChildren}
 
       <div
         className={cn(
@@ -20,6 +26,8 @@ const ReactiveLayout = ({
       >
         {children}
       </div>
+
+      {outerAfterChildren}
     </div>
   );
 };

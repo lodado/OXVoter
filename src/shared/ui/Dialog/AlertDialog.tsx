@@ -93,7 +93,11 @@ const DialogHeader = ({ children, className }: { children?: ReactNode; className
 };
 
 const DialogBody = ({ className, children }: { className?: string; children: ReactNode }) => {
-  return <div className={cn("flex flex-col w-full pt-4 grow body-01 px-6 text-black", className)}>{children}</div>;
+  return (
+    <div className={cn("dialog-content flex flex-col w-full pt-4 grow body-01 px-6 text-black", className)}>
+      {children}
+    </div>
+  );
 };
 
 /**
