@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useLayoutEffect } from "react";
+
 function vhCode() {
   // Safe area insets
 
@@ -9,8 +13,6 @@ function vhCode() {
   const adjustedVh = (window.innerHeight - safeAreaTop - safeAreaBottom) * 0.01;
 
   document.documentElement.style.setProperty("--vh", adjustedVh + "px");
-
-  window.addEventListener("resize", vhCode);
 }
 
 function viewportCode() {
@@ -33,6 +35,14 @@ function viewportCode() {
 }
 
 const ScreenVhScript = ({ nonce }: { nonce: string }) => {
+  useLayoutEffect(() => {
+    vhCode();
+    window.addEventListener("resize", vhCode);
+    return () => {
+      window.removeEventListener("resize", vhCode);
+    };
+  }, [window.location.pathname]);
+
   return (
     <>
       <script type="text/javascript" nonce={nonce} dangerouslySetInnerHTML={{ __html: `(${vhCode})();` }} />

@@ -4,7 +4,9 @@ import { SocketConnectionError } from "@/shared/constants/error/socketError";
 
 import { AbstractSocketPubSubManager } from "./AbstractSocketPubSubManager";
 
-const maxReconnectAttempts = 1;
+const MAX_TRY_CONNECTION_COUNT = 1;
+const TIMEOUT_DELAY = 15000;
+const RECONNECT_DELAY = 5000;
 
 export class SocketPubSubManager extends AbstractSocketPubSubManager {
   private client: Client | null = null;
@@ -27,9 +29,18 @@ export class SocketPubSubManager extends AbstractSocketPubSubManager {
 
     let reconnectCount = 0;
 
+    const timeout = new Promise<boolean>((resolve, reject) => {
+      setTimeout(() => {
+        reject(new SocketConnectionError({ message: "timeout" }));
+        this.client!.deactivate();
+        reconnectCount = MAX_TRY_CONNECTION_COUNT + 1;
+      }, TIMEOUT_DELAY);
+    });
+
     const tryToConnect = new Promise<boolean>((resolve, reject) => {
       this.client = new Client({
         brokerURL: this.url,
+        reconnectDelay: RECONNECT_DELAY,
         heartbeatIncoming: 4000,
         heartbeatOutgoing: 4000,
         onConnect: () => {
@@ -44,7 +55,7 @@ export class SocketPubSubManager extends AbstractSocketPubSubManager {
         },
         onWebSocketClose: (evt) => {
           reconnectCount++;
-          if (reconnectCount >= maxReconnectAttempts) {
+          if (reconnectCount >= MAX_TRY_CONNECTION_COUNT) {
             this.client!.deactivate(); // 클라이언트를 비활성화하여 더 이상 재연결하지 않음
 
             reject(new SocketConnectionError({ message: "timeout" }));
@@ -55,7 +66,7 @@ export class SocketPubSubManager extends AbstractSocketPubSubManager {
       this.client.activate();
     });
 
-    return Promise.race([tryToConnect]);
+    return Promise.race([tryToConnect, timeout]);
   }
 
   /**

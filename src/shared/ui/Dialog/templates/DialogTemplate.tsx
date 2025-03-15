@@ -21,7 +21,7 @@ export const DialogTemplate = ({
         <Dialog swipePercent={swipePercent} isVisible={isVisible} onChangeVisible={onChangeVisible}>
           <Dialog.Root>
             {Trigger && (
-              <Dialog.Trigger>
+              <Dialog.Trigger asChild>
                 <Trigger />
               </Dialog.Trigger>
             )}
