@@ -16,8 +16,7 @@ import { useSettingDialogContext } from "./SettingDialogProvider";
 const UserSettingTab = () => {
   const tSettings = useTranslations("settings");
   const tCommon = useTranslations("common");
-
-  const dialogT = useTranslations("DIALOG");
+  const tDialog = useTranslations("DIALOG");
 
   const { language, onChangeLanguage, handleSubmitSetting } = useSettingDialogContext();
 
@@ -43,8 +42,8 @@ const UserSettingTab = () => {
 
       <AlertDialog.SubmitForm
         className="absolute bottom-0 w-full left-0"
-        submitText={dialogT("SUBMITTEXT")}
-        cancelText={dialogT("CANCELTEXT")}
+        submitText={tDialog("SUBMITTEXT")}
+        cancelText={tDialog("CANCELTEXT")}
         onSubmit={async (e) => {
           handleSubmitSetting(e);
         }}
