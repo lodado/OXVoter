@@ -7,6 +7,7 @@ import type React from "react";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
+import { SettingDialog } from "@/features/Settings";
 import { Button, Card, Form, Input, Switch } from "@/shared/ui";
 import SpinControl from "@/shared/ui/Input/SpinControl";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
@@ -66,7 +67,15 @@ export default function CreateRoom() {
   };
 
   return (
-    <ReactiveLayout className="flex flex-col justify-center items-center py-10">
+    <ReactiveLayout
+      className="flex flex-col justify-center items-center py-10 relative"
+      outerClassName="relative"
+      outerChildren={
+        <div className="h-5 absolute top-5 right-10 z-[100]">
+          <SettingDialog />
+        </div>
+      }
+    >
       <Card className="w-full max-w-md bg-slate-800/80 text-white shadow-xl backdrop-blur">
         <Card.Header>
           <Card.Title className="text-2xl">{t("Title_CreateGameRoom")}</Card.Title>
