@@ -56,6 +56,22 @@
     "de": "Alemão",
     "tr": "Turco"
   },
+  "support": {
+    "title": "Fale Conosco",
+    "description": "Tem uma dúvida ou problema? Fale conosco.",
+    "form-label-name": "Nome",
+    "form-placeholder-name": "Digite seu nome",
+    "form-label-email": "Email",
+    "form-placeholder-email": "Digite seu email",
+    "form-button": "Enviar",
+    "common-content": "Conteúdo",
+    "max-500-characters": "Não pode exceder 500 caracteres.",
+    "enter-content": "Por favor, insira o conteúdo.",
+    "enter-email": "Por favor, insira seu e-mail."
+  },
+  "common": {
+    "terms-of-service": "Termos de serviço"
+  },
   "Home": {
     "title": "Votação ao vivo",
     "description": "Aproveite um jogo de votação em tempo real com seus amigos",
@@ -103,22 +119,7 @@
     "tabsUserSettings": "Configurações",
     "tabsSupport": "Suporte",
     "userSettingsLanguage": "Configurações de idioma",
-    "tab2Content": "Conteúdo da guia 2"
-  },
-  "support": {
-    "title": "Fale Conosco",
-    "description": "Tem uma dúvida ou problema? Fale conosco.",
-    "form-label-name": "Nome",
-    "form-placeholder-name": "Digite seu nome",
-    "form-label-email": "Email",
-    "form-placeholder-email": "Digite seu email",
-    "form-button": "Enviar",
-    "common-content": "Conteúdo",
-    "max-500-characters": "Não pode exceder 500 caracteres.",
-    "enter-content": "Por favor, insira o conteúdo.",
-    "enter-email": "Por favor, insira seu e-mail."
-  },
-  "common": {
-    "terms-of-service": "Termos de serviço"
+    "tab2Content": "Conteúdo da guia 2",
+    "manage-app-settings-description": "Gerencie e personalize suas configurações de aplicativo."
   }
 }

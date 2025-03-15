@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import React from "react";
 
+import { SettingDialog } from "@/features";
 import { getLocalesListsForStateParams } from "@/shared/index.server";
 
 import JoinRoom from "./JoinRoom";

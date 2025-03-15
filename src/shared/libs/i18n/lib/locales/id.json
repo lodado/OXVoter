@@ -56,6 +56,22 @@
     "de": "Jerman",
     "tr": "Turki"
   },
+  "support": {
+    "title": "Hubungi Kami",
+    "description": "Ada pertanyaan atau masalah? Hubungi kami.",
+    "form-label-name": "Nama",
+    "form-placeholder-name": "Masukkan nama Anda",
+    "form-label-email": "Email",
+    "form-placeholder-email": "Masukkan email Anda",
+    "form-button": "Kirim",
+    "common-content": "Konten",
+    "max-500-characters": "Tidak boleh melebihi 500 karakter.",
+    "enter-content": "Silakan masukkan konten.",
+    "enter-email": "Silakan masukkan email Anda."
+  },
+  "common": {
+    "terms-of-service": "Syarat Layanan"
+  },
   "Home": {
     "title": "Voting Langsung",
     "description": "Nikmati permainan voting real-time bersama teman-teman Anda",
@@ -103,22 +119,7 @@
     "tabsUserSettings": "Pengaturan",
     "tabsSupport": "Dukungan",
     "userSettingsLanguage": "Pengaturan Bahasa",
-    "tab2Content": "Konten Tab 2"
-  },
-  "support": {
-    "title": "Hubungi Kami",
-    "description": "Ada pertanyaan atau masalah? Hubungi kami.",
-    "form-label-name": "Nama",
-    "form-placeholder-name": "Masukkan nama Anda",
-    "form-label-email": "Email",
-    "form-placeholder-email": "Masukkan email Anda",
-    "form-button": "Kirim",
-    "common-content": "Konten",
-    "max-500-characters": "Tidak boleh melebihi 500 karakter.",
-    "enter-content": "Silakan masukkan konten.",
-    "enter-email": "Silakan masukkan email Anda."
-  },
-  "common": {
-    "terms-of-service": "Syarat Layanan"
+    "tab2Content": "Konten Tab 2",
+    "manage-app-settings-description": "Kelola dan sesuaikan pengaturan aplikasi Anda."
   }
 }

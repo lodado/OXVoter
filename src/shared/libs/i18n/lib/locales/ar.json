@@ -56,6 +56,22 @@
     "de": "الألمانية",
     "tr": "التركية"
   },
+  "support": {
+    "title": "اتصل بنا",
+    "description": "هل لديك سؤال أو مشكلة؟ اتصل بنا.",
+    "form-label-name": "الاسم",
+    "form-placeholder-name": "أدخل اسمك",
+    "form-label-email": "البريد الإلكتروني",
+    "form-placeholder-email": "أدخل بريدك الإلكتروني",
+    "form-button": "إرسال",
+    "common-content": "محتوى",
+    "max-500-characters": "لا يمكن أن يتجاوز 500 حرف.",
+    "enter-content": "الرجاء إدخال المحتوى.",
+    "enter-email": "الرجاء إدخال بريدك الإلكتروني."
+  },
+  "common": {
+    "terms-of-service": "شروط الخدمة"
+  },
   "Home": {
     "title": "التصويت المباشر",
     "description": "استمتع بلعبة التصويت في الوقت الفعلي مع أصدقائك",
@@ -103,22 +119,7 @@
     "tabsUserSettings": "إعدادات",
     "tabsSupport": "دعم",
     "userSettingsLanguage": "إعدادات اللغة",
-    "tab2Content": "محتوى التبويب 2"
-  },
-  "support": {
-    "title": "اتصل بنا",
-    "description": "هل لديك سؤال أو مشكلة؟ اتصل بنا.",
-    "form-label-name": "الاسم",
-    "form-placeholder-name": "أدخل اسمك",
-    "form-label-email": "البريد الإلكتروني",
-    "form-placeholder-email": "أدخل بريدك الإلكتروني",
-    "form-button": "إرسال",
-    "common-content": "محتوى",
-    "max-500-characters": "لا يمكن أن يتجاوز 500 حرف.",
-    "enter-content": "الرجاء إدخال المحتوى.",
-    "enter-email": "الرجاء إدخال بريدك الإلكتروني."
-  },
-  "common": {
-    "terms-of-service": "شروط الخدمة"
+    "tab2Content": "محتوى التبويب 2",
+    "manage-app-settings-description": "قم بإدارة وتخصيص إعدادات التطبيق الخاصة بك."
   }
 }

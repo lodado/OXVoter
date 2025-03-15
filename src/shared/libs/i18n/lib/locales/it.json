@@ -56,6 +56,22 @@
     "de": "Tedesco",
     "tr": "Turco"
   },
+  "support": {
+    "title": "Contattaci",
+    "description": "Hai una domanda o un problema? Contattaci.",
+    "form-label-name": "Nome",
+    "form-placeholder-name": "Inserisci il tuo nome",
+    "form-label-email": "Email",
+    "form-placeholder-email": "Inserisci il tuo indirizzo email",
+    "form-button": "Invia",
+    "common-content": "Contenuto",
+    "max-500-characters": "Non può superare i 500 caratteri.",
+    "enter-content": "Inserisci il contenuto.",
+    "enter-email": "Inserisci il tuo indirizzo email."
+  },
+  "common": {
+    "terms-of-service": "Termini di servizio"
+  },
   "Home": {
     "title": "Votazione in diretta",
     "description": "Goditi un gioco di votazione in tempo reale con i tuoi amici",
@@ -103,22 +119,7 @@
     "tabsUserSettings": "Impostazioni",
     "tabsSupport": "Supporto",
     "userSettingsLanguage": "Impostazioni della lingua",
-    "tab2Content": "Contenuto della scheda 2"
-  },
-  "support": {
-    "title": "Contattaci",
-    "description": "Hai una domanda o un problema? Contattaci.",
-    "form-label-name": "Nome",
-    "form-placeholder-name": "Inserisci il tuo nome",
-    "form-label-email": "Email",
-    "form-placeholder-email": "Inserisci il tuo indirizzo email",
-    "form-button": "Invia",
-    "common-content": "Contenuto",
-    "max-500-characters": "Non può superare i 500 caratteri.",
-    "enter-content": "Inserisci il contenuto.",
-    "enter-email": "Inserisci il tuo indirizzo email."
-  },
-  "common": {
-    "terms-of-service": "Termini di servizio"
+    "tab2Content": "Contenuto della scheda 2",
+    "manage-app-settings-description": "Gestisci e personalizza le impostazioni della tua app."
   }
 }

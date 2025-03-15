@@ -56,6 +56,22 @@
     "de": "ภาษาเยอรมัน",
     "tr": "ภาษาตุรกี"
   },
+  "support": {
+    "title": "ติดต่อเรา",
+    "description": "มีคำถามหรือปัญหาหรือไม่? ติดต่อเรา",
+    "form-label-name": "ชื่อ",
+    "form-placeholder-name": "กรุณากรอกชื่อของคุณ",
+    "form-label-email": "อีเมล",
+    "form-placeholder-email": "กรุณากรอกอีเมลของคุณ",
+    "form-button": "ส่ง",
+    "common-content": "เนื้อหา",
+    "max-500-characters": "ไม่สามารถเกิน 500 อักขระได้",
+    "enter-content": "กรุณาใส่เนื้อหา",
+    "enter-email": "กรุณากรอกอีเมลของคุณ"
+  },
+  "common": {
+    "terms-of-service": "ข้อกำหนดการใช้บริการ"
+  },
   "Home": {
     "title": "โหวตแบบเรียลไทม์",
     "description": "สนุกกับเกมโหวตแบบเรียลไทม์กับเพื่อน ๆ",
@@ -103,22 +119,7 @@
     "tabsUserSettings": "การตั้งค่า",
     "tabsSupport": "สนับสนุน",
     "userSettingsLanguage": "การตั้งค่าภาษา",
-    "tab2Content": "เนื้อหาของแท็บ 2"
-  },
-  "support": {
-    "title": "ติดต่อเรา",
-    "description": "มีคำถามหรือปัญหาหรือไม่? ติดต่อเรา",
-    "form-label-name": "ชื่อ",
-    "form-placeholder-name": "กรุณากรอกชื่อของคุณ",
-    "form-label-email": "อีเมล",
-    "form-placeholder-email": "กรุณากรอกอีเมลของคุณ",
-    "form-button": "ส่ง",
-    "common-content": "เนื้อหา",
-    "max-500-characters": "ไม่สามารถเกิน 500 อักขระได้",
-    "enter-content": "กรุณาใส่เนื้อหา",
-    "enter-email": "กรุณากรอกอีเมลของคุณ"
-  },
-  "common": {
-    "terms-of-service": "ข้อกำหนดการใช้บริการ"
+    "tab2Content": "เนื้อหาของแท็บ 2",
+    "manage-app-settings-description": "จัดการและปรับแต่งการตั้งค่าแอปของคุณ"
   }
 }

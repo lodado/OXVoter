@@ -56,6 +56,22 @@
     "de": "জার্মান",
     "tr": "তুর্কি"
   },
+  "support": {
+    "title": "আমাদের সাথে যোগাযোগ করুন",
+    "description": "কোনো প্রশ্ন বা সমস্যা আছে? আমাদের সাথে যোগাযোগ করুন।",
+    "form-label-name": "নাম",
+    "form-placeholder-name": "আপনার নাম লিখুন",
+    "form-label-email": "ইমেইল",
+    "form-placeholder-email": "আপনার ইমেইল লিখুন",
+    "form-button": "পাঠান",
+    "common-content": "বিষয়বস্তু",
+    "max-500-characters": "500 অক্ষরের বেশি হতে পারে না।",
+    "enter-content": "অনুগ্রহ করে বিষয়বস্তু লিখুন।",
+    "enter-email": "অনুগ্রহ করে ইমেইল লিখুন।"
+  },
+  "common": {
+    "terms-of-service": "পরিষেবার শর্তাবলী"
+  },
   "Home": {
     "title": "লাইভ ভোটিং",
     "description": "আপনার বন্ধুদের সাথে রিয়েল-টাইম ভোটিং গেম উপভোগ করুন",
@@ -103,22 +119,7 @@
     "tabsUserSettings": "সেটিংস",
     "tabsSupport": "সহায়তা",
     "userSettingsLanguage": "ভাষা সেটিংস",
-    "tab2Content": "ট্যাব 2 এর বিষয়বস্তু"
-  },
-  "support": {
-    "title": "আমাদের সাথে যোগাযোগ করুন",
-    "description": "কোনো প্রশ্ন বা সমস্যা আছে? আমাদের সাথে যোগাযোগ করুন।",
-    "form-label-name": "নাম",
-    "form-placeholder-name": "আপনার নাম লিখুন",
-    "form-label-email": "ইমেইল",
-    "form-placeholder-email": "আপনার ইমেইল লিখুন",
-    "form-button": "পাঠান",
-    "common-content": "বিষয়বস্তু",
-    "max-500-characters": "500 অক্ষরের বেশি হতে পারে না।",
-    "enter-content": "অনুগ্রহ করে বিষয়বস্তু লিখুন।",
-    "enter-email": "অনুগ্রহ করে ইমেইল লিখুন।"
-  },
-  "common": {
-    "terms-of-service": "পরিষেবার শর্তাবলী"
+    "tab2Content": "ট্যাব 2 এর বিষয়বস্তু",
+    "manage-app-settings-description": "আপনার অ্যাপ সেটিংস পরিচালনা করুন এবং ব্যক্তিগতকরণ করুন।"
   }
 }

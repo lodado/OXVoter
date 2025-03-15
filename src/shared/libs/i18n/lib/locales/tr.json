@@ -56,6 +56,22 @@
     "de": "Almanca",
     "tr": "Türkçe"
   },
+  "support": {
+    "title": "Bize Ulaşın",
+    "description": "Bir sorunuz veya probleminiz mi var? Bize ulaşın.",
+    "form-label-name": "İsim",
+    "form-placeholder-name": "Adınızı girin",
+    "form-label-email": "E-posta",
+    "form-placeholder-email": "E-posta adresinizi girin",
+    "form-button": "Gönder",
+    "common-content": "İçerik",
+    "max-500-characters": "500 karakteri aşamaz.",
+    "enter-content": "Lütfen içeriği girin.",
+    "enter-email": "Lütfen e-posta adresinizi girin."
+  },
+  "common": {
+    "terms-of-service": "Hizmet Şartları"
+  },
   "Home": {
     "title": "Canlı Oylama",
     "description": "Arkadaşlarınızla gerçek zamanlı oylama oyununun tadını çıkarın",
@@ -103,22 +119,7 @@
     "tabsUserSettings": "Ayarlar",
     "tabsSupport": "Destek",
     "userSettingsLanguage": "Dil Ayarları",
-    "tab2Content": "Sekme 2'nin içeriği"
-  },
-  "support": {
-    "title": "Bize Ulaşın",
-    "description": "Bir sorunuz veya probleminiz mi var? Bize ulaşın.",
-    "form-label-name": "İsim",
-    "form-placeholder-name": "Adınızı girin",
-    "form-label-email": "E-posta",
-    "form-placeholder-email": "E-posta adresinizi girin",
-    "form-button": "Gönder",
-    "common-content": "İçerik",
-    "max-500-characters": "500 karakteri aşamaz.",
-    "enter-content": "Lütfen içeriği girin.",
-    "enter-email": "Lütfen e-posta adresinizi girin."
-  },
-  "common": {
-    "terms-of-service": "Hizmet Şartları"
+    "tab2Content": "Sekme 2'nin içeriği",
+    "manage-app-settings-description": "Uygulama ayarlarınızı yönetin ve kişiselleştirin."
   }
 }

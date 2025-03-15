@@ -56,6 +56,22 @@
     "de": "German",
     "tr": "Turkish"
   },
+  "support": {
+    "title": "Contact Us",
+    "description": "Have a question or issue? Contact us.",
+    "form-label-name": "Name",
+    "form-placeholder-name": "Enter your name",
+    "form-label-email": "Email",
+    "form-placeholder-email": "Enter your email",
+    "form-button": "Send",
+    "common-content": "Content",
+    "max-500-characters": "Cannot exceed 500 characters.",
+    "enter-content": "Please enter content.",
+    "enter-email": "Please enter your email."
+  },
+  "common": {
+    "terms-of-service": "Terms of Service"
+  },
   "Home": {
     "title": "Live Voting",
     "description": "Enjoy a real-time voting game with your friends",
@@ -103,22 +119,7 @@
     "tabsUserSettings": "Settings",
     "tabsSupport": "Support",
     "userSettingsLanguage": "Language Settings",
-    "tab2Content": "Content of Tab 2"
-  },
-  "support": {
-    "title": "Contact Us",
-    "description": "Have a question or issue? Contact us.",
-    "form-label-name": "Name",
-    "form-placeholder-name": "Enter your name",
-    "form-label-email": "Email",
-    "form-placeholder-email": "Enter your email",
-    "form-button": "Send",
-    "common-content": "Content",
-    "max-500-characters": "Cannot exceed 500 characters.",
-    "enter-content": "Please enter content.",
-    "enter-email": "Please enter your email."
-  },
-  "common": {
-    "terms-of-service": "Terms of Service"
+    "tab2Content": "Content of Tab 2",
+    "manage-app-settings-description": "Manage and personalize your app settings."
   }
 }

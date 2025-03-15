@@ -56,6 +56,22 @@
     "de": "ドイツ語",
     "tr": "トルコ語"
   },
+  "support": {
+    "title": "お問い合わせ",
+    "description": "ご質問や問題がありますか？お問い合わせください。",
+    "form-label-name": "名前",
+    "form-placeholder-name": "名前を入力してください",
+    "form-label-email": "メール",
+    "form-placeholder-email": "メールアドレスを入力してください",
+    "form-button": "送信",
+    "common-content": "内容 (ないよう)",
+    "max-500-characters": "500文字を超えることはできません。",
+    "enter-content": "内容を入力してください。",
+    "enter-email": "メールアドレスを入力してください。"
+  },
+  "common": {
+    "terms-of-service": "利用規約"
+  },
   "Home": {
     "title": "リアルタイム投票",
     "description": "友達と一緒にリアルタイム投票ゲームを楽しもう",
@@ -103,22 +119,7 @@
     "tabsUserSettings": "設定",
     "tabsSupport": "サポート",
     "userSettingsLanguage": "言語設定",
-    "tab2Content": "タブ2のコンテンツ"
-  },
-  "support": {
-    "title": "お問い合わせ",
-    "description": "ご質問や問題がありますか？お問い合わせください。",
-    "form-label-name": "名前",
-    "form-placeholder-name": "名前を入力してください",
-    "form-label-email": "メール",
-    "form-placeholder-email": "メールアドレスを入力してください",
-    "form-button": "送信",
-    "common-content": "内容 (ないよう)",
-    "max-500-characters": "500文字を超えることはできません。",
-    "enter-content": "内容を入力してください。",
-    "enter-email": "メールアドレスを入力してください。"
-  },
-  "common": {
-    "terms-of-service": "利用規約"
+    "tab2Content": "タブ2のコンテンツ",
+    "manage-app-settings-description": "アプリの設定を管理してカスタマイズしてください。"
   }
 }

@@ -56,6 +56,22 @@
     "de": "德语",
     "tr": "土耳其语"
   },
+  "support": {
+    "title": "联系我们",
+    "description": "有问题或疑问？联系我们。",
+    "form-label-name": "名字",
+    "form-placeholder-name": "请输入您的名字",
+    "form-label-email": "电子邮件",
+    "form-placeholder-email": "请输入您的电子邮件",
+    "form-button": "发送",
+    "common-content": "内容",
+    "max-500-characters": "不能超过500个字符。",
+    "enter-content": "请输入内容。",
+    "enter-email": "请输入电子邮件。"
+  },
+  "common": {
+    "terms-of-service": "服务条款"
+  },
   "Home": {
     "title": "实时投票",
     "description": "与朋友一起享受实时投票游戏",
@@ -103,22 +119,7 @@
     "tabsUserSettings": "设置",
     "tabsSupport": "支持",
     "userSettingsLanguage": "语言设置",
-    "tab2Content": "选项卡 2 的内容"
-  },
-  "support": {
-    "title": "联系我们",
-    "description": "有问题或疑问？联系我们。",
-    "form-label-name": "名字",
-    "form-placeholder-name": "请输入您的名字",
-    "form-label-email": "电子邮件",
-    "form-placeholder-email": "请输入您的电子邮件",
-    "form-button": "发送",
-    "common-content": "内容",
-    "max-500-characters": "不能超过500个字符。",
-    "enter-content": "请输入内容。",
-    "enter-email": "请输入电子邮件。"
-  },
-  "common": {
-    "terms-of-service": "服务条款"
+    "tab2Content": "选项卡 2 的内容",
+    "manage-app-settings-description": "管理和个性化您的应用设置。"
   }
 }

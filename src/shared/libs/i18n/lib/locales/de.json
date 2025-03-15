@@ -56,6 +56,22 @@
     "de": "Deutsch",
     "tr": "Türkisch"
   },
+  "support": {
+    "title": "Kontaktieren Sie uns",
+    "description": "Haben Sie eine Frage oder ein Problem? Kontaktieren Sie uns.",
+    "form-label-name": "Name",
+    "form-placeholder-name": "Geben Sie Ihren Namen ein",
+    "form-label-email": "E-Mail",
+    "form-placeholder-email": "Geben Sie Ihre E-Mail ein",
+    "form-button": "Senden",
+    "common-content": "Inhalt",
+    "max-500-characters": "Darf 500 Zeichen nicht überschreiten.",
+    "enter-content": "Bitte geben Sie den Inhalt ein.",
+    "enter-email": "Bitte geben Sie Ihre E-Mail ein."
+  },
+  "common": {
+    "terms-of-service": "Nutzungsbedingungen"
+  },
   "Home": {
     "title": "Live-Abstimmung",
     "description": "Genießen Sie ein Echtzeit-Abstimmungsspiel mit Ihren Freunden",
@@ -103,22 +119,7 @@
     "tabsUserSettings": "Einstellungen",
     "tabsSupport": "Unterstützung",
     "userSettingsLanguage": "Spracheinstellungen",
-    "tab2Content": "Inhalt von Tab 2"
-  },
-  "support": {
-    "title": "Kontaktieren Sie uns",
-    "description": "Haben Sie eine Frage oder ein Problem? Kontaktieren Sie uns.",
-    "form-label-name": "Name",
-    "form-placeholder-name": "Geben Sie Ihren Namen ein",
-    "form-label-email": "E-Mail",
-    "form-placeholder-email": "Geben Sie Ihre E-Mail ein",
-    "form-button": "Senden",
-    "common-content": "Inhalt",
-    "max-500-characters": "Darf 500 Zeichen nicht überschreiten.",
-    "enter-content": "Bitte geben Sie den Inhalt ein.",
-    "enter-email": "Bitte geben Sie Ihre E-Mail ein."
-  },
-  "common": {
-    "terms-of-service": "Nutzungsbedingungen"
+    "tab2Content": "Inhalt von Tab 2",
+    "manage-app-settings-description": "Verwalten und personalisieren Sie Ihre App-Einstellungen."
   }
 }

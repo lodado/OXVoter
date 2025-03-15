@@ -56,6 +56,22 @@
     "de": "Tiếng Đức",
     "tr": "Tiếng Thổ Nhĩ Kỳ"
   },
+  "support": {
+    "title": "Liên hệ với chúng tôi",
+    "description": "Có câu hỏi hoặc vấn đề? Liên hệ với chúng tôi.",
+    "form-label-name": "Tên",
+    "form-placeholder-name": "Nhập tên của bạn",
+    "form-label-email": "Email",
+    "form-placeholder-email": "Nhập email của bạn",
+    "form-button": "Gửi",
+    "common-content": "Nội dung",
+    "max-500-characters": "Không thể vượt quá 500 ký tự.",
+    "enter-content": "Vui lòng nhập nội dung.",
+    "enter-email": "Vui lòng nhập email của bạn."
+  },
+  "common": {
+    "terms-of-service": "Điều khoản dịch vụ"
+  },
   "Home": {
     "title": "Bình chọn trực tiếp",
     "description": "Thưởng thức trò chơi bình chọn theo thời gian thực cùng bạn bè",
@@ -103,22 +119,7 @@
     "tabsUserSettings": "Cài đặt",
     "tabsSupport": "Hỗ trợ",
     "userSettingsLanguage": "Cài đặt ngôn ngữ",
-    "tab2Content": "Nội dung tab 2"
-  },
-  "support": {
-    "title": "Liên hệ với chúng tôi",
-    "description": "Có câu hỏi hoặc vấn đề? Liên hệ với chúng tôi.",
-    "form-label-name": "Tên",
-    "form-placeholder-name": "Nhập tên của bạn",
-    "form-label-email": "Email",
-    "form-placeholder-email": "Nhập email của bạn",
-    "form-button": "Gửi",
-    "common-content": "Nội dung",
-    "max-500-characters": "Không thể vượt quá 500 ký tự.",
-    "enter-content": "Vui lòng nhập nội dung.",
-    "enter-email": "Vui lòng nhập email của bạn."
-  },
-  "common": {
-    "terms-of-service": "Điều khoản dịch vụ"
+    "tab2Content": "Nội dung tab 2",
+    "manage-app-settings-description": "Quản lý và cá nhân hóa cài đặt ứng dụng của bạn."
   }
 }

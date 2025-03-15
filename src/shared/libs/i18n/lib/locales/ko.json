@@ -56,6 +56,22 @@
     "de": "독일어",
     "tr": "터키어"
   },
+  "support": {
+    "title": "문의하기",
+    "description": "질문이나 문제가 있으신가요? 저희에게 연락해 주세요.",
+    "form-label-name": "이름",
+    "form-placeholder-name": "이름을 입력하세요",
+    "form-label-email": "이메일",
+    "form-placeholder-email": "이메일을 입력하세요",
+    "form-button": "보내기",
+    "common-content": "내용",
+    "max-500-characters": "500자를 넘을 수 없습니다.",
+    "enter-content": "내용을 입력해주세요",
+    "enter-email": "이메일을 입력해주세요"
+  },
+  "common": {
+    "terms-of-service": "이용 약관"
+  },
   "Home": {
     "title": "실시간 투표",
     "description": "친구들과 함께 실시간 투표 게임을 즐겨보세요",
@@ -103,22 +119,7 @@
     "tabsUserSettings": "설정",
     "tabsSupport": "문의",
     "userSettingsLanguage": "언어 설정",
-    "tab2Content": "탭 2의 콘텐츠"
-  },
-  "support": {
-    "title": "문의하기",
-    "description": "질문이나 문제가 있으신가요? 저희에게 연락해 주세요.",
-    "form-label-name": "이름",
-    "form-placeholder-name": "이름을 입력하세요",
-    "form-label-email": "이메일",
-    "form-placeholder-email": "이메일을 입력하세요",
-    "form-button": "보내기",
-    "common-content": "내용",
-    "max-500-characters": "500자를 넘을 수 없습니다.",
-    "enter-content": "내용을 입력해주세요",
-    "enter-email": "이메일을 입력해주세요"
-  },
-  "common": {
-    "terms-of-service": "이용 약관"
+    "tab2Content": "탭 2의 콘텐츠",
+    "manage-app-settings-description": "앱 설정을 관리하고 개인화하세요."
   }
 }

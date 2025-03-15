@@ -56,6 +56,22 @@
     "de": "जर्मन",
     "tr": "तुर्की"
   },
+  "support": {
+    "title": "हमसे संपर्क करें",
+    "description": "कोई प्रश्न या समस्या है? हमसे संपर्क करें।",
+    "form-label-name": "नाम",
+    "form-placeholder-name": "अपना नाम दर्ज करें",
+    "form-label-email": "ईमेल",
+    "form-placeholder-email": "अपना ईमेल दर्ज करें",
+    "form-button": "भेजें",
+    "common-content": "सामग्री",
+    "max-500-characters": "500 अक्षरों से अधिक नहीं हो सकता।",
+    "enter-content": "कृपया सामग्री दर्ज करें।",
+    "enter-email": "कृपया ईमेल दर्ज करें।"
+  },
+  "common": {
+    "terms-of-service": "सेवा की शर्तें"
+  },
   "Home": {
     "title": "लाइव वोटिंग",
     "description": "अपने दोस्तों के साथ रीयल-टाइम वोटिंग गेम का आनंद लें",
@@ -103,22 +119,7 @@
     "tabsUserSettings": "सेटिंग्स",
     "tabsSupport": "समर्थन",
     "userSettingsLanguage": "भाषा सेटिंग",
-    "tab2Content": "टैब 2 की सामग्री"
-  },
-  "support": {
-    "title": "हमसे संपर्क करें",
-    "description": "कोई प्रश्न या समस्या है? हमसे संपर्क करें।",
-    "form-label-name": "नाम",
-    "form-placeholder-name": "अपना नाम दर्ज करें",
-    "form-label-email": "ईमेल",
-    "form-placeholder-email": "अपना ईमेल दर्ज करें",
-    "form-button": "भेजें",
-    "common-content": "सामग्री",
-    "max-500-characters": "500 अक्षरों से अधिक नहीं हो सकता।",
-    "enter-content": "कृपया सामग्री दर्ज करें।",
-    "enter-email": "कृपया ईमेल दर्ज करें।"
-  },
-  "common": {
-    "terms-of-service": "सेवा की शर्तें"
+    "tab2Content": "टैब 2 की सामग्री",
+    "manage-app-settings-description": "अपने ऐप सेटिंग्स को प्रबंधित और व्यक्तिगत करें।"
   }
 }
