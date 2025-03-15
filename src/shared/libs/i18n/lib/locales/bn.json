@@ -1,7 +1,9 @@
 {
-  "EDITORLINKDIALOG": {
+  "DIALOG": {
     "SUBMITTEXT": "জমা দিন",
-    "CANCELTEXT": "বাতিল করুন",
+    "CANCELTEXT": "বাতিল করুন"
+  },
+  "EDITORLINKDIALOG": {
     "HEADER": "লিঙ্ক বর্ণনা এবং ইউআরএল ইনপুট মোডাল",
     "DESCRIPTION": "অনুগ্রহ করে নির্বাচিত পাঠ্যের জন্য লিঙ্কের বর্ণনা এবং URL প্রবেশ করান।"
   },
@@ -95,5 +97,28 @@
     "Button_Creating": "তৈরি করা হচ্ছে...",
     "specialVoting": "বিশেষ ভোট সক্রিয় করুন",
     "specialVoting-description": "ভূমিকার জন্য বিশেষ ভোটিং ধাপ যোগ করুন"
+  },
+  "settings": {
+    "title": "সেটিংস",
+    "tabsUserSettings": "সেটিংস",
+    "tabsSupport": "সহায়তা",
+    "userSettingsLanguage": "ভাষা সেটিংস",
+    "tab2Content": "ট্যাব 2 এর বিষয়বস্তু"
+  },
+  "support": {
+    "title": "আমাদের সাথে যোগাযোগ করুন",
+    "description": "কোনো প্রশ্ন বা সমস্যা আছে? আমাদের সাথে যোগাযোগ করুন।",
+    "form-label-name": "নাম",
+    "form-placeholder-name": "আপনার নাম লিখুন",
+    "form-label-email": "ইমেইল",
+    "form-placeholder-email": "আপনার ইমেইল লিখুন",
+    "form-button": "পাঠান",
+    "common-content": "বিষয়বস্তু",
+    "max-500-characters": "500 অক্ষরের বেশি হতে পারে না।",
+    "enter-content": "অনুগ্রহ করে বিষয়বস্তু লিখুন।",
+    "enter-email": "অনুগ্রহ করে ইমেইল লিখুন।"
+  },
+  "common": {
+    "terms-of-service": "পরিষেবার শর্তাবলী"
   }
 }

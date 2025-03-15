@@ -1,7 +1,9 @@
 {
-  "EDITORLINKDIALOG": {
+  "DIALOG": {
     "SUBMITTEXT": "ส่ง",
-    "CANCELTEXT": "ยกเลิก",
+    "CANCELTEXT": "ยกเลิก"
+  },
+  "EDITORLINKDIALOG": {
     "HEADER": "คำอธิบายลิงก์และการป้อน URL Modal",
     "DESCRIPTION": "กรุณาใส่คำอธิบายลิงก์และ URL สำหรับข้อความที่เลือก"
   },
@@ -95,5 +97,28 @@
     "Button_Creating": "กำลังสร้าง...",
     "specialVoting": "เปิดใช้งานการลงคะแนนพิเศษ",
     "specialVoting-description": "เพิ่มขั้นตอนการลงคะแนนพิเศษสำหรับบทบาท"
+  },
+  "settings": {
+    "title": "การตั้งค่า",
+    "tabsUserSettings": "การตั้งค่า",
+    "tabsSupport": "สนับสนุน",
+    "userSettingsLanguage": "การตั้งค่าภาษา",
+    "tab2Content": "เนื้อหาของแท็บ 2"
+  },
+  "support": {
+    "title": "ติดต่อเรา",
+    "description": "มีคำถามหรือปัญหาหรือไม่? ติดต่อเรา",
+    "form-label-name": "ชื่อ",
+    "form-placeholder-name": "กรุณากรอกชื่อของคุณ",
+    "form-label-email": "อีเมล",
+    "form-placeholder-email": "กรุณากรอกอีเมลของคุณ",
+    "form-button": "ส่ง",
+    "common-content": "เนื้อหา",
+    "max-500-characters": "ไม่สามารถเกิน 500 อักขระได้",
+    "enter-content": "กรุณาใส่เนื้อหา",
+    "enter-email": "กรุณากรอกอีเมลของคุณ"
+  },
+  "common": {
+    "terms-of-service": "ข้อกำหนดการใช้บริการ"
   }
 }

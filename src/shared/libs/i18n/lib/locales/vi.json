@@ -1,7 +1,9 @@
 {
-  "EDITORLINKDIALOG": {
+  "DIALOG": {
     "SUBMITTEXT": "Gửi",
-    "CANCELTEXT": "Hủy bỏ",
+    "CANCELTEXT": "Hủy bỏ"
+  },
+  "EDITORLINKDIALOG": {
     "HEADER": "Mô tả liên kết và Nhập URL Modal",
     "DESCRIPTION": "Vui lòng nhập mô tả liên kết và URL cho văn bản đã chọn."
   },
@@ -95,5 +97,28 @@
     "Button_Creating": "Đang tạo...",
     "specialVoting": "Bật bỏ phiếu đặc biệt",
     "specialVoting-description": "Thêm giai đoạn bỏ phiếu đặc biệt cho vai trò"
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "tabsUserSettings": "Cài đặt",
+    "tabsSupport": "Hỗ trợ",
+    "userSettingsLanguage": "Cài đặt ngôn ngữ",
+    "tab2Content": "Nội dung tab 2"
+  },
+  "support": {
+    "title": "Liên hệ với chúng tôi",
+    "description": "Có câu hỏi hoặc vấn đề? Liên hệ với chúng tôi.",
+    "form-label-name": "Tên",
+    "form-placeholder-name": "Nhập tên của bạn",
+    "form-label-email": "Email",
+    "form-placeholder-email": "Nhập email của bạn",
+    "form-button": "Gửi",
+    "common-content": "Nội dung",
+    "max-500-characters": "Không thể vượt quá 500 ký tự.",
+    "enter-content": "Vui lòng nhập nội dung.",
+    "enter-email": "Vui lòng nhập email của bạn."
+  },
+  "common": {
+    "terms-of-service": "Điều khoản dịch vụ"
   }
 }

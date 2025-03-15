@@ -1,7 +1,9 @@
 {
-  "EDITORLINKDIALOG": {
+  "DIALOG": {
     "SUBMITTEXT": "提交",
-    "CANCELTEXT": "取消",
+    "CANCELTEXT": "取消"
+  },
+  "EDITORLINKDIALOG": {
     "HEADER": "链接说明和URL输入模态框",
     "DESCRIPTION": "请输入所选文本的链接描述和网址。"
   },
@@ -95,5 +97,28 @@
     "Button_Creating": "创建中...",
     "specialVoting": "启用特殊投票",
     "specialVoting-description": "为角色添加特殊投票阶段"
+  },
+  "settings": {
+    "title": "设置",
+    "tabsUserSettings": "设置",
+    "tabsSupport": "支持",
+    "userSettingsLanguage": "语言设置",
+    "tab2Content": "选项卡 2 的内容"
+  },
+  "support": {
+    "title": "联系我们",
+    "description": "有问题或疑问？联系我们。",
+    "form-label-name": "名字",
+    "form-placeholder-name": "请输入您的名字",
+    "form-label-email": "电子邮件",
+    "form-placeholder-email": "请输入您的电子邮件",
+    "form-button": "发送",
+    "common-content": "内容",
+    "max-500-characters": "不能超过500个字符。",
+    "enter-content": "请输入内容。",
+    "enter-email": "请输入电子邮件。"
+  },
+  "common": {
+    "terms-of-service": "服务条款"
   }
 }

@@ -1,7 +1,9 @@
 {
-  "EDITORLINKDIALOG": {
+  "DIALOG": {
     "SUBMITTEXT": "प्रस्तुत करें",
-    "CANCELTEXT": "रद्द करें",
+    "CANCELTEXT": "रद्द करें"
+  },
+  "EDITORLINKDIALOG": {
     "HEADER": "लिंक विवरण और URL इनपुट मोडल",
     "DESCRIPTION": "कृपया चयनित टेक्स्ट के लिए लिंक विवरण और URL दर्ज करें।"
   },
@@ -95,5 +97,28 @@
     "Button_Creating": "बनाया जा रहा है...",
     "specialVoting": "विशेष मतदान सक्षम करें",
     "specialVoting-description": "भूमिकाओं के लिए विशेष मतदान चरण जोड़ें"
+  },
+  "settings": {
+    "title": "सेटिंग्स",
+    "tabsUserSettings": "सेटिंग्स",
+    "tabsSupport": "समर्थन",
+    "userSettingsLanguage": "भाषा सेटिंग",
+    "tab2Content": "टैब 2 की सामग्री"
+  },
+  "support": {
+    "title": "हमसे संपर्क करें",
+    "description": "कोई प्रश्न या समस्या है? हमसे संपर्क करें।",
+    "form-label-name": "नाम",
+    "form-placeholder-name": "अपना नाम दर्ज करें",
+    "form-label-email": "ईमेल",
+    "form-placeholder-email": "अपना ईमेल दर्ज करें",
+    "form-button": "भेजें",
+    "common-content": "सामग्री",
+    "max-500-characters": "500 अक्षरों से अधिक नहीं हो सकता।",
+    "enter-content": "कृपया सामग्री दर्ज करें।",
+    "enter-email": "कृपया ईमेल दर्ज करें।"
+  },
+  "common": {
+    "terms-of-service": "सेवा की शर्तें"
   }
 }

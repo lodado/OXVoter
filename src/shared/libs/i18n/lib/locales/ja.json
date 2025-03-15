@@ -1,7 +1,9 @@
 {
-  "EDITORLINKDIALOG": {
+  "DIALOG": {
     "SUBMITTEXT": "送信",
-    "CANCELTEXT": "キャンセル",
+    "CANCELTEXT": "キャンセル"
+  },
+  "EDITORLINKDIALOG": {
     "HEADER": "リンク説明とURL入力モーダル",
     "DESCRIPTION": "選択したテキストに挿入するリンクの説明とURLを入力してください。"
   },
@@ -95,5 +97,28 @@
     "Button_Creating": "作成中...",
     "specialVoting": "特別投票を有効化",
     "specialVoting-description": "役割ごとの特別投票段階を追加"
+  },
+  "settings": {
+    "title": "設定",
+    "tabsUserSettings": "設定",
+    "tabsSupport": "サポート",
+    "userSettingsLanguage": "言語設定",
+    "tab2Content": "タブ2のコンテンツ"
+  },
+  "support": {
+    "title": "お問い合わせ",
+    "description": "ご質問や問題がありますか？お問い合わせください。",
+    "form-label-name": "名前",
+    "form-placeholder-name": "名前を入力してください",
+    "form-label-email": "メール",
+    "form-placeholder-email": "メールアドレスを入力してください",
+    "form-button": "送信",
+    "common-content": "内容 (ないよう)",
+    "max-500-characters": "500文字を超えることはできません。",
+    "enter-content": "内容を入力してください。",
+    "enter-email": "メールアドレスを入力してください。"
+  },
+  "common": {
+    "terms-of-service": "利用規約"
   }
 }

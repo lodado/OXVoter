@@ -1,7 +1,9 @@
 {
-  "EDITORLINKDIALOG": {
+  "DIALOG": {
     "SUBMITTEXT": "Hantar",
-    "CANCELTEXT": "Batal",
+    "CANCELTEXT": "Batal"
+  },
+  "EDITORLINKDIALOG": {
     "HEADER": "Penerangan Pautan dan Input Modal URL",
     "DESCRIPTION": "Sila masukkan perihalan pautan dan URL untuk teks yang dipilih."
   },
@@ -95,5 +97,28 @@
     "Button_Creating": "Sedang membuat...",
     "specialVoting": "Aktifkan Pengundian Khas",
     "specialVoting-description": "Tambahkan tahap pengundian khas untuk peranan"
+  },
+  "settings": {
+    "title": "Tetapan",
+    "tabsUserSettings": "Tetapan",
+    "tabsSupport": "Sokongan",
+    "userSettingsLanguage": "Tetapan Bahasa",
+    "tab2Content": "Kandungan Tab 2"
+  },
+  "support": {
+    "title": "Hubungi Kami",
+    "description": "Ada soalan atau masalah? Hubungi kami.",
+    "form-label-name": "Nama",
+    "form-placeholder-name": "Masukkan nama anda",
+    "form-label-email": "Emel",
+    "form-placeholder-email": "Masukkan e-mel anda",
+    "form-button": "Hantar",
+    "common-content": "Kandungan",
+    "max-500-characters": "Tidak boleh melebihi 500 aksara.",
+    "enter-content": "Sila masukkan kandungan.",
+    "enter-email": "Sila masukkan e-mel anda."
+  },
+  "common": {
+    "terms-of-service": "Terma Perkhidmatan"
   }
 }

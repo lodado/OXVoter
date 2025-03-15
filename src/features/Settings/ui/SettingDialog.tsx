@@ -36,7 +36,11 @@ const SettingDialog = () => {
   };
 
   return (
-    <SettingDialogProvider language={language} onChangeLanguage={onChangeLanguage}>
+    <SettingDialogProvider
+      language={language}
+      onChangeLanguage={onChangeLanguage}
+      handleSubmitSetting={handleSubmitSetting}
+    >
       <IconButton
         variant="link"
         className="w-[50px] h-[50px]"
@@ -49,20 +53,13 @@ const SettingDialog = () => {
 
       <AlertDialog isVisible={isDialogVisible} onChangeVisible={setIsDialogVisible}>
         <AlertDialog.Header>Settings</AlertDialog.Header>
-        <AlertDialog.Body className="h-[50vh] gap-3">
-          <AlertDialog.Description className="h-max text-text-03">
+        <AlertDialog.Body className="relative max-h-[600px] h-[calc(80*var(--vh))] gap-3 overflow-x-hidden overflow-y-auto">
+          <AlertDialog.Description className="sticky h-max text-text-03">
             앱 설정을 관리하고 개인화하세요.
           </AlertDialog.Description>
 
           <SettingTab />
         </AlertDialog.Body>
-        <AlertDialog.SubmitForm
-          submitText="확인"
-          cancelText="취소"
-          onSubmit={async (e) => {
-            handleSubmitSetting(e);
-          }}
-        />
       </AlertDialog>
     </SettingDialogProvider>
   );

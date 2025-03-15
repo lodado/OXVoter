@@ -12,7 +12,7 @@ export const cspMiddleware = (request: NextRequest, response: NextResponse) => {
     script-src 'wasm-unsafe-eval' 'self' ${
       process.env.NODE_ENV !== "production" ? `'unsafe-eval'` : ""
     } 'nonce-${nonce}' 'strict-dynamic' vercel.live vercel.com cdn.jsdelivr.net;
-    script-src-elem  cdn.jsdelivr.net 'self' vercel.live vercel.com 'nonce-${nonce}';
+    script-src-elem  https://www.googletagmanager.com cdn.jsdelivr.net 'self' vercel.live vercel.com 'nonce-${nonce}';
     object-src 'none';
     connect-src ${THIRD_PARTY_CONNECT_SRC_LIST.join(" ")} data: 'self' blob: ;
     base-uri 'self';

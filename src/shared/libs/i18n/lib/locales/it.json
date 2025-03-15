@@ -1,7 +1,9 @@
 {
-  "EDITORLINKDIALOG": {
+  "DIALOG": {
     "SUBMITTEXT": "Invia",
-    "CANCELTEXT": "Annulla",
+    "CANCELTEXT": "Annulla"
+  },
+  "EDITORLINKDIALOG": {
     "HEADER": "Descrizione del link e input URL Modal",
     "DESCRIPTION": "Si prega di inserire la descrizione del link e l'URL per il testo selezionato."
   },
@@ -95,5 +97,28 @@
     "Button_Creating": "Creazione in corso...",
     "specialVoting": "Abilita il voto speciale",
     "specialVoting-description": "Aggiungi fasi di votazione speciali per ruoli"
+  },
+  "settings": {
+    "title": "Impostazioni",
+    "tabsUserSettings": "Impostazioni",
+    "tabsSupport": "Supporto",
+    "userSettingsLanguage": "Impostazioni della lingua",
+    "tab2Content": "Contenuto della scheda 2"
+  },
+  "support": {
+    "title": "Contattaci",
+    "description": "Hai una domanda o un problema? Contattaci.",
+    "form-label-name": "Nome",
+    "form-placeholder-name": "Inserisci il tuo nome",
+    "form-label-email": "Email",
+    "form-placeholder-email": "Inserisci il tuo indirizzo email",
+    "form-button": "Invia",
+    "common-content": "Contenuto",
+    "max-500-characters": "Non può superare i 500 caratteri.",
+    "enter-content": "Inserisci il contenuto.",
+    "enter-email": "Inserisci il tuo indirizzo email."
+  },
+  "common": {
+    "terms-of-service": "Termini di servizio"
   }
 }

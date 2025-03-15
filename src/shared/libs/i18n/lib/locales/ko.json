@@ -1,7 +1,9 @@
 {
-  "EDITORLINKDIALOG": {
+  "DIALOG": {
     "SUBMITTEXT": "확인",
-    "CANCELTEXT": "취소",
+    "CANCELTEXT": "취소"
+  },
+  "EDITORLINKDIALOG": {
     "HEADER": "링크 설명 및 주소 입력 모달",
     "DESCRIPTION": "지금 선택한 텍스트에 넣을 링크의 설명과 주소를 입력해주세요."
   },
@@ -95,5 +97,28 @@
     "Button_Creating": "생성 중...",
     "specialVoting": "특수 투표 활성화",
     "specialVoting-description": "역할별 특수 투표 단계 추가"
+  },
+  "settings": {
+    "title": "설정",
+    "tabsUserSettings": "설정",
+    "tabsSupport": "문의",
+    "userSettingsLanguage": "언어 설정",
+    "tab2Content": "탭 2의 콘텐츠"
+  },
+  "support": {
+    "title": "문의하기",
+    "description": "질문이나 문제가 있으신가요? 저희에게 연락해 주세요.",
+    "form-label-name": "이름",
+    "form-placeholder-name": "이름을 입력하세요",
+    "form-label-email": "이메일",
+    "form-placeholder-email": "이메일을 입력하세요",
+    "form-button": "보내기",
+    "common-content": "내용",
+    "max-500-characters": "500자를 넘을 수 없습니다.",
+    "enter-content": "내용을 입력해주세요",
+    "enter-email": "이메일을 입력해주세요"
+  },
+  "common": {
+    "terms-of-service": "이용 약관"
   }
 }

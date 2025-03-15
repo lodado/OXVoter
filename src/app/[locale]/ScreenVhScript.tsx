@@ -5,6 +5,9 @@ import { useEffect, useLayoutEffect } from "react";
 function vhCode() {
   // Safe area insets
 
+  if (typeof window === "undefined") return;
+
+
   const safeAreaTop = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--safe-area-top")) || 0;
   const safeAreaBottom =
     parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--safe-area-bottom")) || 0;
@@ -41,7 +44,7 @@ const ScreenVhScript = ({ nonce }: { nonce: string }) => {
     return () => {
       window.removeEventListener("resize", vhCode);
     };
-  }, [window.location.pathname]);
+  }, [typeof window !== undefined || window.location.pathname]);
 
   return (
     <>

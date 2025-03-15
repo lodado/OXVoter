@@ -33,25 +33,6 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>((props: TextArea
   const defaultRef = useRef<HTMLTextAreaElement>(null);
   const textAreaRef = useForkRef(ref, defaultRef);
 
-  const scrollToTop = () => {
-    // window.scrollTo({ top: 0, behavior: "smooth" });
-    defaultRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
-  };
-
-  useEffect(() => {
-    const handleBlur = () => {
-      scrollToTop();
-    };
-
-    const textareaElement = defaultRef.current; // defaultRef를 사용해 DOM 요소에 접근합니다.
-    textareaElement?.addEventListener("blur", handleBlur);
-
-    // Cleanup event listeners on component unmount
-    return () => {
-      textareaElement?.removeEventListener("blur", handleBlur);
-    };
-  }, []);
-
   return (
     <textarea
       ref={textAreaRef}

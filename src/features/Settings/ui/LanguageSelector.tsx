@@ -52,7 +52,7 @@ const LanguageSelector = (props: ComponentProps<typeof Select>) => {
             <ChevronDown />
           </Select.Icon>
         </Select.Trigger>
-        <Select.Content align="center" className="flex flex-col min-w-[130px] w-[30vw] max-w-[200px] max-h-[50vh]">
+        <Select.Content align="center" className="flex flex-col min-w-[130px] max-w-[400px] max-h-[50vh]">
           <Select.Group>
             <Select.Label>Lang</Select.Label>
             {languages.map((language) => (

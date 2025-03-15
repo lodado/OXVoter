@@ -1,7 +1,9 @@
 {
-  "EDITORLINKDIALOG": {
+  "DIALOG": {
     "SUBMITTEXT": "Soumettre",
-    "CANCELTEXT": "Annuler",
+    "CANCELTEXT": "Annuler"
+  },
+  "EDITORLINKDIALOG": {
     "HEADER": "Description du lien et modal de saisie d'URL",
     "DESCRIPTION": "Veuillez entrer la description du lien et l'URL pour le texte sélectionné."
   },
@@ -95,5 +97,28 @@
     "Button_Creating": "Création en cours...",
     "specialVoting": "Activer le vote spécial",
     "specialVoting-description": "Ajouter des étapes de vote spéciales pour les rôles"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "tabsUserSettings": "Paramètres",
+    "tabsSupport": "Assistance",
+    "userSettingsLanguage": "Paramètres de langue",
+    "tab2Content": "Contenu de l'onglet 2"
+  },
+  "support": {
+    "title": "Nous contacter",
+    "description": "Une question ou un problème ? Contactez-nous.",
+    "form-label-name": "Nom",
+    "form-placeholder-name": "Entrez votre nom",
+    "form-label-email": "Email",
+    "form-placeholder-email": "Entrez votre e-mail",
+    "form-button": "Envoyer",
+    "common-content": "Contenu",
+    "max-500-characters": "Ne peut pas dépasser 500 caractères.",
+    "enter-content": "Veuillez entrer du contenu.",
+    "enter-email": "Veuillez entrer votre e-mail."
+  },
+  "common": {
+    "terms-of-service": "Conditions d'utilisation"
   }
 }

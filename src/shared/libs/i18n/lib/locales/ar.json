@@ -1,7 +1,9 @@
 {
-  "EDITORLINKDIALOG": {
+  "DIALOG": {
     "SUBMITTEXT": "إرسال",
-    "CANCELTEXT": "إلغاء",
+    "CANCELTEXT": "إلغاء"
+  },
+  "EDITORLINKDIALOG": {
     "HEADER": "وصف الرابط وإدخال URL",
     "DESCRIPTION": "يرجى إدخال وصف الرابط وعنوان URL للنص المحدد."
   },
@@ -95,5 +97,28 @@
     "Button_Creating": "جاري الإنشاء...",
     "specialVoting": "تمكين التصويت الخاص",
     "specialVoting-description": "إضافة مراحل تصويت خاصة للأدوار"
+  },
+  "settings": {
+    "title": "إعدادات",
+    "tabsUserSettings": "إعدادات",
+    "tabsSupport": "دعم",
+    "userSettingsLanguage": "إعدادات اللغة",
+    "tab2Content": "محتوى التبويب 2"
+  },
+  "support": {
+    "title": "اتصل بنا",
+    "description": "هل لديك سؤال أو مشكلة؟ اتصل بنا.",
+    "form-label-name": "الاسم",
+    "form-placeholder-name": "أدخل اسمك",
+    "form-label-email": "البريد الإلكتروني",
+    "form-placeholder-email": "أدخل بريدك الإلكتروني",
+    "form-button": "إرسال",
+    "common-content": "محتوى",
+    "max-500-characters": "لا يمكن أن يتجاوز 500 حرف.",
+    "enter-content": "الرجاء إدخال المحتوى.",
+    "enter-email": "الرجاء إدخال بريدك الإلكتروني."
+  },
+  "common": {
+    "terms-of-service": "شروط الخدمة"
   }
 }

@@ -1,7 +1,9 @@
 {
-  "EDITORLINKDIALOG": {
+  "DIALOG": {
     "SUBMITTEXT": "Gönder",
-    "CANCELTEXT": "İptal etmek",
+    "CANCELTEXT": "İptal etmek"
+  },
+  "EDITORLINKDIALOG": {
     "HEADER": "Bağlantı Açıklaması ve URL Girişi Modalı",
     "DESCRIPTION": "Lütfen seçilen metin için bağlantı açıklaması ve URL girin."
   },
@@ -95,5 +97,28 @@
     "Button_Creating": "Oluşturuluyor...",
     "specialVoting": "Özel Oylamayı Etkinleştir",
     "specialVoting-description": "Rollere özel oylama aşamaları ekleyin"
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "tabsUserSettings": "Ayarlar",
+    "tabsSupport": "Destek",
+    "userSettingsLanguage": "Dil Ayarları",
+    "tab2Content": "Sekme 2'nin içeriği"
+  },
+  "support": {
+    "title": "Bize Ulaşın",
+    "description": "Bir sorunuz veya probleminiz mi var? Bize ulaşın.",
+    "form-label-name": "İsim",
+    "form-placeholder-name": "Adınızı girin",
+    "form-label-email": "E-posta",
+    "form-placeholder-email": "E-posta adresinizi girin",
+    "form-button": "Gönder",
+    "common-content": "İçerik",
+    "max-500-characters": "500 karakteri aşamaz.",
+    "enter-content": "Lütfen içeriği girin.",
+    "enter-email": "Lütfen e-posta adresinizi girin."
+  },
+  "common": {
+    "terms-of-service": "Hizmet Şartları"
   }
 }
