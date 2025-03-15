@@ -8,8 +8,8 @@ import { LocaleProps, ThemeScript } from "@/shared";
 import { GA } from "@/shared/libs/GA";
 import { GlobalDialogContainer } from "@/widgets";
 
+import ScreenVhScript from "../../features/Script/ui/ScreenVhScript";
 import { RootProvider } from "../provider";
-import ScreenVhScript from "./ScreenVhScript";
 
 export function generateViewport(): Viewport {
   return {

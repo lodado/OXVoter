@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { LocaleLink } from "@/entities/Router";
 import { SettingDialog } from "@/features";
+import GameHeader from "@/features/Settings/ui/GameHeader";
 import { getLocalesListsForStateParams } from "@/shared/index.server";
 import { Button } from "@/shared/ui";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
@@ -15,33 +16,31 @@ export default async function Home({ params }: { params: { locale: string } }) {
   const t = await getTranslations("Home");
 
   return (
-    <div className="w-full h-full flex justify-center items-center relative">
-      <div className="h-5 absolute top-5 right-5 z-[100]">
-        <SettingDialog />
-      </div>
-
-      <ReactiveLayout className="flex flex-col justify-center items-center">
-        <div className="w-full max-w-md space-y-8 rounded-xl bg-slate-800/50 p-8 shadow-lg backdrop-blur">
-          <div className="flex flex-col w-full justify-center items-center text-center">
-            <h1 className="display-3 tracking-tight">{t("title")}</h1>
-            <p className="mt-3 text-slate-300 heading-01">{t("description")} 🔥</p>
-          </div>
-
-          <div className="flex flex-col gap-4 pt-4">
-            <LocaleLink href="/create-room" className="w-full ">
-              <Button className="w-full h-[2.9rem]">{t("createRoom")}</Button>
-            </LocaleLink>
-            <LocaleLink href="/join-room" className="w-full">
-              <Button
-                variant="custom"
-                className="w-full h-[2.9rem] border border-slate-600 text-slate-200 hover:bg-slate-700"
-              >
-                {t("joinRoom")}
-              </Button>
-            </LocaleLink>
-          </div>
+    <ReactiveLayout
+      className="flex w-full h-full flex-col min-h-[calc(100*var(--vh)-1.25rem)] justify-center items-center"
+      outerClassName="relative"
+      outerPreviousChildren={<GameHeader isMain={true} />}
+    >
+      <main className="w-full max-w-md space-y-8 rounded-xl bg-slate-800/50 p-8 shadow-lg backdrop-blur">
+        <div className="flex flex-col w-full justify-center items-center text-center">
+          <h1 className="display-3 tracking-tight">{t("title")}</h1>
+          <p className="mt-3 text-slate-300 heading-01">{t("description")} 🔥</p>
         </div>
-      </ReactiveLayout>
-    </div>
+
+        <div className="flex flex-col gap-4 pt-4">
+          <LocaleLink href="/create-room" className="w-full ">
+            <Button className="w-full h-[2.9rem]">{t("createRoom")}</Button>
+          </LocaleLink>
+          <LocaleLink href="/join-room" className="w-full">
+            <Button
+              variant="custom"
+              className="w-full h-[2.9rem] border border-slate-600 text-slate-200 hover:bg-slate-700"
+            >
+              {t("joinRoom")}
+            </Button>
+          </LocaleLink>
+        </div>
+      </main>
+    </ReactiveLayout>
   );
 }

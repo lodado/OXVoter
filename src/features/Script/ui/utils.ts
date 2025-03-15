@@ -1,12 +1,5 @@
-"use client";
-
-import { useEffect, useLayoutEffect } from "react";
-
-function vhCode() {
+export function vhCode() {
   // Safe area insets
-
-  if (typeof window === "undefined") return;
-
 
   const safeAreaTop = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--safe-area-top")) || 0;
   const safeAreaBottom =
@@ -16,9 +9,11 @@ function vhCode() {
   const adjustedVh = (window.innerHeight - safeAreaTop - safeAreaBottom) * 0.01;
 
   document.documentElement.style.setProperty("--vh", adjustedVh + "px");
+
+  window.addEventListener("resize", vhCode);
 }
 
-function viewportCode() {
+export function viewportCode() {
   let prevVisualViewport = 0;
 
   function handleVisualViewportResize() {
@@ -36,22 +31,3 @@ function viewportCode() {
 
   window.visualViewport!.onresize = handleVisualViewportResize;
 }
-
-const ScreenVhScript = ({ nonce }: { nonce: string }) => {
-  useLayoutEffect(() => {
-    vhCode();
-    window.addEventListener("resize", vhCode);
-    return () => {
-      window.removeEventListener("resize", vhCode);
-    };
-  }, [typeof window !== undefined || window.location.pathname]);
-
-  return (
-    <>
-      <script type="text/javascript" nonce={nonce} dangerouslySetInnerHTML={{ __html: `(${vhCode})();` }} />
-      <script type="text/javascript" nonce={nonce} dangerouslySetInnerHTML={{ __html: `(${viewportCode})();` }} />
-    </>
-  );
-};
-
-export default ScreenVhScript;
