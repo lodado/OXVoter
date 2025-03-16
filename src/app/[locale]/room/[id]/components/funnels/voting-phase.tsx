@@ -95,14 +95,14 @@ export default function VotingPhase({
             </div>
           ) : (
             <RadioGroup value={selectedOption || ""} onValueChange={setSelectedOption}>
-              <div className="space-y-3">
+              <div className="flex flex-col gap-3">
                 {options.map((option) => (
                   <div
                     key={option.id}
-                    className="flex items-center space-x-2 rounded-lg border border-slate-700 p-3 hover:bg-slate-700/30"
+                    className="flex h-full items-center px-2 rounded-lg border border-slate-700 p-3 hover:bg-slate-700/30"
                   >
                     <RadioGroup.Label htmlFor={option.id} className="flex flex-row flex-1 gap-2 cursor-pointer">
-                      <RadioGroup.Item id={option.id} value={option.id} className=" border-slate-500" />
+                      <RadioGroup.Item id={option.id} value={option.id} className=" h-full border-slate-500" />
                       {option.text}
                     </RadioGroup.Label>
                   </div>
