@@ -7,13 +7,13 @@ import type React from "react";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-import { LocaleLink } from "@/entities/Router";
-import { PAGE_ROUTE } from "@/entities/Router/configs/route";
-import { SettingDialog } from "@/features/Settings";
 import GameHeader from "@/features/Settings/ui/GameHeader";
 import { Button, Card, Form, Input, Switch } from "@/shared/ui";
 import SpinControl from "@/shared/ui/Input/SpinControl";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
+
+import RoleSettingsDialog from "./components/role-settings-dialog";
+import { RoleType } from "./components/type";
 
 export default function CreateRoom() {
   const t = useTranslations("createRoom");
@@ -68,6 +68,42 @@ export default function CreateRoom() {
       setIsLoading(false);
     }
   };
+
+  // 직업 및 특수 투표 설정
+  const [customRoles, setCustomRoles] = useState<RoleType[]>([
+    {
+      id: "citizen",
+      name: "시민",
+      description: "평범한 시민입니다. 마피아를 찾아내세요.",
+      color: "#10b981",
+      specialAbility: "없음",
+      isEvil: false,
+    },
+    {
+      id: "mafia",
+      name: "마피아",
+      description: "밤에 시민을 죽일 수 있습니다.",
+      color: "#ef4444",
+      specialAbility: "밤에 한 명을 죽일 수 있습니다.",
+      isEvil: true,
+    },
+    {
+      id: "doctor",
+      name: "의사",
+      description: "밤에 한 명을 살릴 수 있습니다.",
+      color: "#3b82f6",
+      specialAbility: "밤에 한 명을 마피아의 공격으로부터 보호할 수 있습니다.",
+      isEvil: false,
+    },
+    {
+      id: "police",
+      name: "경찰",
+      description: "밤에 한 명의 직업을 알 수 있습니다.",
+      color: "#f59e0b",
+      specialAbility: "밤에 한 명의 직업이 마피아인지 확인할 수 있습니다.",
+      isEvil: false,
+    },
+  ]);
 
   return (
     <ReactiveLayout
@@ -171,6 +207,29 @@ export default function CreateRoom() {
                   <p className="text-xs text-slate-400">{t("specialVoting-description")}</p>
                 </div>
                 <Switch id="specialVoting" checked={specialVoting} onCheckedChange={setSpecialVoting} disabled />
+              </div>
+            </div>
+
+            <div className="w-full h-[1px] my-2 bg-slate-700" />
+
+            <div className="space-y-4">
+              <h3 className="text-lg font-medium">고급 설정</h3>
+              <div className="flex flex-col gap-3">
+                <div className="flex justify-between items-center">
+                  <p className="text-sm text-slate-300">직업 및 특수 능력을 직접 설정하세요</p>
+                  <RoleSettingsDialog roles={customRoles} onRolesChange={setCustomRoles} />
+                </div>
+
+                <div className="flex justify-between items-center">
+                  <p className="text-sm text-slate-300">특수 투표를 직접 설정하세요</p>
+                  {/**
+                  <SpecialVoteSettingsDialog
+                    specialVotes={specialVotes}
+                    roles={customRoles}
+                    onSpecialVotesChange={setSpecialVotes}
+                  />
+                  */}
+                </div>
               </div>
             </div>
           </Card.Content>

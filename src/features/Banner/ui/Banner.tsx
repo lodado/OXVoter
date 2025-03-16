@@ -22,19 +22,19 @@ const Banner = (props: BannerProps & BannerActions) => {
   return (
     <div
       key={props.id}
-      className="flex items-center justify-between p-2 rounded-md bg-slate-800/80 text-white shadow-xl backdrop-blur"
+      className={`flex items-center justify-between p-2 rounded-md bg-white text-text-01 border border-border-02`}
       style={{ borderLeft: `4px solid ${props.color}` }}
     >
-      <div className="flex-1">
+      <div className="flex-1 text-text-00">
         <div className="flex items-center gap-2">
-          <span className="font-medium">{props.name}</span>
+          <span className="font-medium text-text-01">{props.name}</span>
           <Badge variant={props.isEvil ? "error" : "success"} className="h-6 bg-transparent">
             {props.isEvil ? "악역" : "선역"}
           </Badge>
         </div>
-        <p className="text-xs text-slate-300 mt-1">{props.description}</p>
+        <p className="text-xs text-text-02 mt-1">{props.description}</p>
         {props.specialAbility && (
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-text-03 mt-1">
             <span className="font-medium">특수 능력:</span> {props.specialAbility}
           </p>
         )}
