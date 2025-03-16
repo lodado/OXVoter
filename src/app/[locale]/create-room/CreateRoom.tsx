@@ -27,7 +27,7 @@ export default function CreateRoom() {
   const [roomName, setRoomName] = useState("");
   const [username, setUsername] = useState("");
   const [maxPlayers, setMaxPlayers] = useState(8);
-  const [randomRoles, setRandomRoles] = useState(false);
+  const [randomRoles, setRandomRoles] = useState(true);
   const [anonymousVoting, setAnonymousVoting] = useState(true);
   const [specialVoting, setSpecialVoting] = useState(false);
   const [isLoading, setIsLoading] = useState(false);

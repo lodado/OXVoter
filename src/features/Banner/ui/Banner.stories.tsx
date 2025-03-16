@@ -14,7 +14,7 @@ const meta: Meta<typeof Banner> = {
     description: "This is a description for the hero banner.",
     color: "#ff0000",
     specialAbility: "Flying",
-    isEvil: false,
+
     onEdit: (role: BannerProps) => console.log("Edit Role:", role),
     onDelete: (roleId: string) => console.log("Delete Role:", roleId),
   },
@@ -64,7 +64,6 @@ export const EvilBanner: Story = {
     description: "A description for the villain banner.",
     color: "#000000",
     specialAbility: "Invisibility",
-    isEvil: true,
   },
 };
 
@@ -80,6 +79,5 @@ export const NoSpecialAbility: Story = {
     description: "A description for the neutral banner.",
     color: "#00ff00",
     specialAbility: "",
-    isEvil: false,
   },
 };
