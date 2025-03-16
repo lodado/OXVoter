@@ -1,3 +1,1 @@
-import ScrollArea from "./ScrollArea";
-
-export { ScrollArea };
+export * from "./ScrollArea";
