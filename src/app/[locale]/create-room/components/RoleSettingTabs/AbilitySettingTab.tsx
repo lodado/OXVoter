@@ -97,12 +97,12 @@ const AbilitySettingTab = () => {
           <Switch id="isPublic" checked={isAbilityPublic} onCheckedChange={setIsAbilityPublic} />
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="w-full flex flex-col gap-4">
           <label htmlFor="specialAbility" className="">
             특수능력 타겟
           </label>
 
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Select defaultValue="all">
               <Select.Trigger className="min-w-[10rem]">
                 <Select.Value placeholder="" />
@@ -120,7 +120,7 @@ const AbilitySettingTab = () => {
               </Select.Content>
             </Select>
 
-            <div className="flex flex-row gap-2 items-center">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               우선 순위
               <SpinControl
                 svgClassName="text-text-01"

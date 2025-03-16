@@ -49,7 +49,7 @@ const JobSettingTab = () => {
   return (
     <Tab.Content value="tab1" className="">
       <div className="flex flex-col gap-4 py-4">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex flex-col gap-2">
             <label htmlFor="roleName" className="">
               진영 이름
@@ -67,7 +67,7 @@ const JobSettingTab = () => {
             <label htmlFor="roleColor" className="">
               색상
             </label>
-            <div className="flex flex-row gap-2 mt-1 justify-evenly">
+            <div className="flex-grow flex flex-row gap-2 mt-1 ">
               <Input
                 id="roleColor"
                 type="color"
@@ -78,7 +78,7 @@ const JobSettingTab = () => {
               <Input
                 value={factionColor}
                 setValue={(value) => setFactionColor(value)}
-                className="flex-1 h-10 "
+                className="flex-grow h-10 "
                 placeholder="#HEX"
               />
             </div>
