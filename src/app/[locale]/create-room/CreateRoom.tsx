@@ -219,17 +219,6 @@ export default function CreateRoom() {
                   <p className="text-sm text-slate-300">직업 및 특수 능력을 직접 설정하세요</p>
                   <RoleSettingsDialog roles={customRoles} onRolesChange={setCustomRoles} />
                 </div>
-
-                <div className="flex justify-between items-center">
-                  <p className="text-sm text-slate-300">특수 투표를 직접 설정하세요</p>
-                  {/**
-                  <SpecialVoteSettingsDialog
-                    specialVotes={specialVotes}
-                    roles={customRoles}
-                    onSpecialVotesChange={setSpecialVotes}
-                  />
-                  */}
-                </div>
               </div>
             </div>
           </Card.Content>

@@ -8,7 +8,7 @@ import { Button, Input, ScrollArea, Switch, TextArea } from "@/shared/ui";
 import { AlertDialog } from "@/shared/ui/Dialog";
 
 import { RoleProvider } from "./RoleProvider";
-import RoleSettingTabs from "./RoleSettingTabs";
+import RoleSettingTabs from "./RoleSettingTabs/RoleSettingTabs";
 import { RoleSettingsDialogProps, RoleType } from "./type";
 
 export default function RoleSettingsDialog({ roles, onRolesChange }: RoleSettingsDialogProps) {

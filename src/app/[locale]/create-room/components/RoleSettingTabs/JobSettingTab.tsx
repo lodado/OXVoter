@@ -1,14 +1,12 @@
 "use client";
 
-import { HandHelping, UserCog } from "lucide-react";
-import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
 import { Banner } from "@/features/Banner";
-import { Button, Input, Switch, Tab } from "@/shared/ui";
+import { Button, Input, Tab } from "@/shared/ui";
 
-import { useRoleContext } from "./RoleProvider";
-import { RoleType } from "./type";
+import { useRoleContext } from "../RoleProvider";
+import { RoleType } from "../type";
 
 const JobSettingTab = () => {
   const { roles, handleDeleteRole, handleAddRole, isEditing, setIsEditing } = useRoleContext();
@@ -27,6 +25,7 @@ const JobSettingTab = () => {
     setRoleColor("#3b82f6");
     setSpecialAbility("");
     setIsEvil(false);
+    setEditingRole(null);
   };
 
   const handleEditRole = (role: RoleType) => {
@@ -41,10 +40,10 @@ const JobSettingTab = () => {
   };
 
   return (
-    <Tab.Content value="tab2" className="h-max">
+    <Tab.Content value="tab3" className="h-max">
       <div className="grid gap-4 py-4">
         <div className="grid grid-cols-2 gap-4">
-          <div>
+          <div className="flex flex-col gap-2">
             <label htmlFor="roleName" className="">
               직업 이름
             </label>
@@ -53,11 +52,11 @@ const JobSettingTab = () => {
               id="roleName"
               value={roleName}
               setValue={(newRoleName) => setRoleName(newRoleName)}
-              className=""
+              className="h-10"
               placeholder="마피아, 의사 등"
             />
           </div>
-          <div>
+          <div className="flex flex-col gap-2">
             <label htmlFor="roleColor" className="">
               색상
             </label>
@@ -67,19 +66,19 @@ const JobSettingTab = () => {
                 type="color"
                 value={roleColor}
                 setValue={(value) => setRoleColor(value)}
-                className="w-12 h-9 p-1 "
+                className="w-12 h-10 p-1"
               />
               <Input
                 value={roleColor}
                 setValue={(value) => setRoleColor(value)}
-                className="flex-1  "
+                className="flex-1 h-10 "
                 placeholder="#HEX"
               />
             </div>
           </div>
         </div>
 
-        <div>
+        <div className="flex flex-col gap-2">
           <label htmlFor="roleDescription" className="">
             설명
           </label>
@@ -99,9 +98,8 @@ const JobSettingTab = () => {
         </div>
 
         <div className="flex items-center space-x-2">
-          <Switch id="isEvil" checked={isEvil} onCheckedChange={setIsEvil} />
           <label htmlFor="isEvil" className="">
-            악역 진영
+            진영
           </label>
         </div>
       </div>
@@ -116,6 +114,7 @@ const JobSettingTab = () => {
               {roles.map((role) => (
                 <div>
                   <Banner
+                    isSelected={editingRole?.id === role.id}
                     onEditRole={() => handleEditRole(role)}
                     onDeleteRole={() => handleDeleteRole(role.id)}
                     {...role}
@@ -141,32 +140,12 @@ const JobSettingTab = () => {
 
           resetForm();
         }}
+        disabled={!roleName}
       >
-        {isEditing ? "직업 수정" : "직업 추가"}
+        {!roleName ? "직업 이름을 입력해주세요" : isEditing ? "직업 수정" : "직업 추가"}
       </Button>
     </Tab.Content>
   );
 };
 
-const RoleSettingTabs = () => {
-  const t = useTranslations("settings");
-
-  return (
-    <Tab defaultValue="tab1">
-      <Tab.List className="w-full">
-        <Tab.Trigger className="flex flex-row gap-2 w-[50%]" value="tab1">
-          <UserCog />
-          {t("tabsUserSettings")}
-        </Tab.Trigger>
-        <Tab.Trigger className="flex flex-row gap-2 w-[50%]" value="tab2">
-          <HandHelping />
-          {t("tabsSupport")}
-        </Tab.Trigger>
-      </Tab.List>
-
-      <JobSettingTab />
-    </Tab>
-  );
-};
-
-export default RoleSettingTabs;
+export default JobSettingTab;

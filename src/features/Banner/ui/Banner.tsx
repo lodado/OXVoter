@@ -11,6 +11,8 @@ export interface BannerProps {
   color: string;
   specialAbility: string;
   isEvil: boolean;
+
+  isSelected?: boolean;
 }
 
 export interface BannerActions {
@@ -22,7 +24,10 @@ const Banner = (props: BannerProps & BannerActions) => {
   return (
     <div
       key={props.id}
-      className={`flex items-center justify-between p-2 rounded-md bg-white text-text-01 border border-border-02`}
+      className={`flex items-center justify-between 
+        p-2 rounded-md bg-white text-text-01 border ${
+          props.isSelected ? "outline-dashed outline-2 outline-solid outline-text-primary" : "border-border-01"
+        }`}
       style={{ borderLeft: `4px solid ${props.color}` }}
     >
       <div className="flex-1 text-text-00">
