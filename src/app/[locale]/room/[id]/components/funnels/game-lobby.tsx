@@ -33,7 +33,7 @@ interface GameLobbyProps {
 export default function GameLobby({ players, settings, isHost, onStartGame }: GameLobbyProps) {
   const [copied, setCopied] = useState(false);
 
-  const [randomRoles, setRandomRoles] = useState(false);
+  const [randomRoles, setRandomRoles] = useState(true);
   const [anonymousVoting, setAnonymousVoting] = useState(true);
   const [specialVoting, setSpecialVoting] = useState(false);
 
