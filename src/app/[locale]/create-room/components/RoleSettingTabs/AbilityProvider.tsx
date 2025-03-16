@@ -6,7 +6,7 @@ export interface AbilityType {
   id: string;
   name: string;
   description: string;
-  votingTarget: string;
+  votingTarget: "all" | "alive" | "dead" | "others" | "evil" | "good";
   priority: number;
   isPublic: boolean;
 }
@@ -31,7 +31,7 @@ export const AbilityProvider = ({ children }: {} & PropsWithChildren) => {
       id: "mafia",
       name: "마피아",
       description: "밤에 한 명을 죽일 수 있습니다.",
-      votingTarget: "one",
+      votingTarget: "alive",
       priority: 1,
       isPublic: true,
     },
@@ -39,7 +39,7 @@ export const AbilityProvider = ({ children }: {} & PropsWithChildren) => {
       id: "doctor",
       name: "의사",
       description: "밤에 한 명을 마피아의 공격으로부터 보호할 수 있습니다.",
-      votingTarget: "one",
+      votingTarget: "alive",
       priority: 2,
       isPublic: true,
     },
@@ -47,7 +47,7 @@ export const AbilityProvider = ({ children }: {} & PropsWithChildren) => {
       id: "police",
       name: "경찰",
       description: "밤에 한 명의 직업이 마피아인지 확인할 수 있습니다.",
-      votingTarget: "one",
+      votingTarget: "alive",
       priority: 1,
       isPublic: false,
     },
