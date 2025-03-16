@@ -18,12 +18,6 @@ const RoleSettingTabs = () => {
           <UserCog />
           특수 능력
         </Tab.Trigger>
-
-        <Tab.Trigger className="flex flex-row gap-2 w-[50%]" value="tab2">
-          <UserCog />
-          진영 설정
-        </Tab.Trigger>
-
         <Tab.Trigger className="flex flex-row gap-2 w-[50%]" value="tab3">
           <HandHelping />
           직업 설정

@@ -9,15 +9,14 @@ export interface BannerProps {
   name: string;
   description: string;
   color: string;
-  specialAbility: string;
-  isEvil: boolean;
 
+  specialAbility?: string;
   isSelected?: boolean;
 }
 
 export interface BannerActions {
-  onEditRole: (role: BannerProps) => void;
-  onDeleteRole: (roleId: string) => void;
+  onEdit: (role: BannerProps) => void;
+  onDelete: (roleId: string) => void;
 }
 
 const Banner = (props: BannerProps & BannerActions) => {
@@ -33,9 +32,9 @@ const Banner = (props: BannerProps & BannerActions) => {
       <div className="flex-1 text-text-00">
         <div className="flex items-center gap-2">
           <span className="font-medium text-text-01">{props.name}</span>
-          <Badge variant={props.isEvil ? "error" : "success"} className="h-6 bg-transparent">
+          {/*<Badge variant={props.isEvil ? "error" : "success"} className="h-6 bg-transparent">
             {props.isEvil ? "악역" : "선역"}
-          </Badge>
+          </Badge>*/}
         </div>
         <p className="text-xs text-text-02 mt-1">{props.description}</p>
         {props.specialAbility && (
@@ -45,10 +44,10 @@ const Banner = (props: BannerProps & BannerActions) => {
         )}
       </div>
       <div className="flex gap-1">
-        <Button variant="link" className="" onClick={() => props.onEditRole(props)}>
+        <Button variant="link" className="" onClick={() => props.onEdit(props)}>
           <Edit2 className="h-4 w-4" />
         </Button>
-        <Button variant="link" onClick={() => props.onDeleteRole(props.id)}>
+        <Button variant="link" onClick={() => props.onDelete(props.id)}>
           <Trash2 className="h-4 w-4" />
         </Button>
       </div>

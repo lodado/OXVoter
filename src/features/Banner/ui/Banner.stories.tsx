@@ -15,8 +15,8 @@ const meta: Meta<typeof Banner> = {
     color: "#ff0000",
     specialAbility: "Flying",
     isEvil: false,
-    onEditRole: (role: BannerProps) => console.log("Edit Role:", role),
-    onDeleteRole: (roleId: string) => console.log("Delete Role:", roleId),
+    onEdit: (role: BannerProps) => console.log("Edit Role:", role),
+    onDelete: (roleId: string) => console.log("Delete Role:", roleId),
   },
   parameters: {
     docs: {

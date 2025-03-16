@@ -1,51 +1,22 @@
 "use client";
 
-import { set } from "lodash-es";
 import { useState } from "react";
 
 import { Banner } from "@/features/Banner";
 import { Button, Input, ScrollArea, Switch, TextArea } from "@/shared/ui";
 import { AlertDialog } from "@/shared/ui/Dialog";
 
-import { RoleProvider } from "./RoleProvider";
-import RoleSettingTabs from "./RoleSettingTabs/RoleSettingTabs";
-import { RoleSettingsDialogProps, RoleType } from "./type";
+import RoleSettingTabs from "./RoleSettingTabs";
 
-export default function RoleSettingsDialog({ roles, onRolesChange }: RoleSettingsDialogProps) {
+export default function RoleSettingsDialog() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
-
-  const handleAddRole = (newRole: RoleType) => {
-    if (!newRole.name) return;
-
-    if (isEditing) {
-      const updatedRoles = roles.map((role) => (role.id === newRole!.id ? newRole : role));
-      onRolesChange(updatedRoles);
-    } else {
-      onRolesChange([...roles, newRole]);
-    }
-
-    setIsEditing(false);
-  };
-
-  const handleDeleteRole = (id: string) => {
-    const updatedRoles = roles.filter((role) => role.id !== id);
-    onRolesChange(updatedRoles);
-  };
 
   const handleOpenChange = (open: boolean) => {
     setIsOpen(open);
-    setIsEditing(false);
   };
 
   return (
-    <RoleProvider
-      roles={roles}
-      isEditing={isEditing}
-      setIsEditing={setIsEditing}
-      handleAddRole={handleAddRole}
-      handleDeleteRole={handleDeleteRole}
-    >
+    <>
       <Button
         type="button"
         className="h-8"
@@ -67,6 +38,6 @@ export default function RoleSettingsDialog({ roles, onRolesChange }: RoleSetting
           <RoleSettingTabs />
         </AlertDialog.Body>
       </AlertDialog>
-    </RoleProvider>
+    </>
   );
 }

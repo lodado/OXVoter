@@ -16,6 +16,8 @@ interface DialogSubmitFormProps extends Omit<SubmitFormProps, "children"> {
   submitButtonProps?: ComponentProps<typeof Button>;
 
   cancelButtonProps?: ComponentProps<typeof Button>;
+
+  isCloseOnSubmit?: boolean;
 }
 
 const SubmitForm = ({
@@ -30,6 +32,8 @@ const SubmitForm = ({
   onSubmit,
   onClose,
   onError,
+
+  isCloseOnSubmit = true,
 }: DialogSubmitFormProps) => {
   const { onChangeVisibleStatus } = useDialogContext();
 
@@ -39,7 +43,7 @@ const SubmitForm = ({
     } catch (error) {
       onError?.(error);
     } finally {
-      onChangeVisibleStatus(false);
+      if (isCloseOnSubmit) onChangeVisibleStatus(false);
     }
   };
 

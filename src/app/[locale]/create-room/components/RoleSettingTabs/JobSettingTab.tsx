@@ -1,12 +1,13 @@
 "use client";
 
+import { RotateCcw } from "lucide-react";
 import React, { useState } from "react";
 
 import { Banner } from "@/features/Banner";
-import { Button, Input, Tab } from "@/shared/ui";
+import { Button, IconButton, Input, Tab } from "@/shared/ui";
 
-import { useRoleContext } from "../RoleProvider";
 import { RoleType } from "../type";
+import { useRoleContext } from "./RoleProvider";
 
 const JobSettingTab = () => {
   const { roles, handleDeleteRole, handleAddRole, isEditing, setIsEditing } = useRoleContext();
@@ -115,8 +116,8 @@ const JobSettingTab = () => {
                 <div>
                   <Banner
                     isSelected={editingRole?.id === role.id}
-                    onEditRole={() => handleEditRole(role)}
-                    onDeleteRole={() => handleDeleteRole(role.id)}
+                    onEdit={() => handleEditRole(role)}
+                    onDelete={() => handleDeleteRole(role.id)}
                     {...role}
                   />
                 </div>
@@ -125,25 +126,36 @@ const JobSettingTab = () => {
           </>
         )}
       </div>
+      <div className="flex flex-row sticky bottom-4 left-0 right-0 px-4 w-full gap-2">
+        <Button
+          className="flex-grow"
+          onClick={() => {
+            handleAddRole({
+              id: editingRole?.id ?? Math.random().toString(36).substring(7),
+              name: roleName,
+              description: roleDescription,
+              color: roleColor,
+              specialAbility,
+              isEvil,
+            });
 
-      <Button
-        className="sticky bottom-4 left-0 right-0 px-4 w-full"
-        onClick={() => {
-          handleAddRole({
-            id: editingRole?.id ?? Math.random().toString(36).substring(7),
-            name: roleName,
-            description: roleDescription,
-            color: roleColor,
-            specialAbility,
-            isEvil,
-          });
+            resetForm();
+          }}
+          disabled={!roleName}
+        >
+          {!roleName ? "직업 이름을 입력해주세요" : isEditing ? "직업 수정" : "직업 추가"}
+        </Button>
 
-          resetForm();
-        }}
-        disabled={!roleName}
-      >
-        {!roleName ? "직업 이름을 입력해주세요" : isEditing ? "직업 수정" : "직업 추가"}
-      </Button>
+        <IconButton
+          className="w-10"
+          disabled={!isEditing}
+          onClick={() => {
+            resetForm();
+          }}
+        >
+          <RotateCcw />
+        </IconButton>
+      </div>
     </Tab.Content>
   );
 };
