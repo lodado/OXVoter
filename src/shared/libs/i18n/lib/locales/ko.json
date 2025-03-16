@@ -112,7 +112,10 @@
     "Button_CreateRoom": "방 만들기",
     "Button_Creating": "생성 중...",
     "specialVoting": "특수 투표 활성화",
-    "specialVoting-description": "역할별 특수 투표 단계 추가"
+    "specialVoting-description": "역할별 특수 투표 단계 추가",
+    "advanced-settings": "고급 설정",
+    "vote-setting": "진영 및 투표 방식을 결정하세요",
+    "role-setting": "직업 및 특수 능력을 직접 설정하세요"
   },
   "settings": {
     "title": "설정",
@@ -122,5 +125,15 @@
     "tab2Content": "탭 2의 콘텐츠",
     "manage-app-settings-description": "앱 설정을 관리하고 개인화하세요.",
     "settings": "설정"
+  },
+  "voteSetting": {
+    "dialog-title": "게임 방식 설정",
+    "button-label": "투표 설정",
+    "description": "게임 진행에 사용할 투표 방식과 진영을 설정하세요."
+  },
+  "roleSetting": {
+    "dialog-title": "게임 직업 설정",
+    "button-label": "직업 설정",
+    "description": "게임에서 사용할 직업과 특수 능력을 설정하세요."
   }
 }

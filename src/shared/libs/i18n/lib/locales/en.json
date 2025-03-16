@@ -112,7 +112,10 @@
     "Button_CreateRoom": "Create Room",
     "Button_Creating": "Creating...",
     "specialVoting": "Enable Special Voting",
-    "specialVoting-description": "Add special voting stages for roles"
+    "specialVoting-description": "Add special voting stages for roles",
+    "advanced-settings": "Advanced Settings",
+    "vote-setting": "Decide on factions and voting method",
+    "role-setting": "Manually configure roles and special abilities"
   },
   "settings": {
     "title": "Settings",
@@ -122,5 +125,15 @@
     "tab2Content": "Content of Tab 2",
     "manage-app-settings-description": "Manage and personalize your app settings.",
     "settings": "Settings"
+  },
+  "voteSetting": {
+    "dialog-title": "Game Mode Settings",
+    "button-label": "Vote Settings",
+    "description": "Set the voting method and factions for the game."
+  },
+  "roleSetting": {
+    "dialog-title": "Game Role Settings",
+    "button-label": "Role Settings",
+    "description": "Set the roles and special abilities to be used in the game."
   }
 }

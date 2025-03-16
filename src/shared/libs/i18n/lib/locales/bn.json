@@ -112,7 +112,10 @@
     "Button_CreateRoom": "ঘর তৈরি করুন",
     "Button_Creating": "তৈরি করা হচ্ছে...",
     "specialVoting": "বিশেষ ভোট সক্রিয় করুন",
-    "specialVoting-description": "ভূমিকার জন্য বিশেষ ভোটিং ধাপ যোগ করুন"
+    "specialVoting-description": "ভূমিকার জন্য বিশেষ ভোটিং ধাপ যোগ করুন",
+    "advanced-settings": "উন্নত সেটিংস",
+    "vote-setting": "গোষ্ঠী এবং ভোটিং পদ্ধতি নির্ধারণ করুন",
+    "role-setting": "ভূমিকা এবং বিশেষ ক্ষমতা নিজে কনফিগার করুন"
   },
   "settings": {
     "title": "সেটিংস",
@@ -122,5 +125,15 @@
     "tab2Content": "ট্যাব 2 এর বিষয়বস্তু",
     "manage-app-settings-description": "আপনার অ্যাপ সেটিংস পরিচালনা করুন এবং ব্যক্তিগতকরণ করুন।",
     "settings": "সেটিংস"
+  },
+  "voteSetting": {
+    "dialog-title": "গেম মোড সেটিংস",
+    "button-label": "ভোট সেটিংস",
+    "description": "গেমের জন্য ভোটিং পদ্ধতি এবং গোষ্ঠী নির্ধারণ করুন।"
+  },
+  "roleSetting": {
+    "dialog-title": "গেম রোল সেটিংস",
+    "button-label": "রোল সেটিংস",
+    "description": "গেমে ব্যবহারের জন্য ভূমিকা এবং বিশেষ ক্ষমতা নির্ধারণ করুন।"
   }
 }

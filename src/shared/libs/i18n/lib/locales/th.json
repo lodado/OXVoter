@@ -112,7 +112,10 @@
     "Button_CreateRoom": "สร้างห้อง",
     "Button_Creating": "กำลังสร้าง...",
     "specialVoting": "เปิดใช้งานการลงคะแนนพิเศษ",
-    "specialVoting-description": "เพิ่มขั้นตอนการลงคะแนนพิเศษสำหรับบทบาท"
+    "specialVoting-description": "เพิ่มขั้นตอนการลงคะแนนพิเศษสำหรับบทบาท",
+    "advanced-settings": "การตั้งค่าขั้นสูง",
+    "vote-setting": "ตัดสินใจเกี่ยวกับฝ่ายและวิธีการลงคะแนน",
+    "role-setting": "กำหนดบทบาทและความสามารถพิเศษด้วยตนเอง"
   },
   "settings": {
     "title": "การตั้งค่า",
@@ -122,5 +125,15 @@
     "tab2Content": "เนื้อหาของแท็บ 2",
     "manage-app-settings-description": "จัดการและปรับแต่งการตั้งค่าแอปของคุณ",
     "settings": "การตั้งค่า"
+  },
+  "voteSetting": {
+    "dialog-title": "การตั้งค่าโหมดเกม",
+    "button-label": "การตั้งค่าการลงคะแนน",
+    "description": "กำหนดวิธีการลงคะแนนและฝ่ายในเกม"
+  },
+  "roleSetting": {
+    "dialog-title": "การตั้งค่าบทบาทในเกม",
+    "button-label": "การตั้งค่าบทบาท",
+    "description": "กำหนดบทบาทและความสามารถพิเศษที่ใช้ในเกม"
   }
 }

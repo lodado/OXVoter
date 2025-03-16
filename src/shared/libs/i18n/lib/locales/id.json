@@ -112,7 +112,10 @@
     "Button_CreateRoom": "Buat ruang",
     "Button_Creating": "Sedang membuat...",
     "specialVoting": "Aktifkan Pemungutan Suara Khusus",
-    "specialVoting-description": "Tambahkan tahap pemungutan suara khusus untuk peran"
+    "specialVoting-description": "Tambahkan tahap pemungutan suara khusus untuk peran",
+    "advanced-settings": "Pengaturan Lanjutan",
+    "vote-setting": "Tentukan faksi dan metode pemungutan suara",
+    "role-setting": "Konfigurasikan peran dan kemampuan khusus secara manual"
   },
   "settings": {
     "title": "Pengaturan",
@@ -122,5 +125,15 @@
     "tab2Content": "Konten Tab 2",
     "manage-app-settings-description": "Kelola dan sesuaikan pengaturan aplikasi Anda.",
     "settings": "Pengaturan"
+  },
+  "voteSetting": {
+    "dialog-title": "Pengaturan Mode Permainan",
+    "button-label": "Pengaturan Pemungutan Suara",
+    "description": "Atur metode pemungutan suara dan faksi untuk permainan."
+  },
+  "roleSetting": {
+    "dialog-title": "Pengaturan Peran Permainan",
+    "button-label": "Pengaturan Peran",
+    "description": "Atur peran dan kemampuan khusus yang digunakan dalam permainan."
   }
 }

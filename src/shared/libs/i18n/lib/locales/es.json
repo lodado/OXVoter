@@ -112,7 +112,10 @@
     "Button_CreateRoom": "Crear sala",
     "Button_Creating": "Creando...",
     "specialVoting": "Habilitar votación especial",
-    "specialVoting-description": "Agregar etapas de votación especiales para roles"
+    "specialVoting-description": "Agregar etapas de votación especiales para roles",
+    "advanced-settings": "Configuraciones avanzadas",
+    "vote-setting": "Decida las facciones y el método de votación",
+    "role-setting": "Configure manualmente los roles y habilidades especiales"
   },
   "settings": {
     "title": "Configuración",
@@ -122,5 +125,15 @@
     "tab2Content": "Contenido de la pestaña 2",
     "manage-app-settings-description": "Administre y personalice la configuración de su aplicación.",
     "settings": "Configuración"
+  },
+  "voteSetting": {
+    "dialog-title": "Configuración del modo de juego",
+    "button-label": "Configuración de votación",
+    "description": "Establezca el método de votación y las facciones del juego."
+  },
+  "roleSetting": {
+    "dialog-title": "Configuración de roles del juego",
+    "button-label": "Configuración de roles",
+    "description": "Establezca los roles y habilidades especiales a utilizar en el juego."
   }
 }

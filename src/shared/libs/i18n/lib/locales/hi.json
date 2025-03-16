@@ -112,7 +112,10 @@
     "Button_CreateRoom": "कमरा बनाएँ",
     "Button_Creating": "बनाया जा रहा है...",
     "specialVoting": "विशेष मतदान सक्षम करें",
-    "specialVoting-description": "भूमिकाओं के लिए विशेष मतदान चरण जोड़ें"
+    "specialVoting-description": "भूमिकाओं के लिए विशेष मतदान चरण जोड़ें",
+    "advanced-settings": "उन्नत सेटिंग्स",
+    "vote-setting": "गुट और मतदान विधि तय करें",
+    "role-setting": "भूमिकाओं और विशेष क्षमताओं को मैन्युअल रूप से कॉन्फ़िगर करें"
   },
   "settings": {
     "title": "सेटिंग्स",
@@ -122,5 +125,15 @@
     "tab2Content": "टैब 2 की सामग्री",
     "manage-app-settings-description": "अपने ऐप सेटिंग्स को प्रबंधित और व्यक्तिगत करें।",
     "settings": "सेटिंग्स"
+  },
+  "voteSetting": {
+    "dialog-title": "गेम मोड सेटिंग्स",
+    "button-label": "मतदान सेटिंग्स",
+    "description": "खेल के लिए मतदान विधि और गुट सेट करें।"
+  },
+  "roleSetting": {
+    "dialog-title": "गेम भूमिका सेटिंग्स",
+    "button-label": "भूमिका सेटिंग्स",
+    "description": "खेल में उपयोग की जाने वाली भूमिकाओं और विशेष क्षमताओं को सेट करें।"
   }
 }

@@ -112,7 +112,10 @@
     "Button_CreateRoom": "Buat bilik",
     "Button_Creating": "Sedang membuat...",
     "specialVoting": "Aktifkan Pengundian Khas",
-    "specialVoting-description": "Tambahkan tahap pengundian khas untuk peranan"
+    "specialVoting-description": "Tambahkan tahap pengundian khas untuk peranan",
+    "advanced-settings": "Tetapan Lanjutan",
+    "vote-setting": "Tentukan puak dan kaedah pengundian",
+    "role-setting": "Konfigurasikan peranan dan kebolehan khas secara manual"
   },
   "settings": {
     "title": "Tetapan",
@@ -122,5 +125,15 @@
     "tab2Content": "Kandungan Tab 2",
     "manage-app-settings-description": "Urus dan peribadikan tetapan aplikasi anda.",
     "settings": "Tetapan"
+  },
+  "voteSetting": {
+    "dialog-title": "Tetapan Mod Permainan",
+    "button-label": "Tetapan Pengundian",
+    "description": "Tetapkan kaedah pengundian dan puak untuk permainan."
+  },
+  "roleSetting": {
+    "dialog-title": "Tetapan Peranan Permainan",
+    "button-label": "Tetapan Peranan",
+    "description": "Tetapkan peranan dan kebolehan khas yang digunakan dalam permainan."
   }
 }

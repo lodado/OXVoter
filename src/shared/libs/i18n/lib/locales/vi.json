@@ -112,7 +112,10 @@
     "Button_CreateRoom": "Tạo phòng",
     "Button_Creating": "Đang tạo...",
     "specialVoting": "Bật bỏ phiếu đặc biệt",
-    "specialVoting-description": "Thêm giai đoạn bỏ phiếu đặc biệt cho vai trò"
+    "specialVoting-description": "Thêm giai đoạn bỏ phiếu đặc biệt cho vai trò",
+    "advanced-settings": "Cài đặt nâng cao",
+    "vote-setting": "Quyết định phe phái và phương thức bỏ phiếu",
+    "role-setting": "Cấu hình thủ công vai trò và khả năng đặc biệt"
   },
   "settings": {
     "title": "Cài đặt",
@@ -122,5 +125,15 @@
     "tab2Content": "Nội dung tab 2",
     "manage-app-settings-description": "Quản lý và cá nhân hóa cài đặt ứng dụng của bạn.",
     "settings": "Cài đặt"
+  },
+  "voteSetting": {
+    "dialog-title": "Cài đặt Chế độ Trò chơi",
+    "button-label": "Cài đặt Bỏ phiếu",
+    "description": "Đặt phương thức bỏ phiếu và phe phái cho trò chơi."
+  },
+  "roleSetting": {
+    "dialog-title": "Cài đặt Vai trò Trò chơi",
+    "button-label": "Cài đặt Vai trò",
+    "description": "Đặt các vai trò và khả năng đặc biệt được sử dụng trong trò chơi."
   }
 }

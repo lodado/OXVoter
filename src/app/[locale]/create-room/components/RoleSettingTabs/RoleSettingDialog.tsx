@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import { Banner } from "@/features/Banner";
@@ -10,6 +11,7 @@ import RoleSettingTabs from "./RoleSettingTabs";
 
 export default function RoleSettingsDialog() {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations("roleSetting");
 
   const handleOpenChange = (open: boolean) => {
     setIsOpen(open);
@@ -25,15 +27,13 @@ export default function RoleSettingsDialog() {
           setIsOpen(true);
         }}
       >
-        직업 설정
+        {t("button-label")}
       </Button>
 
       <AlertDialog className="" isVisible={isOpen} onChangeVisible={handleOpenChange}>
-        <AlertDialog.Header className="">게임 직업 설정</AlertDialog.Header>
+        <AlertDialog.Header className="">{t("dialog-title")}</AlertDialog.Header>
         <AlertDialog.Body className="relative max-h-[600px] scrollbar-hide h-[calc(80*var(--vh))] gap-3 overflow-x-hidden overflow-y-auto">
-          <AlertDialog.Description className="sticky h-max text-text-02">
-            게임에서 사용할 직업과 특수 능력을 설정하세요.
-          </AlertDialog.Description>
+          <AlertDialog.Description className="sticky h-max text-text-02">{t("description")}</AlertDialog.Description>
 
           <RoleSettingTabs />
         </AlertDialog.Body>

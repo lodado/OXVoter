@@ -112,7 +112,10 @@
     "Button_CreateRoom": "إنشاء غرفة",
     "Button_Creating": "جاري الإنشاء...",
     "specialVoting": "تمكين التصويت الخاص",
-    "specialVoting-description": "إضافة مراحل تصويت خاصة للأدوار"
+    "specialVoting-description": "إضافة مراحل تصويت خاصة للأدوار",
+    "advanced-settings": "إعدادات متقدمة",
+    "vote-setting": "حدد الفصائل وطريقة التصويت",
+    "role-setting": "قم بتكوين الأدوار والقدرات الخاصة يدويًا"
   },
   "settings": {
     "title": "إعدادات",
@@ -122,5 +125,15 @@
     "tab2Content": "محتوى التبويب 2",
     "manage-app-settings-description": "قم بإدارة وتخصيص إعدادات التطبيق الخاصة بك.",
     "settings": "إعدادات"
+  },
+  "voteSetting": {
+    "dialog-title": "إعدادات وضع اللعبة",
+    "button-label": "إعدادات التصويت",
+    "description": "قم بتعيين طريقة التصويت والفصائل للعبة."
+  },
+  "roleSetting": {
+    "dialog-title": "إعدادات أدوار اللعبة",
+    "button-label": "إعدادات الدور",
+    "description": "قم بتعيين الأدوار والقدرات الخاصة المستخدمة في اللعبة."
   }
 }

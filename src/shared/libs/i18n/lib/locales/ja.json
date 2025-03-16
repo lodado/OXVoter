@@ -112,7 +112,10 @@
     "Button_CreateRoom": "ルームを作成",
     "Button_Creating": "作成中...",
     "specialVoting": "特別投票を有効化",
-    "specialVoting-description": "役割ごとの特別投票段階を追加"
+    "specialVoting-description": "役割ごとの特別投票段階を追加",
+    "advanced-settings": "高度な設定",
+    "vote-setting": "陣営と投票方式を決定してください",
+    "role-setting": "役職と特殊能力を直接設定してください"
   },
   "settings": {
     "title": "設定",
@@ -122,5 +125,15 @@
     "tab2Content": "タブ2のコンテンツ",
     "manage-app-settings-description": "アプリの設定を管理してカスタマイズしてください。",
     "settings": "設定"
+  },
+  "voteSetting": {
+    "dialog-title": "ゲーム方式の設定",
+    "button-label": "投票設定",
+    "description": "ゲーム進行に使用する投票方式と陣営を設定してください。"
+  },
+  "roleSetting": {
+    "dialog-title": "ゲーム役職設定",
+    "button-label": "役職設定",
+    "description": "ゲームで使用する役職と特殊能力を設定してください。"
   }
 }

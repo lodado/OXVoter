@@ -112,7 +112,10 @@
     "Button_CreateRoom": "Raum erstellen",
     "Button_Creating": "Erstellen...",
     "specialVoting": "Spezielle Abstimmung aktivieren",
-    "specialVoting-description": "Spezielle Abstimmungsphasen für Rollen hinzufügen"
+    "specialVoting-description": "Spezielle Abstimmungsphasen für Rollen hinzufügen",
+    "advanced-settings": "Erweiterte Einstellungen",
+    "vote-setting": "Entscheiden Sie über Fraktionen und Abstimmungsmethode",
+    "role-setting": "Rollen und Spezialfähigkeiten manuell konfigurieren"
   },
   "settings": {
     "title": "Einstellungen",
@@ -122,5 +125,15 @@
     "tab2Content": "Inhalt von Tab 2",
     "manage-app-settings-description": "Verwalten und personalisieren Sie Ihre App-Einstellungen.",
     "settings": "Einstellungen"
+  },
+  "voteSetting": {
+    "dialog-title": "Spielmodus-Einstellungen",
+    "button-label": "Abstimmungseinstellungen",
+    "description": "Legen Sie die Abstimmungsmethode und Fraktionen für das Spiel fest."
+  },
+  "roleSetting": {
+    "dialog-title": "Spielrollen-Einstellungen",
+    "button-label": "Rollen-Einstellungen",
+    "description": "Legen Sie die Rollen und Spezialfähigkeiten fest, die im Spiel verwendet werden."
   }
 }

@@ -112,7 +112,10 @@
     "Button_CreateRoom": "创建房间",
     "Button_Creating": "创建中...",
     "specialVoting": "启用特殊投票",
-    "specialVoting-description": "为角色添加特殊投票阶段"
+    "specialVoting-description": "为角色添加特殊投票阶段",
+    "advanced-settings": "高级设置",
+    "vote-setting": "决定阵营和投票方式",
+    "role-setting": "手动配置职业和特殊能力"
   },
   "settings": {
     "title": "设置",
@@ -122,5 +125,15 @@
     "tab2Content": "选项卡 2 的内容",
     "manage-app-settings-description": "管理和个性化您的应用设置。",
     "settings": "设置"
+  },
+  "voteSetting": {
+    "dialog-title": "游戏模式设置",
+    "button-label": "投票设置",
+    "description": "设置游戏的投票方式和阵营。"
+  },
+  "roleSetting": {
+    "dialog-title": "游戏职业设置",
+    "button-label": "职业设置",
+    "description": "设置游戏中使用的职业和特殊能力。"
   }
 }

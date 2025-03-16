@@ -112,7 +112,10 @@
     "Button_CreateRoom": "Crea una stanza",
     "Button_Creating": "Creazione in corso...",
     "specialVoting": "Abilita il voto speciale",
-    "specialVoting-description": "Aggiungi fasi di votazione speciali per ruoli"
+    "specialVoting-description": "Aggiungi fasi di votazione speciali per ruoli",
+    "advanced-settings": "Impostazioni avanzate",
+    "vote-setting": "Decidi fazioni e metodo di voto",
+    "role-setting": "Configura manualmente ruoli e abilità speciali"
   },
   "settings": {
     "title": "Impostazioni",
@@ -122,5 +125,15 @@
     "tab2Content": "Contenuto della scheda 2",
     "manage-app-settings-description": "Gestisci e personalizza le impostazioni della tua app.",
     "settings": "Impostazioni"
+  },
+  "voteSetting": {
+    "dialog-title": "Impostazioni della Modalità di Gioco",
+    "button-label": "Impostazioni di Voto",
+    "description": "Imposta il metodo di voto e le fazioni per il gioco."
+  },
+  "roleSetting": {
+    "dialog-title": "Impostazioni dei Ruoli di Gioco",
+    "button-label": "Impostazioni dei Ruoli",
+    "description": "Imposta i ruoli e le abilità speciali da utilizzare nel gioco."
   }
 }

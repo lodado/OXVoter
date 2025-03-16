@@ -7,7 +7,13 @@ import { cn } from "@/shared";
 
 import { InputStyleVariants } from "./style";
 
-const SpinInput = (props: InputHTMLAttributes<HTMLInputElement> & { increment: () => void; decrement: () => void }) => {
+const SpinInput = (
+  props: InputHTMLAttributes<HTMLInputElement> & {
+    svgClassName?: string;
+    increment: () => void;
+    decrement: () => void;
+  }
+) => {
   const { className, ...rest } = props;
 
   // Radix UI의 Primitive나 다른 컴포넌트와 결합 가능 (예: Label, Field 등)
@@ -27,7 +33,7 @@ const SpinInput = (props: InputHTMLAttributes<HTMLInputElement> & { increment: (
           className="h-[50%] text-sm focus:outline-none"
           aria-label="Increment value"
         >
-          <ChevronUp size={20} />
+          <ChevronUp className={props.svgClassName} size={20} />
         </button>
         <button
           type="button"
@@ -35,7 +41,7 @@ const SpinInput = (props: InputHTMLAttributes<HTMLInputElement> & { increment: (
           className="h-[50%] text-sm focus:outline-none"
           aria-label="Decrement value"
         >
-          <ChevronDown size={20} />
+          <ChevronDown className={props.svgClassName} size={20} />
         </button>
       </div>
     </div>

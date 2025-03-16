@@ -112,7 +112,10 @@
     "Button_CreateRoom": "Oda Oluştur",
     "Button_Creating": "Oluşturuluyor...",
     "specialVoting": "Özel Oylamayı Etkinleştir",
-    "specialVoting-description": "Rollere özel oylama aşamaları ekleyin"
+    "specialVoting-description": "Rollere özel oylama aşamaları ekleyin",
+    "advanced-settings": "Gelişmiş Ayarlar",
+    "vote-setting": "Grupları ve oylama yöntemini belirleyin",
+    "role-setting": "Rolleri ve özel yetenekleri manuel olarak yapılandırın"
   },
   "settings": {
     "title": "Ayarlar",
@@ -122,5 +125,15 @@
     "tab2Content": "Sekme 2'nin içeriği",
     "manage-app-settings-description": "Uygulama ayarlarınızı yönetin ve kişiselleştirin.",
     "settings": "Ayarlar"
+  },
+  "voteSetting": {
+    "dialog-title": "Oyun Modu Ayarları",
+    "button-label": "Oylama Ayarları",
+    "description": "Oyun için oylama yöntemini ve grupları belirleyin."
+  },
+  "roleSetting": {
+    "dialog-title": "Oyun Rol Ayarları",
+    "button-label": "Rol Ayarları",
+    "description": "Oyunda kullanılacak rolleri ve özel yetenekleri ayarlayın."
   }
 }

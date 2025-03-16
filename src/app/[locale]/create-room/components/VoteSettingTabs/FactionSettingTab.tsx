@@ -4,13 +4,19 @@ import { RotateCcw } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 import { Banner } from "@/features/Banner";
-import { Button, IconButton, Input, Tab } from "@/shared/ui";
+import { Button, IconButton, Input, Switch, Tab } from "@/shared/ui";
 
 import { FactionOption, useFactionContext } from "./FactionProvider";
 
 const JobSettingTab = () => {
-  const { factions, isEditing, setIsEditing, handleEditFaction, handleAddFaction, handleRemoveFaction } =
-    useFactionContext();
+  const {
+    factions,
+    isEditing,
+    setIsEditing,
+    handleEditFaction: handleUpdateFaction,
+    handleAddFaction,
+    handleRemoveFaction,
+  } = useFactionContext();
 
   const [initSelectedOptions, setInitSelectedOptions] = useState<FactionOption | null>(null);
 
@@ -18,6 +24,7 @@ const JobSettingTab = () => {
   const [factionName, setFactionName] = useState("");
   const [factionDescription, setFactionDescription] = useState("");
   const [factionColor, setFactionColor] = useState("#3b82f6"); // 기본 파란색
+  const [isFactionShareTheirRole, setIsFactionShareTheirRole] = useState(false);
 
   const resetForm = () => {
     setFactionName("");
@@ -26,11 +33,22 @@ const JobSettingTab = () => {
     setFactionId("-1");
 
     setIsEditing(false);
+    setIsFactionShareTheirRole(false);
+  };
+
+  const handleEditFaction = (faction: FactionOption) => {
+    setFactionName(faction.name);
+    setFactionDescription(faction.description);
+    setFactionColor(faction.color);
+    setIsFactionShareTheirRole(faction.isSharedTheirRole);
+
+    setInitSelectedOptions(faction);
+    setIsEditing(true);
   };
 
   return (
     <Tab.Content value="tab1" className="">
-      <div className="grid gap-4 py-4">
+      <div className="flex flex-col gap-4 py-4">
         <div className="grid grid-cols-2 gap-4">
           <div className="flex flex-col gap-2">
             <label htmlFor="roleName" className="">
@@ -79,9 +97,21 @@ const JobSettingTab = () => {
             placeholder="이 직업에 대한 간단한 설명"
           />
         </div>
+
+        <div className="flex flex-col justify-center gap-4">
+          <label htmlFor="IsFactionShareTheirRole">진영 내 직업 공개 여부</label>
+
+          <div className="pl-1">
+            <Switch
+              id="IsFactionShareTheirRole"
+              checked={isFactionShareTheirRole}
+              onCheckedChange={setIsFactionShareTheirRole}
+            />
+          </div>
+        </div>
       </div>
 
-      <div className="border-t border-border-01  pt-4 h-max pb-10">
+      <div className="border-t border-border-01 pt-4 h-max pb-10">
         <h4 className="font-medium mb-2">설정된 직업 목록</h4>
         {factions.length === 0 ? (
           <p className="text-slate-400  text-sm">설정된 진영이 없습니다. 진영을 추가해주세요.</p>
@@ -93,11 +123,7 @@ const JobSettingTab = () => {
                   <Banner
                     isSelected={initSelectedOptions?.id === faction.id}
                     onEdit={() => {
-                      setFactionId(faction.id);
-                      setFactionName(faction.name);
-                      setFactionDescription(faction.description);
-                      setFactionColor(faction.color);
-                      setIsEditing(true);
+                      handleEditFaction(faction);
                     }}
                     onDelete={() => {
                       handleRemoveFaction(faction.id);
@@ -115,11 +141,12 @@ const JobSettingTab = () => {
             className="flex-grow"
             onClick={() => {
               if (isEditing)
-                handleEditFaction({
+                handleUpdateFaction({
                   id: factionId,
                   name: factionName,
                   description: factionDescription,
                   color: factionColor,
+                  isSharedTheirRole: isFactionShareTheirRole,
                 });
               else {
                 handleAddFaction({
@@ -127,6 +154,7 @@ const JobSettingTab = () => {
                   name: factionName,
                   description: factionDescription,
                   color: factionColor,
+                  isSharedTheirRole: isFactionShareTheirRole,
                 });
               }
 
