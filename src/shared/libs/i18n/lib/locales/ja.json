@@ -167,5 +167,14 @@
     "status-started": "ゲームが開始されました。各プレイヤーは自分の役割に応じて行動する必要があります。",
     "status-vote": "ホストが投票を開始すると、すべてのプレイヤーが投票に参加できます。",
     "status-host-note": "ホストはいつでも投票を開始できます。"
+  },
+  "votingPhase": {
+    "title": "投票中",
+    "time-left": "残り{time}秒",
+    "vote-completed": "投票完了！",
+    "waiting-for-others": "他のプレイヤーの投票を待っています...",
+    "submit-vote": "投票する",
+    "force-end": "強制集計",
+    "player-list": "プレイヤーリスト"
   }
 }

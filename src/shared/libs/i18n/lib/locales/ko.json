@@ -167,5 +167,14 @@
     "status-started": "게임이 시작되었습니다. 각 플레이어는 자신의 역할에 맞게 행동해야 합니다.",
     "status-vote": "방장이 투표를 시작하면 모든 플레이어가 투표에 참여할 수 있습니다.",
     "status-host-note": "방장은 언제든지 투표를 시작할 수 있습니다."
+  },
+  "votingPhase": {
+    "title": "투표 진행 중",
+    "time-left": "{time}초 남음",
+    "vote-completed": "투표 완료!",
+    "waiting-for-others": "다른 플레이어들의 투표를 기다리는 중...",
+    "submit-vote": "투표하기",
+    "force-end": "강제 개표",
+    "player-list": "플레이어 리스트"
   }
 }

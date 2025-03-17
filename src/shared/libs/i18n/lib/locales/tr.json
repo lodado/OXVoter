@@ -167,5 +167,14 @@
     "status-started": "Oyun başladı. Her oyuncu kendi rolüne göre hareket etmelidir.",
     "status-vote": "Ev sahibi oylamayı başlattığında, tüm oyuncular katılabilir.",
     "status-host-note": "Ev sahibi oylamayı istediği zaman başlatabilir."
+  },
+  "votingPhase": {
+    "title": "Oylama Devam Ediyor",
+    "time-left": "{time} saniye kaldı",
+    "vote-completed": "Oylama Tamamlandı!",
+    "waiting-for-others": "Diğer oyuncuların oy kullanmasını bekliyor...",
+    "submit-vote": "Oyu Gönder",
+    "force-end": "Zorla Bitir",
+    "player-list": "Oyuncu Listesi"
   }
 }

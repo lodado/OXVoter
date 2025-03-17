@@ -167,5 +167,14 @@
     "status-started": "Le jeu a commencé. Chaque joueur doit agir selon son rôle.",
     "status-vote": "Lorsque l'hôte commence le vote, tous les joueurs peuvent y participer.",
     "status-host-note": "L'hôte peut démarrer le vote à tout moment."
+  },
+  "votingPhase": {
+    "title": "Vote en cours",
+    "time-left": "{time} secondes restantes",
+    "vote-completed": "Vote terminé !",
+    "waiting-for-others": "En attente du vote des autres joueurs...",
+    "submit-vote": "Soumettre le vote",
+    "force-end": "Forcer la fin",
+    "player-list": "Liste des joueurs"
   }
 }

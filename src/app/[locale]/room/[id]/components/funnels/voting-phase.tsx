@@ -1,6 +1,7 @@
 "use client";
 
 import { AlertTriangle, Timer } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 import { Button, Card, ProgressBar, RadioGroup } from "@/shared/ui";
@@ -24,7 +25,6 @@ interface VotingPhaseProps {
   onForceEnd?: () => void;
   hasVoted?: boolean;
 }
-
 export default function VotingPhase({
   title,
   isHost,
@@ -35,11 +35,11 @@ export default function VotingPhase({
   onForceEnd,
   hasVoted = false,
 }: VotingPhaseProps) {
+  const t = useTranslations("votingPhase");
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [localHasVoted, setLocalHasVoted] = useState(hasVoted);
   const [timeLeft, setTimeLeft] = useState(timeLimit || 0);
 
-  // hasVoted prop이 변경되면 로컬 상태도 업데이트
   useEffect(() => {
     setLocalHasVoted(hasVoted);
   }, [hasVoted]);
@@ -72,11 +72,11 @@ export default function VotingPhase({
       <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur">
         <Card.Header>
           <Card.Title className="flex items-center justify-between mb-2">
-            <span>{title}</span>
+            <span>{t("title")}</span>
             {timeLimit && (
               <div className="flex items-center gap-2 text-sm">
                 <Timer className="h-4 w-4" />
-                <span>{timeLeft}초 남음</span>
+                <span>{t("time-left", { time: timeLeft })}</span>
               </div>
             )}
           </Card.Title>
@@ -90,8 +90,8 @@ export default function VotingPhase({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-xl font-medium">투표 완료!</h3>
-              <p className="mt-2 text-slate-300">다른 플레이어들의 투표를 기다리는 중...</p>
+              <h3 className="text-xl font-medium">{t("vote-completed")}</h3>
+              <p className="mt-2 text-slate-300">{t("waiting-for-others")}</p>
             </div>
           ) : (
             <RadioGroup value={selectedOption || ""} onValueChange={setSelectedOption}>
@@ -115,11 +115,11 @@ export default function VotingPhase({
           {!localHasVoted && (
             <Button
               variant="primarySolid"
-              className="max-w-[150px] w-[30%] min-w-[120px]  "
+              className="max-w-[150px] w-[30%] min-w-[120px]"
               onClick={handleVote}
               disabled={!selectedOption}
             >
-              투표하기
+              {t("submit-vote")}
             </Button>
           )}
 
@@ -130,7 +130,7 @@ export default function VotingPhase({
               onClick={onForceEnd}
             >
               <AlertTriangle className="h-4 w-4" />
-              강제 개표
+              {t("force-end")}
             </Button>
           )}
         </Card.Footer>
@@ -139,7 +139,7 @@ export default function VotingPhase({
       <br />
 
       <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur">
-        <Card.Header className="headline">플레이어 리스트</Card.Header>
+        <Card.Header className="headline">{t("player-list")}</Card.Header>
         <Card.Content>
           <GamePlayerList players={players} />
         </Card.Content>

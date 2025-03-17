@@ -167,5 +167,14 @@
     "status-started": "游戏已经开始。每个玩家必须按照自己的角色行动。",
     "status-vote": "当房主开始投票时，所有玩家都可以参与。",
     "status-host-note": "房主可以随时开始投票。"
+  },
+  "votingPhase": {
+    "title": "投票进行中",
+    "time-left": "剩余{time}秒",
+    "vote-completed": "投票完成！",
+    "waiting-for-others": "等待其他玩家投票...",
+    "submit-vote": "提交投票",
+    "force-end": "强制计票",
+    "player-list": "玩家列表"
   }
 }

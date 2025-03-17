@@ -167,5 +167,14 @@
     "status-started": "O jogo começou. Cada jogador deve agir de acordo com seu papel.",
     "status-vote": "Quando o anfitrião iniciar a votação, todos os jogadores poderão participar.",
     "status-host-note": "O anfitrião pode iniciar a votação a qualquer momento."
+  },
+  "votingPhase": {
+    "title": "Votação em andamento",
+    "time-left": "{time} segundos restantes",
+    "vote-completed": "Votação concluída!",
+    "waiting-for-others": "Aguardando votação de outros jogadores...",
+    "submit-vote": "Enviar voto",
+    "force-end": "Encerrar forçadamente",
+    "player-list": "Lista de jogadores"
   }
 }

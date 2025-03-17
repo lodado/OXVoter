@@ -167,5 +167,14 @@
     "status-started": "Permainan telah dimulai. Setiap pemain harus bertindak sesuai dengan perannya.",
     "status-vote": "Ketika tuan rumah memulai pemungutan suara, semua pemain dapat berpartisipasi.",
     "status-host-note": "Tuan rumah dapat memulai pemungutan suara kapan saja."
+  },
+  "votingPhase": {
+    "title": "Pemungutan Suara Sedang Berlangsung",
+    "time-left": "{time} detik tersisa",
+    "vote-completed": "Pemungutan suara selesai!",
+    "waiting-for-others": "Menunggu pemain lain memberikan suara...",
+    "submit-vote": "Kirim Suara",
+    "force-end": "Paksa Selesai",
+    "player-list": "Daftar Pemain"
   }
 }

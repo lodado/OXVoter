@@ -167,5 +167,14 @@
     "status-started": "Il gioco è iniziato. Ogni giocatore deve agire in base al proprio ruolo.",
     "status-vote": "Quando l'host avvia la votazione, tutti i giocatori possono partecipare.",
     "status-host-note": "L'host può avviare la votazione in qualsiasi momento."
+  },
+  "votingPhase": {
+    "title": "Votazione in corso",
+    "time-left": "{time} secondi rimasti",
+    "vote-completed": "Voto completato!",
+    "waiting-for-others": "In attesa del voto degli altri giocatori...",
+    "submit-vote": "Invia voto",
+    "force-end": "Forza Fine",
+    "player-list": "Elenco giocatori"
   }
 }

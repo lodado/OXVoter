@@ -167,5 +167,14 @@
     "status-started": "Trò chơi đã bắt đầu. Mỗi người chơi phải hành động theo vai trò của họ.",
     "status-vote": "Khi chủ phòng bắt đầu bỏ phiếu, tất cả người chơi có thể tham gia.",
     "status-host-note": "Chủ phòng có thể bắt đầu bỏ phiếu bất cứ lúc nào."
+  },
+  "votingPhase": {
+    "title": "Đang bỏ phiếu",
+    "time-left": "Còn {time} giây",
+    "vote-completed": "Bỏ phiếu hoàn tất!",
+    "waiting-for-others": "Đang chờ người chơi khác bỏ phiếu...",
+    "submit-vote": "Gửi phiếu bầu",
+    "force-end": "Kết thúc cưỡng bức",
+    "player-list": "Danh sách người chơi"
   }
 }

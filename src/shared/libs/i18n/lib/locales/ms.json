@@ -167,5 +167,14 @@
     "status-started": "Permainan telah bermula. Setiap pemain mesti bertindak mengikut peranan mereka.",
     "status-vote": "Apabila hos memulakan pengundian, semua pemain boleh mengambil bahagian.",
     "status-host-note": "Hos boleh memulakan pengundian pada bila-bila masa."
+  },
+  "votingPhase": {
+    "title": "Pengundian Sedang Berlangsung",
+    "time-left": "{time} saat lagi",
+    "vote-completed": "Pengundian Selesai!",
+    "waiting-for-others": "Menunggu pemain lain mengundi...",
+    "submit-vote": "Hantar Undian",
+    "force-end": "Tamatkan Secara Paksa",
+    "player-list": "Senarai Pemain"
   }
 }

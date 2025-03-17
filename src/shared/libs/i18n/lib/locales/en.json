@@ -167,5 +167,14 @@
     "status-started": "The game has started. Each player must act according to their role.",
     "status-vote": "When the host starts voting, all players can participate.",
     "status-host-note": "The host can start voting at any time."
+  },
+  "votingPhase": {
+    "title": "Voting in Progress",
+    "time-left": "{time} seconds left",
+    "vote-completed": "Vote Completed!",
+    "waiting-for-others": "Waiting for other players to vote...",
+    "submit-vote": "Submit Vote",
+    "force-end": "Force End",
+    "player-list": "Player List"
   }
 }

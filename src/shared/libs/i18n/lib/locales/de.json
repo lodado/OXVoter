@@ -167,5 +167,14 @@
     "status-started": "Das Spiel hat begonnen. Jeder Spieler muss entsprechend seiner Rolle handeln.",
     "status-vote": "Wenn der Gastgeber die Abstimmung startet, können alle Spieler teilnehmen.",
     "status-host-note": "Der Gastgeber kann die Abstimmung jederzeit starten."
+  },
+  "votingPhase": {
+    "title": "Abstimmung läuft",
+    "time-left": "Noch {time} Sekunden",
+    "vote-completed": "Abstimmung abgeschlossen!",
+    "waiting-for-others": "Warten auf die Stimmen der anderen Spieler...",
+    "submit-vote": "Stimme abgeben",
+    "force-end": "Erzwungenes Beenden",
+    "player-list": "Spielerliste"
   }
 }
