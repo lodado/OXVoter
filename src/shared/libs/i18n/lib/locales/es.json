@@ -144,5 +144,18 @@
     "participants-label": "Participantes",
     "copy-invite-link": "Copiar enlace de invitación",
     "host-badge": "Anfitrión"
+  },
+  "copyLink": {
+    "success-title": "Enlace copiado",
+    "success-description": "El enlace de invitación al juego ha sido copiado."
+  },
+  "gameLobby": {
+    "settings-title": "Configuración del juego",
+    "max-players": "Máximo de jugadores",
+    "random-roles": "Asignar roles aleatorios",
+    "anonymous-voting": "Votación anónima",
+    "special-voting": "Votación especial",
+    "start-game": "Iniciar juego",
+    "waiting-for-host": "Esperando a que el anfitrión inicie el juego..."
   }
 }

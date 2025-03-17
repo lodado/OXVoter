@@ -144,5 +144,18 @@
     "participants-label": "参加者",
     "copy-invite-link": "招待リンクをコピー",
     "host-badge": "ホスト"
+  },
+  "copyLink": {
+    "success-title": "リンクがコピーされました",
+    "success-description": "ゲーム招待リンクがコピーされました。"
+  },
+  "gameLobby": {
+    "settings-title": "ゲーム設定",
+    "max-players": "最大人数",
+    "random-roles": "ランダム役職割り当て",
+    "anonymous-voting": "匿名投票",
+    "special-voting": "特殊投票",
+    "start-game": "ゲーム開始",
+    "waiting-for-host": "ホストがゲームを開始するのを待っています..."
   }
 }

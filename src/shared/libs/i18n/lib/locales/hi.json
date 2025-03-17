@@ -144,5 +144,18 @@
     "participants-label": "प्रतिभागी",
     "copy-invite-link": "आमंत्रण लिंक कॉपी करें",
     "host-badge": "होस्ट"
+  },
+  "copyLink": {
+    "success-title": "लिंक कॉपी हो गया",
+    "success-description": "गेम आमंत्रण लिंक कॉपी कर लिया गया है।"
+  },
+  "gameLobby": {
+    "settings-title": "गेम सेटिंग्स",
+    "max-players": "अधिकतम खिलाड़ी",
+    "random-roles": "यादृच्छिक भूमिकाएँ असाइन करें",
+    "anonymous-voting": "गुप्त मतदान",
+    "special-voting": "विशेष मतदान",
+    "start-game": "खेल शुरू करें",
+    "waiting-for-host": "होस्ट के खेल शुरू करने की प्रतीक्षा कर रहा है..."
   }
 }

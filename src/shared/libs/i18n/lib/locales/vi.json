@@ -144,5 +144,18 @@
     "participants-label": "Người tham gia",
     "copy-invite-link": "Sao chép liên kết mời",
     "host-badge": "Chủ phòng"
+  },
+  "copyLink": {
+    "success-title": "Liên kết đã sao chép",
+    "success-description": "Liên kết mời trò chơi đã được sao chép."
+  },
+  "gameLobby": {
+    "settings-title": "Cài đặt trò chơi",
+    "max-players": "Số người chơi tối đa",
+    "random-roles": "Gán vai trò ngẫu nhiên",
+    "anonymous-voting": "Bỏ phiếu ẩn danh",
+    "special-voting": "Bỏ phiếu đặc biệt",
+    "start-game": "Bắt đầu trò chơi",
+    "waiting-for-host": "Đang chờ chủ phòng bắt đầu trò chơi..."
   }
 }

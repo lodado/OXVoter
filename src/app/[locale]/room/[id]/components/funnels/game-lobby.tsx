@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 
-import { Badge, BadgeButton, Button, Card, Switch } from "@/shared/ui";
+import { Badge, BadgeButton, Button, Card, CopyButton, Switch } from "@/shared/ui";
 import { ToastViewPort } from "@/shared/ui/Toast";
 import { useToastStore } from "@/shared/ui/Toast/stores";
 
@@ -39,19 +39,6 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
   const [anonymousVoting, setAnonymousVoting] = useState(true);
   const [specialVoting, setSpecialVoting] = useState(false);
 
-  const { addToast } = useToastStore();
-
-  const handleCopyLink = () => {
-    setCopied(true);
-    addToast({
-      type: "success",
-      title: "링크 복사됨",
-      description: "게임 초대 링크가 복사되었습니다.",
-    });
-
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   return (
     <>
       <div className="grid gap-6 md:grid-cols-2">
@@ -65,18 +52,7 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
                 </span>
               </span>
 
-              <CopyToClipboard
-                text={typeof window !== "undefined" ? window.location.href : ""}
-                onCopy={() => handleCopyLink()}
-              >
-                <Button
-                  variant="primaryLine"
-                  className="border-slate-600 rounded-md h-10 text-slate-200 hover:bg-slate-700"
-                >
-                  {copied ? <CheckCircle className="h-4 w-4 mr-1" /> : <Copy className="h-4 w-4 mr-1" />}
-                  {t("roomWaitCard.copy-invite-link")}
-                </Button>
-              </CopyToClipboard>
+              <CopyButton>{t("roomWaitCard.copy-invite-link")}</CopyButton>
             </Card.Title>
           </Card.Header>
           <Card.Content>
@@ -99,36 +75,36 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
 
         <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur">
           <Card.Header>
-            <Card.Title>게임 설정</Card.Title>
+            <Card.Title>{t("gameLobby.settings-title")}</Card.Title>
           </Card.Header>
           <Card.Content>
             <ul className="space-y-3">
               <li className="flex justify-between">
-                <span className="text-slate-300">최대 인원</span>
-                <span>{settings.maxPlayers}명</span>
+                <span className="text-slate-300">{t("gameLobby.max-players")}</span>
+                <span>{settings.maxPlayers}</span>
               </li>
               <li className="flex justify-between">
-                <span className="text-slate-300">랜덤 직업 부여</span>
+                <span className="text-slate-300">{t("gameLobby.random-roles")}</span>
 
                 <Switch id="randomRoles" checked={randomRoles} onCheckedChange={setRandomRoles} disabled />
               </li>
               <li className="flex justify-between">
-                <span className="text-slate-300">익명 투표</span>
+                <span className="text-slate-300">{t("gameLobby.anonymous-voting")}</span>
                 <Switch id="anonymousVoting" checked={anonymousVoting} onCheckedChange={setAnonymousVoting} />
               </li>
               <li className="flex justify-between">
-                <span className="text-slate-300">특수 투표</span>
+                <span className="text-slate-300">{t("gameLobby.special-voting")}</span>
                 <Switch id="specialVoting" checked={specialVoting} onCheckedChange={setSpecialVoting} disabled />
               </li>
             </ul>
           </Card.Content>
           <Card.Footer>
             {isHost ? (
-              <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={onStartGame}>
-                게임 시작
+              <Button variant="primarySolid" className="w-full" onClick={onStartGame}>
+                {t("gameLobby.start-game")}
               </Button>
             ) : (
-              <p className="text-center text-sm text-slate-400 w-full">방장이 게임을 시작하기를 기다리는 중...</p>
+              <p className="text-center text-sm text-slate-400 w-full">{t("gameLobby.waiting-for-host")}</p>
             )}
           </Card.Footer>
         </Card>

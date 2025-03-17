@@ -144,5 +144,18 @@
     "participants-label": "Участники",
     "copy-invite-link": "Копировать ссылку-приглашение",
     "host-badge": "Хост"
+  },
+  "copyLink": {
+    "success-title": "Ссылка скопирована",
+    "success-description": "Ссылка на приглашение в игру скопирована."
+  },
+  "gameLobby": {
+    "settings-title": "Настройки игры",
+    "max-players": "Максимальное количество игроков",
+    "random-roles": "Назначить случайные роли",
+    "anonymous-voting": "Анонимное голосование",
+    "special-voting": "Специальное голосование",
+    "start-game": "Начать игру",
+    "waiting-for-host": "Ожидание начала игры хостом..."
   }
 }

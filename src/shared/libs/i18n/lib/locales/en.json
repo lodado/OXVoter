@@ -144,5 +144,18 @@
     "participants-label": "Participants",
     "copy-invite-link": "Copy Invite Link",
     "host-badge": "Host"
+  },
+  "copyLink": {
+    "success-title": "Link Copied",
+    "success-description": "Game invite link has been copied."
+  },
+  "gameLobby": {
+    "settings-title": "Game Settings",
+    "max-players": "Max Players",
+    "random-roles": "Assign Random Roles",
+    "anonymous-voting": "Anonymous Voting",
+    "special-voting": "Special Voting",
+    "start-game": "Start Game",
+    "waiting-for-host": "Waiting for the host to start the game..."
   }
 }

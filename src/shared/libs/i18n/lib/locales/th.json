@@ -144,5 +144,18 @@
     "participants-label": "ผู้เข้าร่วม",
     "copy-invite-link": "คัดลอกลิงก์เชิญ",
     "host-badge": "โฮสต์"
+  },
+  "copyLink": {
+    "success-title": "คัดลอกลิงก์แล้ว",
+    "success-description": "คัดลอกลิงก์เชิญเล่นเกมแล้ว"
+  },
+  "gameLobby": {
+    "settings-title": "การตั้งค่าเกม",
+    "max-players": "จำนวนผู้เล่นสูงสุด",
+    "random-roles": "กำหนดบทบาทแบบสุ่ม",
+    "anonymous-voting": "การลงคะแนนแบบไม่ระบุชื่อ",
+    "special-voting": "การลงคะแนนพิเศษ",
+    "start-game": "เริ่มเกม",
+    "waiting-for-host": "กำลังรอให้โฮสต์เริ่มเกม..."
   }
 }

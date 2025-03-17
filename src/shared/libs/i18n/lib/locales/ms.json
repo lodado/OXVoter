@@ -144,5 +144,18 @@
     "participants-label": "Peserta",
     "copy-invite-link": "Salin pautan jemputan",
     "host-badge": "Hos"
+  },
+  "copyLink": {
+    "success-title": "Pautan Disalin",
+    "success-description": "Pautan jemputan permainan telah disalin."
+  },
+  "gameLobby": {
+    "settings-title": "Tetapan Permainan",
+    "max-players": "Pemain Maksimum",
+    "random-roles": "Tetapkan Peranan Rawak",
+    "anonymous-voting": "Pengundian Tanpa Nama",
+    "special-voting": "Pengundian Khas",
+    "start-game": "Mulakan Permainan",
+    "waiting-for-host": "Menunggu hos untuk memulakan permainan..."
   }
 }

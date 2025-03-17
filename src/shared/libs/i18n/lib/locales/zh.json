@@ -144,5 +144,18 @@
     "participants-label": "参与者",
     "copy-invite-link": "复制邀请链接",
     "host-badge": "房主"
+  },
+  "copyLink": {
+    "success-title": "链接已复制",
+    "success-description": "游戏邀请链接已复制。"
+  },
+  "gameLobby": {
+    "settings-title": "游戏设置",
+    "max-players": "最大玩家数",
+    "random-roles": "随机分配职业",
+    "anonymous-voting": "匿名投票",
+    "special-voting": "特殊投票",
+    "start-game": "开始游戏",
+    "waiting-for-host": "等待房主开始游戏..."
   }
 }

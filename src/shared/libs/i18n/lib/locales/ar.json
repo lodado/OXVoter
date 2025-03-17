@@ -144,5 +144,18 @@
     "participants-label": "المشاركون",
     "copy-invite-link": "نسخ رابط الدعوة",
     "host-badge": "المضيف"
+  },
+  "copyLink": {
+    "success-title": "تم نسخ الرابط",
+    "success-description": "تم نسخ رابط دعوة اللعبة."
+  },
+  "gameLobby": {
+    "settings-title": "إعدادات اللعبة",
+    "max-players": "الحد الأقصى للاعبين",
+    "random-roles": "تعيين الأدوار العشوائية",
+    "anonymous-voting": "التصويت المجهول",
+    "special-voting": "التصويت الخاص",
+    "start-game": "بدء اللعبة",
+    "waiting-for-host": "في انتظار أن يبدأ المضيف اللعبة..."
   }
 }

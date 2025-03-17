@@ -144,5 +144,18 @@
     "participants-label": "참가자",
     "copy-invite-link": "초대 링크 복사",
     "host-badge": "방장"
+  },
+  "copyLink": {
+    "success-title": "링크 복사됨",
+    "success-description": "게임 초대 링크가 복사되었습니다."
+  },
+  "gameLobby": {
+    "settings-title": "게임 설정",
+    "max-players": "최대 인원",
+    "random-roles": "랜덤 직업 부여",
+    "anonymous-voting": "익명 투표",
+    "special-voting": "특수 투표",
+    "start-game": "게임 시작",
+    "waiting-for-host": "방장이 게임을 시작하기를 기다리는 중..."
   }
 }

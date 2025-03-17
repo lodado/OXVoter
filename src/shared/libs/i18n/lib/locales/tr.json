@@ -144,5 +144,18 @@
     "participants-label": "Katılımcılar",
     "copy-invite-link": "Davet bağlantısını kopyala",
     "host-badge": "Ev sahibi"
+  },
+  "copyLink": {
+    "success-title": "Bağlantı Kopyalandı",
+    "success-description": "Oyun davet bağlantısı kopyalandı."
+  },
+  "gameLobby": {
+    "settings-title": "Oyun Ayarları",
+    "max-players": "Maksimum Oyuncu",
+    "random-roles": "Rastgele Roller Ata",
+    "anonymous-voting": "Anonim Oylama",
+    "special-voting": "Özel Oylama",
+    "start-game": "Oyunu Başlat",
+    "waiting-for-host": "Oyunun başlaması için ev sahibini bekliyor..."
   }
 }

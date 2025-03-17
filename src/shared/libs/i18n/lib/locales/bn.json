@@ -144,5 +144,18 @@
     "participants-label": "অংশগ্রহণকারী",
     "copy-invite-link": "আমন্ত্রণ লিঙ্ক অনুলিপি করুন",
     "host-badge": "হোস্ট"
+  },
+  "copyLink": {
+    "success-title": "লিংক কপি হয়েছে",
+    "success-description": "গেমের আমন্ত্রণ লিংক কপি করা হয়েছে।"
+  },
+  "gameLobby": {
+    "settings-title": "গেম সেটিংস",
+    "max-players": "সর্বোচ্চ খেলোয়াড়",
+    "random-roles": "অস্থায়ী ভূমিকা নির্ধারণ করুন",
+    "anonymous-voting": "নামবিহীন ভোট",
+    "special-voting": "বিশেষ ভোট",
+    "start-game": "গেম শুরু করুন",
+    "waiting-for-host": "হোস্ট গেম শুরু করার জন্য অপেক্ষা করছে..."
   }
 }
