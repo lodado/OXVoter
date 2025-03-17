@@ -135,5 +135,14 @@
     "dialog-title": "게임 직업 설정",
     "button-label": "직업 설정",
     "description": "게임에서 사용할 직업과 특수 능력을 설정하세요."
+  },
+  "infoPage": {
+    "loading-title": "방 정보 로드중...",
+    "loading-description": "잠시만 기다려주세요"
+  },
+  "roomWaitCard": {
+    "participants-label": "참가자",
+    "copy-invite-link": "초대 링크 복사",
+    "host-badge": "방장"
   }
 }

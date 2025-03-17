@@ -135,5 +135,14 @@
     "dialog-title": "Настройки ролей в игре",
     "button-label": "Настройки ролей",
     "description": "Настройте роли и специальные способности, используемые в игре."
+  },
+  "infoPage": {
+    "loading-title": "Загрузка информации о комнате...",
+    "loading-description": "Пожалуйста, подождите немного."
+  },
+  "roomWaitCard": {
+    "participants-label": "Участники",
+    "copy-invite-link": "Копировать ссылку-приглашение",
+    "host-badge": "Хост"
   }
 }

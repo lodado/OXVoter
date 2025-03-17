@@ -135,5 +135,14 @@
     "dialog-title": "Oyun Rol Ayarları",
     "button-label": "Rol Ayarları",
     "description": "Oyunda kullanılacak rolleri ve özel yetenekleri ayarlayın."
+  },
+  "infoPage": {
+    "loading-title": "Oda bilgileri yükleniyor...",
+    "loading-description": "Lütfen biraz bekleyin."
+  },
+  "roomWaitCard": {
+    "participants-label": "Katılımcılar",
+    "copy-invite-link": "Davet bağlantısını kopyala",
+    "host-badge": "Ev sahibi"
   }
 }

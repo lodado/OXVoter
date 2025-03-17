@@ -135,5 +135,14 @@
     "dialog-title": "Game Role Settings",
     "button-label": "Role Settings",
     "description": "Set the roles and special abilities to be used in the game."
+  },
+  "infoPage": {
+    "loading-title": "Loading Room Information...",
+    "loading-description": "Please wait a moment."
+  },
+  "roomWaitCard": {
+    "participants-label": "Participants",
+    "copy-invite-link": "Copy Invite Link",
+    "host-badge": "Host"
   }
 }

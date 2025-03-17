@@ -135,5 +135,14 @@
     "dialog-title": "गेम भूमिका सेटिंग्स",
     "button-label": "भूमिका सेटिंग्स",
     "description": "खेल में उपयोग की जाने वाली भूमिकाओं और विशेष क्षमताओं को सेट करें।"
+  },
+  "infoPage": {
+    "loading-title": "कक्ष जानकारी लोड हो रही है...",
+    "loading-description": "कृपया थोड़ी देर प्रतीक्षा करें।"
+  },
+  "roomWaitCard": {
+    "participants-label": "प्रतिभागी",
+    "copy-invite-link": "आमंत्रण लिंक कॉपी करें",
+    "host-badge": "होस्ट"
   }
 }

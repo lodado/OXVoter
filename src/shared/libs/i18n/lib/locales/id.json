@@ -135,5 +135,14 @@
     "dialog-title": "Pengaturan Peran Permainan",
     "button-label": "Pengaturan Peran",
     "description": "Atur peran dan kemampuan khusus yang digunakan dalam permainan."
+  },
+  "infoPage": {
+    "loading-title": "Memuat Informasi Ruangan...",
+    "loading-description": "Harap tunggu sebentar."
+  },
+  "roomWaitCard": {
+    "participants-label": "Peserta",
+    "copy-invite-link": "Salin Tautan Undangan",
+    "host-badge": "Tuan Rumah"
   }
 }

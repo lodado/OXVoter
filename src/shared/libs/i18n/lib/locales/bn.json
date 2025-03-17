@@ -135,5 +135,14 @@
     "dialog-title": "গেম রোল সেটিংস",
     "button-label": "রোল সেটিংস",
     "description": "গেমে ব্যবহারের জন্য ভূমিকা এবং বিশেষ ক্ষমতা নির্ধারণ করুন।"
+  },
+  "infoPage": {
+    "loading-title": "রুমের তথ্য লোড হচ্ছে...",
+    "loading-description": "দয়া করে কিছুক্ষণ অপেক্ষা করুন।"
+  },
+  "roomWaitCard": {
+    "participants-label": "অংশগ্রহণকারী",
+    "copy-invite-link": "আমন্ত্রণ লিঙ্ক অনুলিপি করুন",
+    "host-badge": "হোস্ট"
   }
 }

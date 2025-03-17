@@ -135,5 +135,14 @@
     "dialog-title": "Spielrollen-Einstellungen",
     "button-label": "Rollen-Einstellungen",
     "description": "Legen Sie die Rollen und Spezialfähigkeiten fest, die im Spiel verwendet werden."
+  },
+  "infoPage": {
+    "loading-title": "Lade Rauminformationen...",
+    "loading-description": "Bitte warten Sie einen Moment."
+  },
+  "roomWaitCard": {
+    "participants-label": "Teilnehmer",
+    "copy-invite-link": "Einladungslink kopieren",
+    "host-badge": "Gastgeber"
   }
 }

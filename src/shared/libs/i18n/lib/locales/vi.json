@@ -135,5 +135,14 @@
     "dialog-title": "Cài đặt Vai trò Trò chơi",
     "button-label": "Cài đặt Vai trò",
     "description": "Đặt các vai trò và khả năng đặc biệt được sử dụng trong trò chơi."
+  },
+  "infoPage": {
+    "loading-title": "Đang tải thông tin phòng...",
+    "loading-description": "Vui lòng chờ trong giây lát."
+  },
+  "roomWaitCard": {
+    "participants-label": "Người tham gia",
+    "copy-invite-link": "Sao chép liên kết mời",
+    "host-badge": "Chủ phòng"
   }
 }

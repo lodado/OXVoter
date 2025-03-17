@@ -3,6 +3,7 @@
 import { UseFunnelOptions } from "@use-funnel/browser";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
@@ -234,8 +235,10 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
     }
   };
 
+  const tInfo = useTranslations("infoPage");
+
   if (isSocketTryingToConnect || isLoading) {
-    return <InfoPage title="방 정보 로드중..." description="잠시만 기다려주세요" />;
+    return <InfoPage title={tInfo("loading-title")} description={tInfo("loading-description")} />;
   }
 
   return (

@@ -135,5 +135,14 @@
     "dialog-title": "Tetapan Peranan Permainan",
     "button-label": "Tetapan Peranan",
     "description": "Tetapkan peranan dan kebolehan khas yang digunakan dalam permainan."
+  },
+  "infoPage": {
+    "loading-title": "Memuatkan Maklumat Bilik...",
+    "loading-description": "Sila tunggu sebentar."
+  },
+  "roomWaitCard": {
+    "participants-label": "Peserta",
+    "copy-invite-link": "Salin pautan jemputan",
+    "host-badge": "Hos"
   }
 }

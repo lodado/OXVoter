@@ -135,5 +135,14 @@
     "dialog-title": "Paramètres des rôles du jeu",
     "button-label": "Paramètres des rôles",
     "description": "Définissez les rôles et capacités spéciales à utiliser dans le jeu."
+  },
+  "infoPage": {
+    "loading-title": "Chargement des informations de la salle...",
+    "loading-description": "Veuillez patienter un moment."
+  },
+  "roomWaitCard": {
+    "participants-label": "Participants",
+    "copy-invite-link": "Copier le lien d'invitation",
+    "host-badge": "Hôte"
   }
 }

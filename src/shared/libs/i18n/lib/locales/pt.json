@@ -135,5 +135,14 @@
     "dialog-title": "Configurações de Papéis do Jogo",
     "button-label": "Configurações de Papéis",
     "description": "Defina os papéis e habilidades especiais a serem usados no jogo."
+  },
+  "infoPage": {
+    "loading-title": "Carregando informações da sala...",
+    "loading-description": "Por favor, aguarde um momento."
+  },
+  "roomWaitCard": {
+    "participants-label": "Participantes",
+    "copy-invite-link": "Copiar link de convite",
+    "host-badge": "Anfitrião"
   }
 }

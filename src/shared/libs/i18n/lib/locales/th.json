@@ -135,5 +135,14 @@
     "dialog-title": "การตั้งค่าบทบาทในเกม",
     "button-label": "การตั้งค่าบทบาท",
     "description": "กำหนดบทบาทและความสามารถพิเศษที่ใช้ในเกม"
+  },
+  "infoPage": {
+    "loading-title": "กำลังโหลดข้อมูลห้อง...",
+    "loading-description": "กรุณารอสักครู่"
+  },
+  "roomWaitCard": {
+    "participants-label": "ผู้เข้าร่วม",
+    "copy-invite-link": "คัดลอกลิงก์เชิญ",
+    "host-badge": "โฮสต์"
   }
 }

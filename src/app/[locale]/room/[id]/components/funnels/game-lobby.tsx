@@ -1,6 +1,7 @@
 "use client";
 
 import { CheckCircle, Copy, Crown, UserCircle2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 
@@ -32,6 +33,7 @@ interface GameLobbyProps {
 
 export default function GameLobby({ players, settings, isHost, onStartGame }: GameLobbyProps) {
   const [copied, setCopied] = useState(false);
+  const t = useTranslations();
 
   const [randomRoles, setRandomRoles] = useState(true);
   const [anonymousVoting, setAnonymousVoting] = useState(true);
@@ -55,9 +57,12 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
       <div className="grid gap-6 md:grid-cols-2">
         <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur min-h-[40vh]">
           <Card.Header>
-            <Card.Title className="flex items-center justify-between">
-              <span>
-                참가자 ({players.length}/{settings.maxPlayers})
+            <Card.Title className="flex items-center justify-between gap">
+              <span className="flex flex-row gap-1">
+                {t("roomWaitCard.participants-label")}
+                <span>
+                  ({players.length}/{settings.maxPlayers})
+                </span>
               </span>
 
               <CopyToClipboard
@@ -69,7 +74,7 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
                   className="border-slate-600 rounded-md h-10 text-slate-200 hover:bg-slate-700"
                 >
                   {copied ? <CheckCircle className="h-4 w-4 mr-1" /> : <Copy className="h-4 w-4 mr-1" />}
-                  초대 링크 복사
+                  {t("roomWaitCard.copy-invite-link")}
                 </Button>
               </CopyToClipboard>
             </Card.Title>
@@ -83,7 +88,7 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
                   {player.isHost && (
                     <Badge variant={"success"} className="flex items-center gap-1">
                       <Crown className="h-3 w-3 text-warning" />
-                      방장
+                      {t("roomWaitCard.host-badge")}
                     </Badge>
                   )}
                 </li>

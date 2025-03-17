@@ -135,5 +135,14 @@
     "dialog-title": "Configuración de roles del juego",
     "button-label": "Configuración de roles",
     "description": "Establezca los roles y habilidades especiales a utilizar en el juego."
+  },
+  "infoPage": {
+    "loading-title": "Cargando información de la sala...",
+    "loading-description": "Por favor, espere un momento."
+  },
+  "roomWaitCard": {
+    "participants-label": "Participantes",
+    "copy-invite-link": "Copiar enlace de invitación",
+    "host-badge": "Anfitrión"
   }
 }

@@ -135,5 +135,14 @@
     "dialog-title": "ゲーム役職設定",
     "button-label": "役職設定",
     "description": "ゲームで使用する役職と特殊能力を設定してください。"
+  },
+  "infoPage": {
+    "loading-title": "部屋情報を読み込み中...",
+    "loading-description": "しばらくお待ちください。"
+  },
+  "roomWaitCard": {
+    "participants-label": "参加者",
+    "copy-invite-link": "招待リンクをコピー",
+    "host-badge": "ホスト"
   }
 }

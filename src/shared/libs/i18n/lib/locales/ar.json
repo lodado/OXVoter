@@ -135,5 +135,14 @@
     "dialog-title": "إعدادات أدوار اللعبة",
     "button-label": "إعدادات الدور",
     "description": "قم بتعيين الأدوار والقدرات الخاصة المستخدمة في اللعبة."
+  },
+  "infoPage": {
+    "loading-title": "جارٍ تحميل معلومات الغرفة...",
+    "loading-description": "يرجى الانتظار لحظة."
+  },
+  "roomWaitCard": {
+    "participants-label": "المشاركون",
+    "copy-invite-link": "نسخ رابط الدعوة",
+    "host-badge": "المضيف"
   }
 }

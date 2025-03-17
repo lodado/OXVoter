@@ -135,5 +135,14 @@
     "dialog-title": "Impostazioni dei Ruoli di Gioco",
     "button-label": "Impostazioni dei Ruoli",
     "description": "Imposta i ruoli e le abilità speciali da utilizzare nel gioco."
+  },
+  "infoPage": {
+    "loading-title": "Caricamento delle informazioni sulla stanza...",
+    "loading-description": "Attendere un momento."
+  },
+  "roomWaitCard": {
+    "participants-label": "Partecipanti",
+    "copy-invite-link": "Copia il link di invito",
+    "host-badge": "Ospite"
   }
 }

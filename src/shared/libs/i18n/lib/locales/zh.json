@@ -135,5 +135,14 @@
     "dialog-title": "游戏职业设置",
     "button-label": "职业设置",
     "description": "设置游戏中使用的职业和特殊能力。"
+  },
+  "infoPage": {
+    "loading-title": "加载房间信息...",
+    "loading-description": "请稍等片刻。"
+  },
+  "roomWaitCard": {
+    "participants-label": "参与者",
+    "copy-invite-link": "复制邀请链接",
+    "host-badge": "房主"
   }
 }
