@@ -182,5 +182,11 @@
     "unknown-player": "Inconnu",
     "votes": "{count} votes",
     "next-step": "Étape suivante"
+  },
+  "Room": {
+    "roomName": "{roomName}",
+    "roomId": "ID de la salle: {id}",
+    "role": "Rôle: {role}",
+    "username": "{username}"
   }
 }

@@ -182,5 +182,11 @@
     "unknown-player": "Bilinmiyor",
     "votes": "{count} oy",
     "next-step": "Sonraki Adım"
+  },
+  "Room": {
+    "roomName": "{roomName}",
+    "roomId": "Oda Kimliği: {id}",
+    "role": "Rol: {role}",
+    "username": "{username}"
   }
 }

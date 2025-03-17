@@ -182,5 +182,11 @@
     "unknown-player": "अज्ञात",
     "votes": "{count} वोट",
     "next-step": "अगले चरण पर"
+  },
+  "Room": {
+    "roomName": "{roomName}",
+    "roomId": "कक्ष ID: {id}",
+    "role": "भूमिका: {role}",
+    "username": "{username}"
   }
 }

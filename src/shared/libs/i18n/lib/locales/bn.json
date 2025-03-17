@@ -182,5 +182,11 @@
     "unknown-player": "অজানা",
     "votes": "{count} ভোট",
     "next-step": "পরবর্তী ধাপে"
+  },
+  "Room": {
+    "roomName": "{roomName}",
+    "roomId": "রুম আইডি: {id}",
+    "role": "ভূমিকা: {role}",
+    "username": "{username}"
   }
 }

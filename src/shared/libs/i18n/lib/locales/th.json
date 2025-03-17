@@ -182,5 +182,11 @@
     "unknown-player": "ไม่ทราบ",
     "votes": "{count} คะแนน",
     "next-step": "ขั้นตอนถัดไป"
+  },
+  "Room": {
+    "roomName": "{roomName}",
+    "roomId": "รหัสห้อง: {id}",
+    "role": "บทบาท: {role}",
+    "username": "{username}"
   }
 }

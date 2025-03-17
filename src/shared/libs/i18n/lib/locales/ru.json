@@ -182,5 +182,11 @@
     "unknown-player": "Неизвестно",
     "votes": "{count} голосов",
     "next-step": "Следующий шаг"
+  },
+  "Room": {
+    "roomName": "{roomName}",
+    "roomId": "ID комнаты: {id}",
+    "role": "Роль: {role}",
+    "username": "{username}"
   }
 }

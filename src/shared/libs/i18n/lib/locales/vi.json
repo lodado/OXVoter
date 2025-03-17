@@ -182,5 +182,11 @@
     "unknown-player": "Không xác định",
     "votes": "{count} phiếu",
     "next-step": "Bước tiếp theo"
+  },
+  "Room": {
+    "roomName": "{roomName}",
+    "roomId": "ID Phòng: {id}",
+    "role": "Vai trò: {role}",
+    "username": "{username}"
   }
 }

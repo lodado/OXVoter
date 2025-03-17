@@ -44,7 +44,7 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
       <div className="grid gap-6 md:grid-cols-2">
         <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur min-h-[40vh]">
           <Card.Header>
-            <Card.Title className="flex items-center justify-between gap">
+            <Card.Title className="flex items-center justify-between gap-2 flex-row flex-wrap">
               <span className="flex flex-row gap-1">
                 {t("roomWaitCard.participants-label")}
                 <span>
@@ -52,7 +52,9 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
                 </span>
               </span>
 
-              <CopyButton>{t("roomWaitCard.copy-invite-link")}</CopyButton>
+              <CopyButton>
+                <span className="hidden sm:block ">{t("roomWaitCard.copy-invite-link")}</span>
+              </CopyButton>
             </Card.Title>
           </Card.Header>
           <Card.Content>

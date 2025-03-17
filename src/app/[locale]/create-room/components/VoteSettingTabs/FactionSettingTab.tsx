@@ -18,8 +18,7 @@ const JobSettingTab = () => {
     handleRemoveFaction,
   } = useFactionContext();
 
-  const [initSelectedOptions, setInitSelectedOptions] = useState<FactionOption | null>(null);
-
+ 
   const [factionId, setFactionId] = useState("-1");
   const [factionName, setFactionName] = useState("");
   const [factionDescription, setFactionDescription] = useState("");
@@ -27,6 +26,7 @@ const JobSettingTab = () => {
   const [isFactionShareTheirRole, setIsFactionShareTheirRole] = useState(false);
 
   const resetForm = () => {
+    setFactionId("-1");
     setFactionName("");
     setFactionDescription("");
     setFactionColor("#3b82f6");
@@ -37,12 +37,12 @@ const JobSettingTab = () => {
   };
 
   const handleEditFaction = (faction: FactionOption) => {
+    setFactionId(faction.id);
     setFactionName(faction.name);
     setFactionDescription(faction.description);
     setFactionColor(faction.color);
     setIsFactionShareTheirRole(faction.isSharedTheirRole);
 
-    setInitSelectedOptions(faction);
     setIsEditing(true);
   };
 
@@ -121,9 +121,10 @@ const JobSettingTab = () => {
               {factions.map((faction) => (
                 <div>
                   <Banner
-                    isSelected={initSelectedOptions?.id === faction.id}
+                    isSelected={factionId === faction.id}
                     onEdit={() => {
                       handleEditFaction(faction);
+                      setIsEditing(true);
                     }}
                     onDelete={() => {
                       handleRemoveFaction(faction.id);
@@ -135,7 +136,6 @@ const JobSettingTab = () => {
             </div>
           </>
         )}
-
         <div className="flex flex-row sticky bottom-4 left-0 right-0 px-4 w-full gap-2">
           <Button
             className="flex-grow"
@@ -150,7 +150,7 @@ const JobSettingTab = () => {
                 });
               else {
                 handleAddFaction({
-                  id: factionId,
+                  id: Math.random().toString(36).substring(7),
                   name: factionName,
                   description: factionDescription,
                   color: factionColor,

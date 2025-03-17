@@ -182,5 +182,11 @@
     "unknown-player": "غير معروف",
     "votes": "{count} صوت",
     "next-step": "الخطوة التالية"
+  },
+  "Room": {
+    "roomName": "{roomName}",
+    "roomId": "معرف الغرفة: {id}",
+    "role": "الدور: {role}",
+    "username": "{username}"
   }
 }

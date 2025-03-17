@@ -182,5 +182,11 @@
     "unknown-player": "不明",
     "votes": "{count}票",
     "next-step": "次のステップへ"
+  },
+  "Room": {
+    "roomName": "{roomName}",
+    "roomId": "ルームID: {id}",
+    "role": "役割: {role}",
+    "username": "{username}"
   }
 }

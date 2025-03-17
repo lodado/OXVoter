@@ -236,6 +236,7 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
   };
 
   const tInfo = useTranslations("infoPage");
+  const tRoom = useTranslations("Room");
 
   if (isSocketTryingToConnect || isLoading) {
     return <InfoPage title={tInfo("loading-title")} description={tInfo("loading-description")} />;
@@ -245,17 +246,19 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
     <ReactiveLayout
       className="md:w-[1000px] p-4 min-h-[calc(100*var(--vh)-1.25rem)]"
       outerClassName="relative"
-      outerPreviousChildren={<>{funnel.step === "lobby" && <GameHeader />}</>}
+      outerPreviousChildren={funnel.step === "lobby" && <GameHeader />}
     >
       <div className="mx-auto w-full mt-6">
         <header className="mb-7 flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold">{roomSettings.roomName}</h1>
-            <p className="text-sm text-slate-300">방 ID: {params.id}</p>
+            <h1 className="text-2xl font-bold">{tRoom("roomName", { roomName: roomSettings.roomName })}</h1>
+            <p className="text-sm text-slate-300">{tRoom("roomId", { id: params.id })}</p>
           </div>
           <div className="flex items-center gap-2 w-[50%] flex-row justify-end flex-wrap">
-            {myRole && <div className="rounded-full bg-slate-700 px-3 py-1 text-sm">역할: {myRole}</div>}
-            <div className="rounded-full bg-blue-600 px-3 py-1 text-sm">{username}</div>
+            {myRole && (
+              <div className="rounded-full bg-slate-700 px-3 py-1 text-sm">{tRoom("role", { role: myRole })}</div>
+            )}
+            <div className="rounded-full bg-blue-600 px-3 py-1 text-sm">{tRoom("username", { username })}</div>
           </div>
         </header>
 

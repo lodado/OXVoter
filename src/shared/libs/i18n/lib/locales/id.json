@@ -182,5 +182,11 @@
     "unknown-player": "Tidak Diketahui",
     "votes": "{count} suara",
     "next-step": "Langkah Selanjutnya"
+  },
+  "Room": {
+    "roomName": "{roomName}",
+    "roomId": "ID Ruangan: {id}",
+    "role": "Peran: {role}",
+    "username": "{username}"
   }
 }
