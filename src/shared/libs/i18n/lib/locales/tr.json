@@ -157,5 +157,15 @@
     "special-voting": "Özel Oylama",
     "start-game": "Oyunu Başlat",
     "waiting-for-host": "Oyunun başlaması için ev sahibini bekliyor..."
+  },
+  "gameRoom": {
+    "title": "Oyun Devam Ediyor",
+    "alive-players": "Hayatta Kalanlar: {alive}/{total}",
+    "start-vote": "Oylamayı Başlat",
+    "end-game": "Oyunu Bitir",
+    "status-title": "Oyun Durumu",
+    "status-started": "Oyun başladı. Her oyuncu kendi rolüne göre hareket etmelidir.",
+    "status-vote": "Ev sahibi oylamayı başlattığında, tüm oyuncular katılabilir.",
+    "status-host-note": "Ev sahibi oylamayı istediği zaman başlatabilir."
   }
 }

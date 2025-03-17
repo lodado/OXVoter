@@ -157,5 +157,15 @@
     "special-voting": "特殊投票",
     "start-game": "开始游戏",
     "waiting-for-host": "等待房主开始游戏..."
+  },
+  "gameRoom": {
+    "title": "游戏进行中",
+    "alive-players": "幸存者: {alive}/{total}",
+    "start-vote": "开始投票",
+    "end-game": "结束游戏",
+    "status-title": "游戏状态",
+    "status-started": "游戏已经开始。每个玩家必须按照自己的角色行动。",
+    "status-vote": "当房主开始投票时，所有玩家都可以参与。",
+    "status-host-note": "房主可以随时开始投票。"
   }
 }

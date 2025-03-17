@@ -18,8 +18,10 @@ interface GameRoomProps {
   onStartVote: () => void;
   onEndGame: () => void;
 }
+import { useTranslations } from "next-intl";
 
 export default function GameRoom({ players, isHost, onStartVote, onEndGame }: GameRoomProps) {
+  const t = useTranslations("gameRoom");
   const alivePlayers = players.filter((p) => p.isAlive);
 
   return (
@@ -27,9 +29,9 @@ export default function GameRoom({ players, isHost, onStartVote, onEndGame }: Ga
       <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur ">
         <Card.Header>
           <Card.Title className="flex items-center justify-between">
-            <span>게임 진행 중</span>
+            <span>{t("title")}</span>
             <Badge variant="success" className="w-max px-2 bg-transparent subhead-2 ">
-              생존자: {alivePlayers.length}/{players.length}
+              {t("alive-players", { alive: alivePlayers.length, total: players.length })}
             </Badge>
           </Card.Title>
         </Card.Header>
@@ -39,12 +41,12 @@ export default function GameRoom({ players, isHost, onStartVote, onEndGame }: Ga
         <Card.Footer className="flex flex-row justify-center gap-3">
           {isHost && (
             <Button variant="primarySolid" className="w-[30%] min-w-[125px] max-w-[150px]" onClick={onStartVote}>
-              투표 시작하기
+              {t("start-vote")}
             </Button>
           )}
           {isHost && (
             <Button variant="errorSolid" className="w-[30%] min-w-[120px] max-w-[150px]" onClick={onEndGame}>
-              게임 종료
+              {t("end-game")}
             </Button>
           )}
         </Card.Footer>
@@ -52,13 +54,13 @@ export default function GameRoom({ players, isHost, onStartVote, onEndGame }: Ga
 
       <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur">
         <Card.Header>
-          <Card.Title>게임 진행 상황</Card.Title>
+          <Card.Title>{t("status-title")}</Card.Title>
         </Card.Header>
         <Card.Content>
           <div className="space-y-2 text-sm">
-            <p className="text-slate-300">게임이 시작되었습니다. 각 플레이어는 자신의 역할에 맞게 행동해야 합니다.</p>
-            <p className="text-slate-300">방장이 투표를 시작하면 모든 플레이어가 투표에 참여할 수 있습니다.</p>
-            {isHost && <p className="mt-4 text-amber-400">방장은 언제든지 투표를 시작할 수 있습니다.</p>}
+            <p className="text-slate-300">{t("status-started")}</p>
+            <p className="text-slate-300">{t("status-vote")}</p>
+            {isHost && <p className="mt-4 text-amber-400">{t("status-host-note")}</p>}
           </div>
         </Card.Content>
       </Card>

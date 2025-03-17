@@ -157,5 +157,15 @@
     "special-voting": "Vote spécial",
     "start-game": "Démarrer le jeu",
     "waiting-for-host": "En attente que l'hôte démarre le jeu..."
+  },
+  "gameRoom": {
+    "title": "Jeu en cours",
+    "alive-players": "Survivants: {alive}/{total}",
+    "start-vote": "Démarrer le vote",
+    "end-game": "Terminer le jeu",
+    "status-title": "État du jeu",
+    "status-started": "Le jeu a commencé. Chaque joueur doit agir selon son rôle.",
+    "status-vote": "Lorsque l'hôte commence le vote, tous les joueurs peuvent y participer.",
+    "status-host-note": "L'hôte peut démarrer le vote à tout moment."
   }
 }

@@ -157,5 +157,15 @@
     "special-voting": "Pemungutan Suara Khusus",
     "start-game": "Mulai Permainan",
     "waiting-for-host": "Menunggu tuan rumah memulai permainan..."
+  },
+  "gameRoom": {
+    "title": "Permainan Sedang Berlangsung",
+    "alive-players": "Penyintas: {alive}/{total}",
+    "start-vote": "Mulai Pemungutan Suara",
+    "end-game": "Akhiri Permainan",
+    "status-title": "Status Permainan",
+    "status-started": "Permainan telah dimulai. Setiap pemain harus bertindak sesuai dengan perannya.",
+    "status-vote": "Ketika tuan rumah memulai pemungutan suara, semua pemain dapat berpartisipasi.",
+    "status-host-note": "Tuan rumah dapat memulai pemungutan suara kapan saja."
   }
 }

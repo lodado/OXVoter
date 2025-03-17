@@ -157,5 +157,15 @@
     "special-voting": "Bỏ phiếu đặc biệt",
     "start-game": "Bắt đầu trò chơi",
     "waiting-for-host": "Đang chờ chủ phòng bắt đầu trò chơi..."
+  },
+  "gameRoom": {
+    "title": "Trò chơi đang diễn ra",
+    "alive-players": "Người sống sót: {alive}/{total}",
+    "start-vote": "Bắt đầu bỏ phiếu",
+    "end-game": "Kết thúc trò chơi",
+    "status-title": "Trạng thái trò chơi",
+    "status-started": "Trò chơi đã bắt đầu. Mỗi người chơi phải hành động theo vai trò của họ.",
+    "status-vote": "Khi chủ phòng bắt đầu bỏ phiếu, tất cả người chơi có thể tham gia.",
+    "status-host-note": "Chủ phòng có thể bắt đầu bỏ phiếu bất cứ lúc nào."
   }
 }

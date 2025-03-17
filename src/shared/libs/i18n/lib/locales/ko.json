@@ -157,5 +157,15 @@
     "special-voting": "특수 투표",
     "start-game": "게임 시작",
     "waiting-for-host": "방장이 게임을 시작하기를 기다리는 중..."
+  },
+  "gameRoom": {
+    "title": "게임 진행 중",
+    "alive-players": "생존자: {alive}/{total}",
+    "start-vote": "투표 시작하기",
+    "end-game": "게임 종료",
+    "status-title": "게임 진행 상황",
+    "status-started": "게임이 시작되었습니다. 각 플레이어는 자신의 역할에 맞게 행동해야 합니다.",
+    "status-vote": "방장이 투표를 시작하면 모든 플레이어가 투표에 참여할 수 있습니다.",
+    "status-host-note": "방장은 언제든지 투표를 시작할 수 있습니다."
   }
 }

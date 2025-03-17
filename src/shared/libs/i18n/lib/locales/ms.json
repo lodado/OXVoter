@@ -157,5 +157,15 @@
     "special-voting": "Pengundian Khas",
     "start-game": "Mulakan Permainan",
     "waiting-for-host": "Menunggu hos untuk memulakan permainan..."
+  },
+  "gameRoom": {
+    "title": "Permainan Sedang Berlangsung",
+    "alive-players": "Mangsa Terselamat: {alive}/{total}",
+    "start-vote": "Mulakan Pengundian",
+    "end-game": "Tamatkan Permainan",
+    "status-title": "Status Permainan",
+    "status-started": "Permainan telah bermula. Setiap pemain mesti bertindak mengikut peranan mereka.",
+    "status-vote": "Apabila hos memulakan pengundian, semua pemain boleh mengambil bahagian.",
+    "status-host-note": "Hos boleh memulakan pengundian pada bila-bila masa."
   }
 }
