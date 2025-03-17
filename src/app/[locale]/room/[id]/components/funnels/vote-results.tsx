@@ -1,6 +1,7 @@
 "use client";
 
 import { BarChart } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { Badge, Button, Card } from "@/shared/ui";
 
@@ -27,15 +28,16 @@ interface VoteResultsProps {
   anonymousVoting: boolean;
   onContinue?: () => void;
 }
-
 export default function VoteResults({ results, players, anonymousVoting, onContinue }: VoteResultsProps) {
+  const t = useTranslations("voteResults");
+
   // 최대 득표수 계산
   const maxVotes = Math.max(...results.map((r) => r.votes), 1);
 
   // 플레이어 ID로 이름 찾기
   const getPlayerName = (id: string) => {
     const player = players.find((p) => p.id === id);
-    return player ? player.username : "알 수 없음";
+    return player ? player.username : t("unknown-player");
   };
 
   return (
@@ -44,7 +46,7 @@ export default function VoteResults({ results, players, anonymousVoting, onConti
         <Card.Header>
           <Card.Title className="flex items-center gap-2">
             <BarChart className="h-5 w-5" />
-            투표 결과
+            {t("title")}
           </Card.Title>
         </Card.Header>
         <Card.Content>
@@ -53,7 +55,7 @@ export default function VoteResults({ results, players, anonymousVoting, onConti
               <div key={result.id} className="space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="font-medium">{result.text}</div>
-                  <Badge variant="primary">{result.votes}표</Badge>
+                  <Badge variant="primary">{t("votes", { count: result.votes })}</Badge>
                 </div>
 
                 <div className="h-2 w-full overflow-hidden rounded-full bg-slate-700">
@@ -76,7 +78,7 @@ export default function VoteResults({ results, players, anonymousVoting, onConti
         <Card.Footer className="flex justify-center">
           {onContinue && (
             <Button variant="primarySolid" className="max-w-[150px] w-[30%] min-w-[120px]" onClick={onContinue}>
-              다음 단계로
+              {t("next-step")}
             </Button>
           )}
         </Card.Footer>

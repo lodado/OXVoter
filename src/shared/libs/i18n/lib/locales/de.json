@@ -176,5 +176,11 @@
     "submit-vote": "Stimme abgeben",
     "force-end": "Erzwungenes Beenden",
     "player-list": "Spielerliste"
+  },
+  "voteResults": {
+    "title": "Abstimmungsergebnisse",
+    "unknown-player": "Unbekannt",
+    "votes": "{count} Stimmen",
+    "next-step": "Nächster Schritt"
   }
 }

@@ -176,5 +176,11 @@
     "submit-vote": "إرسال التصويت",
     "force-end": "إنهاء القسري",
     "player-list": "قائمة اللاعبين"
+  },
+  "voteResults": {
+    "title": "نتائج التصويت",
+    "unknown-player": "غير معروف",
+    "votes": "{count} صوت",
+    "next-step": "الخطوة التالية"
   }
 }

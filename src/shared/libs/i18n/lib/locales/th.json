@@ -176,5 +176,11 @@
     "submit-vote": "ส่งคะแนน",
     "force-end": "บังคับให้สิ้นสุด",
     "player-list": "รายชื่อผู้เล่น"
+  },
+  "voteResults": {
+    "title": "ผลการลงคะแนน",
+    "unknown-player": "ไม่ทราบ",
+    "votes": "{count} คะแนน",
+    "next-step": "ขั้นตอนถัดไป"
   }
 }

@@ -176,5 +176,11 @@
     "submit-vote": "Oyu Gönder",
     "force-end": "Zorla Bitir",
     "player-list": "Oyuncu Listesi"
+  },
+  "voteResults": {
+    "title": "Oylama Sonuçları",
+    "unknown-player": "Bilinmiyor",
+    "votes": "{count} oy",
+    "next-step": "Sonraki Adım"
   }
 }

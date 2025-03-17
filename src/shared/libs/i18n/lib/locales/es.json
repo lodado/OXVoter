@@ -176,5 +176,11 @@
     "submit-vote": "Enviar voto",
     "force-end": "Forzar finalización",
     "player-list": "Lista de jugadores"
+  },
+  "voteResults": {
+    "title": "Resultados de la votación",
+    "unknown-player": "Desconocido",
+    "votes": "{count} votos",
+    "next-step": "Siguiente paso"
   }
 }

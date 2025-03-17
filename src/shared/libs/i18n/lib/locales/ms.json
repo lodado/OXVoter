@@ -176,5 +176,11 @@
     "submit-vote": "Hantar Undian",
     "force-end": "Tamatkan Secara Paksa",
     "player-list": "Senarai Pemain"
+  },
+  "voteResults": {
+    "title": "Keputusan Undian",
+    "unknown-player": "Tidak Diketahui",
+    "votes": "{count} undi",
+    "next-step": "Langkah Seterusnya"
   }
 }

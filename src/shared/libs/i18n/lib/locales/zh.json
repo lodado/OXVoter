@@ -176,5 +176,11 @@
     "submit-vote": "提交投票",
     "force-end": "强制计票",
     "player-list": "玩家列表"
+  },
+  "voteResults": {
+    "title": "投票结果",
+    "unknown-player": "未知",
+    "votes": "{count}票",
+    "next-step": "下一步"
   }
 }

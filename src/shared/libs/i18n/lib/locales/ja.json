@@ -176,5 +176,11 @@
     "submit-vote": "投票する",
     "force-end": "強制集計",
     "player-list": "プレイヤーリスト"
+  },
+  "voteResults": {
+    "title": "投票結果",
+    "unknown-player": "不明",
+    "votes": "{count}票",
+    "next-step": "次のステップへ"
   }
 }

@@ -176,5 +176,11 @@
     "submit-vote": "मतदान करें",
     "force-end": "बलपूर्वक समाप्त करें",
     "player-list": "खिलाड़ी सूची"
+  },
+  "voteResults": {
+    "title": "मतदान परिणाम",
+    "unknown-player": "अज्ञात",
+    "votes": "{count} वोट",
+    "next-step": "अगले चरण पर"
   }
 }

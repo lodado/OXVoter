@@ -176,5 +176,11 @@
     "submit-vote": "Kirim Suara",
     "force-end": "Paksa Selesai",
     "player-list": "Daftar Pemain"
+  },
+  "voteResults": {
+    "title": "Hasil Pemungutan Suara",
+    "unknown-player": "Tidak Diketahui",
+    "votes": "{count} suara",
+    "next-step": "Langkah Selanjutnya"
   }
 }

@@ -176,5 +176,11 @@
     "submit-vote": "Submit Vote",
     "force-end": "Force End",
     "player-list": "Player List"
+  },
+  "voteResults": {
+    "title": "Vote Results",
+    "unknown-player": "Unknown",
+    "votes": "{count} votes",
+    "next-step": "Next Step"
   }
 }

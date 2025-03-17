@@ -176,5 +176,11 @@
     "submit-vote": "Invia voto",
     "force-end": "Forza Fine",
     "player-list": "Elenco giocatori"
+  },
+  "voteResults": {
+    "title": "Risultati del voto",
+    "unknown-player": "Sconosciuto",
+    "votes": "{count} voti",
+    "next-step": "Passaggio successivo"
   }
 }

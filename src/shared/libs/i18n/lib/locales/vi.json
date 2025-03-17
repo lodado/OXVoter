@@ -176,5 +176,11 @@
     "submit-vote": "Gửi phiếu bầu",
     "force-end": "Kết thúc cưỡng bức",
     "player-list": "Danh sách người chơi"
+  },
+  "voteResults": {
+    "title": "Kết quả bỏ phiếu",
+    "unknown-player": "Không xác định",
+    "votes": "{count} phiếu",
+    "next-step": "Bước tiếp theo"
   }
 }

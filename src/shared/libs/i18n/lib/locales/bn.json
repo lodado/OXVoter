@@ -176,5 +176,11 @@
     "submit-vote": "ভোট দিন",
     "force-end": "জোরপূর্বক গণনা",
     "player-list": "খেলোয়াড়দের তালিকা"
+  },
+  "voteResults": {
+    "title": "ভোটের ফলাফল",
+    "unknown-player": "অজানা",
+    "votes": "{count} ভোট",
+    "next-step": "পরবর্তী ধাপে"
   }
 }
