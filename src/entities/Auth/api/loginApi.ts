@@ -15,6 +15,7 @@ export const handleDeleteUserId = async () => {
   return request({
     method: "DELETE",
     url: "/api/auth",
+    isClientServer: true,
   });
 };
  

@@ -1,4 +1,5 @@
 import { Client, IMessage } from "@stomp/stompjs";
+import SockJS from "sockjs-client";
 
 import { SocketConnectionError } from "@/shared/constants/error/socketError";
 
@@ -32,28 +33,51 @@ export class SocketPubSubManager extends AbstractSocketPubSubManager {
     const timeout = new Promise<boolean>((resolve, reject) => {
       setTimeout(() => {
         reject(new SocketConnectionError({ message: "timeout" }));
-        this.client!.deactivate();
+
         reconnectCount = MAX_TRY_CONNECTION_COUNT + 1;
       }, TIMEOUT_DELAY);
     });
 
     const tryToConnect = new Promise<boolean>((resolve, reject) => {
       this.client = new Client({
-        brokerURL: this.url,
+        webSocketFactory: () => new SockJS(this.url),
+
         reconnectDelay: RECONNECT_DELAY,
-        heartbeatIncoming: 4000,
-        heartbeatOutgoing: 4000,
+        heartbeatIncoming: 10000,
+        heartbeatOutgoing: 10000,
+
         onConnect: () => {
           resolve(true);
+
+          /* 
+          this.client!.subscribe("/sub/chat/room/e76033eb-49ba-4917-9c6b-e8080f6933a7", (message: IMessage) => {
+            // console.log(receiveData);
+          });
+
+          this.client?.publish({
+            destination: "/pub/chat/message",
+            body: JSON.stringify({
+              type: "TALK",
+              roomId: "e76033eb-49ba-4917-9c6b-e8080f6933a7",
+              sender: "ct1",
+              message: "hihi",
+            }),
+          });
+          */
+
+          console.log("test, test");
         },
         onStompError: (frame) => {
           console.error("STOMP 에러:", frame);
-          reject(false);
+
+          reject(new SocketConnectionError({ message: "error" }));
         },
         debug: (str: string) => {
           console.log(str);
         },
         onWebSocketClose: (evt) => {
+          console.log("소켓 연결 종료:", evt);
+
           reconnectCount++;
           if (reconnectCount >= MAX_TRY_CONNECTION_COUNT) {
             this.client!.deactivate(); // 클라이언트를 비활성화하여 더 이상 재연결하지 않음

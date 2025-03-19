@@ -10,10 +10,11 @@ import RoomPage from "./components/Room";
 
 const page = async (props: { searchParams: { username?: string }; params: { id: string } }) => {
   const { searchParams, params } = props;
-
+ 
   if (!searchParams.username) {
     redirect(`${PAGE_ROUTE.JOIN_ROOM}?roomName=${params.id}`);
   }
+     
 
   return (
     <>

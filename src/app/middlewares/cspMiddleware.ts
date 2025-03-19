@@ -4,7 +4,8 @@ import { THIRD_PARTY_CONNECT_SRC_LIST, THIRD_PARTY_IMAGE_SRC_LIST } from "./thir
 
 export const cspMiddleware = (request: NextRequest, response: NextResponse) => {
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
-  const cspHeader = `
+  const cspHeader = ` 
+ 
     default-src 'self';
     style-src 'self' 'unsafe-inline' spoqa.github.io cdn.jsdelivr.net data:;
     img-src 'self' blob: data: ${THIRD_PARTY_IMAGE_SRC_LIST.join(" ")};
@@ -21,7 +22,8 @@ export const cspMiddleware = (request: NextRequest, response: NextResponse) => {
     manifest-src 'self';
     report-uri https://o4506497206779904.ingest.sentry.io/api/4506497210253317/security/?sentry_key=c0d1bc230a8ad553b5f82c9efd56882a;
     report-to csp-endpoint;
-`;
+  `; 
+
   // Replace newline characters and spaces
   const contentSecurityPolicyHeaderValue = cspHeader.replace(/\s{2,}/g, " ").trim();
 

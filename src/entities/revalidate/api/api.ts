@@ -5,5 +5,6 @@ export async function postRevalidateTag({ tagName }: { tagName: string | string[
     url: `/api/revalidate`,
     method: "POST",
     body: JSON.stringify({ tagName }),
+    isClientServer: true,
   });
 }

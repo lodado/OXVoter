@@ -13,5 +13,6 @@ export const postUserFeedback = async ({
     url: "/api/user-feedback",
     method: "POST",
     body: JSON.stringify({ userName, email, message }),
+    isClientServer: true,
   });
 };

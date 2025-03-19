@@ -17,6 +17,8 @@ const request = async <T>({
   params,
   timeout = 5000,
   isSignalRequired = true,
+  isClientServer = false,
+
   ...options
 }: {
   url: string;
@@ -24,6 +26,7 @@ const request = async <T>({
   params?: Record<string, unknown>;
   timeout?: number;
   isSignalRequired?: boolean;
+  isClientServer?: boolean;
 } & RequestInit): Promise<T> => {
   const controller = isServerSide() ? new AbortController() : (new MockController() as AbortController);
 
@@ -44,7 +47,10 @@ const request = async <T>({
     requestHeaders.Cookie = cookieString;
   }
 
-  const urlObject = new URL(url, process.env.NEXT_PUBLIC_CLIENT_URL);
+  const urlObject = new URL(
+    url,
+    isClientServer ? process.env.NEXT_PUBLIC_CLIENT_URL : process.env.NEXT_PUBLIC_SERVER_URL
+  );
 
   if (params) {
     const searchParams = new URLSearchParams(params as Record<string, string>);
