@@ -1,4 +1,4 @@
-import { Client, IMessage } from "@stomp/stompjs";
+import { Client, IMessage, Stomp } from "@stomp/stompjs";
 import SockJS from "sockjs-client";
 
 import { SocketConnectionError } from "@/shared/constants/error/socketError";
@@ -40,7 +40,11 @@ export class SocketPubSubManager extends AbstractSocketPubSubManager {
 
     const tryToConnect = new Promise<boolean>((resolve, reject) => {
       this.client = new Client({
-        webSocketFactory: () => new SockJS(this.url),
+        webSocketFactory: () => {
+          const socket = new SockJS(this.url);
+
+          return socket;
+        },
 
         reconnectDelay: RECONNECT_DELAY,
         heartbeatIncoming: 10000,
@@ -48,6 +52,34 @@ export class SocketPubSubManager extends AbstractSocketPubSubManager {
 
         onConnect: () => {
           resolve(true);
+
+          this.client?.subscribe("/sub/lobby/a6cbe978-c33e-44a7-86fa-def632e47540/enter", (message: IMessage) => {
+            console.log(message);
+          });
+
+          this.client?.subscribe("/sub/room/a6cbe978-c33e-44a7-86fa-def632e47540", (message: IMessage) => {
+            console.log(message);
+          });
+
+          this.client?.publish({
+            destination: "/lobby/user/enter",
+            body: JSON.stringify({
+              type: "TALK",
+              roomId: "a6cbe978-c33e-44a7-86fa-def632e47540",
+              sender: "ct1",
+              message: [],
+            }),
+          });
+
+          this.client?.publish({
+            destination: "/pub/chat/message/send",
+            body: JSON.stringify({
+              type: "TALK",
+              roomId: "a6cbe978-c33e-44a7-86fa-def632e47540",
+              sender: "ct1",
+              message: [],
+            }),
+          });
 
           /* 
           this.client!.subscribe("/sub/chat/room/e76033eb-49ba-4917-9c6b-e8080f6933a7", (message: IMessage) => {

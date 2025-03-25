@@ -13,6 +13,8 @@ export const THIRD_PARTY_CONNECT_SRC_LIST = [
   "https://api.dictionaryapi.dev",
   process.env.NEXT_PUBLIC_API_URL,
   process.env.NEXT_PUBLIC_SOCKET_URL,
+  process.env.NEXT_PUBLIC_SERVER_URL,
+  process.env.NEXT_PUBLIC_SERVER_URL?.replace("http", "ws"),
 ];
 
 export const THIRD_PARTY_IMAGE_SRC_LIST = [
