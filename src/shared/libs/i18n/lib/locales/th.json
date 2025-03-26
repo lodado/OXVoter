@@ -188,5 +188,17 @@
     "roomId": "รหัสห้อง: {id}",
     "role": "บทบาท: {role}",
     "username": "{username}"
+  },
+  "GET_ROOM_ERROR_NOT_FOUND": {
+    "title": "ไม่พบห้อง",
+    "description": "ห้องที่คุณร้องขอไม่มีอยู่หรือถูกลบไปแล้ว"
+  },
+  "GET_ROOM_ERROR_ROOM_EMPTY": {
+    "title": "ห้องเต็มแล้ว",
+    "description": "ไม่สามารถเข้าร่วมได้อีก"
+  },
+  "GET_ROOM_SAME_USER_NAME": {
+    "title": "ชื่อเล่นซ้ำ",
+    "description": "มีผู้ใช้ชื่อเล่นนี้อยู่แล้ว"
   }
 }

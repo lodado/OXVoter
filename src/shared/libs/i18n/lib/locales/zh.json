@@ -188,5 +188,17 @@
     "roomId": "房间ID: {id}",
     "role": "角色: {role}",
     "username": "{username}"
+  },
+  "GET_ROOM_ERROR_NOT_FOUND": {
+    "title": "找不到房间",
+    "description": "您请求的房间不存在或已被删除。"
+  },
+  "GET_ROOM_ERROR_ROOM_EMPTY": {
+    "title": "房间已满",
+    "description": "无法再加入新用户。"
+  },
+  "GET_ROOM_SAME_USER_NAME": {
+    "title": "昵称重复",
+    "description": "已有相同昵称的用户存在。"
   }
 }

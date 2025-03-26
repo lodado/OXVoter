@@ -188,5 +188,17 @@
     "roomId": "ID della Stanza: {id}",
     "role": "Ruolo: {role}",
     "username": "{username}"
+  },
+  "GET_ROOM_ERROR_NOT_FOUND": {
+    "title": "Stanza non trovata",
+    "description": "La stanza richiesta non esiste o è stata eliminata."
+  },
+  "GET_ROOM_ERROR_ROOM_EMPTY": {
+    "title": "Stanza piena",
+    "description": "Nessun altro utente può entrare."
+  },
+  "GET_ROOM_SAME_USER_NAME": {
+    "title": "Nickname duplicato",
+    "description": "Esiste già un utente con lo stesso nickname."
   }
 }

@@ -188,5 +188,17 @@
     "roomId": "Oda Kimliği: {id}",
     "role": "Rol: {role}",
     "username": "{username}"
+  },
+  "GET_ROOM_ERROR_NOT_FOUND": {
+    "title": "Oda Bulunamadı",
+    "description": "İstediğiniz oda mevcut değil veya silinmiş."
+  },
+  "GET_ROOM_ERROR_ROOM_EMPTY": {
+    "title": "Oda Dolu",
+    "description": "Bu odaya başka kullanıcı katılamaz."
+  },
+  "GET_ROOM_SAME_USER_NAME": {
+    "title": "Takma Ad Çakışması",
+    "description": "Aynı takma ada sahip bir kullanıcı zaten mevcut."
   }
 }

@@ -188,5 +188,17 @@
     "roomId": "कक्ष ID: {id}",
     "role": "भूमिका: {role}",
     "username": "{username}"
+  },
+  "GET_ROOM_ERROR_NOT_FOUND": {
+    "title": "कक्ष नहीं मिला",
+    "description": "आपका अनुरोधित कक्ष मौजूद नहीं है या हटा दिया गया है।"
+  },
+  "GET_ROOM_ERROR_ROOM_EMPTY": {
+    "title": "कक्ष भरा हुआ है",
+    "description": "अब और उपयोगकर्ता शामिल नहीं हो सकते।"
+  },
+  "GET_ROOM_SAME_USER_NAME": {
+    "title": "उपनाम डुप्लिकेट",
+    "description": "एक ही उपनाम वाला उपयोगकर्ता पहले से मौजूद है।"
   }
 }

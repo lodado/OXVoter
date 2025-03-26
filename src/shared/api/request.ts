@@ -68,9 +68,16 @@ const request = async <T>({
     ...options,
   });
 
-  if (!response.ok) throw new Error(`Failed to fetch ${response.url} ${response.status} ${response.statusText}`);
-
   const responseData = await response.json();
+
+  if (!response.ok) {
+    const error = new Error(`Failed to fetch ${response.url} ${response.status} ${response.statusText}`);
+
+    (error as any).code = responseData.code;
+
+    throw error;
+  }
+
   return responseData;
 };
 

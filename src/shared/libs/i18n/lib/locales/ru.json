@@ -188,5 +188,17 @@
     "roomId": "ID комнаты: {id}",
     "role": "Роль: {role}",
     "username": "{username}"
+  },
+  "GET_ROOM_ERROR_NOT_FOUND": {
+    "title": "Комната не найдена",
+    "description": "Запрошенная комната не существует или была удалена."
+  },
+  "GET_ROOM_ERROR_ROOM_EMPTY": {
+    "title": "Комната заполнена",
+    "description": "Больше нельзя присоединиться к комнате."
+  },
+  "GET_ROOM_SAME_USER_NAME": {
+    "title": "Повторяющееся имя",
+    "description": "Пользователь с таким именем уже существует."
   }
 }

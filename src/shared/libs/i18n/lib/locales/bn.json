@@ -188,5 +188,17 @@
     "roomId": "রুম আইডি: {id}",
     "role": "ভূমিকা: {role}",
     "username": "{username}"
+  },
+  "GET_ROOM_ERROR_NOT_FOUND": {
+    "title": "রুম খুঁজে পাওয়া যায়নি",
+    "description": "আপনার অনুরোধকৃত রুমটি বিদ্যমান নেই বা মুছে ফেলা হয়েছে।"
+  },
+  "GET_ROOM_ERROR_ROOM_EMPTY": {
+    "title": "রুম পূর্ণ",
+    "description": "আর কোনো ব্যবহারকারী যোগ দিতে পারবে না।"
+  },
+  "GET_ROOM_SAME_USER_NAME": {
+    "title": "নাম ডুপ্লিকেট",
+    "description": "একই নামের একজন ব্যবহারকারী ইতিমধ্যেই আছেন।"
   }
 }

@@ -188,5 +188,17 @@
     "roomId": "ルームID: {id}",
     "role": "役割: {role}",
     "username": "{username}"
+  },
+  "GET_ROOM_ERROR_NOT_FOUND": {
+    "title": "ルームが見つかりません",
+    "description": "リクエストされたルームは存在しないか、削除されました。"
+  },
+  "GET_ROOM_ERROR_ROOM_EMPTY": {
+    "title": "ルームが満員です",
+    "description": "これ以上新しいユーザーは参加できません。"
+  },
+  "GET_ROOM_SAME_USER_NAME": {
+    "title": "ニックネームの重複",
+    "description": "同じニックネームのユーザーがすでに存在します。"
   }
 }

@@ -1,16 +1,18 @@
 "use client";
 
+import { method } from "lodash-es";
 import { ArrowBigLeft, Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import type React from "react";
 import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 
 import GameHeader from "@/features/Settings/ui/GameHeader";
+import { request } from "@/shared";
 import { Button, Card, Form, Input, Switch } from "@/shared/ui";
 import SpinControl from "@/shared/ui/Input/SpinControl";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
+import { useToastStore } from "@/shared/ui/Toast/stores";
 
 import { AbilityProvider } from "./components/RoleSettingTabs/AbilityProvider";
 import { RoleProvider } from "./components/RoleSettingTabs/RoleProvider";
@@ -32,45 +34,43 @@ export default function CreateRoom() {
   const [specialVoting, setSpecialVoting] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  const { addToast } = useToastStore();
+
   const handleCreateRoom = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
     try {
-      // 실제 서버 통신 대신 로컬에서 UUID 생성
-      const roomId = uuidv4();
-
       // 방 설정을 로컬 스토리지에 저장
       const roomData = {
-        id: roomId,
         name: roomName,
-        maxPlayers,
+        maxPlayerCount: maxPlayers,
         settings: {
           randomRoles,
           anonymousVoting,
           specialVoting,
         },
-        players: [
-          {
-            id: uuidv4(),
-            username,
-            isHost: true,
-            isAlive: true,
-          },
-        ],
-        gameState: "lobby",
-        createdAt: new Date().toISOString(),
       };
 
-      localStorage.setItem(`room_${roomId}`, JSON.stringify(roomData));
+      const data = await request<{
+        roomId: string;
+      }>({
+        method: "POST",
+        url: "/rooms",
+        body: JSON.stringify(roomData),
+      });
 
-      // 1초 후 방으로 이동 (로딩 시뮬레이션)
-      setTimeout(() => {
-        router.push(`/room/${roomId}?username=${encodeURIComponent(username)}&isHost=true`);
-      }, 1000);
+      const roomId = data.roomId;
+      router.push(`/room/${roomId}?username=${encodeURIComponent(username)}&isHost=true`);
     } catch (error) {
       console.error("방 생성 오류:", error);
       setIsLoading(false);
+
+      addToast({
+        title: "error",
+        description: "error has occurred",
+        type: "error",
+      });
     }
   };
 

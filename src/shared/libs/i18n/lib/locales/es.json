@@ -188,5 +188,17 @@
     "roomId": "ID de la sala: {id}",
     "role": "Rol: {role}",
     "username": "{username}"
+  },
+  "GET_ROOM_ERROR_NOT_FOUND": {
+    "title": "Sala no encontrada",
+    "description": "La sala solicitada no existe o ha sido eliminada."
+  },
+  "GET_ROOM_ERROR_ROOM_EMPTY": {
+    "title": "La sala está llena",
+    "description": "No se pueden unir más usuarios."
+  },
+  "GET_ROOM_SAME_USER_NAME": {
+    "title": "Apodo duplicado",
+    "description": "Ya existe un usuario con el mismo apodo."
   }
 }

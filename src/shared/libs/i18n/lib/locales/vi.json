@@ -188,5 +188,17 @@
     "roomId": "ID Phòng: {id}",
     "role": "Vai trò: {role}",
     "username": "{username}"
+  },
+  "GET_ROOM_ERROR_NOT_FOUND": {
+    "title": "Không tìm thấy phòng",
+    "description": "Phòng bạn yêu cầu không tồn tại hoặc đã bị xóa."
+  },
+  "GET_ROOM_ERROR_ROOM_EMPTY": {
+    "title": "Phòng đã đầy",
+    "description": "Không thể thêm người dùng mới."
+  },
+  "GET_ROOM_SAME_USER_NAME": {
+    "title": "Tên hiển thị trùng lặp",
+    "description": "Đã có người dùng sử dụng tên hiển thị này."
   }
 }

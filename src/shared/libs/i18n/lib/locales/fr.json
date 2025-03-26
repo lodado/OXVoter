@@ -188,5 +188,17 @@
     "roomId": "ID de la salle: {id}",
     "role": "Rôle: {role}",
     "username": "{username}"
+  },
+  "GET_ROOM_ERROR_NOT_FOUND": {
+    "title": "Salle introuvable",
+    "description": "La salle demandée n'existe pas ou a été supprimée."
+  },
+  "GET_ROOM_ERROR_ROOM_EMPTY": {
+    "title": "Salle complète",
+    "description": "Aucun autre utilisateur ne peut rejoindre cette salle."
+  },
+  "GET_ROOM_SAME_USER_NAME": {
+    "title": "Pseudo en double",
+    "description": "Un utilisateur avec le même pseudo existe déjà."
   }
 }

@@ -188,5 +188,17 @@
     "roomId": "ID Ruangan: {id}",
     "role": "Peran: {role}",
     "username": "{username}"
+  },
+  "GET_ROOM_ERROR_NOT_FOUND": {
+    "title": "Ruangan Tidak Ditemukan",
+    "description": "Ruangan yang Anda minta tidak ada atau telah dihapus."
+  },
+  "GET_ROOM_ERROR_ROOM_EMPTY": {
+    "title": "Ruangan Penuh",
+    "description": "Tidak bisa menambahkan pengguna baru."
+  },
+  "GET_ROOM_SAME_USER_NAME": {
+    "title": "Nama Panggilan Duplikat",
+    "description": "Pengguna dengan nama yang sama sudah ada."
   }
 }

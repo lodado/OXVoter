@@ -188,5 +188,17 @@
     "roomId": "ID Bilik: {id}",
     "role": "Peranan: {role}",
     "username": "{username}"
+  },
+  "GET_ROOM_ERROR_NOT_FOUND": {
+    "title": "Bilik Tidak Ditemui",
+    "description": "Bilik yang diminta tidak wujud atau telah dipadam."
+  },
+  "GET_ROOM_ERROR_ROOM_EMPTY": {
+    "title": "Bilik Penuh",
+    "description": "Tiada pengguna tambahan boleh menyertai bilik ini."
+  },
+  "GET_ROOM_SAME_USER_NAME": {
+    "title": "Nama Samaran Pendua",
+    "description": "Pengguna dengan nama samaran yang sama sudah wujud."
   }
 }

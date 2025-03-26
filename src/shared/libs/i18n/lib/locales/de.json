@@ -188,5 +188,17 @@
     "roomId": "Raum-ID: {id}",
     "role": "Rolle: {role}",
     "username": "{username}"
+  },
+  "GET_ROOM_ERROR_NOT_FOUND": {
+    "title": "Raum nicht gefunden",
+    "description": "Der angeforderte Raum existiert nicht oder wurde gelöscht."
+  },
+  "GET_ROOM_ERROR_ROOM_EMPTY": {
+    "title": "Raum ist voll",
+    "description": "Keine weiteren Benutzer können beitreten."
+  },
+  "GET_ROOM_SAME_USER_NAME": {
+    "title": "Doppelter Spitzname",
+    "description": "Ein Benutzer mit diesem Spitznamen existiert bereits."
   }
 }
