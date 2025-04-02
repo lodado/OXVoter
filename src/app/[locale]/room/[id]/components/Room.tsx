@@ -4,8 +4,7 @@ import { UseFunnelOptions } from "@use-funnel/browser";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import { useState } from "react";
 
 import { useSocketRegister } from "@/entities/Socket/hooks";
 import GameHeader from "@/features/Settings/ui/GameHeader";
@@ -87,15 +86,9 @@ const fallbackMappings: FallbackMapping[] = [
 ];
 
 const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-
-  const { addToast } = useToastStore();
   const { isSocketTryingToConnect } = useSocketRegister();
 
-  const username = searchParams.get("username") || "게스트";
-  const isHost = searchParams.get("isHost") === "true";
-
+  const [username, setUsername] = useState("");
   const [playerId, setPlayerId] = useState<string>("");
   const [players, setPlayers] = useState<Player[]>([]);
   const [myRole, setMyRole] = useState<string | null>(null);
@@ -125,120 +118,10 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
     },
   } satisfies UseFunnelOptions<GameState>);
 
-  // 방 데이터 로드
-  useEffect(() => {
-    const loadRoomData = () => {
-      try {
-        const roomData = localStorage.getItem(`room_${params.id}`);
-
-        if (!roomData) {
-          addToast({
-            title: "방을 찾을 수 없습니다",
-            description: "존재하지 않는 방입니다",
-            type: "error",
-          });
-          router.push("/");
-          return;
-        }
-
-        const room = JSON.parse(roomData) as RoomData;
-
-        // 플레이어 ID 설정 (이미 있는 경우 찾기, 없으면 새로 생성)
-        const existingPlayer = room.players.find((p) => p.username === username);
-        const newPlayerId = existingPlayer?.id || uuidv4();
-        setPlayerId(newPlayerId);
-
-        // 플레이어가 없으면 추가
-        if (!existingPlayer) {
-          const newPlayer = {
-            id: newPlayerId,
-            username,
-            isHost,
-            isAlive: true,
-          };
-          room.players.push(newPlayer);
-          localStorage.setItem(`room_${params.id}`, JSON.stringify(room));
-        }
-
-        // 방 데이터 설정
-        setPlayers(room.players);
-        setRoomSettings({
-          roomName: room.name,
-          maxPlayers: room.maxPlayers,
-          ...room.settings,
-        });
-
-        // 현재 투표 및 결과 설정
-        if (room.currentVote) {
-          setCurrentVote(room.currentVote);
-        }
-
-        if (room.voteResults) {
-          setVoteResults(room.voteResults);
-        }
-
-        // 내 역할 설정
-        const myPlayerData = room.players.find((p) => p.id === newPlayerId);
-        if (myPlayerData && myPlayerData.role) {
-          setMyRole(myPlayerData.role);
-        }
-
-        setIsLoading(false);
-      } catch (error) {
-        console.error("방 데이터 로드 오류:", error);
-        addToast({
-          title: "오류가 발생했습니다",
-          description: "방 데이터를 불러오는 중 오류가 발생했습니다",
-          type: "error",
-        });
-        router.push("/");
-      }
-    };
-
-    loadRoomData();
-
-    // 주기적으로 방 데이터 업데이트 (실시간 통신 모킹)
-    const interval = setInterval(loadRoomData, 2000);
-
-    return () => clearInterval(interval);
-  }, [params.id, username, isHost, router]);
-
-  // 게임 시작
-  const startGame = () => {
-    if (!isHost) return;
-
-    try {
-      const roomData = localStorage.getItem(`room_${params.id}`);
-
-      if (!roomData) {
-        return;
-      }
-
-      const room = JSON.parse(roomData) as RoomData;
-
-      room.players.forEach((player) => {
-        player.role = ROLES.CITIZEN;
-      });
-
-      // 내 역할 설정
-      const myPlayerData = room.players.find((p) => p.id === playerId);
-      if (myPlayerData && myPlayerData.role) {
-        setMyRole(myPlayerData.role);
-      }
-
-      // 방 데이터 저장
-      localStorage.setItem(`room_${params.id}`, JSON.stringify(room));
-
-      setPlayers(room.players);
-    } catch (error) {
-      console.error("게임 시작 오류:", error);
-    }
-  };
-
   const tInfo = useTranslations("infoPage");
   const tRoom = useTranslations("Room");
 
-  if (isSocketTryingToConnect || isLoading) {
+  if (isSocketTryingToConnect) {
     return <InfoPage title={tInfo("loading-title")} description={tInfo("loading-description")} />;
   }
 
@@ -268,9 +151,8 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
               <GameLobby
                 players={players}
                 settings={roomSettings}
-                isHost={isHost}
+                isHost={false}
                 onStartGame={() => {
-                  startGame();
                   history.push("game", {});
                 }}
               />

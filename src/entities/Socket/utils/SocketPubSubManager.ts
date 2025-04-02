@@ -2,21 +2,18 @@ import { Client, IMessage, Stomp } from "@stomp/stompjs";
 import SockJS from "sockjs-client";
 
 import { SocketConnectionError } from "@/shared/constants/error/socketError";
-
-import { AbstractSocketPubSubManager } from "./AbstractSocketPubSubManager";
-
+ 
 const MAX_TRY_CONNECTION_COUNT = 1;
 const TIMEOUT_DELAY = 15000;
 const RECONNECT_DELAY = 5000;
 
-export class SocketPubSubManager extends AbstractSocketPubSubManager {
+export class SocketPubSubManager {
   private client: Client | null = null;
   private url: string;
   private subscriberCount: number = 0;
   private disconnectTimer: ReturnType<typeof setTimeout> | null = null;
 
   constructor(url: string) {
-    super();
     this.url = url;
   }
 
@@ -24,7 +21,7 @@ export class SocketPubSubManager extends AbstractSocketPubSubManager {
    * connect
    * 소켓을 생성하고 이벤트 핸들러를 등록합니다.
    */
-  async connect() {
+  async connect(roomId: string, userName: string) {
     // 이미 연결되어 있으면 재연결하지 않음.
     if (this.client && this.client.connected) return Promise.resolve(true);
 
@@ -53,30 +50,19 @@ export class SocketPubSubManager extends AbstractSocketPubSubManager {
         onConnect: () => {
           resolve(true);
 
-          this.client?.subscribe("/sub/lobby/a6cbe978-c33e-44a7-86fa-def632e47540/enter", (message: IMessage) => {
-            console.log(message);
+          this.client?.subscribe(`/sub/room/${roomId}/users`, (message: IMessage) => {
+            console.log(JSON.parse(message.body), "123214214");
           });
 
-          this.client?.subscribe("/sub/room/a6cbe978-c33e-44a7-86fa-def632e47540", (message: IMessage) => {
-            console.log(message);
-          });
-
-          this.client?.publish({
-            destination: "/lobby/user/enter",
-            body: JSON.stringify({
-              type: "TALK",
-              roomId: "a6cbe978-c33e-44a7-86fa-def632e47540",
-              sender: "ct1",
-              message: [],
-            }),
+          this.client?.subscribe(`/sub/room/${roomId}/enter`, (message: IMessage) => {
+            console.log(JSON.parse(message.body));
           });
 
           this.client?.publish({
-            destination: "/pub/chat/message/send",
+            destination: `/pub/room/${roomId}/join`,
             body: JSON.stringify({
-              type: "TALK",
-              roomId: "a6cbe978-c33e-44a7-86fa-def632e47540",
-              sender: "ct1",
+              roomId: roomId,
+              sender: userName,
               message: [],
             }),
           });
@@ -142,7 +128,7 @@ export class SocketPubSubManager extends AbstractSocketPubSubManager {
    * 구독자가 소켓 사용을 시작할 때 내부 카운트를 증가시키고,
    * 필요시 STOMP 연결을 시작합니다.
    */
-  registerSubscriber() {
+  registerSubscriber(id: string, userName: string) {
     this.subscriberCount += 1;
 
     // 기존에 예약된 disconnect 타이머가 있으면 취소
@@ -153,7 +139,7 @@ export class SocketPubSubManager extends AbstractSocketPubSubManager {
 
     // 구독자가 1 이상인데 연결되어 있지 않다면 연결 시도
     if (!this.client || !this.client.connected) {
-      return this.connect();
+      return this.connect(id, userName);
     }
 
     return Promise.resolve(true);

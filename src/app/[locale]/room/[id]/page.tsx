@@ -12,7 +12,7 @@ const page = async (props: { searchParams: { username?: string }; params: { id: 
   const { searchParams, params } = props;
  
   if (!searchParams.username) {
-    redirect(`${PAGE_ROUTE.JOIN_ROOM}?roomName=${params.id}`);
+    // redirect(`${PAGE_ROUTE.JOIN_ROOM}?roomName=${params.id}`);
   }
      
 

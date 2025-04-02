@@ -44,6 +44,7 @@ export default function CreateRoom() {
       // 방 설정을 로컬 스토리지에 저장
       const roomData = {
         name: roomName,
+        hostName: username,
         maxPlayerCount: maxPlayers,
         settings: {
           randomRoles,

@@ -38,11 +38,11 @@ export default function JoinRoomPage() {
           title: "GET_ROOM_ERROR_NOT_FOUND.title",
           description: "GET_ROOM_ERROR_NOT_FOUND.description",
         },
-        ROOM_EMPTY: {
+        ROOM_ALREADY_FULL: {
           title: "GET_ROOM_ERROR_ROOM_EMPTY.title",
           description: "GET_ROOM_ERROR_ROOM_EMPTY.description",
         },
-        ROOM_SAME_USER_NAME: {
+        DUPLICATED_NAME: {
           title: "GET_ROOM_SAME_USER_NAME.title",
           description: "GET_ROOM_SAME_USER_NAME.description",
         },

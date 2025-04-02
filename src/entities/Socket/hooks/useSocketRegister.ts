@@ -1,5 +1,6 @@
 "use client";
 
+import { useParams, useSearchParams } from "next/navigation";
 import { useLayoutEffect, useState } from "react";
 
 import { SocketConnectionError } from "@/shared/constants/error/socketError";
@@ -8,6 +9,11 @@ import { useErrorBoundary } from "@/shared/hooks";
 import { useSocketContext } from "./useSocketManager";
 
 export const useSocketRegister = () => {
+  const params = useParams();
+
+  const searchParams = useSearchParams();
+  const username = searchParams.get("username") || "";
+
   const { socketController } = useSocketContext();
   const [isLoading, setLoading] = useState(true);
   const { setError } = useErrorBoundary();
@@ -17,10 +23,9 @@ export const useSocketRegister = () => {
       setLoading(true);
 
       try {
-        await socketController.registerSubscriber();
+        await socketController.registerSubscriber(params.id as string, username);
       } catch (e) {
-        /** FIXME - 나중 소캣 연결 후 주석 해제 */
-        // setError(new SocketConnectionError({}));
+        setError(new SocketConnectionError({}));
       } finally {
         setLoading(false);
       }
@@ -32,6 +37,10 @@ export const useSocketRegister = () => {
       if (!isLoading) socketController.unregisterSubscriber();
     };
   }, [socketController]);
+
+  console.log(params);
+
+  const registerUser = () => {};
 
   return { isSocketTryingToConnect: isLoading };
 };
