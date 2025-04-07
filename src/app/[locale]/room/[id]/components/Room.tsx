@@ -3,17 +3,13 @@
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
+import { GAME_STATUS, useGameInformation, useGameStatusFunnel, useSocketOrchestrator } from "@/features/GameStatus";
 import GameHeader from "@/features/Settings/ui/GameHeader";
 import { SocketConnectionError } from "@/shared/constants/error/socketError";
 import { Card, InfoPage, WithErrorBoundary } from "@/shared/ui";
 import { FallbackMapping } from "@/shared/ui/ErrorBoundary/ui/ErrorBoundary";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 
-import useGameInformation from "../hooks/useGameInformation";
-import useGameStatusFunnel from "../hooks/useGameStatusFunnel";
-import useSocketOrchestrator from "../hooks/useSocketOrchestrator";
-import { GAME_STATUS } from "../stores/GAME_STATUS";
-import { useGameStatusStore } from "../stores/useGameStatusStore";
 import GameLobby from "./funnels/game-lobby";
 import GameRoom from "./funnels/game-room";
 import VoteResults from "./funnels/vote-results";

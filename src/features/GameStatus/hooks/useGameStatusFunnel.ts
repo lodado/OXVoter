@@ -16,7 +16,7 @@ export type GameState = {
   [GAME_STATUS.DONE]: {};
 };
 
-const useGameStatusFunnel = () => {
+export const useGameStatusFunnel = () => {
   const { gameStatus } = useGameStatusStore();
 
   const funnel = useFunnelWithoutHistory<GameState>({
@@ -34,5 +34,3 @@ const useGameStatusFunnel = () => {
 
   return funnel;
 };
-
-export default useGameStatusFunnel;

@@ -4,7 +4,7 @@ import { useSocketRegister } from "@/entities/Socket/hooks";
 
 import { useGameStatusSocketRegister } from "../stores/useGameStatusStore";
 import { useUserSocketRegister } from "../stores/useUserListStore";
-import useGameInformation from "./useGameInformation";
+import { useGameInformation } from "./useGameInformation";
 
 const useSocketOrchestrator = () => {
   const { id, username } = useGameInformation();
