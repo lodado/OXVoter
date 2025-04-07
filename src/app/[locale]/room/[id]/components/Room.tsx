@@ -1,30 +1,37 @@
 "use client";
- 
-import { UseFunnelOptions } from "@use-funnel/browser";
-import { useSearchParams } from "next/navigation";
+
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import GameHeader from "@/features/Settings/ui/GameHeader";
-import { useFunnelWithoutHistory } from "@/shared";
 import { SocketConnectionError } from "@/shared/constants/error/socketError";
 import { Card, InfoPage, WithErrorBoundary } from "@/shared/ui";
 import { FallbackMapping } from "@/shared/ui/ErrorBoundary/ui/ErrorBoundary";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 
 import useGameInformation from "../hooks/useGameInformation";
+import useGameStatusFunnel from "../hooks/useGameStatusFunnel";
 import useSocketOrchestrator from "../hooks/useSocketOrchestrator";
+import { GAME_STATUS } from "../stores/GAME_STATUS";
+import { useGameStatusStore } from "../stores/useGameStatusStore";
 import GameLobby from "./funnels/game-lobby";
 import GameRoom from "./funnels/game-room";
 import VoteResults from "./funnels/vote-results";
 import VotingPhase from "./funnels/voting-phase";
 
+/** 
+  WAITING: "WAITING",
+  PLAY: "PLAY",
+  VOTED: "VOTED",
+  DONE: "DONE",
+ */
+
 type GameState = {
-  lobby: {};
-  game: {};
-  voting: {};
+  [GAME_STATUS.WAITING]: {};
+  [GAME_STATUS.PLAY]: {};
+  [GAME_STATUS.VOTED]: {};
   specialVoting: {};
-  results: {};
+  [GAME_STATUS.DONE]: {};
 };
 
 type Player = {
@@ -109,13 +116,7 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasVoted, setHasVoted] = useState(false);
 
-  const funnel = useFunnelWithoutHistory<GameState>({
-    id: "game-page",
-    initial: {
-      step: "lobby",
-      context: {},
-    },
-  } satisfies UseFunnelOptions<GameState>);
+  const funnel = useGameStatusFunnel();
 
   const tInfo = useTranslations("infoPage");
   const tRoom = useTranslations("Room");
@@ -128,7 +129,7 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
     <ReactiveLayout
       className="md:w-[1000px] p-4 min-h-[calc(100*var(--vh)-1.25rem)]"
       outerClassName="relative"
-      outerPreviousChildren={funnel.step === "lobby" && <GameHeader />}
+      outerPreviousChildren={funnel.step === GAME_STATUS.WAITING && <GameHeader />}
     >
       <div className="mx-auto w-full mt-6">
         <header className="mb-7 flex items-center justify-between">
@@ -145,33 +146,33 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
         </header>
 
         <funnel.Render
-          lobby={({ history }) => {
+          WAITING={({ history }) => {
             return (
               <GameLobby
                 players={players}
                 settings={roomSettings}
                 isHost={false}
                 onStartGame={() => {
-                  history.push("game", {});
+                  // history.push("game", {});
                 }}
               />
             );
           }}
-          game={({ history }) => {
+          PLAY={({ history }) => {
             return (
               <GameRoom
                 players={players}
                 isHost={true}
                 onStartVote={() => {
-                  history.push("voting", {});
+                  //  history.push("voting", {});
                 }}
                 onEndGame={() => {
-                  history.push("lobby", {});
+                  // history.push("lobby", {});
                 }}
               />
             );
           }}
-          voting={({ history }) => {
+          VOTED={({ history }) => {
             return (
               <VotingPhase
                 title={"투표하기"}
@@ -183,7 +184,7 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
                   { id: "abstain", text: "기권" },
                 ]}
                 onSubmitVote={(optionId: string) => {
-                  history.push("results", {});
+                  // history.push("results", {});
                 }}
                 timeLimit={60}
               />
@@ -192,7 +193,7 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
           specialVoting={({ history }) => {
             return <div>Special Voting</div>;
           }}
-          results={({ history }) => {
+          DONE={({ history }) => {
             return (
               <VoteResults
                 results={[
@@ -219,7 +220,7 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
                 players={players}
                 anonymousVoting={false}
                 onContinue={() => {
-                  history.push("game", {});
+                  // history.push("game", {});
                 }}
               />
             );
