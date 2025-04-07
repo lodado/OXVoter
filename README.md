@@ -1,101 +1,54 @@
-# Lotion
+# BoardGame-Helper(가명)
 
-this project is currently under development.
+아발론, 마피아등 여러 보드게임의 오프라인, 온라인에서 쉽게 플레이 가능하도록
+투표 관련 기능을 제공하는 웹앱 사이드 프로젝트
 
-## Project Architecture
-
-This project is designed with a focus on maintainability, scalability, and separation of concerns. The architecture leverages Clean Architecture principles, Feature-Sliced Design (FSD), and event-driven patterns using Redux and Redux-Saga.
-
-### Clean Architecture
-
-Clean Architecture is employed to achieve a clear separation of concerns.
-
-This is accomplished through modularization, encapsulation, and the arrangement of software layers.
-
-The primary layers include:
-
-```
-Entities: Core business logic and domain objects.
-
-Use Cases: Application-specific business rules.
-
-Adapters: Interface adapters and controllers.
-
-Frameworks & Drivers: External interfaces such as databases, and external APIs.
-```
-
-Business logic is handled in the UseCase layer, while libraries like Redux and TanStack Query are only responsible for propagating re-renders due to state changes.
-
-#### Clean Architecture Motivation
-
-1. Frustrated with the frequently changing frontend library ecosystem, I designed a system to extract stable business logic into a UseCase layer and connect different libraries (React, Next, Redux, etc.) via an Adapter layer.
-
-2. To abstract and unify business logic used in React's RSC and client components, delegating detailed implementations through DIP (Dependency Inversion Principle).
-
-3. To make writing test code easier.
-
-
-#### Simple Example
-
-```
-Entities: src/entities/Auth/core/entities/UserEntity.tsx
-
-Use Cases: src/entities/Auth/core/usecase/Oauth2LoginUseCase.ts, LogoutUseCase.ts 
-
-Adapters: Redux(for client state) or tanstack-query(for server state) 
-
-Frameworks & Drivers: src/entities/Auth/server/repository 
-or 
-src/entities/Auth/client/repository
-```
+## 구조 설명
 
 ### Feature-Sliced Design (FSD)
 
-Feature-Sliced Design is used to explicitly define business logic and ensure that each feature is self-contained. This approach helps in organizing the codebase by features rather than technical layers, making it easier to manage and scale.
+Feature-Sliced Design은 비즈니스 로직을 명확히 분리하고, 각 기능을 독립적으로 구성할 수 있도록 돕는 설계 방식이다. 기술 레이어 중심이 아닌 "기능 중심"으로 코드를 관리함으로써, 유지보수성과 확장성을 높이는 것이 목적이다.
 
 ```
-App: The top-level layer responsible for the application's initial setup and global configurations.
-
-homePages(Pages): Individual screens presented to the user, combining various features and entities.
-
-Widgets: A higher-level layer created by combining several feature layers.
-
-Features: Self-contained units that provide specific business functionalities.
-
-Entities: Defines data models and related logic within the business domain.
-
-Shared: A collection of utilities and components commonly used across multiple layers.
-
+App: 앱의 초기 설정 및 전역 설정 담당
+Pages: 화면 단위, 여러 기능과 엔티티를 조합해 구성
+Widgets: feature/entity/shared 레이어의 구성 요소 2개 이상을 조합한 상위 UI
+Features: 독립적인 비즈니스 기능 단위
+Entities: 도메인 모델과 관련 로직 정의
+Shared: 공통 유틸리티, 컴포넌트, 스타일 등
 ```
 
-#### FSD Motivation
+#### 도입 배경
 
+1. 의존성 관리가 어려웠고, 이를 구조적으로 해결할 수 있는 파일 구조가 필요했다.
 
-1. I encountered difficulties managing code files, which led me to feel the need for a file structure that supports more manageable dependencies.
+2. 순환 의존성을 제거하고, 각 레이어 간 관계를 명확히 드러내고 싶었다.
 
-2. I wanted to eliminate circular dependencies. It doesn't make sense for a Button to use a Calendar, but a Calendar might use a Button. I wanted to make this explicitly visible in the file structure.
+#### 커스텀 룰
 
+Widgets는 features/entities/shared 레이어의 컴포넌트 2개 이상을 조합할 때만 생성한다. widget과 feature의 경계가 모호해지는 것을 방지하기 위함이다.
 
-#### Custom roles
+대부분의 페이지는 하나의 feature만 사용하는 경우가 많다.
+따라서 해당 페이지 전용 feature는 pages 폴더 내부에 위치시키며, GNB처럼 여러 페이지에서 사용하는 공통 feature만 features/widgets에 둔다.
 
-I was concerned that following the standard FSD rules might lead to a single layer containing dozens of files, similar to atomic design, which could hurt readability.
+## 소켓 데이터 핸들링 방식
 
-So I added a few of my own rules:
+소켓 핸들링에는 Publisher-Subscriber 패턴을 적용했다. 클라이언트에서 특정 이벤트를 발행(publish)하고, 서버를 거쳐 전역 상태가 구독(subscribe)된 방식으로 갱신된다. 이 구조는 백엔드의 Event Driven 패턴과 유사하게 구성되어 있다.
 
+Publisher (Command): 클라이언트에서 소켓을 통해 서버로 명령을 전송한다. 예: `handleJoinRoomMessage()`
 
-1. I worried that the boundary between the widget layer and the features layer could be subjective and ambiguous for different people. Therefore, the widget layer is used only when combining components from the features/entities/shared layer. (at least 2 features layer components)
+Subscriber (View): 서버에서 수신한 메시지는 전역 상태 스토어에서 구독하여 처리한다. 예: `useUserSocketRegister, useGameStatusSocketRegister`
 
-2. Anticipating that too many features layers might be created but that typically only one feature would be used per page, I decided to place features used in the pages layer within that folder. The features/widgets layer is reserved for common components like the GNB Bar.
+전역 상태 업데이트: 구독된 데이터를 기반으로 상태를 업데이트하며 UI가 변경된다.
 
+```
+클라이언트 -> publisher -> 서버 -> subscriber -> 전역 상태 갱신
+```
 
-### Event-Driven Architecture with Redux and Redux-Saga (Currently experimenting)
+features/GameStatus의 useSocketOrchestrator 훅은 이러한 흐름을 통합하는 역할을 한다. 소켓 연결, 방 입장 처리, 사용자 및 게임 상태의 구독 등록 등을 하나의 흐름으로 구성하여, 컴포넌트에서는 최소한의 로직만 필요하도록 구성했다.
 
-Redux and Redux-Saga are used to implement an event-driven architecture pattern. This ensures that state changes are handled in a transactional manner, providing consistency and reliability.
+### 게임 상태 관리
 
-#### EDA Motivation
-
-I drew inspiration from the MSA architecture in backend systems and the workings of Kafka.
-
-I divided the functionality into several domains(entities) and used the publisher-subscriber pattern to propagate events (state changes) to each domain when changes occurred. Each domain handled the event appropriately, using loose coupling to reduce dependency.
-
-Additionally, I implemented it using redux-saga, ensuring that the events were either fully applied like a database transaction or rolled back if not.
+state pattern을 활용해
+각 게임의 page를 하나의 상태(페이지)로 보고,
+각 페이지에서 알맞은 이벤트를 처리하도록 구현했다.
