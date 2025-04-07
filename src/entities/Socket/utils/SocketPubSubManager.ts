@@ -21,7 +21,7 @@ export class SocketPubSubManager {
    * connect
    * 소켓을 생성하고 이벤트 핸들러를 등록합니다.
    */
-  async connect(roomId: string, userName: string) {
+  async connect(onConnectSuccess?: () => void) {
     // 이미 연결되어 있으면 재연결하지 않음.
     if (this.client && this.client.connected) return Promise.resolve(true);
 
@@ -48,14 +48,17 @@ export class SocketPubSubManager {
         heartbeatOutgoing: 10000,
 
         onConnect: () => {
-          resolve(true);
-
+          /* 
           this.client?.subscribe(`/sub/room/${roomId}/users`, (message: IMessage) => {
             console.log(JSON.parse(message.body), "123214214");
           });
 
           this.client?.subscribe(`/sub/room/${roomId}/enter`, (message: IMessage) => {
             console.log(JSON.parse(message.body));
+          });
+
+          this.client!.subscribe("/sub/chat/room/e76033eb-49ba-4917-9c6b-e8080f6933a7", (message: IMessage) => {
+            // console.log(receiveData);
           });
 
           this.client?.publish({
@@ -66,6 +69,8 @@ export class SocketPubSubManager {
               message: [],
             }),
           });
+
+          */
 
           /* 
           this.client!.subscribe("/sub/chat/room/e76033eb-49ba-4917-9c6b-e8080f6933a7", (message: IMessage) => {
@@ -83,7 +88,9 @@ export class SocketPubSubManager {
           });
           */
 
-          console.log("test, test");
+          onConnectSuccess?.();
+
+          resolve(true);
         },
         onStompError: (frame) => {
           console.error("STOMP 에러:", frame);
@@ -128,7 +135,7 @@ export class SocketPubSubManager {
    * 구독자가 소켓 사용을 시작할 때 내부 카운트를 증가시키고,
    * 필요시 STOMP 연결을 시작합니다.
    */
-  registerSubscriber(id: string, userName: string) {
+  registerSubscriber(onConnectSuccess?: () => void) {
     this.subscriberCount += 1;
 
     // 기존에 예약된 disconnect 타이머가 있으면 취소
@@ -139,7 +146,7 @@ export class SocketPubSubManager {
 
     // 구독자가 1 이상인데 연결되어 있지 않다면 연결 시도
     if (!this.client || !this.client.connected) {
-      return this.connect(id, userName);
+      return this.connect(onConnectSuccess);
     }
 
     return Promise.resolve(true);
@@ -161,10 +168,12 @@ export class SocketPubSubManager {
         this.disconnect();
       }, 5000);
     }
+
+    return this.subscriberCount <= 0;
   }
 
-  publish(destination: string = "/app/message", action: { type: string; payload: any }) {
-    if (this.client && this.client.connected) {
+  publish(destination: string = "/app/message", action: { [key: string]: any }) {
+    if (this.client) {
       this.client.publish({
         destination: destination,
         body: JSON.stringify(action),

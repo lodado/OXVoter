@@ -8,13 +8,13 @@ import { useErrorBoundary } from "@/shared/hooks";
 
 import { useSocketContext } from "./useSocketManager";
 
-export const useSocketRegister = () => {
+export const useSocketRegister = (onConnectSuccess?: () => void) => {
   const params = useParams();
 
   const searchParams = useSearchParams();
   const username = searchParams.get("username") || "";
 
-  const { socketController } = useSocketContext();
+  const { socketController, setSocketConnected } = useSocketContext();
   const [isLoading, setLoading] = useState(true);
   const { setError } = useErrorBoundary();
 
@@ -23,9 +23,11 @@ export const useSocketRegister = () => {
       setLoading(true);
 
       try {
-        await socketController.registerSubscriber(params.id as string, username);
+        await socketController.registerSubscriber(onConnectSuccess);
+        setSocketConnected(true);
       } catch (e) {
         setError(new SocketConnectionError({}));
+        setSocketConnected(false);
       } finally {
         setLoading(false);
       }
@@ -34,13 +36,15 @@ export const useSocketRegister = () => {
     registerSocket();
 
     return () => {
-      if (!isLoading) socketController.unregisterSubscriber();
+      if (!isLoading) {
+        const isSocketDisconnected = socketController.unregisterSubscriber();
+
+        if (isSocketDisconnected) {
+          setSocketConnected(false);
+        }
+      }
     };
   }, [socketController]);
-
-  console.log(params);
-
-  const registerUser = () => {};
 
   return { isSocketTryingToConnect: isLoading };
 };

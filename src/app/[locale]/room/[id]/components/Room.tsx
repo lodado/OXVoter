@@ -2,19 +2,17 @@
  
 import { UseFunnelOptions } from "@use-funnel/browser";
 import { useSearchParams } from "next/navigation";
-import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
-import { useSocketRegister } from "@/entities/Socket/hooks";
 import GameHeader from "@/features/Settings/ui/GameHeader";
 import { useFunnelWithoutHistory } from "@/shared";
 import { SocketConnectionError } from "@/shared/constants/error/socketError";
 import { Card, InfoPage, WithErrorBoundary } from "@/shared/ui";
 import { FallbackMapping } from "@/shared/ui/ErrorBoundary/ui/ErrorBoundary";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
-import { useToastStore } from "@/shared/ui/Toast/stores";
 
+import useSocketOrchestrator from "../hooks/useSocketController";
 import GameLobby from "./funnels/game-lobby";
 import GameRoom from "./funnels/game-room";
 import VoteResults from "./funnels/vote-results";
@@ -86,9 +84,10 @@ const fallbackMappings: FallbackMapping[] = [
 ];
 
 const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
-  const { isSocketTryingToConnect } = useSocketRegister();
+  const { isSocketTryingToConnect } = useSocketOrchestrator({ id: params.id });
+  const searchParams = useSearchParams();
+  const username = searchParams.get("username") || "";
 
-  const [username, setUsername] = useState("");
   const [playerId, setPlayerId] = useState<string>("");
   const [players, setPlayers] = useState<Player[]>([]);
   const [myRole, setMyRole] = useState<string | null>(null);

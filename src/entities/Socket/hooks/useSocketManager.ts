@@ -1,3 +1,5 @@
+"use client";
+
 import { IMessage } from "@stomp/stompjs";
 import { useContext, useEffect } from "react";
 
@@ -17,24 +19,38 @@ export const useSocketContext = () => {
   return context;
 };
 
-export const useSocketManager = (messageType: string, callback: (payload: IMessage) => void) => {
-  const { socketController } = useSocketContext();
+export const useSocketSubScriber = ({
+  messageType,
+  callback,
+}: {
+  messageType: string;
+  callback: (payload: IMessage) => void;
+}) => {
+  const { socketController, isSocketConnected } = useSocketContext();
 
   useEffect(() => {
+    if (!isSocketConnected) {
+      return;
+    }
+
     // 지정한 메시지 타입에 대해 구독
     const { unsubscribe } = socketController.subscribe(messageType, (payload) => {
-      callback(payload);
+      callback?.(payload);
     });
 
     // 컴포넌트 언마운트 시 구독 해제
     return () => {
       unsubscribe();
     };
-  }, [socketController, messageType]);
+  }, [socketController, messageType, isSocketConnected]);
+};
+
+export const useSocketPublisher = ({ messageType }: { messageType: string }) => {
+  const { isSocketConnected, socketController } = useSocketContext();
 
   // 지정한 메시지 타입의 메시지를 전송하는 함수
-  const sendSocketMessage = (payload: IMessage) => {
-    socketController.publish(messageType, { type: messageType, payload });
+  const sendSocketMessage = (payload: { [key in string]: any }) => {
+    if (isSocketConnected) socketController.publish(messageType, { ...payload });
   };
 
   return { sendSocketMessage };
