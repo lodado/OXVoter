@@ -3,6 +3,8 @@
 아발론, 마피아등 여러 보드게임의 오프라인, 온라인에서 쉽게 플레이 가능하도록
 투표 관련 기능을 제공하는 웹앱 사이드 프로젝트
 
+<br/>
+
 ## 구조 설명
 
 ### Feature-Sliced Design (FSD)
@@ -18,18 +20,25 @@ Entities: 도메인 모델과 관련 로직 정의
 Shared: 공통 유틸리티, 컴포넌트, 스타일 등
 ```
 
+<br/>
+
 #### 도입 배경
 
 1. 의존성 관리가 어려웠고, 이를 구조적으로 해결할 수 있는 파일 구조가 필요했다.
 
 2. 순환 의존성을 제거하고, 각 레이어 간 관계를 명확히 드러내고 싶었다.
 
+<br/>
+
 #### 커스텀 룰
 
-Widgets는 features/entities/shared 레이어의 컴포넌트 2개 이상을 조합할 때만 생성한다. widget과 feature의 경계가 모호해지는 것을 방지하기 위함이다.
 
-대부분의 페이지는 하나의 feature만 사용하는 경우가 많다.
+1. Widgets는 features/entities/shared 레이어의 컴포넌트 2개 이상을 조합할 때만 생성한다. widget과 feature의 경계가 모호해지는 것을 방지하기 위함이다.
+
+2. 대부분의 페이지는 하나의 feature만 사용하는 경우가 많다.
 따라서 해당 페이지 전용 feature는 pages 폴더 내부에 위치시키며, GNB처럼 여러 페이지에서 사용하는 공통 feature만 features/widgets에 둔다.
+
+<br/>
 
 ## 소켓 데이터 핸들링 방식
 
@@ -48,6 +57,13 @@ Subscriber (View): 서버에서 수신한 메시지는 전역 상태 스토어�
 features/GameStatus의 useSocketOrchestrator 훅은 이러한 흐름을 통합하는 역할을 한다. 소켓 연결, 방 입장 처리, 사용자 및 게임 상태의 구독 등록 등을 하나의 흐름으로 구성하여, 컴포넌트에서는 최소한의 로직만 필요하도록 구성했다.
 
 ### 게임 상태 관리
+
+
+![image](https://github.com/user-attachments/assets/3c87ce69-ef15-4433-9ad6-e80aa46f1656)
+
+
+이해를 돕기 위한 초기 프로토타입 다이어그램
+
 
 state pattern을 활용해
 각 게임의 page를 하나의 상태(페이지)로 보고,
