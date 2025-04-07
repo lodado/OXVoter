@@ -26,8 +26,8 @@ export const useSocketRegister = (onConnectSuccess?: () => void) => {
         await socketController.registerSubscriber(onConnectSuccess);
         setSocketConnected(true);
       } catch (e) {
-        // setError(new SocketConnectionError({}));
-        // setSocketConnected(false);
+        setError(new SocketConnectionError({}));
+        setSocketConnected(false);
       } finally {
         setLoading(false);
       }
