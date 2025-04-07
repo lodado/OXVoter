@@ -12,7 +12,8 @@ import { Card, InfoPage, WithErrorBoundary } from "@/shared/ui";
 import { FallbackMapping } from "@/shared/ui/ErrorBoundary/ui/ErrorBoundary";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 
-import useSocketOrchestrator from "../hooks/useSocketController";
+import useGameInformation from "../hooks/useGameInformation";
+import useSocketOrchestrator from "../hooks/useSocketOrchestrator";
 import GameLobby from "./funnels/game-lobby";
 import GameRoom from "./funnels/game-room";
 import VoteResults from "./funnels/vote-results";
@@ -84,9 +85,8 @@ const fallbackMappings: FallbackMapping[] = [
 ];
 
 const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
-  const { isSocketTryingToConnect } = useSocketOrchestrator({ id: params.id });
-  const searchParams = useSearchParams();
-  const username = searchParams.get("username") || "";
+  const { isSocketTryingToConnect } = useSocketOrchestrator();
+  const { username } = useGameInformation();
 
   const [playerId, setPlayerId] = useState<string>("");
   const [players, setPlayers] = useState<Player[]>([]);

@@ -67,7 +67,7 @@ export const useUserListStore = create<UserStore>((set) => ({
           });
  */
 
-export const useUserSocketRegister = ({ roomId }: { roomId: string }) => {
+export const useUserSocketRegister = ({ userName, roomId }: { userName: string; roomId: string }) => {
   const { setUserList } = useUserListStore();
   const { addToast } = useToastStore();
 
@@ -93,7 +93,7 @@ export const useUserSocketRegister = ({ roomId }: { roomId: string }) => {
     },
   });
 
-  const handleJoinRoomMessage = (userName: string) => {
+  const handleJoinRoomMessage = () => {
     sendJoinRoomMessage({
       roomId: roomId,
       sender: userName,

@@ -1,21 +1,18 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
-
 import { useSocketRegister } from "@/entities/Socket/hooks";
 
-import { useGameStatusSocketRegister } from "../stores/useGameStatus";
+import { useGameStatusSocketRegister } from "../stores/useGameStatusStore";
 import { useUserSocketRegister } from "../stores/useUserListStore";
+import useGameInformation from "./useGameInformation";
 
-const useSocketOrchestrator = ({ id }: { id: string }) => {
-  const searchParams = useSearchParams();
-  const username = searchParams.get("username") || "";
-
-  const { handleJoinRoomMessage } = useUserSocketRegister({ roomId: id });
-  const { handleGameStatusChange } = useGameStatusSocketRegister({ roomId: id, userName: username });
+const useSocketOrchestrator = () => {
+  const { id, username } = useGameInformation();
+  const { handleJoinRoomMessage } = useUserSocketRegister({ userName: username, roomId: id });
+  useGameStatusSocketRegister({ roomId: id, userName: username });
 
   const { isSocketTryingToConnect } = useSocketRegister(() => {
-    handleJoinRoomMessage(username);
+    handleJoinRoomMessage();
   });
 
   return { isSocketTryingToConnect };

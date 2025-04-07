@@ -18,10 +18,6 @@ export const useGameStatusStore = create<GameState>((set) => ({
 export const useGameStatusSocketRegister = ({ userName, roomId }: { userName: string; roomId: string }) => {
   const { setGameStatus } = useGameStatusStore();
 
-  const { sendSocketMessage: sendGameStatusChangeMessage } = useSocketPublisher({
-    messageType: `/pub/room/${roomId}/status`,
-  });
-
   useSocketSubScriber({
     messageType: `/sub/room/${roomId}/status`,
     callback: (payload) => {
@@ -31,8 +27,14 @@ export const useGameStatusSocketRegister = ({ userName, roomId }: { userName: st
       /**setGameStatus  */
     },
   });
+};
 
-  const handleGameStatusChangeMessage = (status: GAME_STATUS_TYPE) => {
+export const useUpdateGameStatus = ({ userName, roomId }: { userName: string; roomId: string }) => {
+  const { sendSocketMessage: sendGameStatusChangeMessage } = useSocketPublisher({
+    messageType: `/pub/room/${roomId}/status`,
+  });
+
+  const handleGameStatusChange = (status: GAME_STATUS_TYPE) => {
     sendGameStatusChangeMessage({
       roomId: roomId,
       sender: userName,
@@ -40,5 +42,5 @@ export const useGameStatusSocketRegister = ({ userName, roomId }: { userName: st
     });
   };
 
-  return { handleGameStatusChangeMessage };
+  return { handleGameStatusChange };
 };
