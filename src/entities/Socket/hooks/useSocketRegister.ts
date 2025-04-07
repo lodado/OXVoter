@@ -9,11 +9,6 @@ import { useErrorBoundary } from "@/shared/hooks";
 import { useSocketContext } from "./useSocketManager";
 
 export const useSocketRegister = (onConnectSuccess?: () => void) => {
-  const params = useParams();
-
-  const searchParams = useSearchParams();
-  const username = searchParams.get("username") || "";
-
   const { socketController, setSocketConnected } = useSocketContext();
   const [isLoading, setLoading] = useState(true);
   const { setError } = useErrorBoundary();
