@@ -1,5 +1,6 @@
 "use client";
 
+import { useCallback } from "react";
 import { create } from "zustand";
 
 import { useSocketPublisher, useSocketSubScriber } from "@/entities/Socket/hooks";
@@ -75,7 +76,7 @@ export const useUserSocketRegister = ({ userName, roomId }: { userName: string; 
     messageType: `/pub/room/${roomId}/join`,
   });
 
-  useSocketSubScriber({
+  const userSub = useSocketSubScriber({
     messageType: `/sub/room/${roomId}/users`,
     callback: (payload) => {
       const userList = JSON.parse(payload.body);
@@ -84,7 +85,7 @@ export const useUserSocketRegister = ({ userName, roomId }: { userName: string; 
     },
   });
 
-  useSocketSubScriber({
+  const enterSub = useSocketSubScriber({
     messageType: `/sub/room/${roomId}/enter`,
     callback: (payload) => {
       const toastMessage = JSON.parse(payload.body);
@@ -101,5 +102,10 @@ export const useUserSocketRegister = ({ userName, roomId }: { userName: string; 
     });
   };
 
-  return { handleJoinRoomMessage };
+  const subscriber = useCallback(()=> {
+    userSub();
+    enterSub();
+  }, [enterSub, userSub])
+
+  return { subscriber, handleJoinRoomMessage };
 };

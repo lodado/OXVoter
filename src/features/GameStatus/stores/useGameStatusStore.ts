@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { create } from "zustand";
 
 import { useSocketPublisher, useSocketSubScriber } from "@/entities/Socket/hooks";
@@ -18,7 +19,7 @@ export const useGameStatusStore = create<GameState>((set) => ({
 export const useGameStatusSocketRegister = ({ userName, roomId }: { userName: string; roomId: string }) => {
   const { setGameStatus } = useGameStatusStore();
 
-  useSocketSubScriber({
+  const statusSubscriber = useSocketSubScriber({
     messageType: `/sub/room/${roomId}/status`,
     callback: (payload) => {
       const statusMessage = JSON.parse(payload.body);
@@ -27,6 +28,12 @@ export const useGameStatusSocketRegister = ({ userName, roomId }: { userName: st
       /**setGameStatus  */
     },
   });
+
+  const subscriber = useCallback(() => {
+    statusSubscriber();
+  }, [statusSubscriber]);
+
+  return { subscriber };
 };
 
 export const useUpdateGameStatus = ({ userName, roomId }: { userName: string; roomId: string }) => {

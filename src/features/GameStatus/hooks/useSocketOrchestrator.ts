@@ -8,10 +8,16 @@ import { useGameInformation } from "./useGameInformation";
 
 const useSocketOrchestrator = () => {
   const { id, username } = useGameInformation();
-  const { handleJoinRoomMessage } = useUserSocketRegister({ userName: username, roomId: id });
-  useGameStatusSocketRegister({ roomId: id, userName: username });
+  const { handleJoinRoomMessage, subscriber: userSubscriber } = useUserSocketRegister({
+    userName: username,
+    roomId: id,
+  });
+  const { subscriber: gameStatusSubscriber } = useGameStatusSocketRegister({ roomId: id, userName: username });
 
   const { isSocketTryingToConnect } = useSocketRegister(() => {
+    userSubscriber();
+    gameStatusSubscriber();
+
     handleJoinRoomMessage();
   });
 
