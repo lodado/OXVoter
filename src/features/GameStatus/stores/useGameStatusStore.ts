@@ -3,6 +3,7 @@ import { create } from "zustand";
 
 import { useSocketPublisher, useSocketSubScriber } from "@/entities/Socket/hooks";
 
+import { useGameInformation } from "../hooks";
 import { GAME_STATUS, GAME_STATUS_TYPE } from "./GAME_STATUS";
 
 interface GameState {
@@ -36,7 +37,9 @@ export const useGameStatusSocketRegister = ({ userName, roomId }: { userName: st
   return { subscriber };
 };
 
-export const useUpdateGameStatus = ({ userName, roomId }: { userName: string; roomId: string }) => {
+export const useUpdateGameStatus = () => {
+  const { id: roomId, username } = useGameInformation();
+
   const { sendSocketMessage: sendGameStatusChangeMessage } = useSocketPublisher({
     messageType: `/pub/room/${roomId}/status`,
   });
@@ -44,8 +47,8 @@ export const useUpdateGameStatus = ({ userName, roomId }: { userName: string; ro
   const handleGameStatusChange = (status: GAME_STATUS_TYPE) => {
     sendGameStatusChangeMessage({
       roomId: roomId,
-      sender: userName,
-      message: [status],
+      sender: username,
+      message: [{ status }],
     });
   };
 

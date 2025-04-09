@@ -174,6 +174,7 @@
     "vote-completed": "Oylama Tamamlandı!",
     "waiting-for-others": "Diğer oyuncuların oy kullanmasını bekliyor...",
     "submit-vote": "Oyu Gönder",
+    "re-vote": "yeniden oy kullanmak",
     "force-end": "Zorla Bitir",
     "player-list": "Oyuncu Listesi"
   },

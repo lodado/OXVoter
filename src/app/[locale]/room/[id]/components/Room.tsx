@@ -143,16 +143,7 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
 
         <funnel.Render
           WAITING={({ history }) => {
-            return (
-              <GameLobby
-                players={players}
-                settings={roomSettings}
-                isHost={false}
-                onStartGame={() => {
-                  // history.push("game", {});
-                }}
-              />
-            );
+            return <GameLobby players={players} settings={roomSettings} isHost={true} />;
           }}
           PLAY={({ history }) => {
             return (
@@ -179,9 +170,6 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
                   { id: "no", text: "반대" },
                   { id: "abstain", text: "기권" },
                 ]}
-                onSubmitVote={(optionId: string) => {
-                  // history.push("results", {});
-                }}
                 timeLimit={60}
               />
             );

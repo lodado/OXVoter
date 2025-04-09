@@ -46,11 +46,7 @@ export default function CreateRoom() {
         name: roomName,
         hostName: username,
         maxPlayerCount: maxPlayers,
-        settings: {
-          randomRoles,
-          anonymousVoting,
-          specialVoting,
-        },
+        options: [],
       };
 
       const data = await request<{

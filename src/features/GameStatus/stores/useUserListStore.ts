@@ -89,8 +89,13 @@ export const useUserSocketRegister = ({ userName, roomId }: { userName: string; 
     messageType: `/sub/room/${roomId}/enter`,
     callback: (payload) => {
       const toastMessage = JSON.parse(payload.body);
+      const message = toastMessage.message?.[0].text;
 
-      console.log("toastMessage", toastMessage);
+      addToast({
+        title: "New Player!",
+        description: `${message} has been joined`,
+        type: "success",
+      });
     },
   });
 

@@ -42,7 +42,7 @@ export const useSocketPublisher = ({ messageType }: { messageType: string }) => 
 
   // 지정한 메시지 타입의 메시지를 전송하는 함수
   const sendSocketMessage = (payload: { [key in string]: any }) => {
-    if (isSocketConnected) socketController.publish(messageType, { ...payload });
+    socketController.publish(messageType, { ...payload });
   };
 
   return { sendSocketMessage };

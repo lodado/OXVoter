@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 
+import { useUpdateGameStatus } from "@/features";
 import { Badge, BadgeButton, Button, Card, CopyButton, Switch } from "@/shared/ui";
 import { ToastViewPort } from "@/shared/ui/Toast";
 import { useToastStore } from "@/shared/ui/Toast/stores";
@@ -28,16 +29,17 @@ interface GameLobbyProps {
   players: Player[];
   settings: GameSettings;
   isHost: boolean;
-  onStartGame: () => void;
 }
 
-export default function GameLobby({ players, settings, isHost, onStartGame }: GameLobbyProps) {
+export default function GameLobby({ players, settings, isHost }: GameLobbyProps) {
   const [copied, setCopied] = useState(false);
   const t = useTranslations();
 
   const [randomRoles, setRandomRoles] = useState(true);
   const [anonymousVoting, setAnonymousVoting] = useState(true);
   const [specialVoting, setSpecialVoting] = useState(false);
+
+  const { handleGameStatusChange } = useUpdateGameStatus();
 
   return (
     <>
@@ -102,7 +104,13 @@ export default function GameLobby({ players, settings, isHost, onStartGame }: Ga
           </Card.Content>
           <Card.Footer>
             {isHost ? (
-              <Button variant="primarySolid" className="w-full" onClick={onStartGame}>
+              <Button
+                onClick={() => {
+                  handleGameStatusChange("PLAY");
+                }}
+                variant="primarySolid"
+                className="w-full"
+              >
                 {t("gameLobby.start-game")}
               </Button>
             ) : (

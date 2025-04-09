@@ -4,9 +4,11 @@ import { AlertTriangle, Timer } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
+import { useUpdateGameStatus } from "@/features";
 import { Button, Card, ProgressBar, RadioGroup } from "@/shared/ui";
 
 import GamePlayerList from "../GamePlayerList";
+import { useVoteStore } from "../stores/useVoteStore";
 import { Player } from "../type";
 
 type VoteOption = {
@@ -21,28 +23,23 @@ interface VotingPhaseProps {
   players: Player[];
 
   timeLimit?: number;
-  onSubmitVote: (optionId: string) => void;
-  onForceEnd?: () => void;
-  hasVoted?: boolean;
 }
-export default function VotingPhase({
-  title,
-  isHost,
-  players,
-  options,
-  timeLimit,
-  onSubmitVote,
-  onForceEnd,
-  hasVoted = false,
-}: VotingPhaseProps) {
+export default function VotingPhase({ isHost, players, options, timeLimit }: VotingPhaseProps) {
   const t = useTranslations("votingPhase");
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
-  const [localHasVoted, setLocalHasVoted] = useState(hasVoted);
+  const [localHasVoted, setLocalHasVoted] = useState(false);
   const [timeLeft, setTimeLeft] = useState(timeLimit || 0);
 
-  useEffect(() => {
-    setLocalHasVoted(hasVoted);
-  }, [hasVoted]);
+  const { submitGameVote } = useVoteStore();
+  const { handleGameStatusChange } = useUpdateGameStatus();
+
+  const handleVote = () => {
+    if (selectedOption) {
+      setLocalHasVoted(true);
+
+      submitGameVote(selectedOption);
+    }
+  };
 
   useEffect(() => {
     if (!timeLimit) return;
@@ -59,13 +56,6 @@ export default function VotingPhase({
 
     return () => clearInterval(timer);
   }, [timeLimit]);
-
-  const handleVote = () => {
-    if (selectedOption) {
-      onSubmitVote(selectedOption);
-      setLocalHasVoted(true);
-    }
-  };
 
   return (
     <>
@@ -112,7 +102,7 @@ export default function VotingPhase({
           )}
         </Card.Content>
         <Card.Footer className="flex justify-center gap-3">
-          {!localHasVoted && (
+          {!localHasVoted ? (
             <Button
               variant="primarySolid"
               className="max-w-[150px] w-[30%] min-w-[120px]"
@@ -121,13 +111,27 @@ export default function VotingPhase({
             >
               {t("submit-vote")}
             </Button>
+          ) : (
+            <Button
+              variant="primarySolid"
+              className="max-w-[150px] w-[30%] min-w-[120px]"
+              onClick={() => {
+                setLocalHasVoted(false);
+                setSelectedOption(null);
+              }}
+              disabled={!selectedOption}
+            >
+              {t("re-vote")}
+            </Button>
           )}
 
           {isHost && (
             <Button
               variant="errorSolid"
               className="flex flex-row max-w-[150px] w-[30%] min-w-[120px] gap-2"
-              onClick={onForceEnd}
+              onClick={() => {
+                handleGameStatusChange("DONE");
+              }}
             >
               <AlertTriangle className="h-4 w-4" />
               {t("force-end")}

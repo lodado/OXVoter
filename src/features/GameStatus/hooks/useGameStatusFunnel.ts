@@ -30,7 +30,7 @@ export const useGameStatusFunnel = () => {
   useEffect(() => {
     // gameStatus가 변경될 때마다 funnel 상태를 업데이트합니다.
     funnel.history.replace(gameStatus);
-  }, [gameStatus, funnel]);
+  }, [gameStatus]);
 
   return funnel;
 };
