@@ -4,6 +4,7 @@ import { useCallback } from "react";
 import { create } from "zustand";
 
 import { useSocketPublisher, useSocketSubScriber } from "@/entities/Socket/hooks";
+import { useCleanUp } from "@/shared/hooks";
 import { useToastStore } from "@/shared/ui/Toast/stores";
 
 import { GAME_STATUS_TYPE } from "./GAME_STATUS";
@@ -70,7 +71,7 @@ export const useUserListStore = create<UserStore>((set) => ({
  */
 
 export const useUserSocketRegister = ({ userName, roomId }: { userName: string; roomId: string }) => {
-  const { setUserList } = useUserListStore();
+  const { setUserList, clearUserList } = useUserListStore();
   const { addToast } = useToastStore();
   const { setUserInformation: setGameInformation } = useGameStatusStore();
 
@@ -153,6 +154,10 @@ export const useUserSocketRegister = ({ userName, roomId }: { userName: string; 
     userSub();
     enterSub();
   }, [enterSub, userSub]);
+
+  useCleanUp(() => {
+    clearUserList();
+  });
 
   return { subscriber, handleJoinRoomMessage };
 };

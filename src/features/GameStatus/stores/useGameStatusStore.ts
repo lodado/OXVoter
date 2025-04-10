@@ -2,6 +2,7 @@ import { useCallback } from "react";
 import { create } from "zustand";
 
 import { useSocketPublisher, useSocketSubScriber } from "@/entities/Socket/hooks";
+import { useCleanUp } from "@/shared/hooks";
 
 import { useGameInformation } from "../hooks";
 import { GAME_STATUS, GAME_STATUS_TYPE, GameInformation } from "./GAME_STATUS";
@@ -17,6 +18,8 @@ interface GameState {
   setUserInformation: (gameInformation: GameInformation) => void;
 
   setUserId: (userId: string) => void;
+
+  cleanGameStatus: () => void;
 }
 
 export const useGameStatusStore = create<GameState>((set) => ({
@@ -35,10 +38,18 @@ export const useGameStatusStore = create<GameState>((set) => ({
   setUserId: (userId: string) => set({ userId }),
 
   setUserInformation: (gameInformation: GameInformation) => set({ userInformation: gameInformation }),
+
+  cleanGameStatus: () => {
+    set({
+      gameStatus: GAME_STATUS.WAIT,
+      userId: null,
+      userInformation: { userId: "", userName: "", isHost: false, state: GAME_STATUS.WAIT },
+    });
+  },
 }));
 
 export const useGameStatusSocketRegister = ({ userName, roomId }: { userName: string; roomId: string }) => {
-  const { setGameStatus } = useGameStatusStore();
+  const { setGameStatus, cleanGameStatus } = useGameStatusStore();
 
   const statusSubscriber = useSocketSubScriber({
     messageType: `/sub/room/${roomId}/status`,
@@ -53,6 +64,10 @@ export const useGameStatusSocketRegister = ({ userName, roomId }: { userName: st
   const subscriber = useCallback(() => {
     statusSubscriber();
   }, [statusSubscriber]);
+
+  useCleanUp(() => {
+    cleanGameStatus();
+  });
 
   return { subscriber };
 };

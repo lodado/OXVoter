@@ -7,8 +7,8 @@ import { useEffect, useState } from "react";
 import { useUpdateGameStatus } from "@/features";
 import { Button, Card, ProgressBar, RadioGroup } from "@/shared/ui";
 
+import { useVoteStore } from "../../../../../../features/GameStatus/stores/useVoteStore";
 import GamePlayerList from "../GamePlayerList";
-import { useVoteStore } from "../stores/useVoteStore";
 import { Player } from "../type";
 
 type VoteOption = {

@@ -22,7 +22,7 @@ import { useTranslations } from "next-intl";
 
 import { useUpdateGameStatus } from "@/features";
 
-import { useVoteStore } from "../stores/useVoteStore";
+import { useVoteStore } from "../../../../../../features/GameStatus/stores/useVoteStore";
 
 export default function GameRoom({ players, isHost, onStartVote, onEndGame }: GameRoomProps) {
   const t = useTranslations("gameRoom");

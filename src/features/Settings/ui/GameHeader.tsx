@@ -4,6 +4,7 @@ import { ArrowBigLeft } from "lucide-react";
 import { usePathname } from "next/navigation";
 import React from "react";
 
+import { useSocketPublisher } from "@/entities/Socket/hooks";
 import { SettingDialog } from "@/features";
 
 import { PAGE_ROUTE } from "../../../entities/Router/configs/route";

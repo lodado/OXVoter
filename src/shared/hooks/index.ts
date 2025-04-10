@@ -22,4 +22,5 @@ export {
   useServerAction,
 };
 
+export * from "./useCleanUp";
 export { useDebounce, useForceRenderer,useForkRef, useInterval, useIsClient, useLinkHref };

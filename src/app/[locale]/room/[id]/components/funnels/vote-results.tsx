@@ -1,10 +1,13 @@
 "use client";
 
 import { BarChart } from "lucide-react";
+import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 
+import { useUpdateGameStatus } from "@/features";
 import { Badge, Button, Card } from "@/shared/ui";
 
+import useVoteResultQuery from "../../hooks/useVoteResultQuery";
 import GamePlayerList from "../GamePlayerList";
 
 type Player = {
@@ -28,8 +31,10 @@ interface VoteResultsProps {
   anonymousVoting: boolean;
   onContinue?: () => void;
 }
-export default function VoteResults({ results, players, anonymousVoting, onContinue }: VoteResultsProps) {
+export default function VoteResults({ results, players, anonymousVoting }: VoteResultsProps) {
   const t = useTranslations("voteResults");
+  const { handleGameStatusChange } = useUpdateGameStatus();
+  const params = useParams();
 
   // 최대 득표수 계산
   const maxVotes = Math.max(...results.map((r) => r.votes), 1);
@@ -39,6 +44,10 @@ export default function VoteResults({ results, players, anonymousVoting, onConti
     const player = players.find((p) => p.id === id);
     return player ? player.username : t("unknown-player");
   };
+
+  const query = useVoteResultQuery({ roomId: params.id as string });
+
+  console.log(query);
 
   return (
     <>
@@ -76,11 +85,17 @@ export default function VoteResults({ results, players, anonymousVoting, onConti
           </div>
         </Card.Content>
         <Card.Footer className="flex justify-center">
-          {onContinue && (
-            <Button variant="primarySolid" className="max-w-[150px] w-[30%] min-w-[120px]" onClick={onContinue}>
+          {
+            <Button
+              onClick={() => {
+                handleGameStatusChange("PLAY");
+              }}
+              variant="primarySolid"
+              className="max-w-[150px] w-[30%] min-w-[120px]"
+            >
               {t("next-step")}
             </Button>
-          )}
+          }
         </Card.Footer>
       </Card>
     </>

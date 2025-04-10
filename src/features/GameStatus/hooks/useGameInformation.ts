@@ -11,12 +11,14 @@ export const useGameInformation = () => {
   const searchParams = useSearchParams();
   const username = searchParams.get("username") || "";
 
-  const { userInformation: gameInformation, setUserInformation: setGameInformation } = useGameStatusStore();
+  const { userInformation } = useGameStatusStore();
 
   /** TODO - SSR server에서 요청하도록 변경 */
   useEffect(() => {
     const requestApi = async () => {
       const request = await getRoomInformation({ roomId: params.id as string });
+
+      console.log("req information", request);
 
       // setGameInformation(request);
     };
@@ -24,7 +26,7 @@ export const useGameInformation = () => {
     requestApi();
   }, []);
 
-  console.log(gameInformation, "abcd");
+  console.log(userInformation, "abcd");
 
-  return { id: params.id as string, username, userId: gameInformation.userId, isHost: gameInformation.isHost };
+  return { id: params.id as string, username, userId: userInformation.userId, isHost: userInformation.isHost };
 };
