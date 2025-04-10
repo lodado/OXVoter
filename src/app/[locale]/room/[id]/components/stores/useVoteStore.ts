@@ -4,7 +4,7 @@ import { useSocketPublisher } from "@/entities/Socket/hooks";
 import { useGameInformation } from "@/features";
 
 export const useVoteStore = () => {
-  const { id: roomId, username } = useGameInformation();
+  const { id: roomId, username, userId } = useGameInformation();
 
   const { sendSocketMessage: sendGameVoteMessage } = useSocketPublisher({
     messageType: `/pub/room/${roomId}/vote`,
@@ -13,8 +13,8 @@ export const useVoteStore = () => {
   const submitGameVote = (option: string) => {
     sendGameVoteMessage({
       roomId: roomId,
-      sender: username,
-      message: [{ option }],
+      sender: userId,
+      vote: option,
     });
   };
 

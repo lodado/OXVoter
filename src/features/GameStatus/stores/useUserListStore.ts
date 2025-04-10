@@ -7,6 +7,7 @@ import { useSocketPublisher, useSocketSubScriber } from "@/entities/Socket/hooks
 import { useToastStore } from "@/shared/ui/Toast/stores";
 
 import { GAME_STATUS_TYPE } from "./GAME_STATUS";
+import { useGameStatusStore } from "./useGameStatusStore";
 
 type User = {
   id: string;
@@ -71,6 +72,7 @@ export const useUserListStore = create<UserStore>((set) => ({
 export const useUserSocketRegister = ({ userName, roomId }: { userName: string; roomId: string }) => {
   const { setUserList } = useUserListStore();
   const { addToast } = useToastStore();
+  const { setUserInformation: setGameInformation } = useGameStatusStore();
 
   const { sendSocketMessage: sendJoinRoomMessage } = useSocketPublisher({
     messageType: `/pub/room/${roomId}/join`,
@@ -80,8 +82,48 @@ export const useUserSocketRegister = ({ userName, roomId }: { userName: string; 
     messageType: `/sub/room/${roomId}/users`,
     callback: (payload) => {
       const userList = JSON.parse(payload.body);
-
       setUserList(userList);
+
+      const message = userList.message?.[0];
+
+      /**
+       * 
+       * {
+    "roomId": "25d172a8-cefb-49db-a9db-f0ce2187af33",
+    "sender": "d8f5fcb4-d0ff-4a0a-9c2e-9c01990a6c64",
+    "message": [
+        {
+            "roomId": "25d172a8-cefb-49db-a9db-f0ce2187af33",
+            "roomState": "WAIT",
+            "roomName": "wqewqe",
+            "users": [
+                {
+                    "userId": "d8f5fcb4-d0ff-4a0a-9c2e-9c01990a6c64",
+                    "userName": "wqeqwewq",
+                    "isHost": true,
+                    "state": "WAIT"
+                }
+            ],
+            "optionMap": {
+                "no": 0,
+                "yes": 0,
+                "abstain": 0
+            }
+        }
+    ]
+}
+       * 
+       */
+
+      const user = message?.users.find((user: any) => user.userName === userName);
+
+      console.log(userList, "userList");
+      console.log(user, "user");
+      console.log();
+
+      setGameInformation(user);
+
+      //  setGameStatus
     },
   });
 
@@ -107,10 +149,10 @@ export const useUserSocketRegister = ({ userName, roomId }: { userName: string; 
     });
   };
 
-  const subscriber = useCallback(()=> {
+  const subscriber = useCallback(() => {
     userSub();
     enterSub();
-  }, [enterSub, userSub])
+  }, [enterSub, userSub]);
 
   return { subscriber, handleJoinRoomMessage };
 };

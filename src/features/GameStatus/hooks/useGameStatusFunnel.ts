@@ -9,9 +9,9 @@ import { GAME_STATUS } from "../stores/GAME_STATUS";
 import { useGameStatusStore } from "../stores/useGameStatusStore";
 
 export type GameState = {
-  [GAME_STATUS.WAITING]: {};
+  [GAME_STATUS.WAIT]: {};
   [GAME_STATUS.PLAY]: {};
-  [GAME_STATUS.VOTED]: {};
+  [GAME_STATUS.VOTE]: {};
   specialVoting: {};
   [GAME_STATUS.DONE]: {};
 };

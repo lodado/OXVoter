@@ -1,8 +1,15 @@
 export const GAME_STATUS = {
-  WAITING: "WAITING",
+  WAIT: "WAIT",
   PLAY: "PLAY",
-  VOTED: "VOTED",
+  VOTE: "VOTE",
   DONE: "DONE",
 } as const;
 
 export type GAME_STATUS_TYPE = keyof typeof GAME_STATUS;
+
+export interface GameInformation  {
+  userId: string;
+  userName: string;
+  isHost: boolean;
+  state: string;
+};

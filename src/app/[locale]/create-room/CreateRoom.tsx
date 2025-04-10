@@ -8,7 +8,7 @@ import type React from "react";
 import { useState } from "react";
 
 import GameHeader from "@/features/Settings/ui/GameHeader";
-import { request } from "@/shared";
+import { request, ROOM_OPTIONS } from "@/shared";
 import { Button, Card, Form, Input, Switch } from "@/shared/ui";
 import SpinControl from "@/shared/ui/Input/SpinControl";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
@@ -46,7 +46,7 @@ export default function CreateRoom() {
         name: roomName,
         hostName: username,
         maxPlayerCount: maxPlayers,
-        options: [],
+        options: ROOM_OPTIONS.map(({ id }) => id),
       };
 
       const data = await request<{

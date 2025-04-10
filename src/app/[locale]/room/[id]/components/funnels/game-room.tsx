@@ -20,11 +20,15 @@ interface GameRoomProps {
 }
 import { useTranslations } from "next-intl";
 
+import { useUpdateGameStatus } from "@/features";
+
 import { useVoteStore } from "../stores/useVoteStore";
 
 export default function GameRoom({ players, isHost, onStartVote, onEndGame }: GameRoomProps) {
   const t = useTranslations("gameRoom");
   const alivePlayers = players.filter((p) => p.isAlive);
+
+  const { handleGameStatusChange } = useUpdateGameStatus();
 
   return (
     <div className="space-y-6">
@@ -42,12 +46,24 @@ export default function GameRoom({ players, isHost, onStartVote, onEndGame }: Ga
         </Card.Content>
         <Card.Footer className="flex flex-row justify-center gap-3">
           {isHost && (
-            <Button onClick={() => {}} variant="primarySolid" className="w-[30%] min-w-[125px] max-w-[150px]">
+            <Button
+              onClick={() => {
+                handleGameStatusChange("VOTE");
+              }}
+              variant="primarySolid"
+              className="w-[30%] min-w-[125px] max-w-[150px]"
+            >
               {t("start-vote")}
             </Button>
           )}
           {isHost && (
-            <Button variant="errorSolid" className="w-[30%] min-w-[120px] max-w-[150px]" onClick={onEndGame}>
+            <Button
+              variant="errorSolid"
+              className="w-[30%] min-w-[120px] max-w-[150px]"
+              onClick={() => {
+                handleGameStatusChange("WAIT");
+              }}
+            >
               {t("end-game")}
             </Button>
           )}

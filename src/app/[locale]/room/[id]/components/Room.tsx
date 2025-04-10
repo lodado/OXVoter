@@ -15,17 +15,10 @@ import GameRoom from "./funnels/game-room";
 import VoteResults from "./funnels/vote-results";
 import VotingPhase from "./funnels/voting-phase";
 
-/** 
-  WAITING: "WAITING",
-  PLAY: "PLAY",
-  VOTED: "VOTED",
-  DONE: "DONE",
- */
-
 type GameState = {
-  [GAME_STATUS.WAITING]: {};
+  [GAME_STATUS.WAIT]: {};
   [GAME_STATUS.PLAY]: {};
-  [GAME_STATUS.VOTED]: {};
+  [GAME_STATUS.VOTE]: {};
   specialVoting: {};
   [GAME_STATUS.DONE]: {};
 };
@@ -87,6 +80,12 @@ const fallbackMappings: FallbackMapping[] = [
   },
 ];
 
+const options = [
+  { id: "yes", text: "찬성" },
+  { id: "no", text: "반대" },
+  { id: "abstain", text: "기권" },
+];
+
 const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
   const { isSocketTryingToConnect } = useSocketOrchestrator();
   const { username } = useGameInformation();
@@ -125,7 +124,7 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
     <ReactiveLayout
       className="md:w-[1000px] p-4 min-h-[calc(100*var(--vh)-1.25rem)]"
       outerClassName="relative"
-      outerPreviousChildren={funnel.step === GAME_STATUS.WAITING && <GameHeader />}
+      outerPreviousChildren={funnel.step === GAME_STATUS.WAIT && <GameHeader />}
     >
       <div className="mx-auto w-full mt-6">
         <header className="mb-7 flex items-center justify-between">
@@ -142,7 +141,7 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
         </header>
 
         <funnel.Render
-          WAITING={({ history }) => {
+          WAIT={({ history }) => {
             return <GameLobby players={players} settings={roomSettings} isHost={true} />;
           }}
           PLAY={({ history }) => {
@@ -159,20 +158,8 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
               />
             );
           }}
-          VOTED={({ history }) => {
-            return (
-              <VotingPhase
-                title={"투표하기"}
-                players={players}
-                isHost={true}
-                options={[
-                  { id: "yes", text: "찬성" },
-                  { id: "no", text: "반대" },
-                  { id: "abstain", text: "기권" },
-                ]}
-                timeLimit={60}
-              />
-            );
+          VOTE={({ history }) => {
+            return <VotingPhase title={"투표하기"} players={players} isHost={true} options={options} timeLimit={60} />;
           }}
           specialVoting={({ history }) => {
             return <div>Special Voting</div>;
