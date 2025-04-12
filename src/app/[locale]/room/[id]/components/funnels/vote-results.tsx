@@ -31,23 +31,20 @@ interface VoteResultsProps {
   anonymousVoting: boolean;
   onContinue?: () => void;
 }
-export default function VoteResults({ results, players, anonymousVoting }: VoteResultsProps) {
+export default function VoteResults() {
   const t = useTranslations("voteResults");
   const { handleGameStatusChange } = useUpdateGameStatus();
   const params = useParams();
 
-  // 최대 득표수 계산
-  const maxVotes = Math.max(...results.map((r) => r.votes), 1);
+  const { query } = useVoteResultQuery({ roomId: params.id as string });
+  const optionMap = query.data ?? {};
 
-  // 플레이어 ID로 이름 찾기
-  const getPlayerName = (id: string) => {
-    const player = players.find((p) => p.id === id);
-    return player ? player.username : t("unknown-player");
-  };
-
-  const query = useVoteResultQuery({ roomId: params.id as string });
-
-  console.log(query);
+  const maxVotes = Math.max(
+    ...Object.entries(optionMap).map(([votingOption, voteResultCount]) => {
+      return voteResultCount;
+    }),
+    1
+  );
 
   return (
     <>
@@ -60,28 +57,20 @@ export default function VoteResults({ results, players, anonymousVoting }: VoteR
         </Card.Header>
         <Card.Content>
           <div className="space-y-6">
-            {results.map((result) => (
-              <div key={result.id} className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <div className="font-medium">{result.text}</div>
-                  <Badge variant="primary">{t("votes", { count: result.votes })}</Badge>
-                </div>
-
-                <div className="h-2 w-full overflow-hidden rounded-full bg-slate-700">
-                  <div className="h-full bg-blue-600" style={{ width: `${(result.votes / maxVotes) * 100}%` }} />
-                </div>
-
-                {!anonymousVoting && result.voters && result.voters.length > 0 && (
-                  <div className="flex flex-wrap gap-1 pt-1">
-                    {result.voters.map((voterId) => (
-                      <Badge key={voterId} variant="isSelected">
-                        {getPlayerName(voterId)}
-                      </Badge>
-                    ))}
+            {Object.entries(optionMap).map(([votingOption, voteResultCount]) => {
+              return (
+                <div key={votingOption} className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <div className="font-medium">{votingOption}</div>
+                    <Badge variant="primary">{t("votes", { count: voteResultCount })}</Badge>
                   </div>
-                )}
-              </div>
-            ))}
+
+                  <div className="h-2 w-full overflow-hidden rounded-full bg-slate-700">
+                    <div className="h-full bg-blue-600" style={{ width: `${(voteResultCount / maxVotes) * 100}%` }} />
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </Card.Content>
         <Card.Footer className="flex justify-center">
