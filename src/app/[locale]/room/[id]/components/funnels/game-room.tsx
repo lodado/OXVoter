@@ -18,7 +18,7 @@ interface GameRoomProps {
 }
 import { useTranslations } from "next-intl";
 
-import { useGameInformation, useUpdateGameStatus, useUserListStore } from "@/features";
+import { GAME_STATUS, useGameInformation, useUpdateGameStatus, useUserListStore } from "@/features";
 
 export default function GameRoom() {
   const t = useTranslations("gameRoom");
@@ -48,7 +48,7 @@ export default function GameRoom() {
           {isHost && (
             <Button
               onClick={() => {
-                handleGameStatusChange("VOTE");
+                handleGameStatusChange(GAME_STATUS.VOTE);
               }}
               variant="primarySolid"
               className="w-[30%] min-w-[125px] max-w-[150px]"
@@ -61,7 +61,7 @@ export default function GameRoom() {
               variant="errorSolid"
               className="w-[30%] min-w-[120px] max-w-[150px]"
               onClick={() => {
-                handleGameStatusChange("WAIT");
+                handleGameStatusChange(GAME_STATUS.WAIT);
               }}
             >
               {t("end-game")}

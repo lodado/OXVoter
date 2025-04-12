@@ -4,7 +4,7 @@ import { BarChart } from "lucide-react";
 import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 
-import { useUpdateGameStatus } from "@/features";
+import { GAME_STATUS, useUpdateGameStatus } from "@/features";
 import { Badge, Button, Card } from "@/shared/ui";
 
 import useVoteResultQuery from "../../hooks/useVoteResultQuery";
@@ -77,7 +77,7 @@ export default function VoteResults() {
           {
             <Button
               onClick={() => {
-                handleGameStatusChange("PLAY");
+                handleGameStatusChange(GAME_STATUS.PLAY);
               }}
               variant="primarySolid"
               className="max-w-[150px] w-[30%] min-w-[120px]"

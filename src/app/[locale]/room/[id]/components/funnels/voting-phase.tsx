@@ -4,7 +4,13 @@ import { AlertTriangle, Timer } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
-import { useGameInformation, useSubmitVotePublisher, useUpdateGameStatus, useVoteStateStore } from "@/features";
+import {
+  GAME_STATUS,
+  useGameInformation,
+  useSubmitVotePublisher,
+  useUpdateGameStatus,
+  useVoteStateStore,
+} from "@/features";
 import { Button, Card, ProgressBar, RadioGroup } from "@/shared/ui";
 
 import GamePlayerList from "../GamePlayerList";
@@ -135,7 +141,7 @@ export default function VotingPhase({ options, timeLimit }: VotingPhaseProps) {
               variant="errorSolid"
               className="flex flex-row max-w-[150px] w-[30%] min-w-[120px] gap-2"
               onClick={() => {
-                handleGameStatusChange("DONE");
+                handleGameStatusChange(GAME_STATUS.DONE);
               }}
             >
               <AlertTriangle className="h-4 w-4" />

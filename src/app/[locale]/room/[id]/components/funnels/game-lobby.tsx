@@ -1,14 +1,12 @@
 "use client";
 
-import { CheckCircle, Copy, Crown, UserCircle2 } from "lucide-react";
+import { Crown, UserCircle2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import CopyToClipboard from "react-copy-to-clipboard";
 
-import { useGameInformation, useUpdateGameStatus, useUserListStore } from "@/features";
-import { Badge, BadgeButton, Button, Card, CopyButton, Switch } from "@/shared/ui";
+import { GAME_STATUS, useGameInformation, useUpdateGameStatus, useUserListStore } from "@/features";
+import { Badge, Button, Card, CopyButton, Switch } from "@/shared/ui";
 import { ToastViewPort } from "@/shared/ui/Toast";
-import { useToastStore } from "@/shared/ui/Toast/stores";
 
 type Player = {
   id: string;
@@ -30,7 +28,6 @@ interface GameLobbyProps {
 }
 
 export default function GameLobby({ settings }: GameLobbyProps) {
-  const [copied, setCopied] = useState(false);
   const t = useTranslations();
 
   const [randomRoles, setRandomRoles] = useState(true);
@@ -107,7 +104,7 @@ export default function GameLobby({ settings }: GameLobbyProps) {
             {isHost ? (
               <Button
                 onClick={() => {
-                  handleGameStatusChange("PLAY");
+                  handleGameStatusChange(GAME_STATUS.PLAY);
                 }}
                 variant="primarySolid"
                 className="w-full"
