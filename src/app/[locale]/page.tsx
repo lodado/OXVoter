@@ -1,7 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { LocaleLink } from "@/entities/Router";
-import { SettingDialog } from "@/features";
 import GameHeader from "@/features/Settings/ui/GameHeader";
 import { getLocalesListsForStateParams } from "@/shared/index.server";
 import { Button } from "@/shared/ui";

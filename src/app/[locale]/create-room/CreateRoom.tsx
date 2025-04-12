@@ -41,7 +41,6 @@ export default function CreateRoom() {
     setIsLoading(true);
 
     try {
-      // 방 설정을 로컬 스토리지에 저장
       const roomData = {
         name: roomName,
         hostName: username,

@@ -16,34 +16,7 @@ import GameLobby from "./funnels/game-lobby";
 import GameRoom from "./funnels/game-room";
 import VoteResults from "./funnels/vote-results";
 import VotingPhase from "./funnels/voting-phase";
-
-type GameState = {
-  [GAME_STATUS.WAIT]: {};
-  [GAME_STATUS.PLAY]: {};
-  [GAME_STATUS.VOTE]: {};
-  specialVoting: {};
-  [GAME_STATUS.DONE]: {};
-};
-
-type Player = {
-  id: string;
-  username: string;
-  role?: string;
-  isHost: boolean;
-  isAlive: boolean;
-};
-
-type VoteOption = {
-  id: string;
-  text: string;
-};
-
-type VoteResult = {
-  optionId: string;
-  votes: number;
-  voters?: string[];
-};
-
+ 
 // 역할 정의
 const ROLES = {
   CITIZEN: "시민",
@@ -65,8 +38,8 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
   const { isSocketTryingToConnect } = useSocketOrchestrator();
   const { username } = useGameInformation();
 
+  /** TO DO - 목킹한 이 값들은 곧 api 값으로 대체됨 */
   const [playerId, setPlayerId] = useState<string>("");
-  const [players, setPlayers] = useState<Player[]>([]);
   const [myRole, setMyRole] = useState<string | null>(null);
   const [roomSettings, setRoomSettings] = useState({
     roomName: "게임방",
@@ -75,16 +48,6 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
     anonymousVoting: false,
     specialVoting: true,
   });
-
-  const [currentVote, setCurrentVote] = useState<{
-    title: string;
-    options: VoteOption[];
-    timeLimit?: number;
-  } | null>(null);
-
-  const [voteResults, setVoteResults] = useState<VoteResult[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasVoted, setHasVoted] = useState(false);
 
   const funnel = useGameStatusFunnel();
 
@@ -126,6 +89,7 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
             VOTE={({ history }) => {
               return <VotingPhase options={ROOM_OPTIONS} timeLimit={VOTE_TIME_LIMIT} />;
             }}
+            // TODO:  직업 및 특별 투표 구현 예정
             specialVoting={({ history }) => {
               return <div>Special Voting</div>;
             }}
