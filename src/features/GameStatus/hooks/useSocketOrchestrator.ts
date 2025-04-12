@@ -3,13 +3,13 @@
 import { useSocketRegister } from "@/entities/Socket/hooks";
 
 import { useGameStatusSocketRegister } from "../stores/useGameStatusStore";
-import { useUserSocketRegister } from "../stores/useUserListStore";
 import { useVoteCountSocketRegister } from "../stores/useVoteStore";
+import { useEnterRoomSocketRegister } from "./useEnterRoomSocketRegister";
 import { useGameInformation } from "./useGameInformation";
 
 const useSocketOrchestrator = () => {
   const { id, username } = useGameInformation();
-  const { handleJoinRoomMessage, subscriber: userSubscriber } = useUserSocketRegister({
+  const { handleJoinRoomMessage, subscriber: enterRoomSubscriber } = useEnterRoomSocketRegister({
     userName: username,
     roomId: id,
   });
@@ -21,7 +21,7 @@ const useSocketOrchestrator = () => {
   });
 
   const { isSocketTryingToConnect } = useSocketRegister(() => {
-    userSubscriber();
+    enterRoomSubscriber();
     gameStatusSubscriber();
     voteCountSubscriber();
 

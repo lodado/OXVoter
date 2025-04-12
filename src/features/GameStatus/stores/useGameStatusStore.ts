@@ -13,7 +13,13 @@ interface GameState {
 
   userId: string | null;
 
+  roomId: string | null;
+  roomName: string | null;
+  roomState: string | null;
+
   setGameStatus: (status: GAME_STATUS_TYPE) => void;
+
+  setRoomInformation: (params: { roomId: string; roomName: string; roomState: string }) => void;
 
   setUserInformation: (gameInformation: GameInformation) => void;
 
@@ -27,6 +33,10 @@ export const useGameStatusStore = create<GameState>((set) => ({
   gameStatus: GAME_STATUS.WAIT,
   userId: null,
 
+  roomId: null,
+  roomName: null,
+  roomState: null,
+
   userInformation: {
     userId: "",
     userName: "",
@@ -37,6 +47,10 @@ export const useGameStatusStore = create<GameState>((set) => ({
 
   setUserId: (userId: string) => set({ userId }),
 
+  setRoomInformation: ({ roomId, roomName, roomState }: { roomId: string; roomName: string; roomState: string }) => {
+    set({ roomId, roomName, roomState });
+  },
+
   setUserInformation: (gameInformation: GameInformation) => set({ userInformation: gameInformation }),
 
   cleanGameStatus: () => {
@@ -44,6 +58,9 @@ export const useGameStatusStore = create<GameState>((set) => ({
       gameStatus: GAME_STATUS.WAIT,
       userId: null,
       userInformation: { userId: "", userName: "", isHost: false, state: GAME_STATUS.WAIT },
+      roomId: null,
+      roomName: null,
+      roomState: null,
     });
   },
 }));

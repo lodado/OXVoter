@@ -1,6 +1,6 @@
 export type Player = {
-  id: string;
-  username: string;
+  userId: string;
+  userName: string;
   role?: string;
   isHost: boolean;
   isAlive: boolean;

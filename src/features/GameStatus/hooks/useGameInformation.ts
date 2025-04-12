@@ -23,7 +23,7 @@ export const useGameInformation = () => {
       // setGameInformation(request);
     };
 
-    requestApi();
+    // requestApi();
   }, []);
 
   console.log(userInformation, "abcd");
