@@ -5,11 +5,13 @@ import { useState } from "react";
 
 import { GAME_STATUS, useGameInformation, useGameStatusFunnel, useSocketOrchestrator } from "@/features/GameStatus";
 import GameHeader from "@/features/Settings/ui/GameHeader";
+import { ROOM_OPTIONS } from "@/shared";
 import { SocketConnectionError } from "@/shared/constants/error/socketError";
 import { Card, InfoPage, WithErrorBoundary } from "@/shared/ui";
 import { FallbackMapping } from "@/shared/ui/ErrorBoundary/ui/ErrorBoundary";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 
+import { VOTE_TIME_LIMIT } from "../constants";
 import GameLobby from "./funnels/game-lobby";
 import GameRoom from "./funnels/game-room";
 import VoteResults from "./funnels/vote-results";
@@ -42,27 +44,6 @@ type VoteResult = {
   voters?: string[];
 };
 
-type RoomData = {
-  id: string;
-  name: string;
-  maxPlayers: number;
-  settings: {
-    randomRoles: boolean;
-    anonymousVoting: boolean;
-    specialVoting: boolean;
-  };
-  players: Player[];
-  gameState: GameState;
-  votes?: Map<string, string>;
-  specialVotes?: Map<string, string>;
-  voteResults?: VoteResult[];
-  currentVote?: {
-    title: string;
-    options: VoteOption[];
-    timeLimit?: number;
-  };
-};
-
 // 역할 정의
 const ROLES = {
   CITIZEN: "시민",
@@ -78,12 +59,6 @@ const fallbackMappings: FallbackMapping[] = [
       <InfoPage {...props} title="서버 연결 오류" description="서버와 연결할 수 없습니다 잠시 후 시도해주세요." />
     ),
   },
-];
-
-const options = [
-  { id: "yes", text: "찬성" },
-  { id: "no", text: "반대" },
-  { id: "abstain", text: "기권" },
 ];
 
 const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
@@ -140,52 +115,25 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
           </div>
         </header>
 
-        <funnel.Render
-          WAIT={({ history }) => {
-            return <GameLobby settings={roomSettings} />;
-          }}
-          PLAY={({ history }) => {
-            return <GameRoom />;
-          }}
-          VOTE={({ history }) => {
-            return <VotingPhase title={"투표하기"} options={options} timeLimit={60} />;
-          }}
-          specialVoting={({ history }) => {
-            return <div>Special Voting</div>;
-          }}
-          DONE={({ history }) => {
-            return (
-              <VoteResults
-                results={[
-                  {
-                    id: "yes",
-                    text: "찬성",
-                    votes: 1,
-                    voters: [playerId],
-                  },
-                  {
-                    id: "no",
-                    text: "반대",
-                    votes: 2,
-                    voters: [playerId],
-                  },
-
-                  {
-                    id: "abstain",
-                    text: "기권",
-                    votes: 3,
-                    voters: [playerId],
-                  },
-                ]}
-                players={players}
-                anonymousVoting={false}
-                onContinue={() => {
-                  // history.push("game", {});
-                }}
-              />
-            );
-          }}
-        />
+        <main>
+          <funnel.Render
+            WAIT={({ history }) => {
+              return <GameLobby settings={roomSettings} />;
+            }}
+            PLAY={({ history }) => {
+              return <GameRoom />;
+            }}
+            VOTE={({ history }) => {
+              return <VotingPhase options={ROOM_OPTIONS} timeLimit={VOTE_TIME_LIMIT} />;
+            }}
+            specialVoting={({ history }) => {
+              return <div>Special Voting</div>;
+            }}
+            DONE={({ history }) => {
+              return <VoteResults />;
+            }}
+          />
+        </main>
       </div>
     </ReactiveLayout>
   );

@@ -21,8 +21,6 @@ type VoteOption = {
 };
 
 interface VotingPhaseProps {
-  title: string;
-
   options: VoteOption[];
 
   timeLimit?: number;
