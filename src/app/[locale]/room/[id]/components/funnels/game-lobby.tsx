@@ -26,7 +26,6 @@ type GameSettings = {
 };
 
 interface GameLobbyProps {
-  players: Player[];
   settings: GameSettings;
 }
 

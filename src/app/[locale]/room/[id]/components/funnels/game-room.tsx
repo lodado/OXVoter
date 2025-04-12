@@ -15,18 +15,18 @@ type Player = {
 interface GameRoomProps {
   players: Player[];
   isHost: boolean;
-  onStartVote: () => void;
-  onEndGame: () => void;
 }
 import { useTranslations } from "next-intl";
 
-import { useUpdateGameStatus } from "@/features";
+import { useGameInformation, useUpdateGameStatus, useUserListStore } from "@/features";
 
-import { useVoteStore } from "../../../../../../features/GameStatus/stores/useVoteStore";
-
-export default function GameRoom({ players, isHost, onStartVote, onEndGame }: GameRoomProps) {
+export default function GameRoom() {
   const t = useTranslations("gameRoom");
-  const alivePlayers = players.filter((p) => p.isAlive);
+
+  const { isHost } = useGameInformation();
+  const { userList } = useUserListStore();
+
+  const alivePlayers = userList.filter((p) => true);
 
   const { handleGameStatusChange } = useUpdateGameStatus();
 
@@ -37,12 +37,12 @@ export default function GameRoom({ players, isHost, onStartVote, onEndGame }: Ga
           <Card.Title className="flex items-center justify-between">
             <span>{t("title")}</span>
             <Badge variant="success" className="w-max px-2 bg-transparent subhead-2 ">
-              {t("alive-players", { alive: alivePlayers.length, total: players.length })}
+              {t("alive-players", { alive: alivePlayers.length, total: userList.length })}
             </Badge>
           </Card.Title>
         </Card.Header>
         <Card.Content className="mb-2">
-          <GamePlayerList players={players} />
+          <GamePlayerList />
         </Card.Content>
         <Card.Footer className="flex flex-row justify-center gap-3">
           {isHost && (
