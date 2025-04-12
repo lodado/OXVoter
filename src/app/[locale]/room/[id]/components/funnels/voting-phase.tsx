@@ -4,12 +4,10 @@ import { AlertTriangle, Timer } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
-import { useUpdateGameStatus } from "@/features";
+import { useGameInformation, useSubmitVotePublisher, useUpdateGameStatus, useVoteStateStore } from "@/features";
 import { Button, Card, ProgressBar, RadioGroup } from "@/shared/ui";
 
-import { useVoteStore } from "../../../../../../features/GameStatus/stores/useVoteStore";
 import GamePlayerList from "../GamePlayerList";
-import { Player } from "../type";
 
 type VoteOption = {
   id: string;
@@ -18,22 +16,26 @@ type VoteOption = {
 
 interface VotingPhaseProps {
   title: string;
-  isHost?: boolean;
+
   options: VoteOption[];
-  players: Player[];
 
   timeLimit?: number;
 }
-export default function VotingPhase({ isHost, players, options, timeLimit }: VotingPhaseProps) {
+export default function VotingPhase({ options, timeLimit }: VotingPhaseProps) {
   const t = useTranslations("votingPhase");
+
+  const { isHost } = useGameInformation();
+
+  const { voteTimeout, voteCount, totalUserCount } = useVoteStateStore();
+  const [currentTime, setCurrentTime] = useState(Date.now());
+
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [localHasVoted, setLocalHasVoted] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(timeLimit || 0);
 
-  const { submitGameVote } = useVoteStore();
+  const { submitGameVote } = useSubmitVotePublisher();
   const { handleGameStatusChange } = useUpdateGameStatus();
 
-  const handleVote = () => {
+  const handleVoteSubmit = () => {
     if (selectedOption) {
       setLocalHasVoted(true);
 
@@ -45,32 +47,35 @@ export default function VotingPhase({ isHost, players, options, timeLimit }: Vot
     if (!timeLimit) return;
 
     const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          return 0;
-        }
-        return prev - 1;
+      setCurrentTime((prev) => {
+        return Date.now();
       });
     }, 1000);
 
     return () => clearInterval(timer);
   }, [timeLimit]);
 
+  const timeLeftInSeconds = Math.max(0, Math.floor((voteTimeout - currentTime) / 1000));
+
   return (
     <>
       <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur">
         <Card.Header>
           <Card.Title className="flex items-center justify-between mb-2">
-            <span>{t("title")}</span>
+            <div className="flex flex-row gap-2">
+              <span>{t("title")}</span>
+
+              <span>({voteCount / Math.max(totalUserCount, 1)})</span>
+            </div>
+
             {timeLimit && (
               <div className="flex items-center gap-2 text-sm">
                 <Timer className="h-4 w-4" />
-                <span>{t("time-left", { time: timeLeft })}</span>
+                <span>{t("time-left", { time: timeLeftInSeconds })}</span>
               </div>
             )}
           </Card.Title>
-          {timeLimit && <ProgressBar value={(timeLeft / timeLimit) * 100} className="h-2 bg-slate-700" />}
+          {timeLimit && <ProgressBar value={timeLeftInSeconds} className="h-2 bg-slate-700" />}
         </Card.Header>
         <Card.Content>
           {localHasVoted ? (
@@ -106,7 +111,7 @@ export default function VotingPhase({ isHost, players, options, timeLimit }: Vot
             <Button
               variant="primarySolid"
               className="max-w-[150px] w-[30%] min-w-[120px]"
-              onClick={handleVote}
+              onClick={handleVoteSubmit}
               disabled={!selectedOption}
             >
               {t("submit-vote")}
@@ -145,7 +150,7 @@ export default function VotingPhase({ isHost, players, options, timeLimit }: Vot
       <Card className="bg-slate-800/80 text-white shadow-xl backdrop-blur">
         <Card.Header className="headline">{t("player-list")}</Card.Header>
         <Card.Content>
-          <GamePlayerList players={players} />
+          <GamePlayerList />
         </Card.Content>
       </Card>
     </>
