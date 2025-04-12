@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 
-import { useUpdateGameStatus } from "@/features";
+import { useGameInformation, useUpdateGameStatus, useUserListStore } from "@/features";
 import { Badge, BadgeButton, Button, Card, CopyButton, Switch } from "@/shared/ui";
 import { ToastViewPort } from "@/shared/ui/Toast";
 import { useToastStore } from "@/shared/ui/Toast/stores";
@@ -28,16 +28,18 @@ type GameSettings = {
 interface GameLobbyProps {
   players: Player[];
   settings: GameSettings;
-  isHost: boolean;
 }
 
-export default function GameLobby({ players, settings, isHost }: GameLobbyProps) {
+export default function GameLobby({ settings }: GameLobbyProps) {
   const [copied, setCopied] = useState(false);
   const t = useTranslations();
 
   const [randomRoles, setRandomRoles] = useState(true);
   const [anonymousVoting, setAnonymousVoting] = useState(true);
   const [specialVoting, setSpecialVoting] = useState(false);
+
+  const { userList } = useUserListStore();
+  const { isHost } = useGameInformation();
 
   const { handleGameStatusChange } = useUpdateGameStatus();
 
@@ -50,7 +52,7 @@ export default function GameLobby({ players, settings, isHost }: GameLobbyProps)
               <span className="flex flex-row gap-1">
                 {t("roomWaitCard.participants-label")}
                 <span>
-                  ({players.length}/{settings.maxPlayers})
+                  ({userList.length}/{settings.maxPlayers})
                 </span>
               </span>
 
@@ -61,11 +63,11 @@ export default function GameLobby({ players, settings, isHost }: GameLobbyProps)
           </Card.Header>
           <Card.Content>
             <ul className="space-y-2">
-              {players.map((player) => (
-                <li key={player.id} className="flex items-center rounded-lg bg-slate-700/50 p-3">
+              {userList.map((user) => (
+                <li key={user.userId} className="flex items-center rounded-lg bg-slate-700/50 p-3">
                   <UserCircle2 className="mr-2 h-5 w-5 text-slate-300" />
-                  <span className="flex-1">{player.username}</span>
-                  {player.isHost && (
+                  <span className="flex-1">{user.userName}</span>
+                  {user.isHost && (
                     <Badge variant={"success"} className="flex items-center gap-1">
                       <Crown className="h-3 w-3 text-warning" />
                       {t("roomWaitCard.host-badge")}
@@ -94,7 +96,7 @@ export default function GameLobby({ players, settings, isHost }: GameLobbyProps)
               </li>
               <li className="flex justify-between">
                 <span className="text-slate-300">{t("gameLobby.anonymous-voting")}</span>
-                <Switch id="anonymousVoting" checked={anonymousVoting} onCheckedChange={setAnonymousVoting} />
+                <Switch id="anonymousVoting" checked={anonymousVoting} onCheckedChange={setAnonymousVoting} disabled />
               </li>
               <li className="flex justify-between">
                 <span className="text-slate-300">{t("gameLobby.special-voting")}</span>
