@@ -1,10 +1,11 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { LocaleLink } from "@/entities/Router";
-import GameHeader from "@/features/Settings/ui/GameHeader";
 import { getLocalesListsForStateParams } from "@/shared/index.server";
 import { Button } from "@/shared/ui";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
+import { ToastViewPort } from "@/shared/ui/Toast";
+import GameHeader from "@/widgets/Settings/ui/GameHeader";
 
 export async function generateStaticParams() {
   return getLocalesListsForStateParams();
@@ -40,6 +41,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
           </LocaleLink>
         </div>
       </main>
+      <ToastViewPort key="viewPort" className="bottom-[3rem]" />
     </ReactiveLayout>
   );
 }

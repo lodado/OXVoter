@@ -7,12 +7,12 @@ import { useTranslations } from "next-intl";
 import type React from "react";
 import { useState } from "react";
 
-import GameHeader from "@/features/Settings/ui/GameHeader";
 import { request, ROOM_OPTIONS } from "@/shared";
 import { Button, Card, Form, Input, Switch } from "@/shared/ui";
 import SpinControl from "@/shared/ui/Input/SpinControl";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 import { useToastStore } from "@/shared/ui/Toast/stores";
+import GameHeader from "@/widgets/Settings/ui/GameHeader";
 
 import { AbilityProvider } from "./components/RoleSettingTabs/AbilityProvider";
 import { RoleProvider } from "./components/RoleSettingTabs/RoleProvider";

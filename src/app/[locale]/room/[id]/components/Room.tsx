@@ -1,23 +1,23 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState } from "react";
 
 import { GAME_STATUS, useGameInformation, useGameStatusFunnel, useSocketOrchestrator } from "@/features/GameStatus";
-import GameHeader from "@/features/Settings/ui/GameHeader";
 import { ROOM_OPTIONS } from "@/shared";
 import { SocketConnectionError } from "@/shared/constants/error/socketError";
-import { Card, InfoPage, WithErrorBoundary } from "@/shared/ui";
+import { InfoPage, WithErrorBoundary } from "@/shared/ui";
 import { FallbackMapping } from "@/shared/ui/ErrorBoundary/ui/ErrorBoundary";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
+import GameHeader from "@/widgets/Settings/ui/GameHeader";
 
 import { VOTE_TIME_LIMIT } from "../constants";
+import DestroyGameRoom from "./funnels/DestroyGameRoom";
 import GameLobby from "./funnels/game-lobby";
 import GameRoom from "./funnels/game-room";
 import VoteResults from "./funnels/vote-results";
 import VotingPhase from "./funnels/voting-phase";
 import GameRoomHeader from "./GameRoomHeader";
- 
+
 // 역할 정의
 const ROLES = {
   CITIZEN: "시민",
@@ -72,6 +72,9 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
             }}
             DONE={({ history }) => {
               return <VoteResults />;
+            }}
+            DESTROY={({ history }) => {
+              return <DestroyGameRoom />;
             }}
           />
         </main>

@@ -4,8 +4,8 @@ import { create } from "zustand";
 import { useSocketPublisher, useSocketSubScriber } from "@/entities/Socket/hooks";
 import { useCleanUp } from "@/shared/hooks";
 
-import { useGameInformation } from "../hooks";
 import { GAME_STATUS, GAME_STATUS_TYPE, GameInformation, UserInformation } from "../constants/GAME_STATUS";
+import { useGameInformation } from "../hooks";
 
 interface GameState {
   gameStatus: GAME_STATUS_TYPE;

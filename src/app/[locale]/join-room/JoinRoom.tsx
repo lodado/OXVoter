@@ -5,12 +5,12 @@ import { useTranslations } from "next-intl";
 import type React from "react";
 import { useState } from "react";
 
-import GameHeader from "@/features/Settings/ui/GameHeader";
 import { request } from "@/shared";
 import { Button, Card, Input } from "@/shared/ui";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 import { ToastViewPort, useErrorToastMapper } from "@/shared/ui/Toast";
 import { useToastStore } from "@/shared/ui/Toast/stores";
+import GameHeader from "@/widgets/Settings/ui/GameHeader";
 
 export default function JoinRoomPage() {
   const TJoinRoom = useTranslations("joinRoom");

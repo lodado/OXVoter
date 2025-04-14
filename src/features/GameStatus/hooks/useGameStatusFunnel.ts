@@ -14,6 +14,7 @@ export type GameState = {
   [GAME_STATUS.VOTE]: {};
   specialVoting: {};
   [GAME_STATUS.DONE]: {};
+  [GAME_STATUS.DESTROY]: {};
 };
 
 export const useGameStatusFunnel = () => {

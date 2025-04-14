@@ -1,3 +1,3 @@
-import { POSTuserFeedback as POST } from "@/features/Settings/api/route";
+import { POSTuserFeedback as POST } from "@/widgets/Settings/api/route";
 
 export { POST };

@@ -3,6 +3,7 @@ export const GAME_STATUS = {
   PLAY: "PLAY",
   VOTE: "VOTE",
   DONE: "DONE",
+  DESTROY: "DESTROY",
 } as const;
 
 export type GAME_STATUS_TYPE = keyof typeof GAME_STATUS;
