@@ -2,14 +2,9 @@
 
 import { create } from "zustand";
 
-import { GAME_STATUS_TYPE } from "./GAME_STATUS";
+import { GAME_STATUS_TYPE, UserInformation } from "./GAME_STATUS";
 
-type User = {
-  userId: string;
-  userName: string;
-  isHost: boolean;
-  state: GAME_STATUS_TYPE;
-};
+type User = UserInformation;
 
 type UserStore = {
   userList: User[];

@@ -34,7 +34,7 @@ export const useVoteStateStore = create<VoteCount>((set) => ({
 }));
 
 export const useVoteCountSocketRegister = ({ userName, roomId }: { userName: string; roomId: string }) => {
-  const { setVoteCount, setTotalUserCount, cleanVoteCount } = useVoteStateStore();
+  const { setVoteCount, setTotalUserCount, setVoteTimeout, cleanVoteCount } = useVoteStateStore();
 
   const voteCountSubscriber = useSocketSubScriber({
     messageType: `/sub/room/${roomId}/vote`,
@@ -52,9 +52,8 @@ export const useVoteCountSocketRegister = ({ userName, roomId }: { userName: str
     callback: (payload) => {
       const voteTimeoutMessage = JSON.parse(payload.body);
 
-      console.log(voteTimeoutMessage, "voteTimeoutMessage");
-
-      setVoteCount(Number(voteTimeoutMessage.endTime));
+      console.log(voteTimeoutMessage, "voteTimeoutMessage", new Date(voteTimeoutMessage.endTime));
+      setVoteTimeout(Math.floor(new Date(voteTimeoutMessage.endTime).getTime()));
     },
   });
 
@@ -72,6 +71,7 @@ export const useVoteCountSocketRegister = ({ userName, roomId }: { userName: str
 
 export const useSubmitVotePublisher = () => {
   const { id: roomId, username, userId } = useGameInformation();
+  const { cleanVoteCount } = useVoteStateStore();
 
   const { sendSocketMessage: sendGameVoteMessage } = useSocketPublisher({
     messageType: `/pub/room/${roomId}/vote`,
@@ -85,5 +85,5 @@ export const useSubmitVotePublisher = () => {
     });
   };
 
-  return { submitGameVote };
+  return { submitGameVote, cleanVoteCount };
 };

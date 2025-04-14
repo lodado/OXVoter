@@ -4,7 +4,8 @@ import { BarChart } from "lucide-react";
 import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 
-import { GAME_STATUS, useUpdateGameStatus } from "@/features";
+import { GAME_STATUS, useGameInformation, useUpdateGameStatus } from "@/features";
+import { useCleanUp } from "@/shared/hooks";
 import { Badge, Button, Card } from "@/shared/ui";
 
 import useVoteResultQuery from "../../hooks/useVoteResultQuery";
@@ -34,10 +35,12 @@ interface VoteResultsProps {
 export default function VoteResults() {
   const t = useTranslations("voteResults");
   const { handleGameStatusChange } = useUpdateGameStatus();
+
+  const { isHost } = useGameInformation();
   const params = useParams();
 
   const { query } = useVoteResultQuery({ roomId: params.id as string });
-  const optionMap = query.data ?? {};
+  const optionMap = query.data?.result ?? {};
 
   const maxVotes = Math.max(
     ...Object.entries(optionMap).map(([votingOption, voteResultCount]) => {
@@ -81,6 +84,7 @@ export default function VoteResults() {
               }}
               variant="primarySolid"
               className="max-w-[150px] w-[30%] min-w-[120px]"
+              disabled={!isHost}
             >
               {t("next-step")}
             </Button>

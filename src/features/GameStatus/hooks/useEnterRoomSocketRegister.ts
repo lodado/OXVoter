@@ -87,6 +87,8 @@ export const useEnterRoomSocketRegister = ({ userName, roomId }: { userName: str
         roomName: roomName,
         roomState: roomState,
       });
+
+      console.log(user, message, "message");
     },
   });
 

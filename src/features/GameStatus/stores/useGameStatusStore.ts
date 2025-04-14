@@ -5,11 +5,11 @@ import { useSocketPublisher, useSocketSubScriber } from "@/entities/Socket/hooks
 import { useCleanUp } from "@/shared/hooks";
 
 import { useGameInformation } from "../hooks";
-import { GAME_STATUS, GAME_STATUS_TYPE, GameInformation } from "./GAME_STATUS";
+import { GAME_STATUS, GAME_STATUS_TYPE, GameInformation, UserInformation } from "./GAME_STATUS";
 
 interface GameState {
   gameStatus: GAME_STATUS_TYPE;
-  userInformation: GameInformation;
+  userInformation: UserInformation;
 
   userId: string | null;
 
@@ -21,7 +21,7 @@ interface GameState {
 
   setRoomInformation: (params: { roomId: string; roomName: string; roomState: string }) => void;
 
-  setUserInformation: (gameInformation: GameInformation) => void;
+  setUserInformation: (gameInformation: UserInformation) => void;
 
   setUserId: (userId: string) => void;
 
@@ -51,7 +51,7 @@ export const useGameStatusStore = create<GameState>((set) => ({
     set({ roomId, roomName, roomState });
   },
 
-  setUserInformation: (gameInformation: GameInformation) => set({ userInformation: gameInformation }),
+  setUserInformation: (gameInformation: UserInformation) => set({ userInformation: gameInformation }),
 
   cleanGameStatus: () => {
     set({

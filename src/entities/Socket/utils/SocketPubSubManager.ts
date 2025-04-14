@@ -104,8 +104,8 @@ export class SocketPubSubManager {
           console.log("소켓 연결 종료:", evt);
 
           reconnectCount++;
-          if (reconnectCount >= MAX_TRY_CONNECTION_COUNT) {
-            this.client!.deactivate(); // 클라이언트를 비활성화하여 더 이상 재연결하지 않음
+          if (this.client && reconnectCount >= MAX_TRY_CONNECTION_COUNT) {
+            this.client?.deactivate(); // 클라이언트를 비활성화하여 더 이상 재연결하지 않음
 
             reject(new SocketConnectionError({ message: "timeout" }));
           }
@@ -136,6 +136,7 @@ export class SocketPubSubManager {
    * 필요시 STOMP 연결을 시작합니다.
    */
   registerSubscriber(onConnectSuccess?: () => void) {
+
     this.subscriberCount += 1;
 
     // 기존에 예약된 disconnect 타이머가 있으면 취소
@@ -158,6 +159,8 @@ export class SocketPubSubManager {
    * 구독자가 0이면 5초 후 STOMP 연결을 종료합니다.
    */
   unregisterSubscriber() {
+    console.log("unregisterSubscriber", this.subscriberCount, this);
+
     if (this.subscriberCount > 0) {
       this.subscriberCount -= 1;
     }
@@ -166,7 +169,9 @@ export class SocketPubSubManager {
     if (this.subscriberCount <= 0) {
       this.disconnectTimer = setTimeout(() => {
         this.disconnect();
-      }, 5000);
+
+        console.log("dis");
+      }, 0);
     }
 
     return this.subscriberCount <= 0;

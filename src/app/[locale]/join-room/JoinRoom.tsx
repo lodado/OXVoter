@@ -27,11 +27,14 @@ export default function JoinRoomPage() {
     setIsLoading(true);
 
     try {
-      await request({
+      const { roomId } = await request<{
+        roomId: string;
+      }>({
         method: "GET",
-        url: `/rooms/${roomName}`,
+        url: `/rooms`,
+        params: { name: roomName },
       });
-      router.push(`/room/${roomName}?username=${encodeURIComponent(username)}`);
+      router.push(`/room/${roomId}?username=${encodeURIComponent(username)}`);
     } catch (error) {
       handleErrorToastByCode({
         ROOM_NOT_FOUND: {

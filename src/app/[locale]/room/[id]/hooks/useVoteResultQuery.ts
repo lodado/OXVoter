@@ -2,7 +2,7 @@ import React from "react";
 
 import { useQueryContainer } from "@/shared/ui";
 
-import getVoteResult from "../api/getRoomInformation";
+import getVoteResult from "../api/getVoteResult";
 
 const useVoteResultQuery = ({ roomId }: { roomId: string }) => {
   const result = useQueryContainer({

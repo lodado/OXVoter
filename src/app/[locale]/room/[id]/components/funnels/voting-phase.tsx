@@ -9,8 +9,10 @@ import {
   useGameInformation,
   useSubmitVotePublisher,
   useUpdateGameStatus,
+  useUserListStore,
   useVoteStateStore,
 } from "@/features";
+import { useCleanUp } from "@/shared/hooks";
 import { Button, Card, ProgressBar, RadioGroup } from "@/shared/ui";
 
 import GamePlayerList from "../GamePlayerList";
@@ -29,6 +31,7 @@ export default function VotingPhase({ options, timeLimit }: VotingPhaseProps) {
   const t = useTranslations("votingPhase");
 
   const { isHost } = useGameInformation();
+  const { userList } = useUserListStore();
 
   const { voteTimeout, voteCount, totalUserCount } = useVoteStateStore();
   const [currentTime, setCurrentTime] = useState(Date.now());
@@ -36,7 +39,7 @@ export default function VotingPhase({ options, timeLimit }: VotingPhaseProps) {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [localHasVoted, setLocalHasVoted] = useState(false);
 
-  const { submitGameVote } = useSubmitVotePublisher();
+  const { submitGameVote, cleanVoteCount } = useSubmitVotePublisher();
   const { handleGameStatusChange } = useUpdateGameStatus();
 
   const handleVoteSubmit = () => {
@@ -56,10 +59,16 @@ export default function VotingPhase({ options, timeLimit }: VotingPhaseProps) {
       });
     }, 1000);
 
-    return () => clearInterval(timer);
+    return () => {
+      clearInterval(timer);
+    };
   }, [timeLimit]);
 
-  const timeLeftInSeconds = Math.max(0, Math.floor((voteTimeout - currentTime) / 1000));
+  const timeLeftInSeconds = Math.max(0, Math.round((voteTimeout - currentTime) / 1000));
+
+  useCleanUp(() => {
+    cleanVoteCount();
+  });
 
   return (
     <>
@@ -69,7 +78,9 @@ export default function VotingPhase({ options, timeLimit }: VotingPhaseProps) {
             <div className="flex flex-row gap-2">
               <span>{t("title")}</span>
 
-              <span>({voteCount / Math.max(totalUserCount, 1)})</span>
+              <span>
+                ({voteCount} / {userList.length})
+              </span>
             </div>
 
             {timeLimit && (
@@ -79,7 +90,7 @@ export default function VotingPhase({ options, timeLimit }: VotingPhaseProps) {
               </div>
             )}
           </Card.Title>
-          {timeLimit && <ProgressBar value={timeLeftInSeconds} className="h-2 bg-slate-700" />}
+          {timeLimit && <ProgressBar value={(timeLeftInSeconds / timeLimit) * 100} className="h-2 bg-slate-700" />}
         </Card.Header>
         <Card.Content>
           {localHasVoted ? (

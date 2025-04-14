@@ -31,12 +31,10 @@ export const useSocketRegister = (onConnectSuccess?: () => void) => {
     registerSocket();
 
     return () => {
-      if (!isLoading) {
-        const isSocketDisconnected = socketController.unregisterSubscriber();
+      const isSocketDisconnected = socketController.unregisterSubscriber();
 
-        if (isSocketDisconnected) {
-          setSocketConnected(false);
-        }
+      if (isSocketDisconnected) {
+        setSocketConnected(false);
       }
     };
   }, [socketController]);

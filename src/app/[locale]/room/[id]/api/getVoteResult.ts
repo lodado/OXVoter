@@ -1,7 +1,7 @@
 import { request } from "@/shared";
 
 type VoteResult = {
-  [key in string]: number;
+  result: { [key in string]: number };
 };
 
 const getVoteResult = async ({ roomId }: { roomId: string }) => {

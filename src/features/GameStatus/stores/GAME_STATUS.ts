@@ -7,9 +7,22 @@ export const GAME_STATUS = {
 
 export type GAME_STATUS_TYPE = keyof typeof GAME_STATUS;
 
-export interface GameInformation  {
+
+export type UserInformation = {
   userId: string;
   userName: string;
   isHost: boolean;
   state: string;
+};
+
+export interface GameInformation {
+  roomId: string;
+  roomState: string;
+  roomName: string;
+
+  users: UserInformation[];
+
+  optionMap: {
+    [key: string]: number;
+  };
 };
