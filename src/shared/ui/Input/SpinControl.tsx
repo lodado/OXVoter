@@ -1,20 +1,21 @@
 import "./input.scss";
 
 import { ChevronDown, ChevronUp } from "lucide-react";
-import React, { InputHTMLAttributes, useState } from "react";
+import React, { forwardRef, InputHTMLAttributes } from "react";
 
 import { cn } from "@/shared";
 
 import { InputStyleVariants } from "./style";
 
-const SpinInput = (
-  props: InputHTMLAttributes<HTMLInputElement> & {
+const SpinInput = forwardRef<
+  HTMLInputElement,
+  InputHTMLAttributes<HTMLInputElement> & {
     svgClassName?: string;
     increment: () => void;
     decrement: () => void;
   }
-) => {
-  const { className, ...rest } = props;
+>((props, ref) => {
+  const { className, increment, decrement, ...rest } = props;
 
   // Radix UI의 Primitive나 다른 컴포넌트와 결합 가능 (예: Label, Field 등)
   // 여기서는 기본 HTML input을 사용하되, Radix UI의 철학에 맞게 접근합니다.
@@ -22,6 +23,7 @@ const SpinInput = (
     <div className="relative inline-flex text-white items-center">
       <input
         type="number"
+        ref={ref}
         className={cn(InputStyleVariants({ variant: "default", size: "medium" }), "text-white", className)}
         {...rest}
       />
@@ -46,6 +48,8 @@ const SpinInput = (
       </div>
     </div>
   );
-};
+});
+
+SpinInput.displayName = "SpinInput";
 
 export default SpinInput;

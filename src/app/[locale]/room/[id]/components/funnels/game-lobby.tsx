@@ -8,26 +8,7 @@ import { GAME_STATUS, useGameInformation, useUpdateGameStatus, useUserListStore 
 import { Badge, Button, Card, CopyButton, Switch } from "@/shared/ui";
 import { ToastViewPort } from "@/shared/ui/Toast";
 
-type Player = {
-  id: string;
-  username: string;
-  isHost: boolean;
-  isAlive: boolean;
-};
-
-type GameSettings = {
-  roomName: string;
-  maxPlayers: number;
-  randomRoles: boolean;
-  anonymousVoting: boolean;
-  specialVoting: boolean;
-};
-
-interface GameLobbyProps {
-  settings: GameSettings;
-}
-
-export default function GameLobby({ settings }: GameLobbyProps) {
+export default function GameLobby() {
   const t = useTranslations();
 
   const [randomRoles, setRandomRoles] = useState(true);
@@ -38,6 +19,14 @@ export default function GameLobby({ settings }: GameLobbyProps) {
   const { isHost } = useGameInformation();
 
   const { handleGameStatusChange } = useUpdateGameStatus();
+
+  const [settings, setRoomSettings] = useState({
+    roomName: "게임방",
+    maxPlayers: 8,
+    randomRoles: true,
+    anonymousVoting: false,
+    specialVoting: true,
+  });
 
   return (
     <>

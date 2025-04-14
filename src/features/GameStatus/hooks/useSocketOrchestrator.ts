@@ -4,7 +4,7 @@ import { useSocketRegister } from "@/entities/Socket/hooks";
 
 import { useGameStatusSocketRegister } from "../stores/useGameStatusStore";
 import { useVoteCountSocketRegister } from "../stores/useVoteStore";
-import { useEnterRoomAggregateSocketRegister } from "./useEnterRoomSocketRegister";
+import { useEnterRoomAggregateSocketRegister } from "./useEnterRoomAggregateSocketRegister";
 import { useGameInformation } from "./useGameInformation";
 
 const useSocketOrchestrator = () => {

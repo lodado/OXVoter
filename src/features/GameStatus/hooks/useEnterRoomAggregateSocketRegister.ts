@@ -5,34 +5,9 @@ import { useSocketPublisher, useSocketSubScriber } from "@/entities/Socket/hooks
 import { useCleanUp } from "@/shared/hooks";
 import { useToastStore } from "@/shared/ui/Toast/stores";
 
+import { UserInformation } from "../constants";
 import { useGameStatusStore } from "../stores/useGameStatusStore";
 import { useUserListStore } from "../stores/useUserListStore";
-
-/**
- *
- *
- *
- this.client?.subscribe(`/sub/room/${roomId}/users`, (message: IMessage) => {
-            console.log(JSON.parse(message.body), "123214214");
-          });
-
-          this.client?.subscribe(`/sub/room/${roomId}/enter`, (message: IMessage) => {
-            console.log(JSON.parse(message.body));
-          });
-
-          this.client!.subscribe("/sub/chat/room/e76033eb-49ba-4917-9c6b-e8080f6933a7", (message: IMessage) => {
-            // console.log(receiveData);
-          });
-
-          this.client?.publish({
-            destination: `/pub/room/${roomId}/join`,
-            body: JSON.stringify({
-              roomId: roomId,
-              sender: userName,
-              message: [],
-            }),
-          });
- */
 
 export const useEnterRoomAggregateSocketRegister = ({ userName, roomId }: { userName: string; roomId: string }) => {
   const { setUserList, clearUserList } = useUserListStore();
@@ -45,37 +20,11 @@ export const useEnterRoomAggregateSocketRegister = ({ userName, roomId }: { user
     callback: (payload) => {
       const GameStatusMessage = JSON.parse(payload.body);
 
+      console.log(GameStatusMessage, "GameStatusMessage");
+
       const message = GameStatusMessage.message?.[0];
 
-      /**
-       *
-       * {
-    "roomId": "25d172a8-cefb-49db-a9db-f0ce2187af33",
-    "sender": "d8f5fcb4-d0ff-4a0a-9c2e-9c01990a6c64",
-    "message": [
-        {
-            "roomId": "25d172a8-cefb-49db-a9db-f0ce2187af33",
-            "roomState": "WAIT",
-            "roomName": "wqewqe",
-            "users": [
-                {
-                    "userId": "d8f5fcb4-d0ff-4a0a-9c2e-9c01990a6c64",
-                    "userName": "wqeqwewq",
-                    "isHost": true,
-                    "state": "WAIT"
-                }
-            ],
-            "optionMap": {
-                "no": 0,
-                "yes": 0,
-                "abstain": 0
-            }
-        }
-    ]
-}
-       *
-       */
-      const user = message?.users.find((user: any) => user.userName === userName);
+      const user = message?.users.find((user: UserInformation) => user.userName === userName);
 
       const roomId = message?.roomId;
       const roomState = message?.roomState;
@@ -89,8 +38,6 @@ export const useEnterRoomAggregateSocketRegister = ({ userName, roomId }: { user
         roomState: roomState,
       });
       setGameStatus(roomState);
-
-      console.log(user, message, "message");
     },
   });
 

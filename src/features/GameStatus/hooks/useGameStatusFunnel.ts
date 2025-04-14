@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 import { useFunnelWithoutHistory } from "@/shared";
 
-import { GAME_STATUS } from "../stores/GAME_STATUS";
+import { GAME_STATUS } from "../constants/GAME_STATUS";
 import { useGameStatusStore } from "../stores/useGameStatusStore";
 
 export type GameState = {

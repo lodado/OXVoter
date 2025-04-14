@@ -48,46 +48,6 @@ export class SocketPubSubManager {
         heartbeatOutgoing: 10000,
 
         onConnect: () => {
-          /* 
-          this.client?.subscribe(`/sub/room/${roomId}/users`, (message: IMessage) => {
-            console.log(JSON.parse(message.body), "123214214");
-          });
-
-          this.client?.subscribe(`/sub/room/${roomId}/enter`, (message: IMessage) => {
-            console.log(JSON.parse(message.body));
-          });
-
-          this.client!.subscribe("/sub/chat/room/e76033eb-49ba-4917-9c6b-e8080f6933a7", (message: IMessage) => {
-            // console.log(receiveData);
-          });
-
-          this.client?.publish({
-            destination: `/pub/room/${roomId}/join`,
-            body: JSON.stringify({
-              roomId: roomId,
-              sender: userName,
-              message: [],
-            }),
-          });
-
-          */
-
-          /* 
-          this.client!.subscribe("/sub/chat/room/e76033eb-49ba-4917-9c6b-e8080f6933a7", (message: IMessage) => {
-            // console.log(receiveData);
-          });
-
-          this.client?.publish({
-            destination: "/pub/chat/message",
-            body: JSON.stringify({
-              type: "TALK",
-              roomId: "e76033eb-49ba-4917-9c6b-e8080f6933a7",
-              sender: "ct1",
-              message: "hihi",
-            }),
-          });
-          */
-
           onConnectSuccess?.();
 
           resolve(true);

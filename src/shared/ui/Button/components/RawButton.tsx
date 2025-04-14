@@ -6,7 +6,7 @@ import { Motion } from "../../animation/animation";
 import { RawButtonProps } from "../type";
 
 const RawButton = forwardRef<HTMLButtonElement, RawButtonProps>(
-  ({ variant, componentType = "button", children, onClick, ...props }, ref) => {
+  ({ variant, componentType = "button", children, hoverAnimationDisabled, onClick, ...props }, ref) => {
     const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
       // @ts-ignore
       navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
@@ -20,8 +20,8 @@ const RawButton = forwardRef<HTMLButtonElement, RawButtonProps>(
     return (
       <Motion
         componentType={componentType}
-        whileHover={!props.hoverAnimationDisabled ? { scale: 1.01 } : {}}
-        whileTap={!props.hoverAnimationDisabled ? { scale: 0.98 } : {}}
+        whileHover={!hoverAnimationDisabled ? { scale: 1.01 } : {}}
+        whileTap={!hoverAnimationDisabled ? { scale: 0.98 } : {}}
         transition={{ type: "spring", duration: 0.25 }}
         ref={ref}
         {...(props as any)}

@@ -2,7 +2,7 @@
 
 import { create } from "zustand";
 
-import { GAME_STATUS_TYPE, UserInformation } from "./GAME_STATUS";
+import { GAME_STATUS_TYPE, UserInformation } from "../constants/GAME_STATUS";
 
 type User = UserInformation;
 

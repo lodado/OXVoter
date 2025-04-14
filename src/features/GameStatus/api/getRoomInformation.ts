@@ -1,7 +1,8 @@
 import { request } from "@/shared";
 
-import { GameInformation } from "../stores";
+import { GameInformation } from "../constants";
 
+ 
 const getRoomInformation = async ({ roomId }: { roomId: string }) => {
   const res = await request<GameInformation>({
     url: `/rooms/${roomId}`,

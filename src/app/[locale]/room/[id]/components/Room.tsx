@@ -37,23 +37,10 @@ const fallbackMappings: FallbackMapping[] = [
 
 const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
   const { isSocketTryingToConnect } = useSocketOrchestrator();
-  const { username } = useGameInformation();
-
-  /** TO DO - 목킹한 이 값들은 곧 api 값으로 대체됨 */
-  const [playerId, setPlayerId] = useState<string>("");
-  const [myRole, setMyRole] = useState<string | null>(null);
-  const [roomSettings, setRoomSettings] = useState({
-    roomName: "게임방",
-    maxPlayers: 8,
-    randomRoles: true,
-    anonymousVoting: false,
-    specialVoting: true,
-  });
 
   const funnel = useGameStatusFunnel();
 
   const tInfo = useTranslations("infoPage");
-  const tRoom = useTranslations("Room");
 
   if (isSocketTryingToConnect) {
     return <InfoPage title={tInfo("loading-title")} description={tInfo("loading-description")} />;
@@ -71,7 +58,7 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
         <main>
           <funnel.Render
             WAIT={({ history }) => {
-              return <GameLobby settings={roomSettings} />;
+              return <GameLobby />;
             }}
             PLAY={({ history }) => {
               return <GameRoom />;
