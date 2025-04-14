@@ -16,6 +16,7 @@ import GameLobby from "./funnels/game-lobby";
 import GameRoom from "./funnels/game-room";
 import VoteResults from "./funnels/vote-results";
 import VotingPhase from "./funnels/voting-phase";
+import GameRoomHeader from "./GameRoomHeader";
  
 // 역할 정의
 const ROLES = {
@@ -65,18 +66,7 @@ const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
       outerPreviousChildren={funnel.step === GAME_STATUS.WAIT && <GameHeader />}
     >
       <div className="mx-auto w-full mt-6">
-        <header className="mb-7 flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-bold">{tRoom("roomName", { roomName: roomSettings.roomName })}</h1>
-            <p className="text-sm text-slate-300">{tRoom("roomId", { id: params.id })}</p>
-          </div>
-          <div className="flex items-center gap-2 w-[50%] flex-row justify-end flex-wrap">
-            {myRole && (
-              <div className="rounded-full bg-slate-700 px-3 py-1 text-sm">{tRoom("role", { role: myRole })}</div>
-            )}
-            <div className="rounded-full bg-blue-600 px-3 py-1 text-sm">{tRoom("username", { username })}</div>
-          </div>
-        </header>
+        <GameRoomHeader />
 
         <main>
           <funnel.Render

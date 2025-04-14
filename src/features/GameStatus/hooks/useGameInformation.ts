@@ -9,7 +9,16 @@ export const useGameInformation = () => {
   const searchParams = useSearchParams();
   const username = searchParams.get("username") || "";
 
-  const { userInformation } = useGameStatusStore();
+  const { userInformation, roomId, roomName, roomState } = useGameStatusStore();
 
-  return { id: params.id as string, username, userId: userInformation.userId, isHost: userInformation.isHost };
+
+  return {
+    id: params.id as string,
+    username,
+    roomState,
+    roomId,
+    roomName,
+    userId: userInformation.userId,
+    isHost: userInformation.isHost,
+  };
 };
