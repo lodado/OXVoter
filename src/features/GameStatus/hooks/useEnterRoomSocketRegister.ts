@@ -34,10 +34,11 @@ import { useUserListStore } from "../stores/useUserListStore";
           });
  */
 
-export const useEnterRoomSocketRegister = ({ userName, roomId }: { userName: string; roomId: string }) => {
+export const useEnterRoomAggregateSocketRegister = ({ userName, roomId }: { userName: string; roomId: string }) => {
   const { setUserList, clearUserList } = useUserListStore();
   const { addToast } = useToastStore();
   const { setUserInformation, setRoomInformation } = useGameStatusStore();
+  const { setGameStatus } = useGameStatusStore();
 
   const initRoomSub = useSocketSubScriber({
     messageType: `/sub/room/${roomId}/users`,
@@ -87,6 +88,7 @@ export const useEnterRoomSocketRegister = ({ userName, roomId }: { userName: str
         roomName: roomName,
         roomState: roomState,
       });
+      setGameStatus(roomState);
 
       console.log(user, message, "message");
     },

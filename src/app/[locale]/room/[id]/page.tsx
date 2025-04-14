@@ -9,12 +9,11 @@ import RoomPage from "./components/Room";
 const page = async (props: { searchParams: { username?: string }; params: { id: string } }) => {
   const { searchParams, params } = props;
 
-  const gameInformation = await getRoomInformation({ roomId: params.id as string });
+  // const gameInformation = await getRoomInformation({ roomId: params.id as string });
 
   return (
     <>
       <RoomPage {...props} />
-      <GameSettings gameInformation={gameInformation} />
     </>
   );
 };
