@@ -2,7 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { LocaleLink } from "@/entities/Router";
 import { getLocalesListsForStateParams } from "@/shared/index.server";
-import { Button } from "@/shared/ui";
+import { Button, FireworkCanvas } from "@/shared/ui";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 import { ToastViewPort } from "@/shared/ui/Toast";
 import GameHeader from "@/widgets/Settings/ui/GameHeader";
@@ -21,6 +21,8 @@ export default async function Home({ params }: { params: { locale: string } }) {
       outerClassName="relative"
       outerPreviousChildren={<GameHeader isMain={true} />}
     >
+      <FireworkCanvas />
+
       <main className="w-full max-w-md space-y-8 rounded-xl bg-slate-800/50 p-8 shadow-lg backdrop-blur">
         <div className="flex flex-col w-full justify-center items-center text-center">
           <h1 className="display-3 tracking-tight">{t("title")}</h1>

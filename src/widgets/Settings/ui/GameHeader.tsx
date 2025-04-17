@@ -13,7 +13,7 @@ const GameHeader = ({ isMain = false }: { isMain?: boolean }) => {
   const { handleGameStatusChange } = useUpdateGameStatus();
 
   return (
-    <div className="sticky flex flex-row justify-between w-full h-5 top-0 left-0 right-0 px-2">
+    <div className="sticky flex flex-row justify-between w-full h-5 top-0 left-0 right-0 px-2 z-[1]">
       {isMain ? (
         <div></div>
       ) : (

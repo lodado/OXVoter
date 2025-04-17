@@ -8,7 +8,7 @@ import type React from "react";
 import { useState } from "react";
 
 import { request, ROOM_OPTIONS } from "@/shared";
-import { Button, Card, Form, Input, Switch } from "@/shared/ui";
+import { Button, Card, FireworkCanvas, Form, Input, Switch } from "@/shared/ui";
 import SpinControl from "@/shared/ui/Input/SpinControl";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 import { useToastStore } from "@/shared/ui/Toast/stores";
@@ -82,6 +82,8 @@ export default function CreateRoom() {
               outerClassName="relative"
               outerPreviousChildren={<GameHeader />}
             >
+              <FireworkCanvas />
+
               <Card className="w-full max-w-md bg-slate-800/80 text-white shadow-xl backdrop-blur">
                 <Card.Header>
                   <Card.Title className="text-2xl">{t("Title_CreateGameRoom")}</Card.Title>

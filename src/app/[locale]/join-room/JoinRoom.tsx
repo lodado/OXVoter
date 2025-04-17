@@ -6,7 +6,7 @@ import type React from "react";
 import { useState } from "react";
 
 import { request } from "@/shared";
-import { Button, Card, Input } from "@/shared/ui";
+import { Button, Card, FireworkCanvas, Input } from "@/shared/ui";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 import { ToastViewPort, useErrorToastMapper } from "@/shared/ui/Toast";
 import { useToastStore } from "@/shared/ui/Toast/stores";
@@ -60,6 +60,8 @@ export default function JoinRoomPage() {
       outerClassName="relative"
       outerPreviousChildren={<GameHeader />}
     >
+      <FireworkCanvas />
+
       <Card className="w-full max-w-md bg-slate-800/80 text-white shadow-xl backdrop-blur">
         <Card.Header>
           <Card.Title className="text-2xl">{TJoinRoom("title")}</Card.Title>
