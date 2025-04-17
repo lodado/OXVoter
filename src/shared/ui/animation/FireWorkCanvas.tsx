@@ -67,7 +67,8 @@ export default function FireworkCanvas() {
     resize();
 
     /* 초기 혜성 50개 */
-    cometsRef.current = Array.from({ length: 50 }, () => createComet(canvas));
+    const cometCount = window.innerWidth <= 700 ? 15 : 50;
+    cometsRef.current = Array.from({ length: cometCount }, () => createComet(canvas));
 
     /* 폭발 시 파티클 생성 */
     const explode = (x: number, y: number, baseColor: string) => {
