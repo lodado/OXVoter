@@ -1,20 +1,17 @@
 "use client";
 
-import { useParams, useSearchParams } from "next/navigation";
+import { useParams } from "next/navigation";
 
 import { useGameStatusStore } from "../stores";
 
 export const useGameInformation = () => {
   const params = useParams();
-  const searchParams = useSearchParams();
-  const username = searchParams.get("username") || "";
-
   const { userInformation, roomId, roomName, roomState } = useGameStatusStore();
-
+  const { userName } = userInformation;
 
   return {
     id: params.id as string,
-    username,
+    username: userName,
     roomState,
     roomId,
     roomName,

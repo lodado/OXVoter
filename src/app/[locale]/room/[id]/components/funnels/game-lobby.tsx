@@ -20,6 +20,7 @@ export default function GameLobby() {
 
   const { handleGameStatusChange } = useUpdateGameStatus();
 
+
   const [settings, setRoomSettings] = useState({
     roomName: "게임방",
     maxPlayers: 8,

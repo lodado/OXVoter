@@ -1,8 +1,18 @@
 "use client";
-
+ 
+import { isEmpty } from "lodash-es";
+import { useParams, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { useLayoutEffect, useRef } from "react";
 
-import { GAME_STATUS, useGameInformation, useGameStatusFunnel, useSocketOrchestrator } from "@/features/GameStatus";
+import {
+  GAME_STATUS,
+  GameInformation,
+  useGameInformation,
+  useGameStatusFunnel,
+  useGameStatusStore,
+  useSocketOrchestrator,
+} from "@/features/GameStatus";
 import { ROOM_OPTIONS } from "@/shared";
 import { SocketConnectionError } from "@/shared/constants/error/socketError";
 import { InfoPage, WithErrorBoundary } from "@/shared/ui";
@@ -35,12 +45,19 @@ const fallbackMappings: FallbackMapping[] = [
   },
 ];
 
-const RoomPage = WithErrorBoundary(({ params }: { params: { id: string } }) => {
-  const { isSocketTryingToConnect } = useSocketOrchestrator();
+const RoomPage = WithErrorBoundary(({ gameInformation }: { gameInformation: GameInformation }) => {
+  const params = useParams();
+  const router = useRouter();
+  const tInfo = useTranslations("infoPage");
 
   const funnel = useGameStatusFunnel();
 
-  const tInfo = useTranslations("infoPage");
+  const { username } = useGameInformation();
+  const { isSocketTryingToConnect } = useSocketOrchestrator();
+
+  if (isEmpty(username)) {
+    router.push(`/join-room?roomName=${gameInformation.roomName}`);
+  }
 
   if (isSocketTryingToConnect) {
     return <InfoPage title={tInfo("loading-title")} description={tInfo("loading-description")} />;

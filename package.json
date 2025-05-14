@@ -7,7 +7,8 @@
   ],
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "ssl-dev": "HTTPS=true SSL_CRT_FILE=./cert.pem SSL_KEY_FILE=./key.pem next dev",
+    "dev": "HTTPS=true SSL_CRT_FILE=./cert.pem SSL_KEY_FILE=./key.pem next dev",
     "build": "next build",
     "start": "next start",
     "lint": "npx eslint --fix",

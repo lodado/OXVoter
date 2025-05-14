@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import type React from "react";
 import { useState } from "react";
 
+import { GAME_STATUS, useGameStatusStore } from "@/features/GameStatus";
 import { request, ROOM_OPTIONS } from "@/shared";
 import { Button, Card, FireworkCanvas, Form, Input, Switch } from "@/shared/ui";
 import SpinControl from "@/shared/ui/Input/SpinControl";
@@ -27,12 +28,14 @@ export default function CreateRoom() {
 
   const router = useRouter();
   const [roomName, setRoomName] = useState("");
-  const [username, setUsername] = useState("");
+  const [userName, setUsername] = useState("");
   const [maxPlayers, setMaxPlayers] = useState(8);
   const [randomRoles, setRandomRoles] = useState(true);
   const [anonymousVoting, setAnonymousVoting] = useState(true);
   const [specialVoting, setSpecialVoting] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  const { setUserInformation } = useGameStatusStore();
 
   const { addToast } = useToastStore();
 
@@ -43,7 +46,7 @@ export default function CreateRoom() {
     try {
       const roomData = {
         name: roomName,
-        hostName: username,
+        hostName: userName,
         maxPlayerCount: maxPlayers,
         options: ROOM_OPTIONS.map(({ id }) => id),
       };
@@ -57,7 +60,15 @@ export default function CreateRoom() {
       });
 
       const roomId = data.roomId;
-      router.push(`/room/${roomId}?username=${encodeURIComponent(username)}&isHost=true`);
+
+      setUserInformation({
+        userId: "",
+        userName: userName,
+        isHost: false,
+        state: GAME_STATUS.WAIT,
+      });
+
+      router.push(`/room/${roomId}`);
     } catch (error) {
       console.error("방 생성 오류:", error);
       setIsLoading(false);
@@ -116,7 +127,7 @@ export default function CreateRoom() {
                         <Input
                           id="username"
                           placeholder={t("Placeholder_Username")}
-                          value={username}
+                          value={userName}
                           setValue={(newUserName) => setUsername(newUserName)}
                           required
                           className=" bg-slate-900/50 text-white"

@@ -1,5 +1,7 @@
 "use client";
 
+import { isEmpty } from "lodash-es";
+
 import { useSocketRegister } from "@/entities/Socket/hooks";
 
 import { useGameStatusSocketRegister } from "../stores/useGameStatusStore";
@@ -8,7 +10,7 @@ import { useEnterRoomAggregateSocketRegister } from "./useEnterRoomAggregateSock
 import { useGameInformation } from "./useGameInformation";
 
 const useSocketOrchestrator = () => {
-  const { id, username } = useGameInformation();
+  const { id, roomName, username } = useGameInformation();
 
   const { subscriber: gameStatusSubscriber } = useGameStatusSocketRegister({ roomId: id, userName: username });
 
@@ -23,11 +25,13 @@ const useSocketOrchestrator = () => {
   });
 
   const { isSocketTryingToConnect } = useSocketRegister(() => {
-    enterRoomSubscriber();
-    gameStatusSubscriber();
-    voteCountSubscriber();
+    if (!isEmpty(username)) {
+      enterRoomSubscriber();
+      gameStatusSubscriber();
+      voteCountSubscriber();
 
-    handleJoinRoomMessage();
+      handleJoinRoomMessage();
+    }
   });
 
   return { isSocketTryingToConnect };

@@ -1,26 +1,27 @@
 "use client";
+import { useParams, useRouter } from "next/navigation";
 import { useCallback } from "react";
 
 import { useSocketPublisher, useSocketSubScriber } from "@/entities/Socket/hooks";
 import { useCleanUp } from "@/shared/hooks";
 import { useToastStore } from "@/shared/ui/Toast/stores";
 
-import { UserInformation } from "../constants";
+import { GAME_STATUS, GAME_STATUS_TYPE, UserInformation } from "../constants";
 import { useGameStatusStore } from "../stores/useGameStatusStore";
 import { useUserListStore } from "../stores/useUserListStore";
 
 export const useEnterRoomAggregateSocketRegister = ({ userName, roomId }: { userName: string; roomId: string }) => {
+  const params = useParams();
+
   const { setUserList, clearUserList } = useUserListStore();
   const { addToast } = useToastStore();
-  const { setUserInformation, setRoomInformation } = useGameStatusStore();
-  const { setGameStatus } = useGameStatusStore();
+  const { setGameStatus, setUserInformation, setRoomInformation } = useGameStatusStore();
+  const { updateLocalStorage } = useGameStatusStore();
 
   const initRoomSub = useSocketSubScriber({
     messageType: `/sub/room/${roomId}/users`,
     callback: (payload) => {
       const GameStatusMessage = JSON.parse(payload.body);
-
-      console.log(GameStatusMessage, "GameStatusMessage");
 
       const message = GameStatusMessage.message?.[0];
 
@@ -38,6 +39,8 @@ export const useEnterRoomAggregateSocketRegister = ({ userName, roomId }: { user
         roomState: roomState,
       });
       setGameStatus(roomState);
+
+      updateLocalStorage(params.id as string);
     },
   });
 

@@ -1,7 +1,10 @@
+"use client";
+
 import { useCallback } from "react";
 import { create } from "zustand";
 
 import { useSocketPublisher, useSocketSubScriber } from "@/entities/Socket/hooks";
+import { LocalStorageStrategy, StorageController } from "@/shared";
 import { useCleanUp } from "@/shared/hooks";
 
 import { GAME_STATUS, GAME_STATUS_TYPE, GameInformation, UserInformation } from "../constants/GAME_STATUS";
@@ -16,7 +19,9 @@ interface GameState {
   roomId: string | null;
   roomName: string | null;
   roomState: string | null;
+}
 
+interface GameAction {
   setGameStatus: (status: GAME_STATUS_TYPE) => void;
 
   setRoomInformation: (params: { roomId: string; roomName: string; roomState: string }) => void;
@@ -26,23 +31,51 @@ interface GameState {
   setUserId: (userId: string) => void;
 
   cleanGameStatus: () => void;
+
+  updateLocalStorage: (id: string) => void;
 }
 
-export const useGameStatusStore = create<GameState>((set) => ({
+const generateGameStatusKey = () => {
+  if (typeof window === "undefined") return "dummy";
+  const url = new URL(window.location.href);
+
+  return `gameStatus-${url.pathname.split("/").slice(-1)[0]}`;
+};
+
+export const useGameStatusStore = create<GameState & GameAction>((set) => ({
   // 초기 상태를 WAITING으로 설정합니다.
-  gameStatus: GAME_STATUS.WAIT,
-  userId: null,
+  ...((new StorageController(new LocalStorageStrategy(generateGameStatusKey())).read() as GameState) ?? {
+    gameStatus: GAME_STATUS.WAIT,
+    userId: null,
 
-  roomId: null,
-  roomName: null,
-  roomState: null,
+    roomId: null,
+    roomName: null,
+    roomState: null,
 
-  userInformation: {
-    userId: "",
-    userName: "",
-    isHost: false,
-    state: GAME_STATUS.WAIT,
+    userInformation: {
+      userId: "",
+      userName: "",
+      isHost: false,
+      state: GAME_STATUS.WAIT,
+    },
+  }),
+
+  updateLocalStorage(id: string) {
+    const { roomId, roomName, roomState, gameStatus, userId, userInformation } = useGameStatusStore.getState();
+
+    const gameStatusController = new StorageController(new LocalStorageStrategy(generateGameStatusKey()));
+    gameStatusController.create({
+      gameStatus: gameStatus,
+      userId: userId,
+      roomId,
+      roomName,
+      roomState,
+      userInformation: {
+        ...userInformation,
+      },
+    });
   },
+
   setGameStatus: (status) => set({ gameStatus: status }),
 
   setUserId: (userId: string) => set({ userId }),
@@ -51,7 +84,9 @@ export const useGameStatusStore = create<GameState>((set) => ({
     set({ roomId, roomName, roomState });
   },
 
-  setUserInformation: (gameInformation: UserInformation) => set({ userInformation: gameInformation }),
+  setUserInformation: (gameInformation: UserInformation) => {
+    set({ userInformation: gameInformation });
+  },
 
   cleanGameStatus: () => {
     set({
@@ -73,7 +108,6 @@ export const useGameStatusSocketRegister = ({ userName, roomId }: { userName: st
     callback: (payload) => {
       const statusMessage = JSON.parse(payload.body);
 
-      console.log("set GameStatus", statusMessage);
       setGameStatus(statusMessage.state);
     },
   });
