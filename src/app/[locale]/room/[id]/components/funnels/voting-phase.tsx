@@ -139,7 +139,7 @@ export default function VotingPhase({ options, timeLimit }: VotingPhaseProps) {
                 setLocalHasVoted(false);
                 setSelectedOption(null);
               }}
-              disabled={!selectedOption}
+              disabled={true}
             >
               {t("re-vote")}
             </Button>
