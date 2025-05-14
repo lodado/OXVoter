@@ -7,7 +7,7 @@ export const IS_DEPLOYMENT = !!process.env.VERCEL_URL;
 export const NAVIGATION_HEIGHT = 64;
 
 export const ROOM_OPTIONS = [
-  { id: "yes", text: "찬성" },
-  { id: "no", text: "반대" },
-  { id: "abstain", text: "기권" },
+  { id: "yes", text: "yes" },
+  { id: "no", text: "no" },
+  { id: "abstain", text: "abstention" },
 ];
