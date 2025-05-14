@@ -59,6 +59,7 @@ export default function CreateRoom() {
         body: JSON.stringify(roomData),
       });
 
+
       const roomId = data.roomId;
 
       setUserInformation({

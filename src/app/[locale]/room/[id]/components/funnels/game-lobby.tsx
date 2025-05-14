@@ -23,7 +23,7 @@ export default function GameLobby() {
 
   const [settings, setRoomSettings] = useState({
     roomName: "게임방",
-    maxPlayers: 8,
+    maxPlayers: "-",
     randomRoles: true,
     anonymousVoting: false,
     specialVoting: true,
@@ -37,9 +37,12 @@ export default function GameLobby() {
             <Card.Title className="flex items-center justify-between gap-2 flex-row flex-wrap">
               <span className="flex flex-row gap-1">
                 {t("roomWaitCard.participants-label")}
+
+                {/* 
                 <span>
                   ({userList.length}/{settings.maxPlayers})
                 </span>
+                */}
               </span>
 
               <CopyButton>
