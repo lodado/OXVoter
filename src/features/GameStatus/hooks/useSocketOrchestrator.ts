@@ -10,17 +10,19 @@ import { useEnterRoomAggregateSocketRegister } from "./useEnterRoomAggregateSock
 import { useGameInformation } from "./useGameInformation";
 
 const useSocketOrchestrator = () => {
-  const { id, roomName, username } = useGameInformation();
+  const { id, roomName, username, userId } = useGameInformation();
 
-  const { subscriber: gameStatusSubscriber } = useGameStatusSocketRegister({ roomId: id, userName: username });
+  const { subscriber: gameStatusSubscriber } = useGameStatusSocketRegister({ roomId: id });
 
   const { subscriber: voteCountSubscriber } = useVoteCountSocketRegister({
     userName: username,
     roomId: id,
   });
 
+  
   const { handleJoinRoomMessage, subscriber: enterRoomSubscriber } = useEnterRoomAggregateSocketRegister({
     userName: username,
+    userId,
     roomId: id,
   });
 

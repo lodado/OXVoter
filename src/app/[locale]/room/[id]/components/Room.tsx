@@ -46,7 +46,6 @@ const fallbackMappings: FallbackMapping[] = [
 ];
 
 const RoomPage = WithErrorBoundary(({ gameInformation }: { gameInformation: GameInformation }) => {
-  const params = useParams();
   const router = useRouter();
   const tInfo = useTranslations("infoPage");
 

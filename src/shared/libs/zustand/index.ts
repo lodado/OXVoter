@@ -1,2 +1,2 @@
-export * from "./createZustandContext";
+export * from "./createZustandContextScope";
 export * from "./useScope";

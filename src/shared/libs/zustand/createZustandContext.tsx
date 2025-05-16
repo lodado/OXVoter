@@ -1,4 +1,3 @@
-// createZustandContextWithScope.ts
 "use client";
 
 import React, { createContext, ReactNode, useContext, useRef } from "react";
@@ -7,58 +6,47 @@ import { useStore } from "zustand";
 import { useShallow } from "zustand/react/shallow";
 
 /**
- * createZustandContextWithScope
+ * createZustandContext
  *
- * zustand 스토어를 context Provider와 연계하는 유틸 함수에 스코프 개념을 추가한 버전입니다.
- * Provider와 hook 모두 선택적으로 scope 값을 받을 수 있으며, 동일한 scope를 사용한 컴포넌트끼리 별도의 상태를 공유합니다.
+ * React Context와 연계된 zustand 스토어를 생성하는 유틸 함수입니다.
+ * 스코프 개념 없이, 하나의 컨텍스트에서 상태를 공유합니다.
  */
-export function createZustandContextWithScope<TStore extends object>(
+export function createZustandContext<TStore extends object>(
   createStore: (initialState?: Partial<TStore>) => UseBoundStore<StoreApi<TStore>>
 ) {
-  // scope 값을 key로 하는 React Context들을 저장할 WeakMap (key는 객체여야 함)
-  const contexts = new WeakMap<object, React.Context<UseBoundStore<StoreApi<TStore>> | null>>();
-  // scope가 없는 경우에 사용될 기본 컨텍스트
-  let defaultContext: React.Context<UseBoundStore<StoreApi<TStore>> | null> | undefined;
+  // 단일 컨텍스트 생성
+  const Context = createContext<UseBoundStore<StoreApi<TStore>> | null>(null);
+  // 기본 스토어 참조 (초기 Provider 생성 시 저장)
+  let defaultStore: UseBoundStore<StoreApi<TStore>> | undefined;
 
-  // scope 값(객체)이 있으면 해당 scope의 컨텍스트, 없으면 기본 컨텍스트를 반환
-  function getContext(scope?: object) {
-    if (!scope) {
-      if (!defaultContext) {
-        defaultContext = createContext<UseBoundStore<StoreApi<TStore>> | null>(null);
-      }
-      return defaultContext;
-    } else {
-      if (!contexts.has(scope)) {
-        contexts.set(scope, createContext<UseBoundStore<StoreApi<TStore>> | null>(null));
-      }
-
-      return contexts.get(scope)!;
-    }
-  }
-
-  // Provider는 선택적 scope prop(객체)을 받고, 해당 scope에 맞는 컨텍스트 Provider로 감쌉니다.
-  const Provider = ({
-    children,
-    initialState,
-    scope,
-  }: {
-    children: ReactNode;
-    initialState?: Partial<TStore>;
-    scope?: object;
-  }) => {
-    const ContextToUse = getContext(scope);
+  /**
+   * Provider 컴포넌트
+   * initialState를 받아 zustand 스토어를 생성하고 Context에 제공합니다.
+   */
+  const Provider = ({ children, initialState }: { children: ReactNode; initialState?: Partial<TStore> }) => {
     const storeRef = useRef<UseBoundStore<StoreApi<TStore>>>();
     if (!storeRef.current) {
       storeRef.current = createStore(initialState);
+      // 첫 번째 Provider일 경우 defaultStore에 저장
+      if (!defaultStore) {
+        defaultStore = storeRef.current;
+      }
     }
-    return <ContextToUse.Provider value={storeRef.current}>{children}</ContextToUse.Provider>;
+    return <Context.Provider value={storeRef.current}>{children}</Context.Provider>;
   };
 
-  // hook도 선택적으로 scope 값을 받고, 동일한 scope에 대응하는 컨텍스트에서 zustand 스토어를 읽어옵니다.
-  const useStoreFromContext = <U,>(selector: (state: TStore) => U, scope?: object): U => {
-    const ContextToUse = getContext(scope);
-    const store = useContext(ContextToUse);
-    if (!store) throw new Error(`Zustand store is missing the Provider; required scope: ${scope}`);
+  /**
+   * useStore 훅
+   * Context로부터 zustand 스토어를 받아 selector와 함께 사용합니다.
+   */
+  const useStoreFromContext = <U,>(selector: (state: TStore) => U): U => {
+    const store = useContext(Context);
+
+    console.log("useStoreFromContext", store, Context);
+
+    if (!store) {
+      throw new Error("Zustand store is missing the Provider");
+    }
     return useStore(store, useShallow(selector));
   };
 

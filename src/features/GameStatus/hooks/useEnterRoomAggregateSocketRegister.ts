@@ -10,7 +10,15 @@ import { GAME_STATUS, GAME_STATUS_TYPE, UserInformation } from "../constants";
 import { useGameStatusStore } from "../stores/useGameStatusStore";
 import { useUserListStore } from "../stores/useUserListStore";
 
-export const useEnterRoomAggregateSocketRegister = ({ userName, roomId }: { userName: string; roomId: string }) => {
+export const useEnterRoomAggregateSocketRegister = ({
+  userName,
+  roomId,
+  userId,
+}: {
+  userId: string;
+  userName: string;
+  roomId: string;
+}) => {
   const params = useParams();
 
   const { setUserList, clearUserList } = useUserListStore();
@@ -65,7 +73,9 @@ export const useEnterRoomAggregateSocketRegister = ({ userName, roomId }: { user
   const handleJoinRoomMessage = () => {
     sendJoinRoomMessage({
       roomId: roomId,
-      sender: userName,
+
+      userName,
+      userId,
       message: [],
     });
   };

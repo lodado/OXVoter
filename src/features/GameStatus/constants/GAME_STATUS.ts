@@ -21,6 +21,7 @@ export interface GameInformation {
   roomState: string;
   roomName: string;
 
+  maxPlayerCount: number;
   users: UserInformation[];
 
   optionMap: {

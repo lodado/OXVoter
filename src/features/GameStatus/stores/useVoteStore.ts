@@ -1,5 +1,6 @@
 "use client";
 
+import { use } from "chai";
 import { useCallback, useEffect } from "react";
 import { create } from "zustand";
 
@@ -80,7 +81,8 @@ export const useSubmitVotePublisher = () => {
   const submitGameVote = (option: string) => {
     sendGameVoteMessage({
       roomId: roomId,
-      sender: userId,
+      userId,
+      userName: username,
       vote: option,
     });
   };

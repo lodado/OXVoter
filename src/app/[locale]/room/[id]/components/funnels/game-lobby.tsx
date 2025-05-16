@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import { GAME_STATUS, useGameInformation, useUpdateGameStatus, useUserListStore } from "@/features";
+import { useGameSettingContext } from "@/features/GameStatus/stores/useGameSettingStore";
 import { Badge, Button, Card, CopyButton, Switch } from "@/shared/ui";
 import { ToastViewPort } from "@/shared/ui/Toast";
 
@@ -17,13 +18,13 @@ export default function GameLobby() {
 
   const { userList } = useUserListStore();
   const { isHost } = useGameInformation();
+  const maxPlayerCount = useGameSettingContext((state) => state.maxPlayerCount);
 
   const { handleGameStatusChange } = useUpdateGameStatus();
 
-
   const [settings, setRoomSettings] = useState({
     roomName: "게임방",
-    maxPlayers: "-",
+    maxPlayers: maxPlayerCount ?? "-",
     randomRoles: true,
     anonymousVoting: false,
     specialVoting: true,

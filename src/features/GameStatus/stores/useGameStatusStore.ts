@@ -100,7 +100,7 @@ export const useGameStatusStore = create<GameState & GameAction>((set) => ({
   },
 }));
 
-export const useGameStatusSocketRegister = ({ userName, roomId }: { userName: string; roomId: string }) => {
+export const useGameStatusSocketRegister = ({ roomId }: { roomId: string }) => {
   const { setGameStatus, cleanGameStatus } = useGameStatusStore();
 
   const statusSubscriber = useSocketSubScriber({
@@ -131,15 +131,10 @@ export const useUpdateGameStatus = () => {
   });
 
   const handleGameStatusChange = (status: GAME_STATUS_TYPE) => {
-    console.log({
-      roomId: roomId,
-      sender: userId,
-      state: status,
-    });
-
     sendGameStatusChangeMessage({
       roomId: roomId,
-      sender: userId,
+      userId,
+      userName: username,
       state: status,
     });
   };

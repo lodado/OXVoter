@@ -7,7 +7,10 @@ import { useGameStatusStore } from "../stores";
 export const useGameInformation = () => {
   const params = useParams();
   const { userInformation, roomId, roomName, roomState } = useGameStatusStore();
+
   const { userName } = userInformation;
+
+  console.log("userInformation", userInformation);
 
   return {
     id: params.id as string,
