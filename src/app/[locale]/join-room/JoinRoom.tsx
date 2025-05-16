@@ -30,13 +30,17 @@ export default function JoinRoomPage() {
     setIsLoading(true);
 
     try {
-      const { roomId } = await request<{
+      const a = await request<{
         roomId: string;
       }>({
         method: "GET",
         url: `/rooms`,
         params: { name: roomName },
       });
+
+      const roomId = a.roomId;
+
+      console.log(a, "a join room");
 
       setUserInformation({
         userId: "",

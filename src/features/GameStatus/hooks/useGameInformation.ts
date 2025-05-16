@@ -10,8 +10,6 @@ export const useGameInformation = () => {
 
   const { userName } = userInformation;
 
-  console.log("userInformation", userInformation);
-
   return {
     id: params.id as string,
     username: userName,

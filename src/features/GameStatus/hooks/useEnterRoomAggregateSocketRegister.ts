@@ -70,6 +70,7 @@ export const useEnterRoomAggregateSocketRegister = ({
     messageType: `/pub/room/${roomId}/join`,
   });
 
+
   const handleJoinRoomMessage = () => {
     sendJoinRoomMessage({
       roomId: roomId,

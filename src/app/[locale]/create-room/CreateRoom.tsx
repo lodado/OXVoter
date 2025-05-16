@@ -59,11 +59,12 @@ export default function CreateRoom() {
         body: JSON.stringify(roomData),
       });
 
-
       const roomId = data.roomId;
+      // @ts-ignore
+      const userId = Object.entries(data.userMap)?.[0]?.id ?? "empty-userId";
 
       setUserInformation({
-        userId: "",
+        userId: userId,
         userName: userName,
         isHost: false,
         state: GAME_STATUS.WAIT,
