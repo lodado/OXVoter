@@ -61,7 +61,7 @@ export default function CreateRoom() {
 
       const roomId = data.roomId;
       // @ts-ignore
-      const userId = Object.entries(data.userMap)?.[0]?.id ?? "empty-userId";
+      const userId = Object.keys(data.userMap)?.[0] ?? "empty-userId";
 
       setUserInformation({
         userId: userId,
