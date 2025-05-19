@@ -74,7 +74,6 @@ export const useEnterRoomAggregateSocketRegister = ({
   const handleJoinRoomMessage = () => {
     sendJoinRoomMessage({
       roomId: roomId,
-
       userName,
       userId,
       message: [],

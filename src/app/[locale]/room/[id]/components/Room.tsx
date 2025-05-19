@@ -51,10 +51,10 @@ const RoomPage = WithErrorBoundary(({ gameInformation }: { gameInformation: Game
 
   const funnel = useGameStatusFunnel();
 
-  const { username } = useGameInformation();
+  const { userId, username } = useGameInformation();
   const { isSocketTryingToConnect } = useSocketOrchestrator();
 
-  if (isEmpty(username)) {
+  if (isEmpty(userId)) {
     router.push(`/join-room?roomName=${gameInformation.roomName}`);
   }
 

@@ -27,7 +27,7 @@ const useSocketOrchestrator = () => {
   });
 
   const { isSocketTryingToConnect } = useSocketRegister(() => {
-    if (!isEmpty(username)) {
+    if (!isEmpty(userId) && !isEmpty(username)) {
       enterRoomSubscriber();
       gameStatusSubscriber();
       voteCountSubscriber();

@@ -6,11 +6,12 @@ import type React from "react";
 import { useState } from "react";
 
 import { GAME_STATUS, useGameStatusStore } from "@/features";
-import { request } from "@/shared";
 import { Button, Card, FireworkCanvas, Input } from "@/shared/ui";
 import { ReactiveLayout } from "@/shared/ui/ReactiveLayout";
 import { ToastViewPort, useErrorToastMapper } from "@/shared/ui/Toast";
 import GameHeader from "@/widgets/Settings/ui/GameHeader";
+
+import { joinGameApi } from "./api/joinGameApi";
 
 export default function JoinRoomPage() {
   const TJoinRoom = useTranslations("joinRoom");
@@ -30,23 +31,22 @@ export default function JoinRoomPage() {
     setIsLoading(true);
 
     try {
-      const a = await request<{
-        roomId: string;
-      }>({
-        method: "GET",
-        url: `/rooms`,
-        params: { name: roomName },
+      const {
+        roomId,
+        userId,
+        userName: serverUserName,
+        isHost,
+        state,
+      } = await joinGameApi({
+        userName: userName,
+        roomName: roomName,
       });
 
-      const roomId = a.roomId;
-
-      console.log(a, "a join room");
-
       setUserInformation({
-        userId: "",
-        userName: userName,
-        isHost: false,
-        state: GAME_STATUS.WAIT,
+        userId: userId,
+        userName: serverUserName,
+        isHost,
+        state,
       });
 
       router.push(`/room/${roomId}`);
