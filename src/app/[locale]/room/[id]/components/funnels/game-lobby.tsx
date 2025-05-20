@@ -9,6 +9,8 @@ import { useGameSettingContext } from "@/features/GameStatus/stores/useGameSetti
 import { Badge, Button, Card, CopyButton, Switch } from "@/shared/ui";
 import { ToastViewPort } from "@/shared/ui/Toast";
 
+import QRCodeDialog from "../QRCodeDialog";
+
 export default function GameLobby() {
   const t = useTranslations();
 
@@ -46,9 +48,13 @@ export default function GameLobby() {
                 */}
               </span>
 
-              <CopyButton>
-                <span className="hidden sm:block ">{t("roomWaitCard.copy-invite-link")}</span>
-              </CopyButton>
+              <div className="flex flex-row gap-3">
+                <QRCodeDialog />
+
+                <CopyButton>
+                  <span className="hidden sm:block ">{t("roomWaitCard.copy-invite-link")}</span>
+                </CopyButton>
+              </div>
             </Card.Title>
           </Card.Header>
           <Card.Content>

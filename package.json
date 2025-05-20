@@ -60,6 +60,7 @@
     "react-dnd-touch-backend": "^16.0.1",
     "react-dom": "^18",
     "react-joyride": "^2.9.3",
+    "react-qr-code": "^2.0.15",
     "react-virtuoso": "^4.12.5",
     "redis": "^4.7.0",
     "sanitize-html": "^2.13.0",

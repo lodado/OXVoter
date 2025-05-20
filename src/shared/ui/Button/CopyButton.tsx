@@ -4,6 +4,7 @@ import { CheckCircle, Copy } from "lucide-react";
 import { useTranslations } from "next-intl";
 import React, { ComponentProps } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
+import QRCode from "react-qr-code";
 
 import { useToastStore } from "../Toast/stores";
 import Button from "./Button";
