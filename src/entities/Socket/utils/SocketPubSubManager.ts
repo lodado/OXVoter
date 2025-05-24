@@ -17,6 +17,10 @@ export class SocketPubSubManager {
     this.url = url;
   }
 
+  canReconnect() {
+    return this.subscriberCount > 0 && (!this.client || !this.client?.connected);
+  }
+
   /**
    * connect
    * 소켓을 생성하고 이벤트 핸들러를 등록합니다.
@@ -96,7 +100,6 @@ export class SocketPubSubManager {
    * 필요시 STOMP 연결을 시작합니다.
    */
   registerSubscriber(onConnectSuccess?: () => void) {
-
     this.subscriberCount += 1;
 
     // 기존에 예약된 disconnect 타이머가 있으면 취소
